@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -53,6 +53,7 @@ const PartnerInquiryForm: React.FC<PartnerInquiryFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
+  const [csrfToken, setCsrfToken] = useState<string>('')
 
   const {
     register,
@@ -67,26 +68,44 @@ const PartnerInquiryForm: React.FC<PartnerInquiryFormProps> = ({
 
   const watchedValues = watch()
 
+  // Fetch CSRF token on component mount
+  useEffect(() => {
+    const fetchCSRFToken = async () => {
+      try {
+        const response = await fetch('/api/csrf-token')
+        if (response.ok) {
+          const { token } = await response.json()
+          setCsrfToken(token)
+        }
+      } catch (error) {
+        console.error('Failed to fetch CSRF token:', error)
+      }
+    }
+    
+    fetchCSRFToken()
+  }, [])
+
   const onSubmit = async (data: PartnerInquiryFormData) => {
     setIsSubmitting(true)
     setSubmitError(null)
 
     try {
-      // Create form data for Netlify Forms
-      const formData = new FormData()
-      formData.append('form-name', 'partner-inquiry')
-      
-      // Append all form fields
-      Object.entries(data).forEach(([key, value]) => {
-        if (value) {
-          formData.append(key, value)
-        }
-      })
+      // Ensure we have a CSRF token
+      if (!csrfToken) {
+        throw new Error('Security token not available. Please refresh the page and try again.')
+      }
 
-      const response = await fetch('/', {
+      // Submit form data to API endpoint with CSRF token
+      const response = await fetch('/api/partnership-inquiry', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString()
+        headers: { 
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify({
+          ...data,
+          csrfToken
+        })
       })
 
       if (response.ok) {
@@ -181,19 +200,8 @@ const PartnerInquiryForm: React.FC<PartnerInquiryFormProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      // Netlify Forms detection
-      name="partner-inquiry"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
+      // Form submission handled via API
     >
-      {/* Hidden field for Netlify Forms */}
-      <input type="hidden" name="form-name" value="partner-inquiry" />
-      
-      {/* Honeypot field for spam protection */}
-      <div style={{ display: 'none' }}>
-        <input name="bot-field" />
-      </div>
 
       {/* Form Header */}
       <div className="text-center space-y-2 mb-8">

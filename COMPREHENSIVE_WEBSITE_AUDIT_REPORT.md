@@ -95,7 +95,7 @@
 - **Form Security:** ⚠️ Basic forms without CSRF protection visible
 - **Privacy Policy:** ✅ Privacy page exists in footer
 - **Cookie Consent:** ❌ No GDPR-compliant cookie handling detected
-- **Contact Forms:** ✅ Netlify forms provide basic spam protection
+- **Contact Forms:** ✅ Custom forms with built-in spam protection
 - **Security Headers:** ⚠️ Needs audit of Next.js security configuration
 
 **Section Score: 73/100**

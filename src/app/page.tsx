@@ -5,7 +5,6 @@ import { TrendingUp, Users, Shield, Target, ArrowRight, CheckCircle, Building, H
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import ClientSuccess from '@/components/ClientSuccess'
-import InteractiveParticles from '@/components/InteractiveParticles'
 import MagneticButton from '@/components/MagneticButton'
 import AnimatedStats from '@/components/AnimatedStats'
 
@@ -13,10 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-navy text-primary-white py-24 overflow-hidden">
-        {/* Interactive Particles Background */}
-        <InteractiveParticles />
-        
+      <section className="relative bg-primary-navy text-primary-white py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <div className="text-center">
             {/* Main Content */}

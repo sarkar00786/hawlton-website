@@ -1,7 +1,7 @@
 'use client'
 
 import { Shield, Globe, TrendingUp, Users, Heart, Lightbulb } from 'lucide-react'
-// import Image from 'next/image' // Temporarily commented out
+import Image from 'next/image'
 
 export default function AboutPage() {
   return (
@@ -99,10 +99,13 @@ export default function AboutPage() {
             <div className="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl">
               <div className="flex flex-col md:flex-row items-center md:items-start mb-6">
                 <div className="relative w-32 h-32 mb-4 md:mb-0 md:mr-6 flex-shrink-0">
-                  <img
+                  <Image
                     src="/images/team/Jahangir-Hussain.jpg"
-                    alt="Jahangir Hussain - Founder & Visionary Lead"
+                    alt="Jahangir Hussain - Founder & Visionary Lead of Hawlton, strategic digital transformation expert with proven track record in scaling online ventures across Pakistan's emerging digital economy"
+                    width={128}
+                    height={128}
                     className="w-32 h-32 object-cover border-4 border-primary-gold rounded-full"
+                    priority
                   />
                   {/* Fallback icon */}
                   <div className="w-32 h-32 bg-primary-silver flex items-center justify-center border-4 border-primary-gold rounded-full" style={{display: 'none'}}>
@@ -135,9 +138,11 @@ export default function AboutPage() {
             <div className="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl">
               <div className="flex flex-col md:flex-row items-center md:items-start mb-6">
                 <div className="relative w-32 h-32 mb-4 md:mb-0 md:mr-6 flex-shrink-0">
-                  <img
+                  <Image
                     src="/images/team/muhammad-ismail.jpg"
-                    alt="Muhammad Ismail - Co-Founder & Operational Lead"
+                    alt="Muhammad Ismail - Co-Founder & Operational Lead of Hawlton, ACCA aspirant with expertise in operational excellence and digital project management for Pakistani businesses"
+                    width={128}
+                    height={128}
                     className="w-32 h-32 object-cover border-4 border-primary-gold rounded-full"
                   />
                   {/* Fallback icon */}

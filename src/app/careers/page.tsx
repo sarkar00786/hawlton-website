@@ -1,6 +1,5 @@
 import { Briefcase, Users, TrendingUp, Award, MapPin, Clock, DollarSign, Heart } from 'lucide-react'
 import Link from 'next/link'
-import AnimatedBackground from '@/components/AnimatedBackground'
 
 const jobOpenings = [
   {
@@ -129,10 +128,8 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-primary-navy text-primary-white py-20 overflow-hidden">
-        <AnimatedBackground className="opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-navy/90 via-primary-navy/80 to-primary-navy/90 z-10"></div>
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-primary-navy text-primary-white py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-primary-gold mb-6 animate-fade-in">
               Join Our Mission

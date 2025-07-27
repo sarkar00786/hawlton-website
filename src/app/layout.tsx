@@ -4,7 +4,13 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
+import GDPRCookieConsent from "@/components/GDPRCookieConsent";
+import BackToTop from "@/components/ui/BackToTop";
+import AccessibilityEnhancer from "@/components/ui/AccessibilityEnhancer";
+import ErrorBoundary from "@/components/ui/ErrorBoundary";
+import { ToastProvider } from "@/components/ui/Toast";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import { LoadingProvider } from "@/components/ui/LoadingStates";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -13,6 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://hawlton.com'),
   title: "Hawlton - Pakistan's Premier Digital Transformation & Investment Partner",
   description: "Empowering Pakistani businesses through strategic digital partnerships and secure investment opportunities. Transform your local business into a national digital powerhouse with proven ROI and sustainable growth strategies.",
   keywords: "Pakistan digital transformation, strategic business partnerships, digital investment opportunities, e-commerce growth Pakistan, online business development, Pakistan startup ecosystem, digital marketing Pakistan, business scaling solutions, venture capital Pakistan, digital economy investment",
@@ -212,9 +219,7 @@ export default function RootLayout({
 }>) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const tawkId = process.env.NEXT_PUBLIC_TAWK_TO_PROPERTY_ID;
-  const isProduction = process.env.NODE_ENV === 'production';
-  
-  // Only load scripts if we have valid IDs and are in production or have real IDs
+  // Only load scripts if we have valid IDs
   const shouldLoadGA = gaId && gaId !== 'G-DEVELOPMENT' && gaId.startsWith('G-');
   const shouldLoadTawk = tawkId && tawkId !== 'development-placeholder';
   
@@ -271,10 +276,19 @@ export default function RootLayout({
           />
         )}
         
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <CookieConsent />
+        <LoadingProvider>
+          <ToastProvider>
+            <ErrorBoundary>
+              <ScrollProgress showReadingTime={true} />
+              <AccessibilityEnhancer />
+              <Header />
+              <main id="main-content">{children}</main>
+              <Footer />
+              <BackToTop />
+              <GDPRCookieConsent />
+            </ErrorBoundary>
+          </ToastProvider>
+        </LoadingProvider>
       </body>
     </html>
   );

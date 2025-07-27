@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, ChevronDown, User, LogOut, Settings, Bell } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import LiquidNav from './LiquidNav'
 
 // For now, just show auth links without checking session state
@@ -12,24 +12,46 @@ import LiquidNav from './LiquidNav'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const pathname = usePathname()
   const mobileMenuRef = useRef<HTMLDivElement>(null)
-  const userMenuRef = useRef<HTMLDivElement>(null)
-  // Auth is handled in individual auth pages only
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const isActive = (path: string) => pathname === path
 
-  // Handle scroll behavior for sticky header
+  // Professional scroll behavior - hide on scroll down, show on scroll up
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      const currentScrollY = window.scrollY
+      
+      // Header becomes sticky after 50px
+      setIsScrolled(currentScrollY > 50)
+      
+      // Hide header when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        setIsVisible(false) // Hide on scroll down
+      } else {
+        setIsVisible(true) // Show on scroll up
+      }
+      
+      setLastScrollY(currentScrollY)
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+
+    // Throttle scroll events for better performance
+    let timeoutId: NodeJS.Timeout
+    const throttledHandleScroll = () => {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(handleScroll, 10)
+    }
+
+    window.addEventListener('scroll', throttledHandleScroll)
+    return () => {
+      window.removeEventListener('scroll', throttledHandleScroll)
+      clearTimeout(timeoutId)
+    }
+  }, [lastScrollY])
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -57,7 +79,13 @@ const Header = () => {
   }, [isMenuOpen])
 
   return (
-    <header className="bg-primary-navy shadow-lg relative z-50">
+    <header 
+      className={`
+        ${isScrolled ? 'fixed top-0 left-0 right-0 bg-primary-navy/95 backdrop-blur-md shadow-xl' : 'bg-primary-navy shadow-lg'} 
+        ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+        transition-all duration-300 ease-in-out z-50 w-full
+      `}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Navigation */}

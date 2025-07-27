@@ -1,14 +1,66 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageCircle, Plus, Minus } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle, Plus, Minus, Loader2, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ContactPage() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(prevOpen => prevOpen === index ? null : index);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: ''
+          });
+          setIsSubmitted(false);
+          setShowContactForm(false);
+        }, 3000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      setSubmitError('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -240,8 +292,8 @@ export default function ContactPage() {
                   </button>
                 </div>
                 
-                <form name="contact" method="POST" data-netlify="true" className="space-y-6">
-                  <input type="hidden" name="form-name" value="contact" />
+                <form className="space-y-6">
+                  {/* Form will be handled by API endpoint */}
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>

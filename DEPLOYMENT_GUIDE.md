@@ -76,12 +76,11 @@ NEXT_PUBLIC_SITE_URL=https://hawlton.com
 
 ## 🌐 Deployment Instructions
 
-### For Netlify (Recommended)
-1. Connect your repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `.next`
-4. Add environment variables in Netlify dashboard
-5. Deploy!
+### For Vercel (Recommended)
+1. Connect your repository to Vercel
+2. Vercel will automatically detect Next.js and configure build settings
+3. Add environment variables in Vercel dashboard
+4. Deploy with zero configuration!
 
 ### Build Verification
 The project builds successfully with zero errors:

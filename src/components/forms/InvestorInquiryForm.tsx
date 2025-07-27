@@ -88,25 +88,11 @@ const InvestorInquiryForm: React.FC<InvestorInquiryFormProps> = ({
     setSubmitError(null)
 
     try {
-      // Create form data for Netlify Forms
-      const formData = new FormData()
-      formData.append('form-name', 'investor-inquiry')
-      
-      // Append all form fields
-      Object.entries(data).forEach(([key, value]) => {
-        if (value) {
-          if (Array.isArray(value)) {
-            formData.append(key, value.join(', '))
-          } else {
-            formData.append(key, value.toString())
-          }
-        }
-      })
-
-      const response = await fetch('/', {
+      // Submit form data to API endpoint
+      const response = await fetch('/api/investor-inquiry', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString()
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       })
 
       if (response.ok) {
@@ -212,19 +198,8 @@ const InvestorInquiryForm: React.FC<InvestorInquiryFormProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      // Netlify Forms detection
-      name="investor-inquiry"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
+      // Form submission handled via API
     >
-      {/* Hidden field for Netlify Forms */}
-      <input type="hidden" name="form-name" value="investor-inquiry" />
-      
-      {/* Honeypot field for spam protection */}
-      <div style={{ display: 'none' }}>
-        <input name="bot-field" />
-      </div>
 
       {/* Form Header */}
       <div className="text-center space-y-2 mb-8">

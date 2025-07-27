@@ -295,29 +295,6 @@ const HeroSection = () => {
                   </motion.div>
                 )
               })}
-              
-              {/* Floating Particles representing data flow and innovation */}
-              {[...Array(12)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-accent-primary rounded-full opacity-60"
-                  style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${20 + Math.random() * 60}%`,
-                  }}
-                  animate={{
-                    y: [0, -30, 0],
-                    opacity: [0.3, 1, 0.3],
-                    scale: [0.5, 1, 0.5]
-                  }}
-                  transition={{
-                    duration: 4 + Math.random() * 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: Math.random() * 2
-                  }}
-                />
-              ))}
             </div>
           </motion.div>
         </div>

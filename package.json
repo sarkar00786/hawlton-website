@@ -14,8 +14,7 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "audit:security": "npm audit --audit-level=moderate",
-    "precommit": "npm run lint && npm run type-check && npm run test:qa",
-    "export": "next export"
+    "precommit": "npm run lint && npm run type-check && npm run test:qa"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.4",

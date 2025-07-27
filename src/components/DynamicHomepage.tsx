@@ -99,9 +99,9 @@ export default function DynamicHomepage() {
           <div className="text-center">
             <motion.div
               className="space-y-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <div className="space-y-6">
                 <motion.div
@@ -193,8 +193,8 @@ export default function DynamicHomepage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  whileHover={{ y: -3 }}
                 >
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-gold flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-primary-navy" />
