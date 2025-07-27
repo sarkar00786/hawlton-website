@@ -33,35 +33,91 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   
-  // Security and performance headers
+  // Comprehensive security and performance headers
   async headers() {
+    const securityHeaders = [
+      {
+        key: 'Content-Security-Policy',
+        value: `
+          default-src 'self';
+          script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.tawk.to;
+          style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+          img-src 'self' data: blob: *.sanity.io *.googletagmanager.com;
+          font-src 'self' fonts.gstatic.com;
+          connect-src 'self' *.google-analytics.com *.sanity.io;
+          frame-src 'self' *.tawk.to;
+          object-src 'none';
+          base-uri 'self';
+          form-action 'self';
+          frame-ancestors 'self';
+          upgrade-insecure-requests;
+        `.replace(/\s{2,}/g, ' ').trim()
+      },
+      {
+        key: 'X-DNS-Prefetch-Control',
+        value: 'on'
+      },
+      {
+        key: 'Strict-Transport-Security',
+        value: 'max-age=63072000; includeSubDomains; preload'
+      },
+      {
+        key: 'X-Frame-Options',
+        value: 'DENY'
+      },
+      {
+        key: 'X-Content-Type-Options',
+        value: 'nosniff'
+      },
+      {
+        key: 'Referrer-Policy',
+        value: 'origin-when-cross-origin'
+      },
+      {
+        key: 'X-XSS-Protection',
+        value: '1; mode=block'
+      },
+      {
+        key: 'Permissions-Policy',
+        value: 'geolocation=(self), microphone=(), camera=()'
+      }
+    ]
+
     return [
       {
         source: '/(.*)',
+        headers: securityHeaders
+      },
+      // Cache static assets aggressively
+      {
+        source: '/images/:path*',
         headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          },
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // Service Worker caching
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate'
+          },
+          {
+            key: 'Service-Worker-Allowed',
+            value: '/'
           }
         ]
       }

@@ -275,6 +275,43 @@ export default function RootLayout({
             }}
           />
         )}
+
+        {/* Service Worker Registration */}
+        <Script
+          id="service-worker"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('[SW] Registration successful:', registration.scope);
+                      
+                      // Check for updates
+                      registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        if (newWorker) {
+                          newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                              // New content is available, notify user
+                              if (confirm('New content is available. Would you like to refresh to get the latest version?')) {
+                                newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                window.location.reload();
+                              }
+                            }
+                          });
+                        }
+                      });
+                    })
+                    .catch(function(error) {
+                      console.log('[SW] Registration failed:', error);
+                    });
+                });
+              }
+            `,
+          }}
+        />
         
         <LoadingProvider>
           <ToastProvider>

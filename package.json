@@ -32,6 +32,7 @@
     "@sanity/cli": "^4.1.1",
     "@sanity/client": "^7.8.1",
     "@sanity/image-url": "^1.1.0",
+    "@types/video.js": "^7.3.58",
     "bcryptjs": "^3.0.2",
     "clsx": "^2.1.1",
     "critters": "^0.0.23",
@@ -53,6 +54,9 @@
     "recharts": "^2.10.3",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
+    "tiny-slider": "^2.9.4",
+    "video.js": "^8.23.3",
+    "web-vitals": "^5.0.3",
     "zod": "^3.22.4"
   },
   "devDependencies": {

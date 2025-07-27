@@ -6,6 +6,32 @@ import { ArrowRight, TrendingUp, Users, Globe, Sparkles, Building2, Target, Shie
 import Button from './ui/Button'
 import { useScrollAnimation, useStaggerAnimation } from '@/lib/hooks'
 
+// Character-by-character animation component
+const AnimatedText = ({ text, className = '', delay = 0 }: { text: string, className?: string, delay?: number }) => {
+  const characters = text.split('')
+  
+  return (
+    <span className={className}>
+      {characters.map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.5, 
+            delay: delay + (index * 0.05),
+            ease: "easeOut"
+          }}
+          className="inline-block"
+          style={{ whiteSpace: char === ' ' ? 'pre' : 'normal' }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </span>
+  )
+}
+
 const HeroSection = () => {
   const { ref: heroRef, inView } = useScrollAnimation(0.2)
   const staggerAnimation = useStaggerAnimation(0.15)
@@ -99,7 +125,10 @@ const HeroSection = () => {
                   backgroundClip: 'text'
                 }}
               >
-                Hawlton: Empowering Pakistan&apos;s{' '}
+                <AnimatedText 
+                  text="Hawlton: Empowering Pakistan's "
+                  delay={inView ? 0.5 : 0}
+                />
                 <motion.span 
                   className="inline-block text-accent-primary font-black"
                   animate={{
@@ -111,7 +140,11 @@ const HeroSection = () => {
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  Digital Future
+                  <AnimatedText 
+                    text="Digital Future"
+                    delay={inView ? 1.5 : 0}
+                    className="text-accent-primary font-black"
+                  />
                 </motion.span>
               </motion.h1>
             </motion.div>

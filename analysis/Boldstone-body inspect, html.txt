@@ -1,0 +1,1586 @@
+<body class="home page-template-default page page-id-19945 wp-embed-responsive bx-lang-en" style="">
+		
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVSCJHH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<div id="page" class="site">
+		<input type="hidden" class="current-lang" value="">  			<header id="masthead" class="site__header site-header"> 				<div class="bx-alert-banner alignfull">
+					<div class="bx-alert-banner__container is-color-theme-dark-alert-banner" style="opacity: 0; display: none;">
+											</div>
+				</div>
+				
+			<div class="site-header__container bx-default-header__padding site-header__container--fixed" style="translate: none; rotate: none; scale: none; transform: translate(0px, -108px);">
+					
+					<div class="site-header__inner">
+						<a class="site-header__skip-link visually-hidden-focusable bx-singular-link_frontend bx-singular-link--arrow-down" href="#primary">
+							<span class="bx-singular-link__label">Skip to main content</span><svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+								<path class="bx-singular-link__icon-arrow" fill="currentColor" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z"></path>
+								<path class="bx-singular-link__icon-fill" fill="currentColor" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z"></path>
+								<path class="bx-singular-link__icon-border" fill="currentColor" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z"></path>
+							
+						</svg></a>
+						<div class="site-header__branding">
+							<a href="https://www.blackstone.com/" class="site-header__logo" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+								<span class="visually-hidden" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">Blackstone</span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 54" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+									<path fill="#FFF" d="M136 0v54H0V0z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+									<path fill="#000" d="M135 1H1v52h134z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+									<g fill="#FFF" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+										<path d="M14.37 27.26c3.27 0 6.49.78 6.49 4 0 2.63-2.56 4.02-4.1 4.43 2.91.26 5.85 1.79 5.85 4.63 0 3.27-3.01 5.16-6.35 5.13h-9.2v-.64l1.5-.1c.84-.1 1-.21 1.03-1.22.03-1.4.03-2.26.03-3.65v-6.97c0-1.39 0-2.25-.03-3.66-.02-1-.19-1.17-1.04-1.21l-1.49-.1v-.64h7.31Zm-2.06.76v7.52s1 .05 1.73.05c2.5 0 4.05-1.22 4.05-3.84 0-2.32-1.5-3.8-3.98-3.8-.85 0-1.8.07-1.8.07m0 8.33v6.19c0 1.86.9 2.2 3 2.2 2.92 0 4.43-1.68 4.43-4.35 0-3.15-2.72-4.04-5.63-4.04h-1.8Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M28.2 39.86c0 1.39 0 2.25.02 3.66.02 1 .18 1.12 1.04 1.22l.94.1v.61h-6.46v-.62l.95-.1c.85-.09 1.02-.2 1.04-1.21.02-1.41.02-2.27.02-3.66v-10.9c0-1.16-.35-1.44-1.35-1.51l-1.1-.07v-.55c1.67-.2 3.33-.5 4.96-.91 0 0-.07 2.5-.07 5.25v8.7Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M37.96 44.1a6 6 0 0 1-3.43 1.54 3.09 3.09 0 0 1-3.06-2.98c0-2.75 3.4-3.66 6.44-3.99v-2.89c0-1.34-.52-1.98-1.64-1.98a1.76 1.76 0 0 0-1.7 1.15c-.5.93-.93 1.48-1.61 1.48a.94.94 0 0 1-.97-.96c0-1.21 2.88-2.43 4.59-2.43 2.65 0 3.86.83 3.86 2.91 0 .96-.12 5.88-.12 6.71 0 .84.42 1.27 1.13 1.27a2.97 2.97 0 0 0 1.47-.6l.24.53c-1.16.95-2.18 1.76-3.31 1.76a2.17 2.17 0 0 1-1.9-1.53m-.05-4.72c-1.91.14-4.19.72-4.19 2.46a2.41 2.41 0 0 0 2.3 2.33c.7.02 1.37-.22 1.9-.69v-4.1Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M53.93 34.75a1.08 1.08 0 0 1-1.09 1.15c-.7 0-1.09-.6-1.54-1.12a2.37 2.37 0 0 0-1.82-.98c-1.87 0-3.31 1.91-3.31 4.66 0 3.03 1.49 5.44 4.52 5.44a4.6 4.6 0 0 0 3.08-1.29l.33.48c-1.52 1.6-2.96 2.6-4.76 2.6-3.17 0-5.44-2.86-5.44-6.13 0-3.63 2.22-6.52 6.08-6.52 2.06 0 3.96.88 3.96 1.72" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M59.45 39.89c0 1.38 0 2.22.02 3.63.03 1 .2 1.12 1.04 1.22l.83.1v.61H55v-.62l.95-.1c.85-.09 1.01-.2 1.04-1.21.02-1.41.02-2.27.02-3.66v-10.9c0-1.16-.35-1.44-1.35-1.51l-1.11-.07v-.55c1.67-.2 3.34-.5 4.97-.91 0 0-.07 2.5-.07 5.25v7.88l4.42-4.25c.4-.4.27-.79-.28-.8l-1.09-.08v-.64h5.37v.62a3.43 3.43 0 0 0-2.65.9l-3.76 3.5 5.09 5.53c.42.6 1.1.96 1.82.98l.28.02v.63h-5.98v-.63l.82-.07c.36-.02.38-.28.22-.5l-2.01-2.39c-.7-.85-1.46-1.67-2.25-2.43v.45Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M71.12 45.31c-.32.03-.64.1-.95.21h-.1l-.25-4.17h.64c.5 2.53 1.63 3.55 3.48 3.55 1.51 0 2.39-.83 2.39-1.97 0-1.08-.48-1.53-2.77-2.49-1.71-.72-3.43-1.55-3.43-3.78 0-2.43 2.24-3.63 4.23-3.63.88.03 1.75.13 2.61.3.29-.07.57-.16.83-.3h.1l.07 3.95h-.7c-.13-1.91-.96-3.16-2.9-3.16-1.28 0-2.25.72-2.25 1.86 0 1.2.76 1.58 2.89 2.56 2.03.96 3.52 1.67 3.52 3.56 0 2.53-2.17 3.9-4.59 3.9a19.3 19.3 0 0 1-2.81-.4" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M81.43 42.9c0-1.96.1-5.18.16-8.38h-1.56v-.39a17.51 17.51 0 0 0 3.7-3.8H84v3.09h3.74v1.07H84v7.83c0 1.39.66 1.94 1.7 1.94a3.33 3.33 0 0 0 2.01-.9l.29.47c-1.33 1.2-2.4 1.86-3.76 1.86a2.7 2.7 0 0 1-2.82-2.8" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M88.87 39.39a6.34 6.34 0 1 1 12.69-.08 6.34 6.34 0 0 1-12.7.08m9.97.23c0-3.34-1.34-5.77-3.76-5.77-2.41 0-3.48 2.36-3.48 5.25 0 3.34 1.35 5.78 3.76 5.78 2.42 0 3.48-2.36 3.48-5.26" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M112.66 37.48c0-1.77-.83-2.82-2.41-2.82-1.06-.04-2.1.3-2.94.95v4.25c0 1.39 0 2.25.02 3.66.03 1 .2 1.12 1.04 1.22l.95.1v.61h-6.53v-.62l.95-.1c.85-.09 1.01-.2 1.04-1.21.02-1.41.02-2.27.02-3.66V36.5c0-1.34-.28-1.8-1.37-1.9l-.8-.06v-.6a22.9 22.9 0 0 0 4.68-1.05v2.1a7.15 7.15 0 0 1 4.47-1.96c2.13 0 3.39 1.34 3.39 3.8v3.03c0 1.39 0 2.25.02 3.66.03 1 .2 1.12 1.04 1.21l.95.1v.62h-6.53v-.62l.94-.1c.86-.1 1.02-.21 1.05-1.21.02-1.41.02-2.27.02-3.66v-2.38Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+										<path d="M118.06 39.48c0-3.22 1.98-6.45 5.51-6.45 3.1 0 4.9 2.06 5.1 5.14h-8.34c-.1 3.22 1.4 5.7 4.62 5.7 1.29 0 2.53-.48 3.5-1.33l.31.5c-1.61 1.6-3.29 2.65-5.2 2.65-3.37 0-5.5-2.86-5.5-6.2m2.34-2.1h5.66c0-1.82-.9-3.59-2.7-3.59-1.84 0-2.77 1.77-2.95 3.58" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Header" data-gtm-component_type="Site Navigation Header" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+									</g>
+								</svg>
+							</a>
+						</div>
+														<div class="site-header__nav primary-nav">
+							<button class="primary-nav__toggle" data-expand-text="Expand Navigation" data-collapse-text="Collapse Navigation" aria-expanded="false">
+								<span class="visually-hidden">Expand Navigation</span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 24" width="34" height="24">
+									<g fill="currentColor">
+										<path class="primary-nav__toggle-lines" d="M1.71 0a1.71 1.71 0 1 0 0 3.43H32.3a1.71 1.71 0 0 0 0-3.43H1.7Zm0 10.29a1.71 1.71 0 0 0 0 3.42H32.3a1.71 1.71 0 0 0 0-3.42H1.7Zm0 10.28a1.71 1.71 0 0 0 0 3.43H32.3a1.71 1.71 0 0 0 0-3.43H1.7Z"></path>
+										<path class="primary-nav__toggle-cross" d="M28.57 2.53c.57-.57.57-1.5 0-2.08l-.02-.02a1.47 1.47 0 0 0-2.08 0l-8.43 8.42a1.47 1.47 0 0 1-2.08 0L7.53.43a1.47 1.47 0 0 0-2.08 0l-.02.02a1.47 1.47 0 0 0 0 2.08l8.42 8.43a1.47 1.47 0 0 1 0 2.08l-8.42 8.43c-.57.57-.57 1.5 0 2.08l.02.02a1.47 1.47 0 0 0 2.08 0l8.43-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.57 1.5.57 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.43Z"></path>
+									</g>
+								</svg>
+							</button>
+							<div class="primary-nav__inner" aria-hidden="false">
+								<ul class="primary-nav__list"><li id="menu-item-19948" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19948 primary-nav__list-item primary-nav__list-item--has-children has-children"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="#" data-menu-id="19948" class="primary-nav__list-item-link" aria-expanded="false"><span class="primary-nav__list-item-label" data-gtm-label="The Firm" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">The Firm</span>		<svg class="primary-nav__list-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+			<path fill="currentColor" d="m8.7 12.4 7-6.8a1 1 0 0 0 0-1.4 1 1 0 0 0-1.4 0L8 10.3 1.7 4.2a1 1 0 0 0-1.4 0 1 1 0 0 0 0 1.4l7 6.8c.4.3 1 .3 1.4 0Z"></path>
+		</svg>
+		</a>
+<div class="primary-nav__lvl-2-wrap" aria-hidden="true"><ul class="primary-nav__list-lvl-2">
+	<li id="menu-item-19949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19949 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm | The Firm" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19949" class="primary-nav__list-lvl-2-link"><span data-gtm-label="The Firm | The Firm" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">The Firm</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19950 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/the-firm/" data-menu-id="19950" class="primary-nav__list-lvl-3-link"><span data-gtm-label="The Firm | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Overview</span></a></li>
+		<li id="menu-item-19951" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19951 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm | Our People" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/the-firm/our-people/" data-menu-id="19951" class="primary-nav__list-lvl-3-link"><span data-gtm-label="The Firm | Our People" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Our People</span></a></li>
+		<li id="menu-item-20006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20006 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm | Careers" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/careers/careers-blackstone/" data-menu-id="20006" class="primary-nav__list-lvl-3-link"><span data-gtm-label="The Firm | Careers" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Careers</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-19952" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19952 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm | Our Clients" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19952" class="primary-nav__list-lvl-2-link"><span data-gtm-label="The Firm | Our Clients" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Our Clients</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19953" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19953 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Clients | Institutional Investors" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-clients/overview/" data-menu-id="19953" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Clients | Institutional Investors" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Institutional Investors</span></a></li>
+		<li id="menu-item-19954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19954 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Clients | Financial Advisors" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/financial-advisors/" data-menu-id="19954" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Clients | Financial Advisors" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Financial Advisors</span></a></li>
+		<li id="menu-item-28290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28290 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Clients | Family Offices" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/family-offices-endowments-foundations/" data-menu-id="28290" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Clients | Family Offices" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Family Offices</span></a></li>
+		<li id="menu-item-25118" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25118 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Clients | Insurance" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/our-businesses/credit-and-insurance-bxci/#Insurance" data-menu-id="25118" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Clients | Insurance" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Insurance</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-19982" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19982 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="The Firm | Our Impact" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19982" class="primary-nav__list-lvl-2-link"><span data-gtm-label="The Firm | Our Impact" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Our Impact</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19984" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19984 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Impact | Building Sustainable Businesses" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-impact/building-sustainable-businesses/" data-menu-id="19984" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Impact | Building Sustainable Businesses" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Building Sustainable Businesses</span></a></li>
+		<li id="menu-item-19986" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19986 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Impact | Blackstone Career Pathways" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/blackstone-career-pathways/" data-menu-id="19986" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Impact | Blackstone Career Pathways" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone Career Pathways</span></a></li>
+		<li id="menu-item-19988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19988 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Impact | Blackstone Charitable Foundation" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-impact/blackstone-charitable-foundation/" data-menu-id="19988" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Impact | Blackstone Charitable Foundation" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone Charitable Foundation</span></a></li>
+		<li id="menu-item-21017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21017 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Our Impact | Blackstone LaunchPad" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/our-impact/blackstone-launchpad/" data-menu-id="21017" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Our Impact | Blackstone LaunchPad" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone LaunchPad</span></a></li>
+	</ul>
+</li>
+</ul></div>
+</li>
+<li id="menu-item-19959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19959 primary-nav__list-item primary-nav__list-item--has-children has-children"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="What We Do" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="#" data-menu-id="19959" class="primary-nav__list-item-link" aria-expanded="false"><span class="primary-nav__list-item-label" data-gtm-label="What We Do" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">What We Do</span>		<svg class="primary-nav__list-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+			<path fill="currentColor" d="m8.7 12.4 7-6.8a1 1 0 0 0 0-1.4 1 1 0 0 0-1.4 0L8 10.3 1.7 4.2a1 1 0 0 0-1.4 0 1 1 0 0 0 0 1.4l7 6.8c.4.3 1 .3 1.4 0Z"></path>
+		</svg>
+		</a>
+<div class="primary-nav__lvl-2-wrap" aria-hidden="true"><ul class="primary-nav__list-lvl-2">
+	<li id="menu-item-19960" class="has-two-column-list menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19960 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="What We Do | Businesses" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19960" class="primary-nav__list-lvl-2-link"><span data-gtm-label="What We Do | Businesses" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Businesses</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19961 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Private Equity" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/private-equity/" data-menu-id="19961" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Private Equity" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Private Equity</span></a></li>
+		<li id="menu-item-19962" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19962 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Real Estate" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/real-estate/" data-menu-id="19962" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Real Estate" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Real Estate</span></a></li>
+		<li id="menu-item-19963" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19963 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Credit &amp; Insurance" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/credit-and-insurance-bxci/" data-menu-id="19963" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Credit &amp; Insurance" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Credit &amp; Insurance</span></a></li>
+		<li id="menu-item-19964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19964 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Blackstone Multi-Asset Investing" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/blackstone-multi-asset-investing-bxma/" data-menu-id="19964" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Blackstone Multi-Asset Investing" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone Multi-Asset Investing</span></a></li>
+		<li id="menu-item-19965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19965 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Strategic Partners" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/strategic-partners/" data-menu-id="19965" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Strategic Partners" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Strategic Partners</span></a></li>
+		<li id="menu-item-19966" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19966 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Tactical Opportunities" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/tactical-opportunities/" data-menu-id="19966" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Tactical Opportunities" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Tactical Opportunities</span></a></li>
+		<li id="menu-item-19967" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19967 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Infrastructure" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/infrastructure/" data-menu-id="19967" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Infrastructure" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Infrastructure</span></a></li>
+		<li id="menu-item-19968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19968 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Life Sciences" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/life-sciences/" data-menu-id="19968" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Life Sciences" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Life Sciences</span></a></li>
+		<li id="menu-item-19969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19969 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Growth" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/blackstone-growth-bxg/" data-menu-id="19969" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Growth" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Growth</span></a></li>
+		<li id="menu-item-19970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19970 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Businesses | Energy Transition Partners" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/blackstone-energy-transition-partners/" data-menu-id="19970" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Businesses | Energy Transition Partners" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Energy Transition Partners</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-19979" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19979 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="What We Do | Transformation" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19979" class="primary-nav__list-lvl-2-link"><span data-gtm-label="What We Do | Transformation" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Transformation</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19981" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19981 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Transformation | Technology &amp; Innovations" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/our-businesses/technology-and-innovations/" data-menu-id="19981" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Transformation | Technology &amp; Innovations" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Technology &amp; Innovations</span></a></li>
+		<li id="menu-item-19980" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19980 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Transformation | Blackstone Operating Team" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/our-businesses/blackstone-operating-team" data-menu-id="19980" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Transformation | Blackstone Operating Team" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone Operating Team</span></a></li>
+	</ul>
+</li>
+	
+</ul></div>
+</li>
+<li id="menu-item-19990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19990 primary-nav__list-item primary-nav__list-item--has-children has-children"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News &amp; Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="#" data-menu-id="19990" class="primary-nav__list-item-link" aria-expanded="false"><span class="primary-nav__list-item-label" data-gtm-label="News &amp; Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">News &amp; Insights</span>		<svg class="primary-nav__list-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+			<path fill="currentColor" d="m8.7 12.4 7-6.8a1 1 0 0 0 0-1.4 1 1 0 0 0-1.4 0L8 10.3 1.7 4.2a1 1 0 0 0-1.4 0 1 1 0 0 0 0 1.4l7 6.8c.4.3 1 .3 1.4 0Z"></path>
+		</svg>
+		</a>
+<div class="primary-nav__lvl-2-wrap" aria-hidden="true"><ul class="primary-nav__list-lvl-2">
+	<li id="menu-item-19991" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19991 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News &amp; Insights | News" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19991" class="primary-nav__list-lvl-2-link"><span data-gtm-label="News &amp; Insights | News" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">News</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19992 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News | View All" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/news/" data-menu-id="19992" class="primary-nav__list-lvl-3-link"><span data-gtm-label="News | View All" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">View All</span></a></li>
+		<li id="menu-item-19993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19993 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News | Press Releases" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/news/press/" data-menu-id="19993" class="primary-nav__list-lvl-3-link"><span data-gtm-label="News | Press Releases" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Press Releases</span></a></li>
+		<li id="menu-item-19994" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19994 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News | In the News" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/news/in-the-news/" data-menu-id="19994" class="primary-nav__list-lvl-3-link"><span data-gtm-label="News | In the News" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">In the News</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-19997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19997 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News &amp; Insights | Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="19997" class="primary-nav__list-lvl-2-link"><span data-gtm-label="News &amp; Insights | Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Insights</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-19998" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19998 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Insights | View All" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/insights/" data-menu-id="19998" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Insights | View All" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">View All</span></a></li>
+		<li id="menu-item-20001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20001 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Insights | Market Views" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/insights/market-views" data-menu-id="20001" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Insights | Market Views" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Market Views</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-32707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32707 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="News &amp; Insights | Essentials of Private Markets" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="32707" class="primary-nav__list-lvl-2-link"><span data-gtm-label="News &amp; Insights | Essentials of Private Markets" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Essentials of Private Markets</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-32708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32708 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Essentials of Private Markets | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/essentials-of-private-markets/" data-menu-id="32708" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Essentials of Private Markets | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Overview</span></a></li>
+		<li id="menu-item-32709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32709 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Essentials of Private Markets | Private Equity" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/essentials-of-private-equity/" data-menu-id="32709" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Essentials of Private Markets | Private Equity" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Private Equity</span></a></li>
+		<li id="menu-item-32710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32710 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Essentials of Private Markets | Private Credit" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/essentials-of-private-credit/" data-menu-id="32710" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Essentials of Private Markets | Private Credit" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Private Credit</span></a></li>
+		<li id="menu-item-32711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32711 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Essentials of Private Markets | Private Real Estate" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/essentials-of-private-real-estate/" data-menu-id="32711" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Essentials of Private Markets | Private Real Estate" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Private Real Estate</span></a></li>
+		<li id="menu-item-32712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32712 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Essentials of Private Markets | Private Infrastructure" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/essentials-of-private-infrastructure/" data-menu-id="32712" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Essentials of Private Markets | Private Infrastructure" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Private Infrastructure</span></a></li>
+	</ul>
+</li>
+
+
+<li class="primary-nav__list-lvl-2-item has-nav-widget">
+	<div class="primary-nav-widget">
+		<div class="primary-nav-widget__content">
+			<div class="primary-nav-widget__content-inner">
+				<h2 class="primary-nav-widget__title"></h2>
+				<p><strong>Pattern Recognition:</strong> Insights from the World’s Leading Alternative Asset Manager</p>
+			</div>
+			<div class="primary-nav-widget__cta">
+				<a class="bx-singular-link_frontend " tabindex="0" href="https://www.blackstone.com/pattern-recognition/" aria-label="Learn More" data-gtm-label="|Learn More" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">
+			<span class="bx-singular-link__label">Learn More</span>
+	
+			<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+	</a>
+			</div>
+		</div>
+					<div class="primary-nav-widget__media">
+				<img width="1024" height="440" src="https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?w=1024" class="attachment-296x296 size-296x296 wp-post-image" alt="Pattern Recognition_Blackstone" decoding="async" fetchpriority="high" srcset="https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png 1650w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=300,129 300w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=768,330 768w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=1024,440 1024w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=1536,660 1536w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=1136,487 1136w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=1264,542 1264w, https://www.blackstone.com/wp-content/uploads/sites/2/2023/07/PatternRecognition_Webpage_Hero.png?resize=1648,707 1648w" sizes="(max-width: 1024px) 100vw, 1024px">			</div>
+			</div>
+</li>
+
+</ul></div>
+</li>
+<li id="menu-item-29508" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29508 primary-nav__list-item primary-nav__list-item--has-children has-children"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Financial Advisors" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="#" data-menu-id="29508" class="primary-nav__list-item-link" aria-expanded="false"><span class="primary-nav__list-item-label" data-gtm-label="Financial Advisors" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Financial Advisors</span>		<svg class="primary-nav__list-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+			<path fill="currentColor" d="m8.7 12.4 7-6.8a1 1 0 0 0 0-1.4 1 1 0 0 0-1.4 0L8 10.3 1.7 4.2a1 1 0 0 0-1.4 0 1 1 0 0 0 0 1.4l7 6.8c.4.3 1 .3 1.4 0Z"></path>
+		</svg>
+		</a>
+<div class="primary-nav__lvl-2-wrap" aria-hidden="true"><ul class="primary-nav__list-lvl-2">
+	<li id="menu-item-29509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29509 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Financial Advisors | Private Wealth at Blackstone" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="29509" class="primary-nav__list-lvl-2-link"><span data-gtm-label="Financial Advisors | Private Wealth at Blackstone" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Private Wealth at Blackstone</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-29510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29510 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Private Wealth at Blackstone | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/" data-menu-id="29510" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Private Wealth at Blackstone | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Overview</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-29511" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29511 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Financial Advisors | Blackstone University" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="29511" class="primary-nav__list-lvl-2-link"><span data-gtm-label="Financial Advisors | Blackstone University" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone University</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-29512" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29512 primary-nav__list-lvl-3-item"><a data-label-emea="Overview" data-url-emea="https://www.blackstone.com/en-emea/pws/blackstone-university/" data-label-apac="Overview" data-url-apac="https://www.blackstone.com/en-apac/pws/blackstone-university/" data-label-us="Overview" data-url-us="https://www.blackstone.com/pws/blackstone-university/" data-gtm-label="Blackstone University | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/en-apac/pws/blackstone-university/" data-menu-id="29512" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Blackstone University | Overview" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Overview</span></a></li>
+		<li id="menu-item-29513" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29513 primary-nav__list-lvl-3-item"><a data-label-emea="Essentials of Private Markets" data-url-emea="https://www.blackstone.com/en-emea/pws/essentials-of-private-markets/" data-label-apac="Essentials of Private Markets" data-url-apac="https://www.blackstone.com/en-apac/pws/essentials-of-private-markets/" data-label-us="Essentials of Private Markets" data-url-us="https://www.blackstone.com/pws/essentials-of-private-markets/" data-gtm-label="Blackstone University | Essentials of Private Markets" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/en-apac/pws/essentials-of-private-markets/" data-menu-id="29513" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Blackstone University | Essentials of Private Markets" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Essentials of Private Markets</span></a></li>
+		<li id="menu-item-29517" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29517 primary-nav__list-lvl-3-item"><a data-label-emea="Insights" data-url-emea="https://www.blackstone.com/en-emea/pws/insights" data-label-apac="Insights" data-url-apac="https://www.blackstone.com/en-apac/pws/insights" data-label-us="Insights" data-url-us="https://www.blackstone.com/pws/insights" data-gtm-label="Blackstone University | Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" title="https://www.blackstone.com/pws/insights" href="https://www.blackstone.com/en-apac/pws/insights" data-menu-id="29517" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Blackstone University | Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Insights</span></a></li>
+		<li id="menu-item-29519" class="pws-not-apac pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-29519 primary-nav__list-lvl-3-item" style="display: none;"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Blackstone University | Events" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/events/" data-menu-id="29519" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Blackstone University | Events" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Events</span></a></li>
+		<li id="menu-item-29520" class="pws-not-apac pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-29520 primary-nav__list-lvl-3-item" style="display: none;"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Blackstone University | Continuing Education" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.blackstone.com/pws/continuing-education-program/" data-menu-id="29520" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Blackstone University | Continuing Education" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Continuing Education</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-29521" class="pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29521 primary-nav__list-lvl-2-item"><span data-label-emea="" data-url-emea="" data-label-apac="Strategies" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Financial Advisors | Products" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-menu-id="29521" class="primary-nav__list-lvl-2-link"><span data-gtm-label="Financial Advisors | Products" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Strategies</span></span>
+	<ul class="primary-nav__list-lvl-3">
+		<li id="menu-item-29522" class="pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-29522 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="European Real Estate" data-url-apac="https://www.bepif.com/" data-label-us="" data-url-us="" data-gtm-label="Products | Blackstone Real Estate Income Trust (BREIT)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" target="_blank" rel="noopener" href="https://www.bepif.com/" data-menu-id="29522" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Products | Blackstone Real Estate Income Trust (BREIT)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">European Real Estate</span></a></li>
+		<li id="menu-item-29523" class="pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-29523 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="European Credit" data-url-apac="https://www.ecred.com/" data-label-us="" data-url-us="" data-gtm-label="Products | Blackstone Private Credit Fund (BCRED)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" target="_blank" rel="noopener" href="https://www.ecred.com/" data-menu-id="29523" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Products | Blackstone Private Credit Fund (BCRED)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">European Credit</span></a></li>
+		<li id="menu-item-32045" class="pws-not-apac pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-32045 primary-nav__list-lvl-3-item" style="display: none;"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Products | Blackstone Private Multi-Asset Credit and Income Fund (BMACX)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.bmacx.com/" data-menu-id="32045" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Products | Blackstone Private Multi-Asset Credit and Income Fund (BMACX)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Blackstone Private Multi-Asset Credit and Income Fund (BMACX)</span></a></li>
+		<li id="menu-item-29524" class="pws-not-emea menu-item menu-item-type-custom menu-item-object-custom menu-item-29524 primary-nav__list-lvl-3-item"><a data-label-emea="" data-url-emea="" data-label-apac="Global Private Equity" data-url-apac="https://www.bxpef.com/" data-label-us="" data-url-us="" data-gtm-label="Products | View All" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.bxpef.com/" data-menu-id="29524" class="primary-nav__list-lvl-3-link"><span data-gtm-label="Products | View All" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Global Private Equity</span></a></li>
+	</ul>
+</li>
+</ul></div>
+</li>
+<li id="menu-item-19989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19989 primary-nav__list-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="Shareholders" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://ir.blackstone.com/overview/default.aspx" data-menu-id="19989" class="primary-nav__list-item-link"><span class="primary-nav__list-item-label" data-gtm-label="Shareholders" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">Shareholders</span></a></li>
+<li id="menu-item-20007" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20007 primary-nav__list-item"><a data-label-emea="" data-url-emea="" data-label-apac="" data-url-apac="" data-label-us="" data-url-us="" data-gtm-label="LP Login" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.bxaccess.com/portal/" data-menu-id="20007" class="primary-nav__list-item-link"><span class="primary-nav__list-item-label" data-gtm-label="LP Login" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click">LP Login</span></a></li>
+</ul>																								<div class="primary-nav__search">
+									<div class="primary-nav__search-inner">
+										<a class="primary-nav__search-link" href="/?s" aria-label="Search the site">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" heigth="20" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Search" data-gtm-component_type="Navigation Header">
+												<path fill="currentColor" d="m19.738 18.591-4.879-4.879a8.385 8.385 0 1 0-1.169 1.165l4.879 4.879a.827.827 0 0 0 1.173-1.165h-.004ZM15.1 8.429a6.69 6.69 0 1 1-6.691-6.693 6.699 6.699 0 0 1 6.69 6.693Z"></path>
+											</svg>
+										</a>
+									</div>
+								</div>
+																<template id="primaryNavBackdrop">
+									<div class="primary-nav__backdrop primary-nav__backdrop--hidden"></div>
+								</template>
+							</div>
+						</div>
+											</div>
+				</div></header>
+	<main id="primary" class="site__main site-main">
+									<div class="default-page default-page--content-only">
+					<div class="default-page__content" id="content">
+						<div class="bx-content-container">
+							
+<section class="bx-block-component bx-promo-header alignfull bx-stacked-component-header-padding-top bx-stacked-component-header-padding-bottom    is-color-theme-dark wp-block-blackstone-v2-promo-header" data-parent_block="" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;&quot;,&quot;nextBlockColorTheme&quot;:&quot;dark&quot;,&quot;previousBlockName&quot;:&quot;&quot;,&quot;nextBlockName&quot;:&quot;blackstone-v2/promo-carousel&quot;,&quot;currentBlockTheme&quot;:&quot;default&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/promo-header&quot;}" data-comp_name="blackstone-v2/promo-header" data-gtm-component_title="Build with Blackstone" data-gtm-component_type="Promo Header">
+	<div class="bx-promo-header__inner">
+		<h1 class="bx-promo-header__title animated words chars splitting" style="--word-total: 3; --char-total: 19; opacity: 1; visibility: inherit;"><span class="bx-promo-header__title-1"><strong><span class="word" data-word="Build" style="--word-index: 0;"><span class="char" data-char="B" style="--char-index: 0; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">B</span><span class="char" data-char="u" style="--char-index: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">u</span><span class="char" data-char="i" style="--char-index: 2; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">i</span><span class="char" data-char="l" style="--char-index: 3; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">l</span><span class="char" data-char="d" style="--char-index: 4; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">d</span></span></strong> <span class="word" data-word="with" style="--word-index: 1;"><span class="char" data-char="w" style="--char-index: 5; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">w</span><span class="char" data-char="i" style="--char-index: 6; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">i</span><span class="char" data-char="t" style="--char-index: 7; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">t</span><span class="char" data-char="h" style="--char-index: 8; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">h</span></span></span><span class="bx-promo-header__title-2"><span class="word" data-word="Blackstone" style="--word-index: 2;"><span class="char" data-char="B" style="--char-index: 9; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">B</span><span class="char" data-char="l" style="--char-index: 10; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">l</span><span class="char" data-char="a" style="--char-index: 11; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">a</span><span class="char" data-char="c" style="--char-index: 12; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">c</span><span class="char" data-char="k" style="--char-index: 13; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">k</span><span class="char" data-char="s" style="--char-index: 14; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">s</span><span class="char" data-char="t" style="--char-index: 15; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">t</span><span class="char" data-char="o" style="--char-index: 16; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">o</span><span class="char" data-char="n" style="--char-index: 17; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">n</span><span class="char" data-char="e" style="--char-index: 18; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">e</span></span></span></h1>
+		
+					<div class="bx-promo-header__description animated" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+				<p class="">
+					At Blackstone, we deliver for investors by building businesses that power tomorrow’s economy				</p>
+			</div>
+			</div>
+</section>
+
+
+<section class="bx-block-component bx-promo-carousel alignfull is-color-theme-dark bx-component-main-no-padding-top bx-component-main-alternate-padding-bottom wp-block-blackstone-v2-promo-carousel" id="bxPromoCarousel1" data-parent_block="" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;default&quot;,&quot;nextBlockColorTheme&quot;:&quot;default&quot;,&quot;previousBlockName&quot;:&quot;blackstone-v2/promo-header&quot;,&quot;nextBlockName&quot;:&quot;blackstone-v2/our-offerings&quot;,&quot;currentBlockTheme&quot;:&quot;dark&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/promo-carousel&quot;}" data-comp_name="blackstone-v2/promo-carousel" data-gtm-component_type="Promo Carousel" aria-labelledby="Promo-Carousel-aca18dc1-b31d-44e8-8f32-4e1eb653e382">
+    	<div class=" ">
+    <div id="" class="bx-promo-carousel__inner ">
+					<div class="tns-outer" id="tns1-ow"><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">2</span>  of 3</div><div id="tns1-mw" class="tns-ovh"><div class="tns-inner" id="tns1-iw"><div class="bx-promo-carousel__items  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transition-duration: 0s; transform: translate3d(-20%, 0px, 0px);"><div class="bx-brightcove-no__disclaimer_class bx-promo-carousel__item bx-promo-carousel__item--image tns-item tns-slide-cloned" data-index="3" data-url="https://www.blackstone.com/pattern-recognition/" data-label="Learn More" data-gtm-label="Promo Carousel Block Floater | Learn More" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" aria-hidden="true" tabindex="-1">
+
+		
+
+						<a href="https://www.blackstone.com/pattern-recognition/" tabindex="-1" class="bx-promo-carousel-item__href " aria-hidden="true">
+				
+		<div class="bx-promo-carousel-item__media bx-promo-custom-height ">
+			<img decoding="async" src="https://blackstone.scene7.com/is/image/blackstone/PR_Homepage-Carousel-Image-1" alt="PR Homepage Carousel" data-gtm-component_title="Pattern Recognition" data-gtm-component_type="Promo carousel" data-gtm-page_name="https://www.blackstone.com/" data-gtm-tag_name="Page Engagement" data-gtm-click_text="PR Homepage Carousel" data-gtm-click_url="https://blackstone.scene7.com/is/image/blackstone/PR_Homepage-Carousel-Image-1">
+						<div class="bx-promo-carousel-item__curtain"></div>
+		</div>
+			
+		</a>
+			
+	<div class="bx-promo-carousel-item__main  bx-promo-has-no-eyebrow  ">
+	<!-- Eyebrow -->
+		<div class=" bx-promo-carousel-item__title">
+					<h3 class="bx-promo-crousel-item_title-inner">
+				Pattern Recognition			</h3>
+				</div>
+
+		
+				<div class="bx-promo-carousel-item__content ">
+						<div class="bx-promo-carousel-item__blurb">
+				<!-- BE To Do: <p> tags should be output automatically -->
+				<p>Insights from the World’s Largest Alternative Asset Manager</p>
+			</div>
+			
+							<div class="bx-promo-carousel-item__cta ">
+									<a class="bx-singular-link_frontend " href="https://www.blackstone.com/pattern-recognition/" data-gtm-label="Promo Carousel Block Image Slide &quot;3&quot; | Learn More" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" data-gtm-component_type="Promo Carousel" data-gtm-component_title="null" tabindex="-1" aria-hidden="true">
+														<span class="bx-singular-link__label">Learn More</span>
+																	<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+																			</a>
+									</div>
+					</div>
+			</div>
+</div>
+				<div id="bxPromoCarousel&quot;1&quot;carouselItem&quot;1&quot;" class="bx-brightcove-no__disclaimer_class bx-promo-carousel__item bx-promo-carousel__item--image tns-item tns-slide-active" data-index="1" data-url="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" data-label="Play Video" data-gtm-label="Promo Carousel Block Floater | Play Video" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click">
+
+		
+
+						<a href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" tabindex="0" class="bx-promo-carousel-item__href bx-featured-content-video-link__brightcove">
+				
+		</a><div class="bx-promo-carousel-item__media bx-promo-custom-height "><a href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" tabindex="0" class="bx-promo-carousel-item__href bx-featured-content-video-link__brightcove">
+			<img decoding="async" src="https://blackstone.scene7.com/is/image/blackstone/AiMicroSite_SASJG_Thumbnail_1648x707-1" alt="AI Micro Site" data-gtm-component_title="Building the Infrastructure of the Future" data-gtm-component_type="Promo carousel" data-gtm-page_name="https://www.blackstone.com/" data-gtm-tag_name="Page Engagement" data-gtm-click_text="AI Micro Site" data-gtm-click_url="https://blackstone.scene7.com/is/image/blackstone/AiMicroSite_SASJG_Thumbnail_1648x707-1">
+			
+				</a><a aria-label="Play Video" class="bx-article-content-video__link bx-featured-content-video-link__brightcove" href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112">
+
+					<svg class="bx-featured-content-video__svg_dark bx-article-content-video__svg" xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88">
+    <defs>
+        <style>
+        .cls-1-dark {
+            fill: #fff;
+        }
+        </style>
+    </defs>
+    <g id="Group_9" data-name="Group 9" transform="translate(-1648 -989)">
+        <circle id="_--c-white" data-name="--c-white" class="cls-1-dark" cx="44" cy="44" r="44" transform="translate(1648 989)"></circle>
+        <path id="_--c-black" data-name="--c-black" d="M282.9,173.657,264.3,184.45h0a1.2,1.2,0,0,1-1.2,0,1.209,1.209,0,0,1-.6-1.045V161.819a1.209,1.209,0,0,1,.6-1.046,1.2,1.2,0,0,1,1.2,0l18.6,10.793h0a1.21,1.21,0,0,1,0,2.09Z" transform="translate(1421.498 860.388)"></path>
+    </g>
+</svg>
+				</a>
+
+							<div class="bx-promo-carousel-item__curtain"></div>
+		</div>
+			
+		
+			
+	<div class="bx-promo-carousel-item__main  bx-promo-has-no-eyebrow  ">
+	<!-- Eyebrow -->
+		<div class=" bx-promo-carousel-item__title">
+					<h3 class="bx-promo-crousel-item_title-inner">
+				Building the Infrastructure of the Future			</h3>
+				</div>
+
+		
+				<div class="bx-promo-carousel-item__content ">
+						<div class="bx-promo-carousel-item__blurb">
+				<!-- BE To Do: <p> tags should be output automatically -->
+				<p>From data centers to the energy that powers them, Blackstone is providing the infrastructure to fuel the AI revolution.</p>
+			</div>
+			
+							<div class="bx-promo-carousel-item__cta ">
+									<a class="bx-singular-link_frontend bx-featured-content-video-link__brightcove" href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" data-gtm-label="Promo Carousel Block Image Slide &quot;1&quot; | Play Video" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" data-gtm-component_type="Promo Carousel" data-gtm-component_title="null">
+													<span class="bx-singular-link__label">Play Video</span>
+								<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+									<path class="bx-singular-link__icon-arrow" fill="currentColor" d="M28.59 19.38 16.13 13.1a.82.82 0 0 0-.77 0 .66.66 0 0 0-.36.62V26.3c-.01.26.13.5.36.61a.81.81 0 0 0 .78 0l12.46-6.29a.67.67 0 0 0 0-1.23h-.01Z"></path>
+									<path class="bx-singular-link__icon-fill" fill="currentColor" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm-4.64 13.1a.66.66 0 0 0-.36.6v12.6c-.01.26.13.5.36.61a.81.81 0 0 0 .78 0l12.46-6.29a.67.67 0 0 0 0-1.23h-.01L16.13 13.1a.82.82 0 0 0-.77 0Z"></path>
+									<path class="bx-singular-link__icon-border" fill="currentColor" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z"></path>
+								</svg>
+											</a>
+									</div>
+					</div>
+			</div>
+</div><div id="bxPromoCarousel&quot;1&quot;carouselItem&quot;2&quot;" class="bx-brightcove-no__disclaimer_class bx-promo-carousel__item bx-promo-carousel__item--image tns-item" data-index="2" data-url="https://www.blackstone.com/investing-in-ai/" data-label="Learn More" data-gtm-label="Promo Carousel Block Floater | Learn More" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" aria-hidden="true" tabindex="-1">
+
+		
+
+						<a href="https://www.blackstone.com/investing-in-ai/" tabindex="0" class="bx-promo-carousel-item__href ">
+				
+		<div class="bx-promo-carousel-item__media bx-promo-custom-height ">
+			<img decoding="async" src="https://blackstone.scene7.com/is/image/blackstone/Ai%20Webpage%20-%20Second%20Video%20Thumbnail-1" alt="AI Webpage Carousel 2" data-gtm-component_title="Investing in AI" data-gtm-component_type="Promo carousel" data-gtm-page_name="https://www.blackstone.com/" data-gtm-tag_name="Page Engagement" data-gtm-click_text="AI Webpage Carousel 2" data-gtm-click_url="https://blackstone.scene7.com/is/image/blackstone/Ai%20Webpage%20-%20Second%20Video%20Thumbnail-1">
+						<div class="bx-promo-carousel-item__curtain"></div>
+		</div>
+			
+		</a>
+			
+	<div class="bx-promo-carousel-item__main  bx-promo-has-no-eyebrow  ">
+	<!-- Eyebrow -->
+		<div class=" bx-promo-carousel-item__title">
+					<h3 class="bx-promo-crousel-item_title-inner">
+				Investing in AI			</h3>
+				</div>
+
+		
+				<div class="bx-promo-carousel-item__content ">
+						<div class="bx-promo-carousel-item__blurb">
+				<!-- BE To Do: <p> tags should be output automatically -->
+				<p>Artificial intelligence is transforming the ways we live and work. At Blackstone, we’re investing across the AI ecosystem and deploying AI tools to build stronger businesses.</p>
+			</div>
+			
+							<div class="bx-promo-carousel-item__cta ">
+									<a class="bx-singular-link_frontend " href="https://www.blackstone.com/investing-in-ai/" data-gtm-label="Promo Carousel Block Image Slide &quot;2&quot; | Learn More" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" data-gtm-component_type="Promo Carousel" data-gtm-component_title="null">
+														<span class="bx-singular-link__label">Learn More</span>
+																	<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+																			</a>
+									</div>
+					</div>
+			</div>
+</div><div id="bxPromoCarousel&quot;1&quot;carouselItem&quot;3&quot;" class="bx-brightcove-no__disclaimer_class bx-promo-carousel__item bx-promo-carousel__item--image tns-item" data-index="3" data-url="https://www.blackstone.com/pattern-recognition/" data-label="Learn More" data-gtm-label="Promo Carousel Block Floater | Learn More" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" aria-hidden="true" tabindex="-1">
+
+		
+
+						<a href="https://www.blackstone.com/pattern-recognition/" tabindex="0" class="bx-promo-carousel-item__href ">
+				
+		<div class="bx-promo-carousel-item__media bx-promo-custom-height ">
+			<img decoding="async" src="https://blackstone.scene7.com/is/image/blackstone/PR_Homepage-Carousel-Image-1" alt="PR Homepage Carousel" data-gtm-component_title="Pattern Recognition" data-gtm-component_type="Promo carousel" data-gtm-page_name="https://www.blackstone.com/" data-gtm-tag_name="Page Engagement" data-gtm-click_text="PR Homepage Carousel" data-gtm-click_url="https://blackstone.scene7.com/is/image/blackstone/PR_Homepage-Carousel-Image-1">
+						<div class="bx-promo-carousel-item__curtain"></div>
+		</div>
+			
+		</a>
+			
+	<div class="bx-promo-carousel-item__main  bx-promo-has-no-eyebrow  ">
+	<!-- Eyebrow -->
+		<div class=" bx-promo-carousel-item__title">
+					<h3 class="bx-promo-crousel-item_title-inner">
+				Pattern Recognition			</h3>
+				</div>
+
+		
+				<div class="bx-promo-carousel-item__content ">
+						<div class="bx-promo-carousel-item__blurb">
+				<!-- BE To Do: <p> tags should be output automatically -->
+				<p>Insights from the World’s Largest Alternative Asset Manager</p>
+			</div>
+			
+							<div class="bx-promo-carousel-item__cta ">
+									<a class="bx-singular-link_frontend " href="https://www.blackstone.com/pattern-recognition/" data-gtm-label="Promo Carousel Block Image Slide &quot;3&quot; | Learn More" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" data-gtm-component_type="Promo Carousel" data-gtm-component_title="null">
+														<span class="bx-singular-link__label">Learn More</span>
+																	<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+																			</a>
+									</div>
+					</div>
+			</div>
+</div>			<div class="bx-brightcove-no__disclaimer_class bx-promo-carousel__item bx-promo-carousel__item--image tns-item tns-slide-cloned" data-index="1" data-url="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" data-label="Play Video" data-gtm-label="Promo Carousel Block Floater | Play Video" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" aria-hidden="true" tabindex="-1">
+
+		
+
+						<a href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" tabindex="-1" class="bx-promo-carousel-item__href bx-featured-content-video-link__brightcove" aria-hidden="true">
+				
+		</a><div class="bx-promo-carousel-item__media bx-promo-custom-height "><a href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" tabindex="-1" class="bx-promo-carousel-item__href bx-featured-content-video-link__brightcove" aria-hidden="true">
+			<img decoding="async" src="https://blackstone.scene7.com/is/image/blackstone/AiMicroSite_SASJG_Thumbnail_1648x707-1" alt="AI Micro Site" data-gtm-component_title="Building the Infrastructure of the Future" data-gtm-component_type="Promo carousel" data-gtm-page_name="https://www.blackstone.com/" data-gtm-tag_name="Page Engagement" data-gtm-click_text="AI Micro Site" data-gtm-click_url="https://blackstone.scene7.com/is/image/blackstone/AiMicroSite_SASJG_Thumbnail_1648x707-1">
+			
+				</a><a aria-label="Play Video" class="bx-article-content-video__link bx-featured-content-video-link__brightcove" href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" tabindex="-1" aria-hidden="true">
+
+					<svg class="bx-featured-content-video__svg_dark bx-article-content-video__svg" xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88">
+    <defs>
+        <style>
+        .cls-1-dark {
+            fill: #fff;
+        }
+        </style>
+    </defs>
+    <g id="Group_9" data-name="Group 9" transform="translate(-1648 -989)">
+        <circle id="_--c-white" data-name="--c-white" class="cls-1-dark" cx="44" cy="44" r="44" transform="translate(1648 989)"></circle>
+        <path id="_--c-black" data-name="--c-black" d="M282.9,173.657,264.3,184.45h0a1.2,1.2,0,0,1-1.2,0,1.209,1.209,0,0,1-.6-1.045V161.819a1.209,1.209,0,0,1,.6-1.046,1.2,1.2,0,0,1,1.2,0l18.6,10.793h0a1.21,1.21,0,0,1,0,2.09Z" transform="translate(1421.498 860.388)"></path>
+    </g>
+</svg>
+				</a>
+
+							<div class="bx-promo-carousel-item__curtain"></div>
+		</div>
+			
+		
+			
+	<div class="bx-promo-carousel-item__main  bx-promo-has-no-eyebrow  ">
+	<!-- Eyebrow -->
+		<div class=" bx-promo-carousel-item__title">
+					<h3 class="bx-promo-crousel-item_title-inner">
+				Building the Infrastructure of the Future			</h3>
+				</div>
+
+		
+				<div class="bx-promo-carousel-item__content ">
+						<div class="bx-promo-carousel-item__blurb">
+				<!-- BE To Do: <p> tags should be output automatically -->
+				<p>From data centers to the energy that powers them, Blackstone is providing the infrastructure to fuel the AI revolution.</p>
+			</div>
+			
+							<div class="bx-promo-carousel-item__cta ">
+									<a class="bx-singular-link_frontend bx-featured-content-video-link__brightcove" href="https://players.brightcove.net/5843213364001/default_default/index.html?videoId=6362764337112" data-gtm-label="Promo Carousel Block Image Slide &quot;1&quot; | Play Video" data-gtm-category="Content Engagement" data-gtm-tag_name="CTA Click" data-gtm-component_type="Promo Carousel" data-gtm-component_title="null" tabindex="-1" aria-hidden="true">
+													<span class="bx-singular-link__label">Play Video</span>
+								<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+									<path class="bx-singular-link__icon-arrow" fill="currentColor" d="M28.59 19.38 16.13 13.1a.82.82 0 0 0-.77 0 .66.66 0 0 0-.36.62V26.3c-.01.26.13.5.36.61a.81.81 0 0 0 .78 0l12.46-6.29a.67.67 0 0 0 0-1.23h-.01Z"></path>
+									<path class="bx-singular-link__icon-fill" fill="currentColor" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm-4.64 13.1a.66.66 0 0 0-.36.6v12.6c-.01.26.13.5.36.61a.81.81 0 0 0 .78 0l12.46-6.29a.67.67 0 0 0 0-1.23h-.01L16.13 13.1a.82.82 0 0 0-.77 0Z"></path>
+									<path class="bx-singular-link__icon-border" fill="currentColor" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z"></path>
+								</svg>
+											</a>
+									</div>
+					</div>
+			</div>
+</div></div></div></div></div>
+
+		
+
+							<div class="bx-promo-carousel__footer" style="top: 766px; position: absolute;">
+														<div class="bx-promo-carousel__nav bx-promo-carousel-third__active">
+						<button class="bx-promo-carousel__nav-button bx-promo-carousel__nav-button--prev" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Promo Carousel Block | Show Previous Slide" data-gtm-tag_name="Carousel Arrow Click" data-gtm-component_title="Build with Blackstone" data-gtm-component_type="Promo Carousel" data-gtm-carousel_arrow="Arrow" aria-controls="tns1" tabindex="-1" data-controls="prev">
+							<span class="visually-hidden">Show Previous Slide</span>
+							<svg class="bx-promo-carousel__nav-button-icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-promo-carousel__nav-button-icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-promo-carousel__nav-button-icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-promo-carousel__nav-button-icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+						</button>
+						<ul class="bx-dot-nav">
+															<li class="bx-dot-nav__item  bx-dot-nav__item--active">
+									<a data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Promo Carousel Block | Dot 1" data-gtm-tag_name="Carousel Arrow Click" data-gtm-component_title="Building the Infrastructure of the Future" data-gtm-component_type="Promo Carousel" data-gtm-carousel_arrow="Bullet point" href="#bxPromoCarousel1carouselItem1" class="bx-dot-nav__item-link" data-index="1">
+										<svg class="bx-promo-carousel__nav-item-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" data-circumference="83.25">
+											<circle class="bx-dot-nav__item-stroke" fill="transparent" stroke="currentColor" cx="14" cy="14" r="13.25" stroke-dasharray="83.25 0" stroke-dashoffset="20.8125" stroke-width="1.5"></circle>
+										</svg>
+
+										<span class="visually-hidden">
+											Go to slide 											Building the Infrastructure of the Future										</span>
+									</a>
+								</li>
+															<li class="bx-dot-nav__item ">
+									<a data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Promo Carousel Block | Dot 2" data-gtm-tag_name="Carousel Arrow Click" data-gtm-component_title="Investing in AI" data-gtm-component_type="Promo Carousel" data-gtm-carousel_arrow="Bullet point" href="#bxPromoCarousel1carouselItem2" class="bx-dot-nav__item-link" data-index="2">
+										<svg class="bx-promo-carousel__nav-item-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" data-circumference="83.25">
+											<circle class="bx-dot-nav__item-stroke" fill="transparent" stroke="currentColor" cx="14" cy="14" r="13.25" stroke-dasharray="83.25 0" stroke-dashoffset="20.8125" stroke-width="1.5"></circle>
+										</svg>
+
+										<span class="visually-hidden">
+											Go to slide 											Investing in AI										</span>
+									</a>
+								</li>
+															<li class="bx-dot-nav__item ">
+									<a data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Promo Carousel Block | Dot 3" data-gtm-tag_name="Carousel Arrow Click" data-gtm-component_title="Pattern Recognition" data-gtm-component_type="Promo Carousel" data-gtm-carousel_arrow="Bullet point" href="#bxPromoCarousel1carouselItem3" class="bx-dot-nav__item-link" data-index="3">
+										<svg class="bx-promo-carousel__nav-item-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" data-circumference="83.25">
+											<circle class="bx-dot-nav__item-stroke" fill="transparent" stroke="currentColor" cx="14" cy="14" r="13.25" stroke-dasharray="83.25 0" stroke-dashoffset="20.8125" stroke-width="1.5"></circle>
+										</svg>
+
+										<span class="visually-hidden">
+											Go to slide 											Pattern Recognition										</span>
+									</a>
+								</li>
+													</ul>
+						<button class="bx-promo-carousel__nav-button bx-promo-carousel__nav-button--next" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Promo Carousel Block | Show Next Slide" data-gtm-tag_name="Carousel Arrow Click" data-gtm-component_title="Build with Blackstone" data-gtm-component_type="Promo Carousel" data-gtm-carousel_arrow="Arrow" aria-controls="tns1" tabindex="-1" data-controls="next">
+							<span class="visually-hidden">Show Next Slide</span>
+							<svg class="bx-promo-carousel__nav-button-icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-promo-carousel__nav-button-icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-promo-carousel__nav-button-icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-promo-carousel__nav-button-icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+						</button>
+					</div>
+								</div>
+						</div><!-- /.bx-promo-carousel__inner -->
+	</div>
+
+		
+</section>
+
+
+<section class="bx-block-component bx-offerings alignfull   bx-component-base-padding-top bx-component-base-padding-bottom wp-block-blackstone-v2-our-offerings" data-parent_block="" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;dark&quot;,&quot;nextBlockColorTheme&quot;:&quot;dark&quot;,&quot;previousBlockName&quot;:&quot;blackstone-v2/promo-carousel&quot;,&quot;nextBlockName&quot;:&quot;blackstone-v2/two-up-content&quot;,&quot;currentBlockTheme&quot;:&quot;default&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/our-offerings&quot;}" data-comp_name="blackstone-v2/our-offerings" data-gtm-component_title="Delivering for Investors" data-gtm-component_type="Our Offerings">
+	<div class="bx-offerings__inner">
+		<div class="bx-offerings__heading bx-offerings-heading has-text-align-center">
+							<p class="bx-offerings-heading__eyebrow" aria-hidden="true">The firm</p>
+			
+			<h2 class="bx-offerings-heading__title">
+									<span class="visually-hidden">The firm: </span>Delivering for Investors							</h2>
+		</div>
+
+		
+
+<div class="bx-offerings__main bx-offerings-main wp-block-blackstone-v2-our-offerings-main">
+			<h3 class="bx-offerings-main__title">
+			Unmatched scale		</h3>
+	
+	<div class="bx-offerings-main__content">
+					<div class="bx-offerings-main__copy">
+				<p>Blackstone is the world’s largest alternative asset manager, with more than $1 trillion in AUM. We serve institutional and individual investors by building strong businesses that deliver lasting value. Our scale – with 12,500+ real estate assets and 250+ portfolio companies<sup style="font-size: var(--fs-16) !important; font-weight: var(--fw-light) !important;">[1]</sup> – enables us to invest in dynamic sectors positioned for long-term growth.</p>
+			</div>
+		
+					<div class="bx-offerings-main__cta">
+								<a class="bx-singular-link_frontend " tabindex="0" href="https://www.blackstone.com/the-firm/" aria-label="Learn More" data-gtm-label="Our Offerings Block | Unmatched scale | Learn More" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="CTA Click" data-gtm-component_title="Unmatched scale" data-gtm-component_type="Our Offerings">
+			<span class="bx-singular-link__label">Learn More</span>
+	
+			<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+	</a>
+			</div>
+			</div>
+	<div class="bx-offerings-main__stat">
+					<p class="bx-offerings-main__stat-value">$1.2T </p>
+							<div class="bx-offerings-main__stat-subtext"> 
+				<p>Assets Under Management</p>
+			</div>
+							<div class="bx-offerings-main__stat-disclaimer">
+				<p>All figures as of June 30, 2025, unless otherwise indicated.<br><br><sup style="font-size: var(--fs-12) !important; font-weight: var(--fw-light) !important;">[1]</sup>As of March 31, 2025.<br></p>
+			</div>
+			</div>
+</div>
+
+
+
+<div class="bx-offerings__highlights bx-offerings-highlights wp-block-blackstone-v2-our-offerings-highlights">
+	
+
+<div class="bx-offerings-highlights__item wp-block-blackstone-v2-our-offerings-highlights-item">
+	<div class="bx-offerings-card">
+							<div class="bx-offerings-card__media " style="--x: 0.5; --y: 0.5;">
+			<picture>
+			<img src="https://blackstone.scene7.com/is/image/blackstone/Wood-Grain-1?wid=1280&amp;hei=854" alt="Wood_Grain" style="opacity: 1; visibility: inherit;">
+			<div class="bx-offerings-card__media-curtain" style="translate: none; rotate: none; scale: none; transform: translate(0px, -100%);"></div>
+			
+			</picture>
+		</div>
+				<div class="bx-offerings-card__content">
+							<h2 class="bx-offerings-card__title" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+					Build financial security				</h2>
+										<div class="bx-offerings-card__description" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+					<p>We seek to deliver outstanding performance for institutional and individual investors by stewarding their capital with integrity and conviction.</p>
+				</div>
+										<div class="bx-offerings-card__cta" style="opacity: 1; visibility: inherit;">
+															<p><a data-gtm-label="Our Offerings Block Item | Build financial security | Learn More" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="CTA Click" data-gtm-component_title="Build financial security" data-gtm-component_type="Our Offerings" href="https://www.blackstone.com/the-firm/#our-clients">Learn More</a></p>
+				</div>
+					</div>
+	</div>
+</div>
+
+
+<div class="bx-offerings-highlights__item wp-block-blackstone-v2-our-offerings-highlights-item">
+	<div class="bx-offerings-card">
+							<div class="bx-offerings-card__media " style="--x: 0.5; --y: 0.5;">
+			<picture>
+			<img src="https://blackstone.scene7.com/is/image/blackstone/The_Firm_2-1?wid=800&amp;hei=1066" alt="The_Firm_2" style="opacity: 1; visibility: inherit;">
+			<div class="bx-offerings-card__media-curtain" style="translate: none; rotate: none; scale: none; transform: translate(0px, -100%);"></div>
+			
+			</picture>
+		</div>
+				<div class="bx-offerings-card__content">
+							<h2 class="bx-offerings-card__title" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+					Build your career				</h2>
+										<div class="bx-offerings-card__description" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+					<p>We offer an environment where exceptional talent can build lasting careers. To work at Blackstone means being at the forefront of emerging trends and setting the standards for our industry.</p>
+				</div>
+										<div class="bx-offerings-card__cta" style="opacity: 1; visibility: inherit;">
+															<p><a data-gtm-label="Our Offerings Block Item | Build your career | Learn More" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="CTA Click" data-gtm-component_title="Build your career" data-gtm-component_type="Our Offerings" href="https://www.blackstone.com/careers/careers-blackstone/">Learn More</a></p>
+				</div>
+					</div>
+	</div>
+</div>
+
+
+<div class="bx-offerings-highlights__item wp-block-blackstone-v2-our-offerings-highlights-item">
+	<div class="bx-offerings-card">
+							<div class="bx-offerings-card__media " style="--x: 0.5; --y: 0.5;">
+			<picture>
+			<img src="https://blackstone.scene7.com/is/image/blackstone/The_Firm_3-1?wid=800&amp;hei=1066" alt="The_Firm_3" style="opacity: 1; visibility: inherit;">
+			<div class="bx-offerings-card__media-curtain" style="translate: none; rotate: none; scale: none; transform: translate(0px, -100%);"></div>
+			
+			</picture>
+		</div>
+				<div class="bx-offerings-card__content">
+							<h2 class="bx-offerings-card__title" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+					Build strong businesses				</h2>
+										<div class="bx-offerings-card__description" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+					<p>We equip businesses with an extensive range of tools and capabilities they need to grow.</p>
+				</div>
+										<div class="bx-offerings-card__cta" style="opacity: 1; visibility: inherit;">
+															<p><a data-gtm-label="Our Offerings Block Item | Build strong businesses | Learn More" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="CTA Click" data-gtm-component_title="Build strong businesses" data-gtm-component_type="Our Offerings" href="https://www.blackstone.com/our-businesses/portfolio-operations/">Learn More</a></p>
+				</div>
+					</div>
+	</div>
+</div>
+</div>
+
+	</div>
+</section>
+
+
+
+<section class="bx-block-component bx-two-up-content alignfull is-color-theme-dark bx-component-stacked-same-theme-padding-top bx-component-base-padding-bottom intl-only bx-component-base-padding-top wp-block-blackstone-v2-two-up-content" data-parent_block="" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;dark&quot;,&quot;nextBlockColorTheme&quot;:&quot;dark&quot;,&quot;previousBlockName&quot;:&quot;blackstone-v2/two-up-content&quot;,&quot;nextBlockName&quot;:&quot;blackstone-v2/tickertape&quot;,&quot;currentBlockTheme&quot;:&quot;dark&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/two-up-content&quot;}" data-comp_name="blackstone-v2/two-up-content" data-gtm-component_title="Institutional quality for individual investors" data-gtm-component_type="Two-up Content">
+	<div class="bx-two-up-content__inner">
+					<p class="bx-two-up-content__eyebrow is-style-eyebrow">Private wealth solutions</p>
+		
+		<h3 class="bx-two-up-content__title" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+			Institutional quality for individual investors		</h3>
+
+					<div class="bx-two-up-content__copy" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+				<p>
+					Blackstone Private Wealth Solutions partners with financial advisors to unlock access to private markets for their clients.				</p>
+			</div>
+		
+					<div class="bx-two-up-content__cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+								<a class="bx-singular-link_frontend " tabindex="0" href="https://pws.blackstone.com/" aria-label="Learn More" target="_blank" rel="noreferrer" data-gtm-label="Two-up Content Block | Learn More" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="CTA Click" data-gtm-component_title="Institutional quality for individual investors" data-gtm-component_type="Two-up content">
+			<span class="bx-singular-link__label">Learn More</span>
+	
+			<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+	</a>
+			</div>
+		
+		<div class="bx-two-up-content__links ">
+			<div class="bx-two-up-content__links-inner">
+									<div class="bx-two-up-content__link">
+						<div class="bx-two-up-content__link-col">
+							<p class="bx-two-up-content__link-label" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+								Insights from Our Private Wealth Business							</p>
+						</div>
+
+													<a class="bx-singular-link_frontend " tabindex="0" href="https://pws.blackstone.com/education-insights/" aria-label="https://pws.blackstone.com/education-insights/" target="_blank" rel="noreferrer" data-gtm-label="Two-up Content Block | Insights from Our Private Wealth Business" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Institutional quality for individual investors" data-gtm-component_type="Two-up content" data-gtm-click_text="Insights from Our Private Wealth Business">
+			<span class="bx-singular-link__label"></span>
+	
+			<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+	</a>
+											</div>
+				
+									<div class="bx-two-up-content__link">
+						<div class="bx-two-up-content__link-col">
+							<p class="bx-two-up-content__link-label" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+								Blackstone University: An Intro to Alternatives							</p>
+						</div>
+
+													<a class="bx-singular-link_frontend " tabindex="0" href="https://pws.blackstone.com/education-insights/blackstone-university/intro-to-alternatives/" aria-label="https://pws.blackstone.com/education-insights/blackstone-university/intro-to-alternatives/" target="_blank" rel="noreferrer" data-gtm-label="Two-up Content Block | Blackstone University: An Intro to Alternatives" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Institutional quality for individual investors" data-gtm-component_type="Two-up content" data-gtm-click_text="Blackstone University: An Intro to Alternatives">
+			<span class="bx-singular-link__label"></span>
+	
+			<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+	</a>
+											</div>
+				
+							</div>
+		</div>
+	</div>
+	</section>
+
+
+<div class="bx-block-component bx-block-no-spacing bx-tickertape  bx-ticker-tape-stack-padding-top   bx-ticker-tape-stack-padding-bottom   alignfull is-color-theme-dark is-color-theme-dark wp-block-blackstone-v2-tickertape" data-parent_block="" data-spacing_attrs="null" data-comp_name="blackstone-v2/tickertape" data-gtm-component_title="Build wealth with Blackstone" data-gtm-component_type="Ticker Tape">
+	<div class="bx-tickertape__inner bx-component-stacked-inline-disclaimer-padding-bottom">
+		<div class="bx-tickertape__ticker">
+			<div class="bx-tickertape__ticker-item" style="translate: none; rotate: none; scale: none; transform: translate(-24.4883%, 0%) translate3d(0px, 0px, 0px);">
+								<p class="bx-tickertape__title"><strong>Build</strong> wealth with Blackstone</p>
+			</div>
+		<div class="bx-tickertape__ticker-item" style="translate: none; rotate: none; scale: none; transform: translate(-24.4883%, 0%) translate3d(0px, 0px, 0px);">
+								<p class="bx-tickertape__title"><strong>Build</strong> wealth with Blackstone</p>
+			</div><div class="bx-tickertape__ticker-item" style="translate: none; rotate: none; scale: none; transform: translate(-24.4883%, 0%) translate3d(0px, 0px, 0px);">
+								<p class="bx-tickertape__title"><strong>Build</strong> wealth with Blackstone</p>
+			</div></div>
+	</div>
+	
+	<div class="bx-inline-disclaimer__inner" data-collapse="" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Build wealth with Blackstone" data-gtm-component_type="Ticker Tape - Inline Disclaimer"> 
+	<div class="bx-inline-disclaimer__item"> 
+		      
+			<div class="bx-inline-disclaimer__content" role="article">  
+				<p class="bx-inline-disclaimer__content-font">
+					Investing involves risks, including loss of capital				</p>
+			</div>
+			</div>
+	</div></div>
+
+<section class="bx-block-component bx-announcement alignfull   bx-component-base-padding-top bx-component-base-padding-bottom wp-block-blackstone-v2-announcement" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;dark&quot;,&quot;nextBlockColorTheme&quot;:&quot;default&quot;,&quot;previousBlockName&quot;:&quot;blackstone-v2/tickertape&quot;,&quot;nextBlockName&quot;:&quot;blackstone-v2/news-insights&quot;,&quot;currentBlockTheme&quot;:&quot;default&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/announcement&quot;}" data-parent_block="" data-comp_name="blackstone-v2/announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results" data-gtm-component_type="Announcement">
+	<div class="bx-announcement__inner">
+					<p class="bx-announcement__eyebrow is-style-eyebrow">EARNINGS</p>
+		
+		<h3 class="bx-announcement__title" style="opacity: 1; visibility: inherit;">
+			Blackstone Reports Second- Quarter 2025 Results		</h3>
+						<div class="bx-announcement__media " style="--x: 0.5; --y: 0.5;">
+		<picture>
+			<img src="https://blackstone.scene7.com/is/image/blackstone/Results_1-1?wid=800&amp;hei=1066" alt="Results" style="opacity: 1; visibility: inherit;">
+				<div class="bx-announcement__curtain" style="translate: none; rotate: none; scale: none; transform: translate(0px, -100%);"></div>
+
+			</picture>		
+		</div>
+		
+		<div class="bx-announcement__content" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+							<p><a href="https://event.webcasts.com/starthere.jsp?ei=1703516&amp;tp_key=a150fca554" target="_blank" rel="noreferrer noopener" data-gtm-component_type="Announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results"><br></a><a href="https://www.blackstone.com/wp-content/uploads/sites/2/2025/07/Blackstone2Q25EarningsPressRelease.pdf" target="_blank" rel="noreferrer noopener" data-gtm-component_type="Announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results">View Full Press Release</a><br><a href="https://www.blackstone.com/wp-content/uploads/sites/2/2025/07/Blackstone2Q25SupplementalFinancialData.pdf" target="_blank" rel="noreferrer noopener" data-gtm-component_type="Announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results">View Supplemental Financial Data: PDF</a> | <a href="https://www.blackstone.com/wp-content/uploads/sites/2/2025/07/Blackstone2Q25SupplementalFinancialData.xlsx" target="_blank" rel="noreferrer noopener" data-gtm-component_type="Announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results">Excel</a><a href="https://www.blackstone.com/news/press/blackstone-announces-first-quarter-2025-investor-call/" data-gtm-component_type="Announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results"><br></a><a href="https://event.webcasts.com/starthere.jsp?ei=1725493&amp;tp_key=ccdd76990b" target="_blank" rel="noreferrer noopener" data-gtm-component_type="Announcement" data-gtm-component_title="Blackstone Reports Second- Quarter 2025 Results">Listen to Webcast</a></p>
+			
+			<div class="bx-announcement__cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+							</div>
+		</div>
+	</div>
+</section>
+
+<section class="bx-block-component bx-featured-news alignfull   bx-component-stacked-same-theme-padding-top bx-component-base-padding-bottom wp-block-blackstone-v2-news-insights" id="news" data-parent_block="" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;default&quot;,&quot;nextBlockColorTheme&quot;:&quot;dark&quot;,&quot;previousBlockName&quot;:&quot;blackstone-v2/announcement&quot;,&quot;nextBlockName&quot;:&quot;blackstone-v2/email-capture&quot;,&quot;currentBlockTheme&quot;:&quot;default&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/news-insights&quot;}" data-comp_name="blackstone-v2/news-insights">
+	<div class="bx-featured-news__inner">
+			<p class="bx-featured-news__eyebrow is-style-eyebrow" aria-hidden="true">News &amp; Insights</p>
+				<h2 class="bx-featured-news__title">
+							<span class="visually-hidden">News &amp; Insights: </span>
+						Featured Stories		</h2>
+	
+	<div class="bx-featured-news__cards">
+		
+<div class="bx-featured-news__card wp-block-blackstone-v2-news-insights-item">
+	
+<article class="bx-content-card">
+				<div class="bx-content-card__media " style="--x: 0.5; --y: 0.5;">
+			
+			<img class="bx-content-card__image" src="https://blackstone.scene7.com/is/image/blackstone/MV_April2025_VerticalFeatured_Image_2up_1.2_756x1008_v2" alt="Jon" gray="" market="" views="" q1'25="">
+		</div>
+	
+	<div class="bx-content-card__main">
+		<h3 class="bx-content-card__title">
+			<a href="https://www.blackstone.com/insights/article/market-views-opportunity-amid-uncertainty/" class="bx-content-card__title-link" data-gtm-label="News &amp; Insights Block | Market Views: Opportunity Amid Uncertainty" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Market Views: Opportunity Amid Uncertainty" data-gtm-component_type="News &amp; Insights">
+									Market Views: Opportunity Amid Uncertainty							</a>
+		</h3>
+	</div>
+
+	<div class="bx-content-card__footer">
+					<p class="bx-content-card__meta">
+									<a href="https://www.blackstone.com/insights/market-views/" rel="tag" data-gtm-label="News &amp; Insights Block | Market Views" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Market Views: Opportunity Amid Uncertainty" data-gtm-component_type="News &amp; Insights">
+						Market Views					</a>
+							</p>
+				<p class="bx-content-card__date">
+			<time datetime="2025-04-24T17:39:43-04:00">April 24, 2025</time>
+		</p>
+	</div>
+</article>
+</div>
+
+
+<div class="bx-featured-news__card wp-block-blackstone-v2-news-insights-item">
+	
+<article class="bx-content-card">
+				<div class="bx-content-card__media " style="--x: 0.5; --y: 0.5;">
+			
+			<img class="bx-content-card__image" src="https://blackstone.scene7.com/is/image/blackstone/server-room_interior_776x1034?wid=776&amp;hei=1034&amp;qlt=100&amp;op_sharpen=1&amp;fmt=avif" alt="Server" room="" interior="">
+		</div>
+	
+	<div class="bx-content-card__main">
+		<h3 class="bx-content-card__title">
+			<a href="https://www.blackstone.com/insights/article/revisiting-our-megatrends/" class="bx-content-card__title-link" data-gtm-label="News &amp; Insights Block | A Mid-Year Megatrends Update | The Connection" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="A Mid-Year Megatrends Update | The Connection" data-gtm-component_type="News &amp; Insights">
+									A Mid-Year Megatrends Update | The Connection							</a>
+		</h3>
+	</div>
+
+	<div class="bx-content-card__footer">
+					<p class="bx-content-card__meta">
+									<a href="https://www.blackstone.com/insights/investment-strategy/" rel="tag" data-gtm-label="News &amp; Insights Block | Investment Strategy" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="A Mid-Year Megatrends Update | The Connection" data-gtm-component_type="News &amp; Insights">
+						Investment Strategy					</a>
+							</p>
+				<p class="bx-content-card__date">
+			<time datetime="2025-07-10T18:09:21-04:00">July 10, 2025</time>
+		</p>
+	</div>
+</article>
+</div>
+
+
+<div class="bx-featured-news__card wp-block-blackstone-v2-news-insights-item">
+	
+<article class="bx-content-card">
+				<div class="bx-content-card__media " style="--x: 0.5; --y: 0.5;">
+			
+			<img class="bx-content-card__image" src="https://blackstone.scene7.com/is/image/blackstone/skyscrapers_exterior_blue-sky_776x1034?wid=776&amp;hei=1034&amp;qlt=100&amp;op_sharpen=1&amp;fmt=avif" alt="">
+		</div>
+	
+	<div class="bx-content-card__main">
+		<h3 class="bx-content-card__title">
+			<a href="https://www.blackstone.com/insights/article/navigating-2025-the-case-for-private-assets-in-a-changing-market/" class="bx-content-card__title-link" data-gtm-label="News &amp; Insights Block | Navigating 2025: The Case for Private Assets in a Changing Market | The Connection" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Navigating 2025: The Case for Private Assets in a Changing Market | The Connection" data-gtm-component_type="News &amp; Insights">
+									Navigating 2025: The Case for Private Assets in a Changing Market | The Connection							</a>
+		</h3>
+	</div>
+
+	<div class="bx-content-card__footer">
+					<p class="bx-content-card__meta">
+									<a href="https://www.blackstone.com/insights/investment-strategy/" rel="tag" data-gtm-label="News &amp; Insights Block | Investment Strategy" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Navigating 2025: The Case for Private Assets in a Changing Market | The Connection" data-gtm-component_type="News &amp; Insights">
+						Investment Strategy					</a>
+							</p>
+				<p class="bx-content-card__date">
+			<time datetime="2025-07-10T18:06:04-04:00">July 10, 2025</time>
+		</p>
+	</div>
+</article>
+</div>
+
+
+<div class="bx-featured-news__card wp-block-blackstone-v2-news-insights-item">
+	
+<article class="bx-content-card">
+				<div class="bx-content-card__media " style="--x: 0.5; --y: 0.5;">
+			
+			<img class="bx-content-card__image" src="https://blackstone.scene7.com/is/image/blackstone/server_interior_300x300_004?wid=600&amp;hei=600&amp;qlt=100&amp;op_sharpen=1&amp;fmt=avif" alt="">
+		</div>
+	
+	<div class="bx-content-card__main">
+		<h3 class="bx-content-card__title">
+			<a href="https://www.blackstone.com/insights/article/greg-blank-on-infrastructure-investings-trillion-dollar-opportunities/" class="bx-content-card__title-link" data-gtm-label="News &amp; Insights Block | Q&amp;A: Greg Blank on Infrastructure Investing’s Trillion Dollar Opportunities" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Q&amp;A: Greg Blank on Infrastructure Investing’s Trillion Dollar Opportunities" data-gtm-component_type="News &amp; Insights">
+									Q&amp;A: Greg Blank on Infrastructure Investing’s Trillion Dollar Opportunities							</a>
+		</h3>
+	</div>
+
+	<div class="bx-content-card__footer">
+					<p class="bx-content-card__meta">
+									<a href="https://www.blackstone.com/insights/market-views/" rel="tag" data-gtm-label="News &amp; Insights Block | Market Views" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Q&amp;A: Greg Blank on Infrastructure Investing’s Trillion Dollar Opportunities" data-gtm-component_type="News &amp; Insights">
+						Market Views					</a>
+							</p>
+				<p class="bx-content-card__date">
+			<time datetime="2025-06-16T04:11:00-04:00">June 16, 2025</time>
+		</p>
+	</div>
+</article>
+</div>
+
+	</div>
+
+		</div>
+</section><section data-gtm-component_title="Sign up for our latest insights and firm announcements." data-gtm-component_type="Email Capture" aria-label="Stay up-to-date" ;="" class="bx-block-component bx-email-capture alignfull bx-component-base-padding-top bx-component-base-padding-bottom wp-block-blackstone-v2-email-capture" data-spacing_attrs="{&quot;previousBlockColorTheme&quot;:&quot;default&quot;,&quot;nextBlockColorTheme&quot;:&quot;&quot;,&quot;previousBlockName&quot;:&quot;blackstone-v2/news-insights&quot;,&quot;nextBlockName&quot;:&quot;&quot;,&quot;currentBlockTheme&quot;:&quot;dark&quot;,&quot;currentBlockName&quot;:&quot;blackstone-v2/vertical-list&quot;}" data-parent_block="" data-comp_name="blackstone-v2/email-capture">
+	
+	<div class=" bx-email-capture-container  ">
+		<!--DESIGN IMPLEMENTATION-->
+		<div class="bx-email-capture__inner">
+					<h2 class="bx-email-capture__eyebrow is-style-eyebrow">
+				Stay up-to-date		
+			</h2>
+						<h3 class="bx-email-capture__title">
+				Sign up for our latest insights and firm announcements.	</h3>
+	<div class="bx-email-capture-form"><div class="wp-block-blackstone-v2-email-capture">
+<form class="bx-email-capture-form_container" data-pardot-endpoint="https://www3.blackstone.com/l/1037233/2023-11-21/5vb5r8" novalidate="">
+																<div class="bx-email-capture-form__element bx-text-control">
+							<label class="bx-email-capture-form__label" for="stay-up-to-date-email">Email Address *</label>
+							<input class="bx-email-capture-form-authoring-textbox opt-set" type="email" id="stay-up-to-date-email" placeholder="Email Address*" name="email" data-error="Please fill out this field." required="">
+														<div class="bx-email-capture-form_error-text">
+							Please fill out this field.								</div>
+								</div>
+														                  
+                    															<div class="bx-email-capture-form__element bx-text-control">
+							<label class="bx-email-capture-form__label" for="stay-up-to-date-first_name">First Name *</label>
+							<input class="bx-email-capture-form-authoring-textbox opt-set" type="text" id="stay-up-to-date-first_name" placeholder="First Name*" name="first_name" data-error="Please fill out this field." required="">
+														<div class="bx-email-capture-form_error-text">
+							Please fill out this field.								</div>
+								</div>
+														                  
+                    															<div class="bx-email-capture-form__element bx-text-control">
+							<label class="bx-email-capture-form__label" for="stay-up-to-date-last_name">Last Name *</label>
+							<input class="bx-email-capture-form-authoring-textbox opt-set" type="text" id="stay-up-to-date-last_name" placeholder="Last Name*" name="last_name" data-error="Please fill out this field." required="">
+														<div class="bx-email-capture-form_error-text">
+							Please fill out this field.								</div>
+								</div>
+														                  
+                    															<div class="bx-email-capture-form__element bx-text-control">
+							<label class="bx-email-capture-form__label" for="stay-up-to-date-company">Company</label>
+							<input class="bx-email-capture-form-authoring-textbox opt-set" type="text" id="stay-up-to-date-company" placeholder="Company" name="company" data-error="Please fill out this field.">
+														<div class="bx-email-capture-form_error-text">
+							Please fill out this field.								</div>
+								</div>
+														                  
+                    															<div class="bx-email-capture-form__element bx-text-control">
+							<label class="bx-email-capture-form__label" for="stay-up-to-date-job_title">Job Title</label>
+							<input class="bx-email-capture-form-authoring-textbox opt-set" type="text" id="stay-up-to-date-job_title" placeholder="Job Title" name="job_title" data-error="Please fill out this field.">
+														<div class="bx-email-capture-form_error-text">
+							Please fill out this field.								</div>
+								</div>
+														                  
+                    <div class="wp-block-blackstone-v2-email-capture">
+	<div class="bx-email-capture-disclaimer">
+                  	<div class="bx-choice-control">
+					  <div class="bx-disclaimer_circle">
+					  </div>
+				<input aria-label="Input" class="bx-email-capture__disclaimer-checkbox" id="stay-up-to-date-privacy" name="privacy" type="checkbox" value="1" required="">
+				
+				<label class="bx-choice-control__label bx-email-capture-checkbox">By submitting this request, you consent to receive email from Blackstone. For information on our privacy practices see our <a href="https://www.blackstone.com/privacy" target="_blank" rel="noreferrer noopener" data-gtm-component_type="Email Capture" data-gtm-component_title="Sign up for our latest insights and firm announcements.">Privacy Policy</a>.</label>
+			</div>
+</div>
+</div>
+                  
+                    				<div style="position:absolute; left:-9999px; top: -9999px;">
+    				<label for="pardot_extra_field">Comments</label>
+    				<input type="text" id="pardot_extra_field" name="pardot_extra_field" autocomplete="new-password">
+				</div>
+								<div class="bx-email-capture__submit-button">
+			<button class="bx-singular-link_frontend bx-email-capture__submit-button-OnClick" type="submit" data-gtm-click_text="Submit" data-gtm-tag_name="form_submission" data-gtm-component_title="Sign up for our latest insights and firm announcements." data-gtm-component_type="Email Capture" data-gtm-form_id="5vb5r8" data-gtm-form_name="Blackstone.com Email Signup Module (all sites)">
+				<span class="bx-singular-link__label bx-email-capture__submit-label">Submit</span>
+				<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+	<!-- bx-singular-link__icon-arrow class is dynamically generated -->
+	<path class="bx-singular-link__icon-arrow" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-fill class is dynamically generated -->
+	<path class="bx-singular-link__icon-fill" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z" fill="currentColor"></path>
+	<!-- bx-singular-link__icon-border class is dynamically generated -->
+	<path class="bx-singular-link__icon-border" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z" fill="currentColor"></path>
+</svg>
+
+			</button>
+			</div>
+						<input type="hidden" class="bxid-input" name="bxid" value="11176453-8be1-4dff-9a4b-8904999b650c">
+		<input type="hidden" name="URL" value="https://www.blackstone.com/">
+	</form>
+</div>
+</div>        
+
+                    <div class="bx-email-capture__socialLink-Area">
+							<div class="bx-email-capture__socialLink-position"><div class="wp-block-blackstone-v2-email-capture">
+
+						                    
+</div>
+</div>
+						</div>        
+
+                    				<div class="bx-email-capture__success-state bx-email-capture__success-state_display">
+					<div class="bx-email-capture_sucess-container bx-email-capture__success-container-background">
+				<p class="bx-email-capture__success-message bx-email-capture-success_color">
+				You have successfully submitted your information	
+			</p>
+						</div>
+				</div>
+	</div>
+	
+
+	</div></section>
+
+
+						</div>
+					</div>
+				</div>
+						</main>
+			<footer id="colophon" class="site__footer site-footer is-color-theme-dark">
+				<div class="site-footer__inner">
+																<div class="site-footer__top">
+								<div class="site-footer__branding">
+									<div class="site-footer__logo">
+										<a class="site-footer__logo-link" href="https://www.blackstone.com/" aria-label="Blackstone home" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 56" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+												<g fill="none" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+													<path fill="#FFF" d="M235 0v56H90.86V0z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+													<path fill="#000" d="M234 1.04H91.9v53.92H234z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+													<g fill="currentColor" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+														<path d="M.07 26.54c.57-.08 1.16-.16 1.65-.26.06-1 .08-2.88.08-3.98V9.1L.04 8.87c-.03-.27-.01-.54.05-.8h7.4c5.08 0 7.22 1.51 7.22 4.49 0 2.23-1.7 3.88-4.6 4.55v.13c2.87.33 5.77 1.49 5.77 4.7 0 2.28-1.11 3.64-3.39 4.64-1.44.52-2.97.77-4.5.75H.02c-.04-.27-.02-.54.05-.8m6.88-9.84c.81.02 1.6-.19 2.3-.62A3.23 3.23 0 0 0 10.72 13c0-2.93-1.29-3.93-3.88-3.93h-.77v7.63h.88v-.01Zm.78 9.6c2.58 0 3.88-1.43 3.88-4.23 0-3.31-2.1-4.16-5.54-4.19v8.43h1.66v-.01Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M18.12 23.45v-5.9l-.02-3.14c-.47-.07-.7-.12-1.32-.2-.08 0-.05-.72.05-.72h5.35v9.45c0 1.57.42 2.57 2.18 2.57a3 3 0 0 0 2.27-.95v-7.01c0-.6-.02-2.62-.05-3.14-.41-.07-.8-.12-1.42-.2-.05 0-.05-.72.05-.72h5.51v8.99c0 .7.03 2.62.05 3.34l1.58.33c.08.03.05.72-.03.72-1.75.26-3.46.44-5.14.77-.08 0-.39-.12-.39-.18l-.03-2h-.1a5.86 5.86 0 0 1-4.26 2.21c-2.75 0-4.27-1.36-4.27-4.2" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="m33.02 26.62 1.3-.2c.02-.83.02-2 .02-3.1V18.4c0-1.1-.02-2.08-.05-3.21a9.96 9.96 0 0 0-1.32-.36c-.02 0-.05-.62.03-.65 2.07-.43 4.03-.8 5.2-1.07.11-.01.21.06.23.18 0 .61-.05 2.05-.05 3.18v9.97l1.32.18c.08 0 0 .72-.03.72H33c-.08 0-.03-.72.02-.72m1.1-16.68a2.24 2.24 0 1 1 2.21 2.11 2.15 2.15 0 0 1-2.22-2.1" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="m40.58 26.62 1.29-.2c.03-.83.03-2 .03-3.09V12.69c0-1.1-.03-2.08-.06-3.2a13.9 13.9 0 0 0-1.32-.37c-.02 0-.05-.61.03-.64 2.07-.41 4.04-.77 5.2-1.08.08-.02.23.1.23.18 0 .64-.05 2.06-.05 3.19v15.66c.5.08.88.1 1.4.18.08 0 0 .73-.02.73h-6.76c-.08 0-.03-.73.03-.73" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M48.18 21.07c0-5.32 3.65-7.89 7.24-7.89.78 0 1.55.1 2.3.28h.13v-.84c0-1.1-.02-1.98-.05-3.14-.52-.13-.72-.2-1.3-.33-.02 0-.04-.62.03-.64 2.36-.49 3.18-.67 5.12-1.1.08-.03.24.13.24.18l-.03 3.18V25.8c.34.08 1.24.31 1.55.36.05 0 .05.6-.02.62-1.71.23-3.29.51-5.07.82-.13-.04-.25-.1-.36-.18v-1.85h-.13a5.46 5.46 0 0 1-4.17 2.08c-3.31 0-5.48-2.46-5.48-6.57m9.62 3.57v-9.46a2.62 2.62 0 0 0-2.07-.97c-2 0-3.34 1.87-3.34 5.86 0 3.8 1.4 5.36 3.08 5.36.86.09 1.7-.2 2.33-.8" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M43.83 48.08h-.97L38.8 36.06l-.92-.22c-.05 0-.05-.47.02-.47h4.93c.07 0 .02.47-.05.47-.42.05-.7.12-1.2.2l1.04 3.3c.07.23 1.54 4.8 1.63 5.14h.05c.1-.35 1.56-4.6 1.66-4.96l.6-1.79-.58-1.67-1.06-.21c-.05 0-.05-.47.02-.47h5.1c.07 0 .05.47-.05.47-.4.04-.64.09-1.23.18l1.04 3.3c.08.24 1.57 4.8 1.64 5.16h.05c.11-.36 1.58-4.63 1.68-4.98.73-2.2.76-2.3 1.09-3.48l-1.33-.19c-.07 0-.05-.47.03-.47h3.22c.07 0 .02.45-.05.47l-.92.21c-.36.9-.67 1.89-1.42 4-.15.48-2.47 7.02-2.75 8.03h-.95l-3.1-9.13-.4 1.1c-.17.48-2.47 7.02-2.75 8.03" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="m56.86 47.47 1.21-.19c.03-.75.03-1.5.03-2.5v-5.1c0-1.01-.03-1.98-.05-3.01-.4-.14-.82-.25-1.23-.33-.03 0-.05-.43.02-.43a99 99 0 0 0 3.6-.9c.02 0 .21.1.21.17l-.04 2.05V47.3c.4.08.75.12 1.28.17.03.16.01.34-.05.5h-5.02a.88.88 0 0 1 .04-.5m1-15.58a1.47 1.47 0 1 1 2.94-.07 1.47 1.47 0 0 1-2.94.07" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M64.35 45.02v-8.59h-1.92c-.04 0-.1-.33 0-.4a69.3 69.3 0 0 0 4-3.32c.1-.09.53 0 .53.12l-.07 2.54h3.74c.12 0-.02 1.06-.14 1.06h-3.62v8.4c0 1.25.45 2.07 1.8 2.07a4.1 4.1 0 0 0 2.08-.66c.05-.02.1.43.05.52a3.84 3.84 0 0 1-3.27 1.5c-2.4 0-3.18-1.26-3.18-3.24" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="m71.18 47.47 1.21-.19c.02-.75.02-1.5.02-2.5V34.32c0-1-.02-1.98-.04-3.01-.4-.13-.82-.24-1.24-.33-.02 0-.04-.42.03-.42 1.68-.4 2.13-.52 3.55-.9.03 0 .21.12.21.17v7.22H75a7.2 7.2 0 0 1 4.74-1.93c2.13 0 3.39.94 3.39 3.53v8.66c.37.07.73.12 1.23.17.03.16.01.34-.05.5H79.3a.89.89 0 0 1 .04-.5l1.21-.19c.02-.82.02-1.5.02-2.5v-5.53c0-1.83-.52-2.68-2.22-2.68a5.22 5.22 0 0 0-3.37 1.15v9.58c.4.07.71.12 1.23.17.04.16.02.33-.04.49h-5.03a.88.88 0 0 1 .05-.5" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+													</g>
+													<g fill="#FFF" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com">
+														<path d="M105.76 28.27c3.4 0 6.73.81 6.73 4.16 0 2.72-2.65 4.16-4.25 4.58 3.02.27 6.06 1.85 6.06 4.8 0 3.4-3.11 5.35-6.58 5.33h-9.54v-.67l1.55-.1c.88-.1 1.05-.22 1.08-1.26.02-1.47.02-2.36.02-3.8V34.1c0-1.44 0-2.34-.02-3.8-.03-1.03-.2-1.2-1.08-1.26l-1.55-.1v-.66h7.58Zm-2.13.79v7.8s1.03.05 1.79.05c2.6 0 4.2-1.26 4.2-3.99 0-2.4-1.55-3.94-4.13-3.94-.88 0-1.86.08-1.86.08m0 8.64v6.41c0 1.94.93 2.28 3.12 2.28 3.01 0 4.58-1.73 4.58-4.5 0-3.27-2.82-4.19-5.84-4.19h-1.86Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M120.1 41.34c0 1.44 0 2.33.02 3.79.03 1.04.2 1.16 1.08 1.26l.98.1v.65h-6.7v-.65l.98-.1c.89-.1 1.06-.22 1.08-1.26.03-1.46.03-2.35.03-3.79V30.02c0-1.19-.37-1.48-1.4-1.56L115 28.4v-.57c1.74-.2 3.46-.5 5.16-.94 0 0-.07 2.6-.07 5.45v9.01Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M130.23 45.72a6.22 6.22 0 0 1-3.56 1.61 3.2 3.2 0 0 1-3.17-3.1c0-2.84 3.53-3.78 6.67-4.13v-3c0-1.38-.54-2.05-1.7-2.05a1.82 1.82 0 0 0-1.76 1.2c-.52.96-.96 1.53-1.67 1.53a.98.98 0 0 1-1-1c0-1.25 2.99-2.52 4.75-2.52 2.75 0 4 .87 4 3.02 0 1-.12 6.1-.12 6.96 0 .87.44 1.31 1.18 1.31a3.08 3.08 0 0 0 1.52-.61l.25.54c-1.2 1-2.26 1.83-3.44 1.83-.92-.07-1.7-.7-1.96-1.58m-.05-4.9c-1.99.14-4.35.74-4.35 2.55a2.5 2.5 0 0 0 2.38 2.42c.73.02 1.43-.24 1.97-.72v-4.26Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M146.79 36.04a1.12 1.12 0 0 1-1.13 1.19c-.74 0-1.13-.62-1.6-1.16a2.46 2.46 0 0 0-1.89-1.02c-1.93 0-3.43 1.98-3.43 4.83 0 3.15 1.54 5.65 4.69 5.65a4.77 4.77 0 0 0 3.19-1.34l.34.5c-1.57 1.66-3.07 2.7-4.93 2.7-3.3 0-5.65-2.98-5.65-6.37 0-3.76 2.3-6.76 6.31-6.76 2.14 0 4.1.92 4.1 1.78" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M152.51 41.37c0 1.43 0 2.3.03 3.76.02 1.04.2 1.16 1.08 1.26l.85.1v.65h-6.57v-.65l.98-.1c.88-.1 1.05-.22 1.08-1.26.02-1.46.02-2.35.02-3.79V30.02c0-1.19-.37-1.48-1.4-1.56l-1.15-.07v-.57c1.74-.2 3.46-.51 5.15-.94 0 0-.07 2.6-.07 5.45v8.17l4.6-4.4c.4-.43.26-.83-.3-.85l-1.13-.07v-.67h5.57v.64a3.57 3.57 0 0 0-2.75.94l-3.9 3.62 5.27 5.74c.44.62 1.14 1 1.9 1.02l.29.02v.65h-6.21v-.65l.86-.07c.36-.03.39-.3.22-.52l-2.09-2.48a29.6 29.6 0 0 0-2.33-2.52v.47Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M164.62 46.99c-.34.03-.67.1-.99.22h-.1l-.27-4.33h.67c.51 2.62 1.7 3.69 3.6 3.69 1.58 0 2.48-.87 2.48-2.06 0-1.11-.49-1.58-2.87-2.57-1.77-.75-3.56-1.61-3.56-3.92 0-2.52 2.34-3.76 4.4-3.76a18 18 0 0 1 2.7.3c.3-.07.59-.17.86-.3h.1l.07 4.08h-.7c-.16-1.98-1.02-3.26-3.03-3.26-1.32 0-2.33.74-2.33 1.93 0 1.23.79 1.63 3 2.65 2.1.99 3.65 1.73 3.65 3.69 0 2.62-2.26 4.03-4.76 4.03-.98-.06-1.96-.19-2.92-.4" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M175.3 44.49c0-2.04.1-5.38.18-8.7h-1.62v-.4a18.16 18.16 0 0 0 3.83-3.93h.3v3.2h3.87v1.1h-3.88v8.13c0 1.44.69 2 1.77 2 .78-.06 1.52-.4 2.08-.93l.3.5c-1.38 1.23-2.48 1.92-3.9 1.92a2.8 2.8 0 0 1-2.92-2.9" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M183.02 40.85a6.58 6.58 0 1 1 13.16-.08 6.58 6.58 0 0 1-13.16.08m10.34.24c0-3.46-1.4-5.99-3.9-5.99-2.51 0-3.62 2.45-3.62 5.45 0 3.47 1.4 6 3.9 6 2.51 0 3.62-2.46 3.62-5.46" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M207.7 38.86c0-1.83-.87-2.92-2.51-2.92a4.7 4.7 0 0 0-3.04 1v4.4c0 1.44 0 2.33.02 3.79.02 1.04.2 1.16 1.08 1.26l.98.1v.65h-6.77v-.65l.98-.1c.88-.1 1.05-.22 1.08-1.26.02-1.46.02-2.35.02-3.79v-3.5c0-1.38-.29-1.85-1.42-1.95l-.83-.07v-.62c1.65-.2 3.28-.56 4.86-1.1v2.19a7.41 7.41 0 0 1 4.64-2.03c2.2 0 3.5 1.38 3.5 3.93v3.15c0 1.44 0 2.33.03 3.79.02 1.04.2 1.16 1.08 1.26l.98.1v.64h-6.77v-.64l.98-.1c.88-.1 1.05-.22 1.08-1.26.02-1.46.02-2.35.02-3.8v-2.47Z" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+														<path d="M213.29 40.95c0-3.35 2.06-6.7 5.72-6.7 3.21 0 5.08 2.14 5.28 5.33h-8.64c-.1 3.35 1.45 5.92 4.78 5.92 1.34 0 2.63-.5 3.64-1.39l.32.53c-1.67 1.65-3.41 2.74-5.4 2.74-3.49 0-5.7-2.97-5.7-6.43m2.43-2.18h5.87c0-1.89-.93-3.72-2.8-3.72-1.91 0-2.87 1.83-3.06 3.72" data-gtm-tag_name="Page Engagement" data-gtm-component_title="Site Navigation Footer" data-gtm-component_type="Site Navigation Footer" data-gtm-click_text="Blackstone Logo" data-gtm-click_url="https://www.blackstone.com"></path>
+													</g>
+												</g>
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<nav class="site-footer__primary-nav"><div class="site-footer__primary-nav-column"><h2 class="site-footer__primary-nav-column-title">Quick Links</h2><ul class="site-footer__primary-nav-list"><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Quick Links | The Firm" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/the-firm/" class="site-footer__primary-nav-link" data-menu-id="20010">The Firm</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Quick Links | Our People" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/the-firm/our-people/" class="site-footer__primary-nav-link" data-menu-id="20009">Our People</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Quick Links | Insights" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/insights/" class="site-footer__primary-nav-link" data-menu-id="20011">Insights</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Quick Links | Careers" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/careers/careers-blackstone/" class="site-footer__primary-nav-link" data-menu-id="20012">Careers</a></li></ul></div><div class="site-footer__primary-nav-column"><h2 class="site-footer__primary-nav-column-title">Social</h2><ul class="site-footer__primary-nav-list"><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Social | LinkedIn" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" target="_blank" rel="noopener" href="https://www.linkedin.com/company/blackstonegroup/" class="site-footer__primary-nav-link" data-menu-id="20019">LinkedIn</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Social | Instagram" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" target="_blank" rel="noopener" href="https://www.instagram.com/blackstone/" class="site-footer__primary-nav-link" data-menu-id="20015">Instagram</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Social | X (Twitter)" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" target="_blank" rel="noopener" href="https://twitter.com/blackstone" class="site-footer__primary-nav-link" data-menu-id="20018">X (Twitter)</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Social | Facebook" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" target="_blank" rel="noopener" href="https://www.facebook.com/blackstone" class="site-footer__primary-nav-link" data-menu-id="20017">Facebook</a></li></ul></div><div class="site-footer__primary-nav-column"><h2 class="site-footer__primary-nav-column-title">Get in Touch</h2><ul class="site-footer__primary-nav-list"><li class="site-footer__primary-nav-list-item  menu-item flyout-1 menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Get in Touch | Contact Us" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="#contact-us" class="site-footer__primary-nav-link" data-menu-id="20022" data-a11y-dialog-show="flyout-1">Contact Us</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Get in Touch | Our Offices" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="/the-firm/our-offices/" class="site-footer__primary-nav-link" data-menu-id="20023">Our Offices</a></li><li class="site-footer__primary-nav-list-item   menu-item menu-item-type-custom menu-item-object-custom"><a data-gtm-label="Get in Touch | Limited Partner Login" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" href="https://www.bxaccess.com/portal/" class="site-footer__primary-nav-link" data-menu-id="20024">Limited Partner Login</a></li></ul></div></nav>							</div>
+																				<div class="site-footer__bottom">
+																			<nav class="site-footer__secondary-nav"><ul class="site-footer__secondary-nav-list"><li id="menu-item-20025" class="site-footer__secondary-nav-list-item menu-item menu-item-type-post_type menu-item-object-page menu-item-20025"><a href="https://www.blackstone.com/transparency-disclosure/" class="site-footer__secondary-nav-link " data-menu-id="20025" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Transparency &amp; Disclosure">Transparency &amp; Disclosure</a></li>
+<li id="menu-item-20026" class="site-footer__secondary-nav-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-20026"><a href="/legal/" class="site-footer__secondary-nav-link " data-menu-id="20026" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Legal">Legal</a></li>
+<li id="menu-item-21378" class="site-footer__secondary-nav-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-21378"><a href="https://www.blackstone.com/privacy/" class="site-footer__secondary-nav-link " data-menu-id="21378" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Privacy Center">Privacy Center</a></li>
+<li id="menu-item-20030" class="site-footer__secondary-nav-list-item menu-item menu-item-type-post_type menu-item-object-page menu-item-20030"><a href="https://www.blackstone.com/japan-disclaimer/" class="site-footer__secondary-nav-link " data-menu-id="20030" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Japan Disclaimer">Japan Disclaimer</a></li>
+<li id="menu-item-20031" class="site-footer__secondary-nav-list-item menu-item menu-item-type-post_type menu-item-object-page menu-item-20031"><a href="https://www.blackstone.com/phishing-and-fraud-awareness/" class="site-footer__secondary-nav-link " data-menu-id="20031" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Phishing and Fraud Awareness">Phishing and Fraud Awareness</a></li>
+<li id="menu-item-21358" class="site-footer__secondary-nav-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-21358 bx-manage-cookies"><a href="#" class="site-footer__secondary-nav-link " data-menu-id="21358" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Do Not Sell or Share My Personal Information">Do Not Sell or Share My Personal Information</a></li>
+</ul></nav>												<p class="site-footer__copyright">© 2025 Blackstone Inc.</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div id="dialog-cookies">
+		</div>
+		
+<div id="dialog-geo" class="bx-dialog bx-dialog--alert bx-dialog-attestations__wrapper" aria-hidden="true" role="alertdialog" aria-label="Geo Modal" aria-modal="true" tabindex="-1">
+	<div class="bx-dialog__backdrop" role="presentation"></div>
+
+	<div class="bx-dialog__container" role="document">
+		<div class="bx-dialog__container-inner">
+			<div class="bx-dialog__container-content">
+				<div class="bx-dialog__content">
+					<div class="bx-dialog-attestation bx-non-pws-attestation">
+						<h2 class="bx-dialog-attestation__title">Welcome to Blackstone</h2>
+
+						<p class="bx-dialog-attestation__description">Portions of this site are directed only to persons in certain jurisdictions. By selecting the relevant option, you certify that it accurately reflects your residency.</p>
+
+						<div class="bx-button-row bx-dialog-attestation__button-row">
+							<a class="bx-dialog-geo__button bx-singular-link_frontend bx-dialog-first__button" type="button" data-a11y-dialog-hide="" aria-label="I am not a United States Resident" data-location="NOT-US" data-gtm-tag_name="Attestation Acknowledgment" data-gtm-component_title="Welcome to Blackstone" data-gtm-click_text="I am not a United States Resident" data-gtm-component_type="Attestation Acknowledgment" href="#">
+								<span class="bx-singular-link__label ">I am not a United States Resident</span>
+																	<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path class="bx-singular-link__icon-arrow" fill="currentColor" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z"></path>
+										<path class="bx-singular-link__icon-fill" fill="currentColor" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z"></path>
+										<path class="bx-singular-link__icon-border" fill="currentColor" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z"></path>
+									</svg>
+															</a>
+							<a class="bx-dialog-geo__button bx-singular-link_frontend bx-dialog-second__button" type="button" data-a11y-dialog-hide="" aria-label="I am a United States Resident" data-location="US" data-gtm-tag_name="Attestation Acknowledgment" data-gtm-component_title="Welcome to Blackstone" data-gtm-click_text="I am a United States Resident" data-gtm-component_type="Attestation Acknowledgment" href="#">
+								<span class="bx-singular-link__label ">I am a United States Resident</span>
+																	<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path class="bx-singular-link__icon-arrow" fill="currentColor" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z"></path>
+										<path class="bx-singular-link__icon-fill" fill="currentColor" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z"></path>
+										<path class="bx-singular-link__icon-border" fill="currentColor" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z"></path>
+									</svg>
+															</a>
+						</div>
+					</div>
+                    				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="dialog-brightcove" class="bx-dialog bx-dialog--embed bx-dialog-brightcove__modal" role="dialog" aria-modal="true" tabindex="-1" aria-hidden="true">
+	<div class="bx-dialog__backdrop" data-a11y-dialog-hide="" role="presentation" style="opacity: 0; visibility: hidden;"></div>
+
+	<div class="bx-dialog__container" role="document" style="opacity: 1; visibility: inherit;">
+		<div class="bx-dialog__container-inner bx-dialog__container-inner-brightcove bx-dialog-container-inner-has-no-disclaimer">
+			<div class="bx-dialog__container-content">
+				<button class="bx-dialog__close" data-a11y-dialog-hide="" aria-label="Close this dialog window">
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.57 2.54c.58-.58.58-1.5 0-2.08l-.02-.03a1.47 1.47 0 0 0-2.08 0l-8.43 8.43a1.47 1.47 0 0 1-2.08 0L2.54.43a1.47 1.47 0 0 0-2.08 0L.43.46a1.47 1.47 0 0 0 0 2.08l8.43 8.42a1.47 1.47 0 0 1 0 2.08L.43 21.47c-.57.57-.57 1.5 0 2.08l.03.02a1.47 1.47 0 0 0 2.08 0l8.42-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.58 1.5.58 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.42Z" style="fill: var(--c-white);"></path>
+					</svg>
+				</button>
+
+				<div class="bx-dialog__content">
+					<div class="bx-dialog-brightcove">
+						<!-- dynamically inserted -->
+					<script async="" charset="utf-8" src="https://players.brightcove.net/5843213364001/default_default/index.min.js"></script></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="bx-leadership-totalWrapper" tabindex="-1" role="dialog" class="bx-leadership_overlay_background" aria-modal="true" aria-label="Bio Flyout Wrapper">
+<div id="bx-leadership__bio__bioOverlayid" class="bx-leadership__bio__overlay bx-leadership__bio__overlayHidden" role="document">
+<a class="bx-leadership__bio__tag" tabindex="-1" aria-hidden="true"></a>
+      <div class="bx-leadership__bio__closeButton__wrapper">
+      <button class="bx-leadership__bio__closebtn" data-a11y-dialog-hide="" aria-label="Close Bio" tabindex="-1" aria-hidden="true">
+      
+<svg xmlns="http://www.w3.org/2000/svg" class="bx-leadership__bio__closebtn_svg" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <style>
+.bx-leadership__bio__closebtn_svg .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Close_Button" transform="translate(-1800 -404)">
+    <circle id="_--c-white" data-name="--c-white" class="cls-1" cx="36" cy="36" r="36" transform="translate(1800 404)"></circle>
+    <path id="_--c-black" data-name="--c-black" d="M228.509,156.634l5.741-5.741a1.326,1.326,0,0,0-1.876-1.876l-5.741,5.741-5.741-5.741a1.326,1.326,0,0,0-1.876,1.876l5.741,5.741-5.741,5.741a1.326,1.326,0,1,0,1.876,1.876l5.741-5.741,5.741,5.741a1.326,1.326,0,1,0,1.876-1.876Z" transform="translate(1609.367 283.366)"></path>
+  </g>
+</svg>
+      </button> 
+</div>
+      <div class="bx-leadership__bio__overlay__content" role="document">
+
+      </div>
+   </div>
+</div>	<div id="bx-drawer-footnote" aria-label="footnote" class="bx-dialog bx-footnote-drawer dialog-container bs-lightbox" aria-hidden="true" role="dialog" aria-modal="true" tabindex="-1">
+	<div class="bx-drawer-footnote__backdrop" tabindex="-1" data-a11y-dialog-hide=""></div>
+		<div class="bx-dialog__container">
+			<div class="bx-dialog__container-inner">
+				<div class="bx-footnote__container">
+					<button class="bx-dialog__close" data-a11y-dialog-hide="" aria-label="Close this drawer window">
+						<svg class="bx-footnote__crossbutton" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23.57 2.54c.58-.58.58-1.5 0-2.08l-.02-.03a1.47 1.47 0 0 0-2.08 0l-8.43 8.43a1.47 1.47 0 0 1-2.08 0L2.54.43a1.47 1.47 0 0 0-2.08 0L.43.46a1.47 1.47 0 0 0 0 2.08l8.43 8.42a1.47 1.47 0 0 1 0 2.08L.43 21.47c-.57.57-.57 1.5 0 2.08l.03.02a1.47 1.47 0 0 0 2.08 0l8.42-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.58 1.5.58 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.42Z"></path>
+						</svg>
+					</button>
+
+					<div class="bx-drawer-footnote__content dialog-body">
+						<div class="bx-drawer-footnote-title">
+							<h5>
+							Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title Footnote Title 
+</h5>
+						</div>
+						<div class="bx-drawer-footnote-desc" tabindex="-1">
+							<p>
+						“Institutional quality” refers to BREIT’s real estate portfolio and not the terms of the offering. Individual investors should be aware that institutional investors generally have different criteria when making investment decisions.
+</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+<div id="flyout-widget">
+			<div id="contact-us" class="bx-dialog" aria-hidden="true" aria-modal="true" tabindex="-1" role="dialog">
+			<div class="bx-dialog__backdrop" data-a11y-dialog-hide="" role="presentation"></div>
+			<div class="bx-dialog__slide-in-container" role="document">
+				<button class="bx-dialog__close" data-a11y-dialog-hide="" aria-label="Close this dialog windowl">
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.57 2.54c.58-.58.58-1.5 0-2.08l-.02-.03a1.47 1.47 0 0 0-2.08 0l-8.43 8.43a1.47 1.47 0 0 1-2.08 0L2.54.43a1.47 1.47 0 0 0-2.08 0L.43.46a1.47 1.47 0 0 0 0 2.08l8.43 8.42a1.47 1.47 0 0 1 0 2.08L.43 21.47c-.57.57-.57 1.5 0 2.08l.03.02a1.47 1.47 0 0 0 2.08 0l8.42-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.58 1.5.58 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.42Z"></path>
+					</svg>
+				</button>
+				<div class="bx-dialog__content bx-flyout-content">
+					<section id="block-8" class="widget widget_block">
+<h2 class="wp-block-heading">Contact Us</h2>
+</section><section id="block-3" class="widget widget_block widget_text">
+<p class="">For office-specific contact information, please visit&nbsp;<a href="https://www.blackstone.com/the-firm/our-offices/">our offices page</a>. Switchboard:&nbsp;<a href="tel:12125835000" data-gtm-category="Form Engagement" data-gtm-action="Phone Number Click" data-gtm-label="+1 (212) 583 5000" data-gtm-outbound_link_type="mailto link" data-gtm-click_url="tel:12125835000" data-gtm-click_text="+1 (212) 583-5000">+1 (212) 583-5000</a></p>
+</section><section id="block-4" class="widget widget_block">
+<h3 class="wp-block-heading">Media Contacts</h3>
+</section><section id="block-5" class="widget widget_block widget_text">
+<p class="">For press inquiries, contact&nbsp;<a href="mailto:pressinquiries@blackstone.com" data-gtm-category="Form Engagement" data-gtm-action="Email Address Click" data-gtm-label="Pressinquiries@blackstone.com" data-gtm-outbound_link_type="mailto link" data-gtm-click_url="mailto:pressinquiries@blackstone.com" data-gtm-click_text="pressinquiries@blackstone.com">pressinquiries@blackstone.com</a>.</p>
+</section><section id="block-6" class="widget widget_block widget_text">
+<p class="">To view recent press releases,&nbsp;<a href="https://www.blackstone.com/press-releases">click here</a>.</p>
+</section>				</div>
+			</div>
+		</div>
+			<div id="subscribe" class="bx-dialog" aria-hidden="true" aria-modal="true" tabindex="-1" role="dialog">
+			<div class="bx-dialog__backdrop" data-a11y-dialog-hide="" role="presentation"></div>
+			<div class="bx-dialog__slide-in-container" role="document">
+				<button class="bx-dialog__close" data-a11y-dialog-hide="" aria-label="Close this dialog windowl">
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.57 2.54c.58-.58.58-1.5 0-2.08l-.02-.03a1.47 1.47 0 0 0-2.08 0l-8.43 8.43a1.47 1.47 0 0 1-2.08 0L2.54.43a1.47 1.47 0 0 0-2.08 0L.43.46a1.47 1.47 0 0 0 0 2.08l8.43 8.42a1.47 1.47 0 0 1 0 2.08L.43 21.47c-.57.57-.57 1.5 0 2.08l.03.02a1.47 1.47 0 0 0 2.08 0l8.42-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.58 1.5.58 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.42Z"></path>
+					</svg>
+				</button>
+				<div class="bx-dialog__content bx-flyout-content">
+					<section id="block-7" class="widget widget_block widget_text">
+<p class=""></p><div class="bx-subscribe-form-wrapper">
+	<form class="bx-subscribe-form" data-pardot-endpoint="https://www3.blackstone.com/l/1037233/2023-11-21/5vb5r5" novalidate="">
+		<div class="bx-subscribe-form__group">
+			<h4 class="bx-subscribe-form__title">Stay up-to-date</h4>
+			<p class="bx-subscribe-form__description">To receive email alerts from Blackstone, sign up below.</p>
+			<p class="bx-subscribe-form__notice bx-form__notice"></p>
+		</div>
+
+		<div class="bx-subscribe-form__group">
+			<div class="bx-subscribe-form__element bx-text-control">
+				<input class="bx-text-control__input" type="email" id="stay-up-to-date-email" placeholder="Email Address *" name="email" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Email address" data-error="Please fill out this field." required="">
+				<label class="bx-text-control__label" for="stay-up-to-date-email">Email Address *</label>
+			</div>
+
+			<div class="bx-subscribe-form__grid-2">
+				<div class="bx-subscribe-form__element bx-text-control">
+					<input class="bx-text-control__input" type="text" id="stay-up-to-date-first-name" placeholder="First Name *" name="first_name" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | First name" data-error="Please fill out this field." required="">
+					<label class="bx-text-control__label" for="stay-up-to-date-first-name">First Name *</label>
+				</div>
+
+				<div class="bx-subscribe-form__element bx-text-control">
+					<input class="bx-text-control__input" type="text" id="stay-up-to-date-last-name" placeholder="Last Name *" name="last_name" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Last name" data-error="Please fill out this field." required="">
+					<label class="bx-text-control__label" for="stay-up-to-date-last-name">Last Name *</label>
+				</div>
+			</div>
+
+			<div class="bx-subscribe-form__grid-2">
+				<div class="bx-subscribe-form__element bx-text-control">
+					<input class="bx-text-control__input" type="text" id="stay-up-to-date-company" placeholder="Company" name="company" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Company name">
+					<label class="bx-text-control__label" for="stay-up-to-date-company">Company</label>
+				</div>
+
+				<div class="bx-subscribe-form__element bx-text-control">
+					<input class="bx-text-control__input" type="text" id="stay-up-to-date-job-title" placeholder="Job Title" name="job_title" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Job title">
+					<label class="bx-text-control__label" for="stay-up-to-date-job-title">Job Title</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="bx-subscribe-form__group">
+			<div class="bx-subscribe-form__element bx-choice-control">
+				<input class="bx-choice-control__checkbox" id="stay-up-to-date-market-commentary" name="list_byron_market_commentary" type="checkbox" value="1"><span class="checkmark"></span>
+				<label class="bx-choice-control__label" for="stay-up-to-date-market-commentary">Market Commentary &amp; Insights</label>
+			</div>
+
+			<div class="bx-subscribe-form__element bx-choice-control">
+				<input class="bx-choice-control__checkbox" id="stay-up-to-date-press-releases" name="list_press_releases" type="checkbox" value="1"><span class="checkmark"></span>
+				<label class="bx-choice-control__label" for="stay-up-to-date-press-releases">Press Releases &amp; Firm Updates</label>
+			</div>
+
+			<div class="bx-subscribe-form__element bx-choice-control">
+				<input class="bx-choice-control__checkbox" id="stay-up-to-date-pattern-recognition" name="list_pattern_recognition" type="checkbox" value="1"><span class="checkmark"></span>
+				<label class="bx-choice-control__label" for="stay-up-to-date-pattern-recognition">Blackstone Pattern Recognition</label>
+			</div>
+		</div>
+
+		<hr class="bx-subscribe-form__group">
+
+		<div class="bx-subscribe-form__group">
+			<p class="bx-subscribe-form__consent">By submitting this request, you consent to receive email from Blackstone.<br> For information on our privacy practices see our <a href="https://www.blackstone.com/privacy" target="_blank">Privacy Policy</a>.</p>
+		</div>
+
+		<div class="bx-subscribe-form__group">
+			<button class="bx-singular-link bx-singular-link--with-background" type="submit" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Submit" data-gtm-tag_name="form_submission" data-gtm-form_name="Blackstone.com Email List Signup Form" data-gtm-form_id="5vb5r5">
+				<span class="bx-singular-link__label bx-form__submit-label">Submit</span>
+				<svg class="bx-singular-link__icon" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+					<path class="bx-singular-link__icon-arrow" fill="currentColor" d="M29 20c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6Z"></path>
+					<path class="bx-singular-link__icon-fill" fill="currentColor" d="M20 0a20 20 0 1 1 0 40 20 20 0 0 1 0-40Zm3.2 14.8c-.3.3-.3.8 0 1.1l3.1 3.3H11.8a.8.8 0 1 0 0 1.6h14.5l-3 3.3c-.4.3-.4.8 0 1.2.3.3.8.2 1.1 0l4.4-4.7.2-.6c0-.2 0-.4-.2-.6l-4.4-4.6a1 1 0 0 0-1.2 0Z"></path>
+					<path class="bx-singular-link__icon-border" fill="currentColor" d="M20 0a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 1.5a18.5 18.5 0 1 1 0 37 18.5 18.5 0 0 1 0-37Z"></path>
+				</svg>
+			</button>
+		</div>
+
+		<input type="hidden" class="bxid-input" name="bxid" value="11176453-8be1-4dff-9a4b-8904999b650c">
+		<input type="hidden" name="URL" value="https://www.blackstone.com/">
+	</form>
+</div>
+<p></p>
+</section>				</div>
+			</div>
+		</div>
+			<div id="fa-connect" class="bx-dialog" aria-hidden="true" aria-modal="true" tabindex="-1" role="dialog">
+			<div class="bx-dialog__backdrop" data-a11y-dialog-hide="" role="presentation"></div>
+			<div class="bx-dialog__slide-in-container" role="document">
+				<button class="bx-dialog__close" data-a11y-dialog-hide="" aria-label="Close this dialog windowl">
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.57 2.54c.58-.58.58-1.5 0-2.08l-.02-.03a1.47 1.47 0 0 0-2.08 0l-8.43 8.43a1.47 1.47 0 0 1-2.08 0L2.54.43a1.47 1.47 0 0 0-2.08 0L.43.46a1.47 1.47 0 0 0 0 2.08l8.43 8.42a1.47 1.47 0 0 1 0 2.08L.43 21.47c-.57.57-.57 1.5 0 2.08l.03.02a1.47 1.47 0 0 0 2.08 0l8.42-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.58 1.5.58 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.42Z"></path>
+					</svg>
+				</button>
+				<div class="bx-dialog__content bx-flyout-content">
+					<section id="block-9" class="widget widget_block widget_text">
+<p class=""></p><div class="bx-connect-us-form-wrapper">
+	<div class="bx-connect-us-form">
+		<div class="bx-connect-us-form__group">
+			<h4 class="bx-connect-us-form__title">Connect with our dedicated team</h4>
+			<div class="bx-connect-us-form__content">
+			<p>Our dedicated team works directly with private wealth managers, family offices and financial advisors to help their clients access alternative solutions. </p>
+			<br>
+			<p><b>Individual Investors</b></p>
+			<p>Please contact your financial advisor to learn more.</p>
+			<br>
+			<p><b>Financial Professional Inquiries</b></p>
+			<p><span>
+			<a href="mailto:connect@blackstone.com" data-gtm-tag_name="Outbound Mailto Link Click" data-gtm-outbound_link_type="mailto link" data-gtm-outbound_mailto_link_click_count="1" data-gtm-click_url="mailto:connect@blackstone.com" data-gtm-click_text="connect@blackstone.com" data-gtm-component_title="Financial Professional Contact Request Submission" data-gtm-component_type="Form" data-gtm-form_name="PWS Media Landing Page_April - July 2024" data-gtm-form_id="2v9s1f" data-gtm-category="Form Engagement" data-gtm-action="Email Address Click" data-gtm-label=""> connect@blackstone.com </a> 
+			</span>
+			<span>
+			<a href="tel:12125835200" data-gtm-tag_name="Outbound Tel Link Click" data-gtm-outbound_link_type="tel link" data-gtm-outbound_tel_link_click_count="1" data-gtm-click_url="tel:12125835200" data-gtm-click_text="+1 (212) 583-5200" data-gtm-component_title="Financial Professional Contact Request Submission" data-gtm-component_type="Form" data-gtm-form_name="PWS Media Landing Page_April - July 2024" data-gtm-form_id="2v9s1f" data-gtm-category="Form Engagement" data-gtm-action="Phone Number Click" data-gtm-label="+1 (212) 583 5200">	+1 (212) 583-5200 </a>
+            </span>
+			</p>
+</div>
+</div>
+</div>
+<p></p>
+</div></section>				</div>
+			</div>
+		</div>
+			<div id="jp-contact-us" class="bx-dialog" aria-hidden="true" aria-modal="true" tabindex="-1" role="dialog">
+			<div class="bx-dialog__backdrop" data-a11y-dialog-hide="" role="presentation"></div>
+			<div class="bx-dialog__slide-in-container" role="document">
+				<button class="bx-dialog__close" data-a11y-dialog-hide="" aria-label="Close this dialog windowl">
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.57 2.54c.58-.58.58-1.5 0-2.08l-.02-.03a1.47 1.47 0 0 0-2.08 0l-8.43 8.43a1.47 1.47 0 0 1-2.08 0L2.54.43a1.47 1.47 0 0 0-2.08 0L.43.46a1.47 1.47 0 0 0 0 2.08l8.43 8.42a1.47 1.47 0 0 1 0 2.08L.43 21.47c-.57.57-.57 1.5 0 2.08l.03.02a1.47 1.47 0 0 0 2.08 0l8.42-8.42a1.47 1.47 0 0 1 2.08 0l8.43 8.42c.57.58 1.5.58 2.08 0l.02-.02a1.47 1.47 0 0 0 0-2.08l-8.42-8.43a1.47 1.47 0 0 1 0-2.08l8.42-8.42Z"></path>
+					</svg>
+				</button>
+				<div class="bx-dialog__content bx-flyout-content">
+					<section id="block-10" class="widget widget_block">
+<h2 class="wp-block-heading">お問い合わせ</h2>
+</section><section id="block-11" class="widget widget_block widget_text">
+<p class="">当社グループの特定の拠点にお問い合わせを希望される場合は、<a href="https://www.blackstone.com/the-firm/our-offices/" data-type="link" data-id="https://www.blackstone.com/the-firm/our-offices/">「当社の拠点」（英語サイト）</a>をご参照ください。</p>
+</section><section id="block-12" class="widget widget_block">
+<h4 class="wp-block-heading">報道関係者お問い合わせ先</h4>
+</section><section id="block-13" class="widget widget_block widget_text">
+<p class=""><a href="mailto:pressinquiries-jp@blackstone.com" data-gtm-category="Form Engagement" data-gtm-action="Email Address Click" data-gtm-label="Pressinquiries Jp@blackstone.com" data-gtm-outbound_link_type="mailto link" data-gtm-click_url="mailto:pressinquiries-jp@blackstone.com" data-gtm-click_text="pressinquiries-jp@blackstone.com">pressinquiries-jp@blackstone.com</a></p>
+</section><section id="block-14" class="widget widget_block widget_text">
+<p class="">最新のプレス・リリースは<a href="https://www.blackstone.com/jp/japan-press-releases/" data-type="link" data-id="https://www.blackstone.com/jp/japan-press-releases/">こちら</a>（英語サイト）をご確認ください。</p>
+</section>				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" id="blackstone-core-js-extra">
+/* <![CDATA[ */
+var bxCore = {"currentSite":"blackstone","isArchive":"false","postType":"page","apiUrl":"https:\/\/publicdata.blackstone.com\/{{type}}\/{{file}}","pauseGA4Analytics":"0"};
+var bxI18n = {"lang":"en","defaultLang":"en"};
+var bxRegionCheck = {"all_languages":{"IN":{"url":"https:\/\/www.blackstone.com\/en-apac\/","slug":"en-apac"},"GB":{"url":"https:\/\/www.blackstone.com\/en-emea\/","slug":"en-emea"},"JP":{"url":"https:\/\/www.blackstone.com\/jp\/","slug":"jp"}},"is_home":"1","is_user_logged_in":""};
+var bxpwspagelanuageData = {"pagedata":[],"regiondata":{"apac":"382","emea":"387","us":"35","ja-jp":"421"},"regionnames":{"en-apac":"apac","en-emea":"emea","en":"us","ja-jp":"ja-jp"},"pwspagecheck":"","regionslugs":{"apac":"en-apac","emea":"en-emea","us":"en","ja-jp":"ja-jp"},"pwsreferertxt":"Take me back"};
+var bxGeoLocation = {"countryCode":"IN","gdprCountries":["AT","BE","BG","CY","CZ","DK","EE","EU","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","GB"],"restUrl":"https:\/\/www.blackstone.com\/wp-json\/blackstone\/v1\/region\/check","shouldRedirect":"1","siteUrl":"https:\/\/www.blackstone.com\/","pageGatedCountries":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blackstone.com/_static/??-eJyNjcEOgjAMhl/I0QgS48H4LLgVUtw60nUY3t5GL5yIpx7+7/sK78UR+1gDFpgLBCoKK3LIAjYtOW4jxWgMijaJuJnLCQ4kwQmNHTSLk8pKCf/Rdr8O8ZCTExzCtqd8ZkVW8JHsuFTdEutEXOAZB/8qmhkNEvw1rDXKVwlWeKT7+dp3l/bWd+38AZGEZJQ="></script><script type="text/javascript" src="https://www.blackstone.com/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19" id="lodash-js"></script>
+<script type="text/javascript" id="lodash-js-after">
+/* <![CDATA[ */
+window.lodash = _.noConflict();
+/* ]]> */
+</script>
+<script type="text/javascript" id="frontend-js-extra">
+/* <![CDATA[ */
+var BxV2FrontendStrings = {"submit":"Submit","submitting":"Submitting...","successMsg":"You have successfully submitted your information","errorMsgAddList":"We were unable to add you to the list(s). Please try again later.","errorMsgRequired":"This field is required."};
+var BxV2FrontendData = {"rest_url":"https:\/\/www.blackstone.com\/wp-json\/","total_insights":"12","featured_insights":"33126","pws_featured_insights":"29621,34028,33538,29622,34030,33544,29623,34029,33542","current_cat":null,"pws_current_cat":null,"current_cat_news":null,"current_cat_news_type":null,"featured_news":"33126"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="frontend-js-before">
+/* <![CDATA[ */
+var gtmKey = "GTM-KVSCJHH";
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blackstone.com/wp-content/themes/blackstone-v2/dist/js/frontend.js?ver=6d0c71c37419e5e2ed2c" id="frontend-js"></script>
+<script type="text/javascript" id="blocks-js-extra">
+/* <![CDATA[ */
+var bxBlocks = {"custom":{"chartTabs":{"localStorageEnabled":false}}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blackstone.com/wp-content/client-mu-plugins/gutenberg/dist/js/blocks.js?m=1753429571g"></script><script type="text/javascript" src="https://fcscdn.broadridge.com/widgets/dist/fl-loader.js?ver=6d0c71c37419e5e2ed2c" id="blacstone-broadridge-script-js"></script><div class="fl-embedded" id="fl-hover-container"></div>
+<script type="text/javascript" src="https://stats.wp.com/e-202530.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"172058796\",\"post\":\"19945\",\"tz\":\"-4\",\"srv\":\"www.blackstone.com\",\"hp\":\"vip\",\"j\":\"1:13.6.1\"}") ]);
+_stq.push([ "clickTrackerInit", "172058796", "19945" ]);
+/* ]]> */
+</script><img src="https://pixel.wp.com/g.gif?v=ext&amp;blog=172058796&amp;post=19945&amp;tz=-4&amp;srv=www.blackstone.com&amp;hp=vip&amp;j=1%3A13.6.1&amp;host=www.blackstone.com&amp;ref=&amp;fcp=2768&amp;rand=0.7320371616887593" alt="" width="6" height="5" id="wpstats">
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-a87f8c3ef941511fee4","applicationID":"756523305","transactionName":"b1RaZksDDBVQBxZdC1Yee0dKFg0LHiIQWwpMEWhTXgc=","queueTime":0,"applicationTime":570,"atts":"QxNNEAMZH0oTBUAOH0VM","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;965a2d08bbdcc904&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.7.0&quot;,&quot;token&quot;:&quot;5a429b9150e941058cd05606149c92ac&quot;}" crossorigin="anonymous"></script>
+
+
+									<div class="primary-nav__backdrop primary-nav__backdrop--hidden"></div>
+								<div id="give-freely-root-ejkiikneibegknkgimmihdpcbcedgmpo" class="give-freely-root" data-extension-id="ejkiikneibegknkgimmihdpcbcedgmpo" data-extension-name="Volume Booster" style="display: block;"></div> 
+
+<style>
+    .cc-message p { margin: 0; font-size: 14px;}
+  .f-gpc-banner {
+        background:white;
+        z-index:99;
+    }
+  .f-gpc-flyout{
+    z-index:99;
+  }
+  
+  .cmp-tabs__gpc-message span,
+  .cmp-tabs__opt-out.active {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 100;
+    color: #FFF;
+    font-style: normal;
+  }
+</style><script type="text/javascript" id="" charset="">(function(){var a=document.createElement("script");a.src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js";a.setAttribute("data-tenant-uuid","9b010e88-83d6-4aeb-a593-1843c0b155b8");a.setAttribute("data-domain-uuid","8af139b6-2417-4be1-8462-d927645f9c77");a.setAttribute("data-backend-url","https://app.securiti.ai");google_tag_manager["rm"]["119325388"](7)==google_tag_manager["rm"]["119325388"](8)&&a.setAttribute("data-securiti-staging-mode","true");a.setAttribute("data-skip-css","false");a.defer=!0;var b=document.head||
+document.body;b.appendChild(a)})();</script><script type="text/javascript" id="" charset="">window.addEventListener("message",function(a){if(a.data.message==="consent_given"){var c=new Headers;c.append("Authorization","Basic MTox");c={method:"GET",headers:c};fetch("/wp-json/blackstone/v1/bx-analytics/identification",c).then(function(b){return b.json()}).then(function(b){b["X-Bot-Score"]&&b["X-Internal"]?a.data.consentStatuses&&Object.keys(a.data.consentStatuses)&&dataLayer.push({event:"userPrefUpdate_v2",consolidatedConsent:a.data.consentStatuses,bxTraffic:b["X-Internal"],bxBR:b["X-Bot-Score"]}):
+b["X-Bot-Score"]?a.data.consentStatuses&&Object.keys(a.data.consentStatuses)&&dataLayer.push({event:"userPrefUpdate_v2",consolidatedConsent:a.data.consentStatuses,bxBR:b["X-Bot-Score"]}):b["X-Internal"]?a.data.consentStatuses&&Object.keys(a.data.consentStatuses)&&dataLayer.push({event:"userPrefUpdate_v2",consolidatedConsent:a.data.consentStatuses,bxTraffic:b["X-Internal"]}):a.data.consentStatuses&&Object.keys(a.data.consentStatuses)&&dataLayer.push({event:"userPrefUpdate_v2",consolidatedConsent:a.data.consentStatuses})})["catch"](function(b){a.data.consentStatuses&&
+Object.keys(a.data.consentStatuses)&&dataLayer.push({event:"userPrefUpdate_v2",consolidatedConsent:a.data.consentStatuses})})}});</script><script id="" text="" charset="" type="text/javascript" src="https://cdn.optimizely.com/js/29787080125.js"></script><script type="text/javascript" id="" charset="">window.addEventListener("message",function(a){"consent_given"===a.data.message&&(console.log(a.data.consentStatuses),a.data.consentStatuses&&Object.keys(a.data.consentStatuses).forEach(function(b){a.data.consentStatuses[b]&&dataLayer.push({event:"userPrefUpdate",cookieAccepted:b})}))});</script><iframe src="https://a29787080125.cdn.optimizely.com/client_storage/a29787080125.html" hidden="" tabindex="-1" title="Optimizely Internal Frame" height="0" width="0" style="display: none;"></iframe><style>
+            .bx-email-capture-form-authoring-textbox {
+                background: transparent !important;
+                padding: 0 !important;
+                padding-bottom: 6px !important;
+                font-size: 18px !important;
+                font-weight: 400;
+            }
+            body div .bx-email-capture-form-authoring-textbox:hover {
+                font-weight: 400 !important;
+            }
+            .bx-email-capture-form_error-text {
+                font-weight: 400 !important;
+            }
+            .bx-email-capture-form__label {
+                left: 0px !important;
+                top: 0px !important;
+                font-weight: 400 !important;
+            }
+            .bx-email-capture-form-authoring-textbox {
+                box-shadow: 0 1px 0 var(--c-copy) !important;
+            }
+            .bx-email-capture-form-authoring-textbox.textbox_validation,
+            .bx-email-capture-form-authoring-textbox.textbox_validation:focus-within {
+                box-shadow: 0 1px 0 #ea4334 !important;
+            }
+            .bx-email-capture-form__element {
+                padding-top: 24px !important;
+            }
+            .bx-email-capture-form-authoring-textbox:hover {
+                font-weight: inherit !important;
+            }
+            .bx-email-capture-form {
+                transform: translateY(-90px);
+            }
+            .bx-email-capture__title {
+                font-weight: 300 !important;
+                font-size: 40px !important;
+                width: 580px;
+            }
+            
+            .bx-email-capture-checkbox {
+                font-size: 14px;
+                font-weight: 400 !important;
+                max-width: 366px;
+                flex-grow: 1;
+            }
+            h3 .bx-email-capture__submit-button {
+                padding-top: 20px !important;
+            }
+            @media screen and (min-width: 1280px) {
+                .bx-email-capture__inner {
+                    --columns: 16 !important;
+                    grid-template-areas: "Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow "
+                                        "Title Title Title Title Title Title Title Title Title . form form form form form . "
+                                        "Link Link Link Link . . . . . . form form form form form . "
+                                        "innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks"
+                                        ". . . . success success success success success success success success . . . . " !important;
+                }
+            }
+            @media screen and (max-width: 1279px) {
+                .bx-email-capture__title {
+                    width: 100%;
+                    font-size: 48px !important;
+                }
+                .bx-email-capture-disclaimer {
+                    padding-top: 20px;
+                }
+                .bx-email-capture__inner {
+                    --columns: 16 !important;
+                    grid-template-areas: "Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow Eyebrow "
+                                        "Title Title Title Title Title Title Title Title . form form form form form form form "
+                                        "Link Link Link Link . . . . . form form form form form form form "
+                                        "innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks innerblocks"
+                                        ". . . . success success success success success success success success . . . . " !important;
+                }
+                                    
+                .bx-email-capture-form {
+                    transform: translateY(-6px);
+                    padding-left: 20px
+                }
+                .bx-email-capture-checkbox {
+                    padding-left: 20px;
+                    font-size: 11px;
+                    line-height: 16px;
+                }
+                .bx-email-capture__eyebrow {
+                    padding-bottom: 24px !important;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .bx-email-capture__inner {
+                    --columns: 4 !important;
+                    grid-template-areas:
+                    "Eyebrow Eyebrow Eyebrow Eyebrow "
+                    "Title Title Title Title "
+                    "form form form form"
+                    "Link Link Link . "
+                    "success success success success" !important;
+                }
+                .bx-email-capture-form .bx-email-capture__submit-button {
+                    display: block !important;
+                }
+                h3 .bx-email-capture__submit-button {
+                    display: none !important;
+                }
+                .bx-email-capture-form {
+                    transform: none;
+                    padding-left: 0px !important;
+                }
+                .bx-email-capture-checkbox {
+                    font-size: 15px;
+                    line-height: 22px;
+                    transform: translateY(-5px);
+                }
+                .bx-email-capture-disclaimer {
+                    padding-top: 32px;
+                }
+                .bx-email-capture-form .bx-email-capture__submit-button {
+                    display: flex !important;
+                }
+                .bx-email-capture__title {
+                    font-size: 35px !important;
+                }
+                .bx-email-capture-form-authoring-textbox {
+                    padding-bottom: 4px !important;
+                }
+                .bx-email-capture-form .bx-email-capture__submit-button button {
+                    font-size: var(--fs-18);
+                }
+            }
+            @media (min-width: 25.87em) {
+                .bx-email-capture.alignfull {
+                    padding-bottom: var(--spacing-40) !important;
+                    padding-top: var(--spacing-40) !important;
+                }
+            }
+            @media (min-width: 48em) {
+                .bx-email-capture.alignfull {
+                    padding-bottom: var(--spacing-48) !important;
+                    padding-top: var(--spacing-48) !important;
+                }
+            }
+            @media (min-width: 80em) {
+                .bx-email-capture.alignfull {
+                    padding-bottom: var(--spacing-72) !important;
+                    padding-top: var(--spacing-72) !important;
+                }
+            }
+            @media (min-width: 90em) {
+                .bx-email-capture.alignfull {
+                    padding-bottom: var(--spacing-80) !important;
+                    padding-top: var(--spacing-80) !important;
+                }
+            }
+        </style><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><script src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-1.125.0.js "></script><script type="text/javascript" id="" charset="">function initBXID(){var b="BXID",a=document.cookie;(a=a.match(new RegExp("(^|;)\\s*"+b+"\\s*\x3d\\s*([^;]+)")))&&1<a.length&&"undefined"!==a[2]&&(window._BXID=a[2]);a=new Date;a.setTime(a.getTime()+7776E6);a="; expires\x3d"+a.toUTCString();document.cookie=b+"\x3d"+window._BXID+a+"; path\x3d/"}initBXID();</script><script type="text/javascript" id="" charset="">for(var eventQueue=eventQueue||[],i=0;i<eventQueue.length;i++){var event=eventQueue[i];event.event&&(window.dataLayer.push(event),eventQueue.splice(i,1),i--)};</script><script type="text/javascript" id="" charset="">window.dataLayer.push({event:"video_progress_restart",videoProgress75:!1,videoProgress50:!1,videoProgress25:!1});</script><script type="text/javascript" id="" charset="">window.dataLayer.push({event:"video_progress_reached",videoProgress25:!0});</script><script type="text/javascript" id="" charset="">window.dataLayer.push({event:"video_progress_reached",videoProgress50:!0,videoProgress25:!0});</script><iframe height="0" width="0" src="https://11798860.fls.doubleclick.net/activityi;src=11798860;type=globa0;cat=scrol0;ord=8541306720206;npa=0;auiddc=462115070.1753569902;uaa=x86;uab=64;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.169%7CGoogle%2520Chrome%3B138.0.7204.169;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;pscdl=noapi;frm=0;_tu=KlA;gtm=45fe57n0h1v9189574039z89119325388za200zb9119325388zd9119325388;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813;epver=2;dc_random=1753598927761;_dc_test=1;~oref=https%3A%2F%2Fwww.blackstone.com%2F?" style="display: none; visibility: hidden;"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="DC-11798860/globa0/scrol0+standard" data-load-time="1753598927791" height="0" width="0" src="https://td.doubleclick.net/td/fls/rul/activityi;fledge=1;src=11798860;type=globa0;cat=scrol0;ord=8541306720206;npa=0;auiddc=462115070.1753569902;uaa=x86;uab=64;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.169%7CGoogle%2520Chrome%3B138.0.7204.169;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;pscdl=noapi;frm=0;_tu=KlA;gtm=45fe57n0h1v9189574039z89119325388za200zb9119325388zd9119325388;gcd=13l3l3l3l1l1;dma=0;dc_fmt=9;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813;epver=2;dc_random=1753598927761;_dc_test=1;~oref=https%3A%2F%2Fwww.blackstone.com%2F?" style="display: none; visibility: hidden;"></iframe><script type="text/javascript" id="" charset="">window.dataLayer.push({event:"video_progress_reached",videoProgress75:!0,videoProgress50:!0,videoProgress25:!0});</script></body>

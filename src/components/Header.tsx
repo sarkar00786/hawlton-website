@@ -3,8 +3,10 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Search, Globe, Bell, User, ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin } from 'lucide-react'
 import LiquidNav from './LiquidNav'
+import EnhancedNavigation from './EnhancedNavigation'
+import { motion, AnimatePresence } from 'framer-motion'
 
 // For now, just show auth links without checking session state
 // This makes the header work without requiring SessionProvider
@@ -96,8 +98,8 @@ const Header = () => {
               </Link>
             </div>
 
-            {/* Desktop Navigation - Liquid Nav */}
-            <LiquidNav />
+            {/* Desktop Navigation - Enhanced Navigation */}
+            <EnhancedNavigation />
           </div>
 
           {/* CTA Buttons Section - Desktop */}
