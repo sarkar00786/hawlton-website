@@ -70,30 +70,20 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       
       // Variant styles - Use Tailwind-defined colors
       {
-        // Primary - Professional Gold Button
-        'bg-primary-gold text-primary-navy shadow-gold': variant === 'primary',
-        'hover:bg-primary-gold/90 hover:shadow-glow-gold hover:scale-105': variant === 'primary',
-        'focus:ring-primary-gold/30': variant === 'primary',
+        // Primary - Professional Gold Button with all states
+        'bg-primary-gold text-primary-navy shadow-gold hover:bg-primary-gold/90 hover:shadow-glow-gold hover:scale-105 focus:ring-primary-gold/30': variant === 'primary',
         
-        // Secondary - Gold Outline Button
-        'bg-accent-secondary text-primary-navy shadow-navy': variant === 'secondary',
-        'hover:bg-accent-hover hover:shadow-elevated': variant === 'secondary',
-        'focus:ring-accent-secondary/30': variant === 'secondary',
+        // Secondary - Gold Outline Button with all states
+        'bg-accent-secondary text-primary-navy shadow-navy hover:bg-accent-hover hover:shadow-elevated focus:ring-accent-secondary/30': variant === 'secondary',
         
-        // Outline - Professional Border Button
-        'border-2 border-primary-gold text-primary-gold bg-transparent': variant === 'outline',
-        'hover:bg-primary-gold hover:text-primary-navy': variant === 'outline',
-        'focus:ring-primary-gold/30': variant === 'outline',
+        // Outline - Professional Border Button with all states
+        'border-2 border-primary-gold text-primary-gold bg-transparent hover:bg-primary-gold hover:text-primary-navy focus:ring-primary-gold/30': variant === 'outline',
         
-        // Ghost - Subtle Text Button
-        'text-primary-gold bg-transparent': variant === 'ghost',
-        'hover:bg-primary-gold/10': variant === 'ghost',
-        'focus:ring-primary-gold/30': variant === 'ghost',
+        // Ghost - Subtle Text Button with all states
+        'text-primary-gold bg-transparent hover:bg-primary-gold/10 focus:ring-primary-gold/30': variant === 'ghost',
         
-        // Link - Text Link Button
-        'text-primary-gold bg-transparent underline-offset-4': variant === 'link',
-        'hover:underline': variant === 'link',
-        'focus:ring-primary-gold/30': variant === 'link',
+        // Link - Text Link Button with all states
+        'text-primary-gold bg-transparent underline-offset-4 hover:underline focus:ring-primary-gold/30': variant === 'link',
       },
       
       // Full width
