@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hawlton's Story Section */}
-      <section className="bg-primary-platinum py-20">
+      <section id="hero-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
@@ -37,7 +37,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="bg-primary-navy py-20">
+      <section id="vision-mission-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
@@ -81,7 +81,7 @@ export default function AboutPage() {
       </section>
 
       {/* The Team Section */}
-      <section className="bg-primary-platinum py-20">
+      <section id="team-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
@@ -227,7 +227,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Philosophy Section */}
-      <section className="bg-primary-navy py-20">
+      <section id="philosophy-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">

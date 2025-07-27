@@ -33,97 +33,88 @@ export const PAGE_SECTIONS = {
     'values': 'value-proposition'
   },
   
-  // About page sections
+  // About page sections - matching actual content
   '/about': {
-    'overview': 'about-overview',
-    'team': 'about-team', 
-    'vision': 'about-vision',
-    'awards': 'about-awards',
-    'mission': 'about-mission',
-    'history': 'about-history'
+    'overview': 'hero-section', // Company story section
+    'team': 'team-section', // The Team Section
+    'vision': 'vision-mission-section', // Vision & Mission Section
+    'values': 'philosophy-section' // Our Philosophy Section
   },
   
-  // Solutions page sections
+  // Solutions page sections - matching actual content
   '/solutions': {
-    'digital-transformation': 'solutions-digital',
-    'partnerships': 'solutions-partnerships', 
-    'investment': 'solutions-investment',
-    'success-stories': 'solutions-success',
-    'services': 'solutions-services',
-    'process': 'solutions-process'
+    'services': 'hero-section', // Main solutions intro
+    'partnerships': 'digital-partnerships-section', // Digital Growth Partnerships
+    'results': 'impact-section', // Our Impact Section
+    'process': 'cta-section' // CTA Section
   },
   
-  // Partner page sections
+  // Partner page sections - matching actual content
   '/partner': {
-    'types': 'partner-types',
-    'application': 'partner-application',
-    'process': 'partner-process',
-    'benefits': 'partner-benefits',
-    'requirements': 'partner-requirements',
-    'testimonials': 'partner-testimonials'
+    'benefits': 'benefits-section', // Benefits Section
+    'process': 'process-section', // Process Section
+    'testimonials': 'testimonials-section', // Testimonials Section
+    'application': 'partner-form' // Partner Form Section
   },
   
-  // Invest page sections  
+  // Invest page sections - matching actual content
   '/invest': {
-    'opportunities': 'invest-opportunities',
-    'portfolio': 'invest-portfolio',
-    'relations': 'invest-relations',
-    'documentation': 'invest-documentation',
-    'process': 'invest-process',
-    'returns': 'invest-returns'
+    'benefits': 'benefits-section', // Benefits Section
+    'opportunities': 'opportunities-section', // Investment Opportunities Section
+    'testimonials': 'testimonials-section', // Testimonials Section
+    'investment-form': 'investment-form' // Investment Form Section
   },
   
-  // Contact page sections
+  // Contact page sections - matching actual content
   '/contact': {
-    'form': 'contact-form',
-    'locations': 'contact-locations', 
-    'info': 'contact-info',
-    'map': 'contact-map'
+    'form': 'contact-form', // Contact Form Section
+    'info': 'contact-info', // Contact Information
+    'faq': 'faq-section' // FAQ Section
   },
   
-  // Careers page sections
+  // Careers page sections - matching actual content
   '/careers': {
-    'openings': 'careers-openings',
-    'culture': 'careers-culture',
-    'benefits': 'careers-benefits',
-    'process': 'careers-process',
-    'apply': 'careers-apply'
+    'openings': 'open-positions', // Open Positions Section
+    'culture': 'company-culture', // Why Work With Us Section
+    'process': 'hiring-process', // Application Process Section
+    'benefits': 'company-culture' // Benefits are part of company culture section
   }
 }
 
 // Navigation href to section mapping
 export const NAVIGATION_MAPPING = {
-  // About dropdown mappings
-  '/about': 'overview',
-  '/about/team': 'team',
-  '/about/vision': 'vision', 
-  '/about/awards': 'awards',
+  // About dropdown mappings - matching new structure
+  '/about#overview': 'overview',
+  '/about#team': 'team',
+  '/about#vision': 'vision', 
+  '/about#values': 'values',
   
-  // Solutions dropdown mappings
-  '/solutions': 'services',
-  '/solutions/digital-transformation': 'digital-transformation',
-  '/solutions/partnerships': 'partnerships',
-  '/solutions/investment': 'investment',
-  '/solutions/success-stories': 'success-stories',
+  // Solutions dropdown mappings - matching new structure
+  '/solutions#services': 'services',
+  '/solutions#partnerships': 'partnerships',
+  '/solutions#results': 'results',
+  '/solutions#process': 'process',
   
-  // Partner dropdown mappings
-  '/partner': 'benefits',
-  '/partner/types': 'types', 
-  '/partner/apply': 'application',
-  '/partner/portal': 'process',
-  '/partner/resources': 'requirements',
+  // Partner dropdown mappings - matching new structure
+  '/partner#benefits': 'benefits',
+  '/partner#process': 'process',
+  '/partner#testimonials': 'testimonials',
+  '/partner#application': 'application',
   
-  // Invest dropdown mappings
-  '/invest': 'opportunities',
-  '/invest/opportunities': 'opportunities',
-  '/invest/portfolio': 'portfolio',
-  '/invest/relations': 'relations', 
-  '/invest/docs': 'documentation',
+  // Invest dropdown mappings - matching new structure
+  '/invest#benefits': 'benefits',
+  '/invest#opportunities': 'opportunities',
+  '/invest#testimonials': 'testimonials',
+  '/invest#investment-form': 'investment-form',
   
-  // Contact dropdown mappings
-  '/contact': 'form',
-  '/contact/locations': 'locations',
-  '/careers': 'openings'
+  // Contact dropdown mappings - matching new structure
+  '/contact#form': 'form',
+  '/contact#info': 'info',
+  
+  // Careers dropdown mappings
+  '/careers#openings': 'openings',
+  '/careers#culture': 'culture',
+  '/careers#process': 'process'
 }
 
 /**
