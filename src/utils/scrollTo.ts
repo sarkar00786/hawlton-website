@@ -144,9 +144,10 @@ export const handleNavigation = (
   // If we're already on the target page, just scroll to section
   if (currentPath === targetPath && sectionKey) {
     const pageSections = PAGE_SECTIONS[targetPath as keyof typeof PAGE_SECTIONS]
-    if (pageSections && pageSections[sectionKey]) {
+    if (pageSections && sectionKey in pageSections) {
+      const sectionId = pageSections[sectionKey as keyof typeof pageSections]
       setTimeout(() => {
-        scrollToSection(pageSections[sectionKey])
+        scrollToSection(sectionId)
         onComplete?.()
       }, 100)
       return true
@@ -159,9 +160,10 @@ export const handleNavigation = (
       // Wait for page to load, then scroll to section
       if (sectionKey) {
         const pageSections = PAGE_SECTIONS[targetPath as keyof typeof PAGE_SECTIONS]
-        if (pageSections && pageSections[sectionKey]) {
+        if (pageSections && sectionKey in pageSections) {
+          const sectionId = pageSections[sectionKey as keyof typeof pageSections]
           setTimeout(() => {
-            scrollToSection(pageSections[sectionKey])
+            scrollToSection(sectionId)
             onComplete?.()
           }, 300) // Slightly longer delay for page navigation
         }
@@ -182,5 +184,8 @@ export const handleNavigation = (
  */
 export const getSectionId = (pathname: string, sectionKey: string): string | null => {
   const pageSections = PAGE_SECTIONS[pathname as keyof typeof PAGE_SECTIONS]
-  return pageSections ? pageSections[sectionKey] || null : null
+  if (pageSections && sectionKey in pageSections) {
+    return pageSections[sectionKey as keyof typeof pageSections]
+  }
+  return null
 }
