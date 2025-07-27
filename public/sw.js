@@ -22,6 +22,7 @@ const urlsToCache = [
 const cachePatterns = {
   images: /\.(jpg|jpeg|png|gif|webp|svg)$/i,
   fonts: /\.(woff|woff2|ttf|eot)$/i,
+  googleFonts: /^https:\/\/fonts\.(googleapis|gstatic)\.com/,
   api: /^https:\/\/.*\.sanity\.io/,
   cdn: /^https:\/\/cdn\./
 }
@@ -111,7 +112,7 @@ async function handleRequest(request) {
     }
     
     // Fonts - Cache first (they rarely change)
-    if (cachePatterns.fonts.test(request.url)) {
+    if (cachePatterns.fonts.test(request.url) || cachePatterns.googleFonts.test(request.url)) {
       return await cacheFirstStrategy(request)
     }
     

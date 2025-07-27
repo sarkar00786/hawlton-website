@@ -278,8 +278,7 @@ export default function RootLayout({
           />
         )}
 
-        {/* Service Worker Registration - Temporarily disabled to fix CSP issues */}
-        {/*
+        {/* Service Worker Registration */}
         <Script
           id="service-worker"
           strategy="afterInteractive"
@@ -299,7 +298,6 @@ export default function RootLayout({
             `,
           }}
         />
-        */}
         
         <LanguageProvider>
           <LoadingProvider>

@@ -1,10 +1,31 @@
 'use client'
 
-import { Suspense } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { TrendingUp, DollarSign, PieChart, BarChart3, Users, Target, Award, FileText } from 'lucide-react'
 
 const InvestorPortal = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simulate loading completion
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 100)
+    
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-primary-navy via-primary-navy/95 to-primary-navy text-primary-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-primary-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-primary-silver">Loading your portfolio...</p>
+        </div>
+      </div>
+    )
+  }
   const stats = [
     {
       label: "Total Investment",
