@@ -19,6 +19,11 @@ const EnhancedNavigation = () => {
   // Navigation items with internationalization
   const navigationItems = [
     {
+      label: 'Home',
+      href: '/',
+      submenu: null
+    },
+    {
       label: t('nav.about'),
       href: '/about',
       submenu: [
@@ -125,27 +130,27 @@ const EnhancedNavigation = () => {
   return (
     <nav className="hidden lg:flex items-center space-x-1">
       {/* Smart Search Integration */}
-      <div className="relative mr-6">
-        <div className="flex items-center bg-primary-navy/50 rounded-lg px-3 py-2 border border-primary-gold/20 focus-within:border-primary-gold transition-colors">
-          <Search className="w-4 h-4 text-primary-silver mr-2" />
+      <div className="relative mr-4">
+        <div className="flex items-center bg-primary-navy/50 rounded-md px-2 py-1 border border-primary-gold/20 focus-within:border-primary-gold transition-colors">
+          <Search className="w-3 h-3 text-primary-silver mr-1.5" />
           <input
             type="text"
             placeholder={t('common.search')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-transparent text-primary-white placeholder-primary-silver text-sm w-32 focus:w-48 transition-all focus:outline-none"
+            className="bg-transparent text-primary-white placeholder-primary-silver text-xs w-24 focus:w-32 transition-all focus:outline-none"
           />
         </div>
       </div>
 
       {/* Language Switcher */}
-      <div className="relative mr-6">
+      <div className="relative mr-4">
         <button
           onClick={() => setLanguage(language === 'EN' ? 'UR' : 'EN')}
-          className="flex items-center space-x-1 text-primary-silver hover:text-primary-gold transition-colors px-2 py-1 rounded"
+          className="flex items-center space-x-1 text-primary-silver hover:text-primary-gold transition-colors px-1.5 py-1 rounded"
         >
-          <Globe className="w-4 h-4" />
-          <span className="text-sm font-medium">{language}</span>
+          <Globe className="w-3 h-3" />
+          <span className="text-xs font-medium">{language}</span>
         </button>
       </div>
 
@@ -159,16 +164,16 @@ const EnhancedNavigation = () => {
         >
           <Link
             href={item.href}
-            className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-200 ${
+            className={`flex items-center space-x-1 px-3 py-1.5 rounded-md transition-all duration-200 ${
               isActive(item.href)
                 ? 'bg-primary-gold/10 text-primary-gold font-semibold'
                 : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
             }`}
           >
-            <span>{item.label}</span>
+            <span className="text-sm">{item.label}</span>
             {item.submenu && (
               <ChevronDown 
-                className={`w-4 h-4 transition-transform duration-200 ${
+                className={`w-3 h-3 transition-transform duration-200 ${
                   activeDropdown === item.label ? 'rotate-180' : ''
                 }`} 
               />
