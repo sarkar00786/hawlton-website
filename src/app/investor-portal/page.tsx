@@ -1,6 +1,7 @@
 'use client'
 
 import { Suspense } from 'react'
+import Link from 'next/link'
 import { TrendingUp, DollarSign, PieChart, BarChart3, Users, Target, Award, FileText } from 'lucide-react'
 
 const InvestorPortal = () => {
@@ -61,11 +62,47 @@ const InvestorPortal = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-navy via-primary-navy/95 to-primary-navy text-primary-white">
+      {/* Professional Header */}
+      <header className="bg-black/20 backdrop-blur-xl border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo Area */}
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-r from-primary-gold to-primary-gold rounded-xl flex items-center justify-center">
+                  <span className="text-primary-navy font-bold text-lg">H</span>
+                </div>
+                <div>
+                  <h1 className="text-white font-bold text-xl">Investor Portal</h1>
+                  <p className="text-primary-silver text-sm">Welcome back, Investor</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Header Actions */}
+            <div className="flex items-center space-x-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-primary-gold to-primary-gold rounded-full flex items-center justify-center">
+                <span className="text-primary-navy font-semibold text-sm">IN</span>
+              </div>
+              
+              {/* Back to Hawlton Button */}
+              <Link href="/">
+                <button className="group relative overflow-hidden bg-gradient-to-r from-primary-gold to-primary-gold text-primary-navy font-semibold px-6 py-2 rounded-xl hover:scale-105 transition-transform duration-200">
+                  <div className="relative flex items-center space-x-2">
+                    <span>Back to Hawlton</span>
+                  </div>
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </header>
+      
       <div className="max-w-7xl mx-auto p-6">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-primary-gold mb-2">
-              Investor Portal
-            </h1>
+            <h2 className="text-3xl font-bold text-primary-gold mb-2">
+              Portfolio Dashboard
+            </h2>
             <p className="text-primary-silver text-lg">
               Track your investments and portfolio performance
             </p>

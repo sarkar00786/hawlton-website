@@ -6,6 +6,9 @@ import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react'
 const Footer = () => {
   const pathname = usePathname()
   
+  const isPortalPage = pathname.startsWith('/investor-portal') || pathname.startsWith('/partner-portal')
+  if (isPortalPage) return null;
+
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/'
     return pathname.startsWith(href)

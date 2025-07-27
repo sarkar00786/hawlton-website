@@ -44,14 +44,16 @@ const nextConfig: NextConfig = {
     const securityHeaders = [
       {
         key: 'Content-Security-Policy',
-        value: `
+value: `
           default-src 'self';
-          script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.tawk.to;
-          style-src 'self' 'unsafe-inline' fonts.googleapis.com;
-          img-src 'self' data: blob: *.sanity.io *.googletagmanager.com;
-          font-src 'self' fonts.gstatic.com;
-          connect-src 'self' *.google-analytics.com *.sanity.io;
-          frame-src 'self' *.tawk.to;
+          script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.tawk.to https://vercel.live;
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+          img-src 'self' data: blob: *.sanity.io *.googletagmanager.com https:;
+          font-src 'self' https://fonts.gstatic.com;
+          connect-src 'self' *.google-analytics.com *.sanity.io https://fonts.googleapis.com https://fonts.gstatic.com https://vercel.live wss://ws-us3.pusher.com;
+          frame-src 'self' *.tawk.to https://vercel.live;
+          worker-src 'self' blob:;
+          child-src 'self' blob:;
           object-src 'none';
           base-uri 'self';
           form-action 'self';
