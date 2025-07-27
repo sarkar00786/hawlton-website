@@ -57,6 +57,14 @@ const Header = () => {
 
   const isActive = (path: string) => pathname === path
 
+  // Hide header on portal pages for focused app experience
+  const isPortalPage = pathname.startsWith('/investor-portal') || pathname.startsWith('/partner-portal')
+  
+  // Don't render header at all on portal pages
+  if (isPortalPage) {
+    return null
+  }
+
   // Professional scroll behavior - hide on scroll down, show on scroll up
   useEffect(() => {
     const handleScroll = () => {
