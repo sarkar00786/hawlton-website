@@ -54,14 +54,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
       // Custom styling for Hawlton brand
       player.ready(() => {
-        const controlBar = player.controlBar
+        const controlBar = player.getChild('ControlBar')
         
         // Customize control bar colors
         if (controlBar && controlBar.el()) {
-          controlBar.el().style.background = 'linear-gradient(90deg, rgba(26, 35, 126, 0.9) 0%, rgba(26, 35, 126, 0.7) 100%)'
-          controlBar.el().style.backdropFilter = 'blur(10px)'
+          const controlBarEl = controlBar.el() as HTMLElement
+          controlBarEl.style.background = 'linear-gradient(135deg, #1a365d 0%, #2d3748 100%)'
+          controlBarEl.style.color = '#e2e8f0'
         }
-
         // Add custom CSS for Hawlton theme
         const style = document.createElement('style')
         style.textContent = `
@@ -136,6 +136,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       player.on('timeupdate', () => {
         const currentTime = player.currentTime()
         const duration = player.duration()
+        
+        // Only calculate if both values are valid
+        if (typeof currentTime !== 'number' || typeof duration !== 'number' || duration === 0) {
+          return
+        }
+        
         const percentWatched = (currentTime / duration) * 100
 
         // Track 25%, 50%, 75% completion
