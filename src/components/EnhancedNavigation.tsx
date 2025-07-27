@@ -10,7 +10,7 @@ const EnhancedNavigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [language, setLanguage] = useState('EN')
-  const timeoutRef = useRef<NodeJS.Timeout>()
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const pathname = usePathname()
 
   const navigationItems = [
