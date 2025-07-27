@@ -113,8 +113,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       // Analytics tracking (if needed)
       player.on('play', () => {
         // Track video play event
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'video_play', {
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          (window as any).gtag('event', 'video_play', {
             event_category: 'Video Engagement',
             event_label: title || src,
             video_title: title
@@ -124,8 +124,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
       player.on('ended', () => {
         // Track video completion
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'video_complete', {
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          (window as any).gtag('event', 'video_complete', {
             event_category: 'Video Engagement',
             event_label: title || src,
             video_title: title
@@ -139,10 +139,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         const percentWatched = (currentTime / duration) * 100
 
         // Track 25%, 50%, 75% completion
-        if (percentWatched >= 25 && !player.hasTracked25) {
-          player.hasTracked25 = true
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'video_progress', {
+        if (percentWatched >= 25 && !(player as any).hasTracked25) {
+          (player as any).hasTracked25 = true
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as any).gtag('event', 'video_progress', {
               event_category: 'Video Engagement',
               event_label: title || src,
               video_title: title,

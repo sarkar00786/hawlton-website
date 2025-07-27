@@ -78,8 +78,8 @@ const AdvancedCarousel: React.FC<AdvancedCarouselProps> = ({
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
     
     // Track navigation
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'carousel_navigation', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'carousel_navigation', {
         event_category: 'Content Engagement',
         event_label: 'Previous Slide',
         slide_index: currentSlide
@@ -91,8 +91,8 @@ const AdvancedCarousel: React.FC<AdvancedCarouselProps> = ({
     setCurrentSlide((prev) => (prev + 1) % slides.length)
     
     // Track navigation
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'carousel_navigation', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'carousel_navigation', {
         event_category: 'Content Engagement',
         event_label: 'Next Slide',
         slide_index: currentSlide
@@ -104,8 +104,8 @@ const AdvancedCarousel: React.FC<AdvancedCarouselProps> = ({
     setCurrentSlide(index)
     
     // Track direct navigation
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'carousel_dot_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'carousel_dot_click', {
         event_category: 'Content Engagement',
         event_label: `Slide ${index + 1}`,
         slide_index: index
