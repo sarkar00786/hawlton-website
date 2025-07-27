@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+# Priority pages for enhanced crawling
+Allow: /about
+Allow: /solutions
+Allow: /partner
+Allow: /invest
+Allow: /careers
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+
+# Block access to private directories
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /hawlton-cms/
+Disallow: /test-tailwind/
+
+# Allow access to static assets
+Allow: /images/
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /site.webmanifest
+
+# Sitemap location
+Sitemap: https://hawlton.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block common bot spam
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

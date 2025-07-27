@@ -1,0 +1,214 @@
+// Hawlton Authentication System Database Schema
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model with role-based access
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id                String    @id @default(cuid())
+  name              String?
+  email             String    @unique
+  emailVerified     DateTime?
+  image             String?
+  password          String?   // For credentials login
+  role              UserRole  @default(USER)
+  status            UserStatus @default(ACTIVE)
+  
+  // Business Information
+  company           String?
+  phone             String?
+  businessType      String?
+  website           String?
+  
+  // Timestamps
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  lastLoginAt       DateTime?
+
+  // Relations
+  accounts          Account[]
+  sessions          Session[]
+  partnerInquiries  PartnerInquiry[]
+  investorInquiries InvestorInquiry[]
+  dashboardAccess   DashboardAccess[]
+  notifications     Notification[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Partner Inquiry System
+model PartnerInquiry {
+  id                String   @id @default(cuid())
+  userId            String?  // Optional: link to user if logged in
+  user              User?    @relation(fields: [userId], references: [id])
+  
+  // Contact Information
+  fullName          String
+  email             String
+  phone             String
+  company           String
+  website           String?
+  
+  // Business Details
+  businessType      String
+  currentRevenue    String
+  partnershipGoals  String
+  additionalInfo    String?
+  
+  // Status and Tracking
+  status            InquiryStatus @default(PENDING)
+  priority          Priority      @default(MEDIUM)
+  assignedTo        String?       // Staff member assigned
+  
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  reviewedAt        DateTime?
+  
+  // Response tracking
+  responseNotes     String?
+  followUpDate      DateTime?
+}
+
+// Investor Inquiry System
+model InvestorInquiry {
+  id                String   @id @default(cuid())
+  userId            String?  // Optional: link to user if logged in
+  user              User?    @relation(fields: [userId], references: [id])
+  
+  // Contact Information
+  fullName          String
+  email             String
+  phone             String
+  organization      String?
+  country           String
+  
+  // Investment Details
+  investmentInterest String
+  investmentRange   String?
+  experience        String?
+  message           String
+  
+  // Status and Tracking
+  status            InquiryStatus @default(PENDING)
+  priority          Priority      @default(MEDIUM)
+  assignedTo        String?       // Staff member assigned
+  
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  reviewedAt        DateTime?
+  
+  // Response tracking
+  responseNotes     String?
+  followUpDate      DateTime?
+}
+
+// Dashboard Access Control
+model DashboardAccess {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  section     String   // e.g., "analytics", "inquiries", "users"
+  permissions String[] // e.g., ["read", "write", "delete"]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Notification System
+model Notification {
+  id        String            @id @default(cuid())
+  userId    String
+  user      User              @relation(fields: [userId], references: [id])
+  type      NotificationType
+  title     String
+  message   String
+  isRead    Boolean           @default(false)
+  data      Json?             // Additional data as JSON
+  createdAt DateTime          @default(now())
+}
+
+// Enums
+enum UserRole {
+  USER          // Regular user/client
+  PARTNER       // Business partner
+  INVESTOR      // Investor
+  STAFF         // Hawlton staff member
+  ADMIN         // Full admin access
+  SUPER_ADMIN   // Highest level access
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING_VERIFICATION
+}
+
+enum InquiryStatus {
+  PENDING
+  REVIEWING
+  IN_PROGRESS
+  CONTACTED
+  QUALIFIED
+  CONVERTED
+  REJECTED
+  CLOSED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum NotificationType {
+  INQUIRY_RECEIVED
+  INQUIRY_UPDATE
+  ACCOUNT_UPDATE
+  SYSTEM_ALERT
+  PARTNERSHIP_UPDATE
+  INVESTMENT_UPDATE
+}
