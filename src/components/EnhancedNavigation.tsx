@@ -88,7 +88,7 @@ const EnhancedNavigation = () => {
       scale: 1,
       transition: {
         duration: 0.2,
-        ease: "easeOut"
+        ease: [0.23, 1, 0.32, 1] as const
       }
     },
     exit: { 
@@ -97,7 +97,7 @@ const EnhancedNavigation = () => {
       scale: 0.95,
       transition: {
         duration: 0.15,
-        ease: "easeIn"
+        ease: [0.76, 0, 0.24, 1] as const
       }
     }
   }
