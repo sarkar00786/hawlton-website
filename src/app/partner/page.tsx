@@ -83,7 +83,7 @@ export default function PartnerWithUsPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-navy text-primary-white py-24 overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10 -z-10">
           <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
           <div className="absolute bottom-20 right-20 w-80 h-80 bg-accent-secondary rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
         </div>

@@ -93,17 +93,75 @@ const EnhancedNavigation = () => {
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current)
+      timeoutRef.current = undefined
     }
     setActiveDropdown(label)
   }
 
   const handleMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
     timeoutRef.current = setTimeout(() => {
       setActiveDropdown(null)
-    }, 150)
+    }, 300) // Increased delay for better UX
+  }
+
+  const handleDropdownMouseEnter = (label: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+      timeoutRef.current = undefined
+    }
+    setActiveDropdown(label)
+  }
+
+  const handleDropdownMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 300)
+  }
+
+  // Handle click for mobile-like behavior on smaller screens
+  const handleNavItemClick = (e: React.MouseEvent, item: any) => {
+    if (item.submenu) {
+      e.preventDefault()
+      // Toggle dropdown on click for better mobile experience
+      if (activeDropdown === item.label) {
+        setActiveDropdown(null)
+      } else {
+        setActiveDropdown(item.label)
+      }
+    }
   }
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/')
+
+  // Clean up timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
+    }
+  }, [])
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element
+      if (target && !target.closest('.relative.group')) {
+        setActiveDropdown(null)
+      }
+    }
+
+    if (activeDropdown) {
+      document.addEventListener('click', handleClickOutside)
+      return () => document.removeEventListener('click', handleClickOutside)
+    }
+  }, [activeDropdown])
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: -10, scale: 0.95 },
@@ -162,23 +220,34 @@ const EnhancedNavigation = () => {
           onMouseEnter={() => handleMouseEnter(item.label)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link
-            href={item.href}
-            className={`flex items-center space-x-1 px-3 py-1.5 rounded-md transition-all duration-200 ${
-              isActive(item.href)
-                ? 'bg-primary-gold/10 text-primary-gold font-semibold'
-                : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
-            }`}
-          >
-            <span className="text-sm">{item.label}</span>
-            {item.submenu && (
+          {item.submenu ? (
+            <button
+              onClick={(e) => handleNavItemClick(e, item)}
+              className={`flex items-center space-x-1 px-3 py-1.5 rounded-md transition-all duration-200 w-full text-left ${
+                isActive(item.href)
+                  ? 'bg-primary-gold/10 text-primary-gold font-semibold'
+                  : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
+              }`}
+            >
+              <span className="text-sm">{item.label}</span>
               <ChevronDown 
                 className={`w-3 h-3 transition-transform duration-200 ${
                   activeDropdown === item.label ? 'rotate-180' : ''
                 }`} 
               />
-            )}
-          </Link>
+            </button>
+          ) : (
+            <Link
+              href={item.href}
+              className={`flex items-center space-x-1 px-3 py-1.5 rounded-md transition-all duration-200 ${
+                isActive(item.href)
+                  ? 'bg-primary-gold/10 text-primary-gold font-semibold'
+                  : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
+              }`}
+            >
+              <span className="text-sm">{item.label}</span>
+            </Link>
+          )}
 
           {/* Dropdown Menu */}
           <AnimatePresence>
@@ -188,9 +257,9 @@ const EnhancedNavigation = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-[9999]"
-                onMouseEnter={() => handleMouseEnter(item.label)}
-                onMouseLeave={handleMouseLeave}
+                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-[10001]"
+                onMouseEnter={() => handleDropdownMouseEnter(item.label)}
+                onMouseLeave={handleDropdownMouseLeave}
               >
                 <div className="p-4">
                   <div className="grid gap-3">

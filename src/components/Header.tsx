@@ -7,9 +7,43 @@ import { Menu, X, Search, Globe, Bell, User, ChevronDown, Award, Users, Target, 
 import LiquidNav from './LiquidNav'
 import EnhancedNavigation from './EnhancedNavigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import ErrorBoundary from './ui/ErrorBoundary'
 
 // For now, just show auth links without checking session state
 // This makes the header work without requiring SessionProvider
+
+// Simple fallback navigation component
+const SimpleNavigation = () => {
+  const pathname = usePathname()
+  const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/')
+  
+  const navItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Solutions', href: '/solutions' },
+    { label: 'Partner', href: '/partner' },
+    { label: 'Invest', href: '/invest' },
+    { label: 'Contact', href: '/contact' }
+  ]
+
+  return (
+    <nav className="hidden lg:flex items-center space-x-4">
+      {navItems.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className={`px-3 py-1.5 rounded-md transition-all duration-200 text-sm ${
+            isActive(item.href)
+              ? 'bg-primary-gold/10 text-primary-gold font-semibold'
+              : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
+          }`}
+        >
+          {item.label}
+        </Link>
+      ))}
+    </nav>
+  )
+}
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -85,7 +119,7 @@ const Header = () => {
       className={`
         ${isScrolled ? 'fixed top-0 left-0 right-0 bg-primary-navy/95 backdrop-blur-md shadow-xl' : 'bg-primary-navy shadow-lg'} 
         ${isVisible ? 'translate-y-0' : '-translate-y-full'}
-        transition-all duration-300 ease-in-out z-[9998] w-full
+        transition-all duration-300 ease-in-out z-[10000] w-full
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +133,9 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation - Enhanced Navigation */}
-            <EnhancedNavigation />
+            <ErrorBoundary fallback={<SimpleNavigation />}>
+              <EnhancedNavigation />
+            </ErrorBoundary>
           </div>
 
           {/* CTA Buttons Section - Desktop */}

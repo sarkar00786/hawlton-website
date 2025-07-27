@@ -199,22 +199,38 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Load language from localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('hawlton-language') as Language
-    if (savedLanguage && (savedLanguage === 'EN' || savedLanguage === 'UR')) {
-      setLanguage(savedLanguage)
+    try {
+      const savedLanguage = localStorage.getItem('hawlton-language') as Language
+      if (savedLanguage && (savedLanguage === 'EN' || savedLanguage === 'UR')) {
+        setLanguage(savedLanguage)
+      }
+    } catch (error) {
+      console.warn('Failed to load language from localStorage:', error)
+      // Use default language 'EN'
     }
   }, [])
 
   // Save language to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem('hawlton-language', language)
-    // Update document direction for RTL
-    document.documentElement.dir = language === 'UR' ? 'rtl' : 'ltr'
-    document.documentElement.lang = language === 'UR' ? 'ur' : 'en'
+    try {
+      localStorage.setItem('hawlton-language', language)
+      // Update document direction for RTL
+      if (typeof document !== 'undefined') {
+        document.documentElement.dir = language === 'UR' ? 'rtl' : 'ltr'
+        document.documentElement.lang = language === 'UR' ? 'ur' : 'en'
+      }
+    } catch (error) {
+      console.warn('Failed to save language to localStorage:', error)
+    }
   }, [language])
 
   const t = (key: string): string => {
-    return translations[language][key] || key
+    try {
+      return translations[language]?.[key] || translations['EN']?.[key] || key
+    } catch (error) {
+      console.warn('Translation error for key:', key, error)
+      return key
+    }
   }
 
   return (
