@@ -92,10 +92,11 @@ export default function PartnerWithUsPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <motion.div
-              className="text-center lg:text-left space-y-8"
+              className="text-center lg:text-left space-y-8 relative z-[1]"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              style={{ zIndex: 1 }}
             >
               <div className="space-y-4">
                 <motion.div
@@ -144,10 +145,11 @@ export default function PartnerWithUsPage() {
 
             {/* Right Content - Stats */}
             <motion.div
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-2 gap-6 relative z-[1]"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              style={{ zIndex: 1 }}
             >
               {[
                 { number: '400%', label: 'Average Revenue Growth' },
