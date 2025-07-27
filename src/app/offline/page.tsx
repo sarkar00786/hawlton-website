@@ -1,14 +1,18 @@
-import { Metadata } from 'next'
+'use client'
+
 import Link from 'next/link'
 import { Wifi, WifiOff, ArrowLeft, RefreshCw } from 'lucide-react'
-
-export const metadata: Metadata = {
-  title: 'Offline - Hawlton',
-  description: 'You are currently offline. Please check your internet connection.',
-  robots: 'noindex, nofollow'
-}
+import { useEffect } from 'react'
 
 export default function OfflinePage() {
+  useEffect(() => {
+    // Set document title and meta tags
+    document.title = 'Offline - Hawlton'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'You are currently offline. Please check your internet connection.')
+    }
+  }, [])
   return (
     <div className="min-h-screen bg-gradient-navy flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center">

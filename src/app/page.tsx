@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-primary-navy text-primary-white py-24">
+      <section id="hero-section" className="relative bg-primary-navy text-primary-white py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <div className="text-center">
             {/* Main Content */}
@@ -85,7 +85,7 @@ export default function Home() {
       </section>
       
       {/* Value Proposition Section */}
-      <section className="bg-primary-platinum py-20">
+      <section id="value-proposition" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="bg-primary-navy py-20">
+      <section id="approach" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Our Impact Section */}
-      <section className="bg-primary-platinum py-20">
+      <section id="impact" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"

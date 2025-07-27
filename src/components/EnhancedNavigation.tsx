@@ -2,68 +2,83 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin, Search, Globe } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { handleNavigation } from '@/utils/scrollTo'
 
 const EnhancedNavigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
-  const [language, setLanguage] = useState('EN')
   const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const pathname = usePathname()
+  const router = useRouter()
+  const { language, setLanguage, t } = useLanguage()
 
+  // Navigation items with internationalization
   const navigationItems = [
     {
-      label: 'About Us',
+      label: t('nav.about'),
       href: '/about',
       submenu: [
-        { label: 'Overview', href: '/about', icon: Building2, description: 'Learn about Hawlton\'s mission and vision' },
-        { label: 'Our Team', href: '/about/team', icon: Users, description: 'Meet our expert leadership team' },
-        { label: 'Our Vision', href: '/about/vision', icon: Target, description: 'Our roadmap for Pakistan\'s digital future' },
-        { label: 'Awards & Recognition', href: '/about/awards', icon: Award, description: 'Industry recognition and achievements' }
+        { label: t('nav.about.overview'), href: '/about', icon: Building2, description: t('nav.about.overview.desc') },
+        { label: t('nav.about.team'), href: '/about/team', icon: Users, description: t('nav.about.team.desc') },
+        { label: t('nav.about.vision'), href: '/about/vision', icon: Target, description: t('nav.about.vision.desc') },
+        { label: t('nav.about.awards'), href: '/about/awards', icon: Award, description: t('nav.about.awards.desc') }
       ]
     },
     {
-      label: 'Solutions',
+      label: t('nav.solutions'),
       href: '/solutions',
       submenu: [
-        { label: 'Digital Transformation', href: '/solutions/digital-transformation', icon: TrendingUp, description: 'Enterprise modernization solutions' },
-        { label: 'Partnership Programs', href: '/solutions/partnerships', icon: Users, description: 'Strategic collaboration opportunities' },
-        { label: 'Investment Services', href: '/solutions/investment', icon: Building2, description: 'Professional investment management' },
-        { label: 'Success Stories', href: '/solutions/success-stories', icon: Award, description: 'Client transformation case studies' }
+        { label: t('nav.solutions.digital'), href: '/solutions/digital-transformation', icon: TrendingUp, description: t('nav.solutions.digital.desc') },
+        { label: t('nav.solutions.partnerships'), href: '/solutions/partnerships', icon: Users, description: t('nav.solutions.partnerships.desc') },
+        { label: t('nav.solutions.investment'), href: '/solutions/investment', icon: Building2, description: t('nav.solutions.investment.desc') },
+        { label: t('nav.solutions.success'), href: '/solutions/success-stories', icon: Award, description: t('nav.solutions.success.desc') }
       ]
     },
     {
-      label: 'Partner',
+      label: t('nav.partner'),
       href: '/partner',
       submenu: [
-        { label: 'Partnership Types', href: '/partner/types', icon: Building2, description: 'Explore partnership opportunities' },
-        { label: 'Application Process', href: '/partner/apply', icon: FileText, description: 'Step-by-step application guide' },
-        { label: 'Partner Portal', href: '/partner/portal', icon: Users, description: 'Access partner resources' },
-        { label: 'Resources', href: '/partner/resources', icon: Target, description: 'Tools and documentation' }
+        { label: t('nav.partner.types'), href: '/partner/types', icon: Building2, description: t('nav.partner.types.desc') },
+        { label: t('nav.partner.apply'), href: '/partner/apply', icon: FileText, description: t('nav.partner.apply.desc') },
+        { label: t('nav.partner.portal'), href: '/partner/portal', icon: Users, description: t('nav.partner.portal.desc') },
+        { label: t('nav.partner.resources'), href: '/partner/resources', icon: Target, description: t('nav.partner.resources.desc') }
       ]
     },
     {
-      label: 'Invest',
+      label: t('nav.invest'),
       href: '/invest',
       submenu: [
-        { label: 'Investment Opportunities', href: '/invest/opportunities', icon: TrendingUp, description: 'Current investment options' },
-        { label: 'Portfolio', href: '/invest/portfolio', icon: Building2, description: 'Our investment portfolio' },
-        { label: 'Investor Relations', href: '/invest/relations', icon: Users, description: 'Connect with our investor team' },
-        { label: 'Documentation', href: '/invest/docs', icon: FileText, description: 'Legal and compliance documents' }
+        { label: t('nav.invest.opportunities'), href: '/invest/opportunities', icon: TrendingUp, description: t('nav.invest.opportunities.desc') },
+        { label: t('nav.invest.portfolio'), href: '/invest/portfolio', icon: Building2, description: t('nav.invest.portfolio.desc') },
+        { label: t('nav.invest.relations'), href: '/invest/relations', icon: Users, description: t('nav.invest.relations.desc') },
+        { label: t('nav.invest.docs'), href: '/invest/docs', icon: FileText, description: t('nav.invest.docs.desc') }
       ]
     },
     {
-      label: 'Contact',
+      label: t('nav.contact'),
       href: '/contact',
       submenu: [
-        { label: 'Get in Touch', href: '/contact', icon: Phone, description: 'Contact our team directly' },
-        { label: 'Office Locations', href: '/contact/locations', icon: MapPin, description: 'Find our offices across Pakistan' },
-        { label: 'Careers', href: '/careers', icon: Users, description: 'Join our growing team' }
+        { label: t('nav.contact.touch'), href: '/contact', icon: Phone, description: t('nav.contact.touch.desc') },
+        { label: t('nav.contact.locations'), href: '/contact/locations', icon: MapPin, description: t('nav.contact.locations.desc') },
+        { label: t('nav.careers'), href: '/careers', icon: Users, description: t('nav.contact.careers.desc') }
       ]
     }
   ]
+
+  // Handle navigation click with scroll functionality
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault()
+    setActiveDropdown(null) // Close dropdown
+    
+    // Use our enhanced navigation handler
+    handleNavigation(href, pathname, router, () => {
+      // Navigation complete callback
+    })
+  }
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) {
@@ -110,7 +125,7 @@ const EnhancedNavigation = () => {
           <Search className="w-4 h-4 text-primary-silver mr-2" />
           <input
             type="text"
-            placeholder="Search..."
+            placeholder={t('common.search')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="bg-transparent text-primary-white placeholder-primary-silver text-sm w-32 focus:w-48 transition-all focus:outline-none"
@@ -168,10 +183,11 @@ const EnhancedNavigation = () => {
                 <div className="p-4">
                   <div className="grid gap-3">
                     {item.submenu.map((subItem) => (
-                      <Link
+                      <a
                         key={subItem.href}
                         href={subItem.href}
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-primary-gold/10 transition-colors group"
+                        onClick={(e) => handleNavClick(e, subItem.href)}
+                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-primary-gold/10 transition-colors group cursor-pointer"
                       >
                         <div className="flex-shrink-0 w-8 h-8 bg-primary-gold/20 rounded-lg flex items-center justify-center group-hover:bg-primary-gold/30 transition-colors">
                           <subItem.icon className="w-4 h-4 text-primary-gold" />
@@ -184,7 +200,7 @@ const EnhancedNavigation = () => {
                             {subItem.description}
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </div>
