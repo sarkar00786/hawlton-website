@@ -158,7 +158,7 @@ const EnhancedNavigation = () => {
       {navigationItems.map((item) => (
         <div
           key={item.label}
-          className="relative"
+          className="relative group"
           onMouseEnter={() => handleMouseEnter(item.label)}
           onMouseLeave={handleMouseLeave}
         >
@@ -189,6 +189,8 @@ const EnhancedNavigation = () => {
                 animate="visible"
                 exit="exit"
                 className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-[9999]"
+                onMouseEnter={() => handleMouseEnter(item.label)}
+                onMouseLeave={handleMouseLeave}
               >
                 <div className="p-4">
                   <div className="grid gap-3">
