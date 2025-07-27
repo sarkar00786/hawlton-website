@@ -40,23 +40,23 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       // Default responsive padding if no specific padding set
       padding === 'md' && 'card-padding',
       
-      // Variant styles
+      // Variant styles using Tailwind-defined colors
       {
         // Default - Soft Platinum Gray background
-        'bg-secondary-50 shadow-soft': variant === 'default',
+        'bg-primary-platinum shadow-soft': variant === 'default',
         
-        // Elevated - Premium white with elevated shadow
+        // Elevated - Premium white with elevated shadow  
         'bg-white shadow-elevated': variant === 'elevated',
         
         // Premium - Enhanced styling with gold accents
-        'bg-white shadow-premium border-accent-primary/20': variant === 'premium',
-        'before:absolute before:inset-0 before:bg-gradient-gold before:opacity-5': variant === 'premium',
+        'bg-white shadow-premium border-primary-gold/20': variant === 'premium',
+        'before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-gold/5 before:to-transparent': variant === 'premium',
         
         // Glass - Glassmorphism effect
         'bg-white/80 backdrop-blur-sm border-white/20 shadow-soft': variant === 'glass',
         
         // Navy - Deep navy background for dark sections
-        'bg-primary-navy border-primary-700 shadow-navy text-text-light': variant === 'navy',
+        'bg-primary-navy border-primary-700 shadow-navy text-primary-white': variant === 'navy',
       },
       
       // Interactive states

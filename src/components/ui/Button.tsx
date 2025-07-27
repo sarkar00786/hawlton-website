@@ -42,9 +42,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }, ref) => {
   const baseClasses = cn(
       // Professional base styling - Windows & Mobile optimized
-      'btn', // Use our professional btn class
       'relative inline-flex items-center justify-center font-heading font-semibold',
-      'select-none text-center',
+      'select-none text-center transition-all duration-200 ease-in-out',
+      'focus:outline-none focus:ring-2 focus:ring-offset-2',
+      'disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group',
       
       // Hybrid approach: Sharp corners for primary CTAs, subtle rounding for secondary buttons
       {
@@ -55,42 +56,44 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'rounded-sm': variant === 'outline' || variant === 'ghost' || variant === 'link',
       },
       
-      // Professional size variants - WCAG AA compliant
+      // Professional size variants - WCAG AA compliant (Direct Tailwind)
       {
-        'btn-sm': size === 'sm',
-        'btn-md': size === 'md',  
-        'btn-lg': size === 'lg' || size === 'xl',
+        // Small buttons - 36px on desktop, 44px on mobile
+        'px-2 py-1.5 text-sm gap-1.5 min-h-[2.25rem] sm:min-h-[2.75rem]': size === 'sm',
+        // Medium buttons - 44px minimum
+        'px-3 py-2.5 text-base gap-2 min-h-[2.75rem]': size === 'md',  
+        // Large buttons - 52px
+        'px-4 py-3 text-lg gap-2 min-h-[3.25rem]': size === 'lg',
+        // Extra large buttons
+        'px-6 py-4 text-xl gap-3 min-h-[3.5rem]': size === 'xl',
       },
       
-      // Additional XL sizing
-      size === 'xl' && 'px-8 py-4 text-xl gap-3 min-h-[3.5rem]',
-      
-      // Variant styles
+      // Variant styles - Use Tailwind-defined colors
       {
-        // Primary - Vibrant Classic Gold
-        'bg-gradient-gold text-primary-navy shadow-gold': variant === 'primary',
-        'hover:shadow-glow-gold hover:scale-105': variant === 'primary',
-        'focus:ring-accent-primary-primary': variant === 'primary',
+        // Primary - Professional Gold Button
+        'bg-primary-gold text-primary-navy shadow-gold': variant === 'primary',
+        'hover:bg-primary-gold/90 hover:shadow-glow-gold hover:scale-105': variant === 'primary',
+        'focus:ring-primary-gold/30': variant === 'primary',
         
-        // Secondary - Metallic Gold
+        // Secondary - Gold Outline Button
         'bg-accent-secondary text-primary-navy shadow-navy': variant === 'secondary',
         'hover:bg-accent-hover hover:shadow-elevated': variant === 'secondary',
-        'focus:ring-accent-secondary': variant === 'secondary',
+        'focus:ring-accent-secondary/30': variant === 'secondary',
         
-        // Outline
-        'border-2 border-accent-primary text-accent-primary bg-transparent': variant === 'outline',
-        'hover:bg-accent-primary hover:text-primary-navy': variant === 'outline',
-        'focus:ring-accent-primary-outline': variant === 'outline',
+        // Outline - Professional Border Button
+        'border-2 border-primary-gold text-primary-gold bg-transparent': variant === 'outline',
+        'hover:bg-primary-gold hover:text-primary-navy': variant === 'outline',
+        'focus:ring-primary-gold/30': variant === 'outline',
         
-        // Ghost
-        'text-accent-primary bg-transparent': variant === 'ghost',
-        'hover:bg-accent-primary/10': variant === 'ghost',
-        'focus:ring-accent-primary-ghost': variant === 'ghost',
+        // Ghost - Subtle Text Button
+        'text-primary-gold bg-transparent': variant === 'ghost',
+        'hover:bg-primary-gold/10': variant === 'ghost',
+        'focus:ring-primary-gold/30': variant === 'ghost',
         
-        // Link
-        'text-accent-primary bg-transparent underline-offset-4': variant === 'link',
+        // Link - Text Link Button
+        'text-primary-gold bg-transparent underline-offset-4': variant === 'link',
         'hover:underline': variant === 'link',
-        'focus:ring-accent-primary-link': variant === 'link',
+        'focus:ring-primary-gold/30': variant === 'link',
       },
       
       // Full width
