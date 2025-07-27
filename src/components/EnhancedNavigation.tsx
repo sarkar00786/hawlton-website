@@ -50,7 +50,7 @@ const EnhancedNavigation = () => {
       submenu: [
         { label: 'Partnership Benefits', href: '/partner#benefits', icon: TrendingUp, description: 'Why partner with Hawlton for exponential business growth' },
         { label: 'Partnership Types', href: '/partner#types', icon: Building2, description: 'Different partnership models: inventory-based vs. full investment partnerships' },
-        { label: 'Project Portal', href: '/partner#portal', icon: Target, description: 'Access your dedicated project management and tracking portal' },
+        { label: 'Project Portal', href: '/partner-portal', icon: Target, description: 'Access your dedicated project management and tracking portal' },
         { label: 'Partner Resources', href: '/partner#resources', icon: FileText, description: 'Tools, materials, and support resources for partners' },
         { label: 'Success Stories', href: '/partner#testimonials', icon: Users, description: 'Hear from partners who transformed their businesses' },
         { label: 'Apply Now', href: '/partner#application', icon: Award, description: 'Start your partnership journey with Hawlton today' }
@@ -63,7 +63,7 @@ const EnhancedNavigation = () => {
         { label: 'Investment Benefits', href: '/invest#benefits', icon: TrendingUp, description: 'High returns through Pakistan\'s digital transformation' },
         { label: 'Investment Portfolio', href: '/invest#portfolio', icon: Building2, description: 'Current investment portfolio showcase and performance metrics' },
         { label: 'Investment Opportunities', href: '/invest#opportunities', icon: Target, description: 'Diverse portfolio of high-growth digital ventures' },
-        { label: 'Investor Relations', href: '/invest#relations', icon: Users, description: 'Ongoing investor communication, updates, and support' },
+        { label: 'Investor Portal', href: '/investor-portal', icon: Users, description: 'Access your personalized investment dashboard and reports' },
         { label: 'Documentation', href: '/invest#documentation', icon: FileText, description: 'Investment documents, reports, and due diligence materials' },
         { label: 'Get Started', href: '/invest#investment-form', icon: Award, description: 'Begin your investment journey with Hawlton' }
       ]
@@ -188,7 +188,7 @@ const EnhancedNavigation = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-50"
+                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-[9999]"
               >
                 <div className="p-4">
                   <div className="grid gap-3">

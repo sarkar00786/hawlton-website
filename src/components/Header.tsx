@@ -85,7 +85,7 @@ const Header = () => {
       className={`
         ${isScrolled ? 'fixed top-0 left-0 right-0 bg-primary-navy/95 backdrop-blur-md shadow-xl' : 'bg-primary-navy shadow-lg'} 
         ${isVisible ? 'translate-y-0' : '-translate-y-full'}
-        transition-all duration-300 ease-in-out z-50 w-full
+        transition-all duration-300 ease-in-out z-[100] w-full
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,18 +105,8 @@ const Header = () => {
           {/* CTA Buttons Section - Desktop */}
           <div className="hidden md:flex items-center space-x-2">
             <Link
-              href="/"
-              className={`border border-primary-gold px-2 py-0.5 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
-                isActive('/') 
-                  ? 'bg-primary-gold text-primary-navy shadow-md' 
-                  : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
-              }`}
-            >
-              Home
-            </Link>
-            <Link
               href="/partner"
-              className={`border border-primary-gold px-2 py-0.5 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
+              className={`border border-primary-gold px-2.5 py-1 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
                 isActive('/partner') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
                   : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
@@ -126,7 +116,7 @@ const Header = () => {
             </Link>
             <Link
               href="/invest"
-              className={`border border-primary-gold px-2 py-0.5 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
+              className={`border border-primary-gold px-2.5 py-1 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
                 isActive('/invest') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
                   : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
@@ -136,7 +126,7 @@ const Header = () => {
             </Link>
             <Link
               href="/auth/signup"
-              className="bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-2.5 py-0.5 text-xs font-medium rounded transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg ml-1 focus:outline-none focus:ring-0"
+              className="bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-3 py-1 text-xs font-medium rounded transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg ml-1 focus:outline-none focus:ring-0"
             >
               Get Started
             </Link>
