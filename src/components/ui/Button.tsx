@@ -40,30 +40,30 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     children,
     ...props
   }, ref) => {
-    const baseClasses = cn(
-      // Base styling
+  const baseClasses = cn(
+      // Professional base styling - Windows & Mobile optimized
+      'btn', // Use our professional btn class
       'relative inline-flex items-center justify-center font-heading font-semibold',
-      'transition-all duration-200 ease-in-out',
-      'focus:outline-none focus:ring-2 focus:ring-offset-2',
-      'disabled:opacity-50 disabled:cursor-not-allowed',
-      'overflow-hidden group',
+      'select-none text-center',
       
       // Hybrid approach: Sharp corners for primary CTAs, subtle rounding for secondary buttons
       {
         // Sharp corners for primary CTAs (conveys authority & trust for investment/partnership buttons)
-        '': variant === 'primary',
+        'rounded-none': variant === 'primary',
         // Subtle rounding for secondary buttons (more approachable for navigation/utility buttons)
         'rounded-md': variant === 'secondary',
         'rounded-sm': variant === 'outline' || variant === 'ghost' || variant === 'link',
       },
       
-      // Size variants
+      // Professional size variants - WCAG AA compliant
       {
-        'px-3 py-1.5 text-sm gap-1.5': size === 'sm',
-        'px-4 py-2 text-base gap-2': size === 'md',  
-        'px-6 py-3 text-lg gap-2': size === 'lg',
-        'px-8 py-4 text-xl gap-3': size === 'xl',
+        'btn-sm': size === 'sm',
+        'btn-md': size === 'md',  
+        'btn-lg': size === 'lg' || size === 'xl',
       },
+      
+      // Additional XL sizing
+      size === 'xl' && 'px-8 py-4 text-xl gap-3 min-h-[3.5rem]',
       
       // Variant styles
       {

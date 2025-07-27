@@ -23,19 +23,22 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     ...props
   }, ref) => {
     const baseClasses = cn(
-      'relative transition-all duration-300',
-      // Consistent rounded corners for cards (hybrid approach) - using rounded-xl like working cards
+      // Professional card base - responsive and consistent
+      'card', // Use our professional card class
+      'relative',
+      // Consistent rounded corners for cards (hybrid approach)
       'rounded-xl',
-      'border border-secondary-200',
       
-      // Padding variants
+      // Professional responsive padding system
       {
         'p-0': padding === 'none',
-        'p-3': padding === 'sm',
-        'p-6': padding === 'md',
-        'p-8': padding === 'lg',
-        'p-12': padding === 'xl',
+        'card-padding': padding === 'sm' || padding === 'md', // Responsive padding
+        'p-6 md:p-8 lg:p-10': padding === 'lg', // 24px->32px->40px
+        'p-8 md:p-10 lg:p-12': padding === 'xl', // 32px->40px->48px
       },
+      
+      // Default responsive padding if no specific padding set
+      padding === 'md' && 'card-padding',
       
       // Variant styles
       {

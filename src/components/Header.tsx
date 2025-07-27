@@ -143,27 +143,27 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-2">
             <Link
               href="/partner"
-              className={`border border-primary-gold px-2.5 py-1 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
+              className={`btn btn-sm btn-outline ${
                 isActive('/partner') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
-                  : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
+                  : ''
               }`}
             >
               Partner
             </Link>
             <Link
               href="/invest"
-              className={`border border-primary-gold px-2.5 py-1 text-xs font-medium rounded transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:border-primary-gold ${
+              className={`btn btn-sm btn-outline ${
                 isActive('/invest') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
-                  : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
+                  : ''
               }`}
             >
               Invest
             </Link>
             <Link
               href="/auth/signup"
-              className="bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-3 py-1 text-xs font-medium rounded transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg ml-1 focus:outline-none focus:ring-0"
+              className="btn btn-sm btn-primary"
             >
               Get Started
             </Link>

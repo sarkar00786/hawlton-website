@@ -187,16 +187,16 @@ const EnhancedNavigation = () => {
 
   return (
     <nav className="hidden lg:flex items-center space-x-1">
-      {/* Smart Search Integration */}
+      {/* Professional Search Integration */}
       <div className="relative mr-4">
-        <div className="flex items-center bg-primary-navy/50 rounded-md px-2 py-1 border border-primary-gold/20 focus-within:border-primary-gold transition-colors">
-          <Search className="w-3 h-3 text-primary-silver mr-1.5" />
+        <div className="search-container">
+          <Search className="search-icon" />
           <input
             type="text"
             placeholder={t('common.search')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-transparent text-primary-white placeholder-primary-silver text-xs w-24 focus:w-32 transition-all focus:outline-none"
+            className="search-input"
           />
         </div>
       </div>
@@ -257,20 +257,20 @@ const EnhancedNavigation = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy border border-primary-gold/20 rounded-xl shadow-2xl z-[99999]"
+                className="dropdown absolute top-full left-0 mt-2"
                 onMouseEnter={() => handleDropdownMouseEnter(item.label)}
                 onMouseLeave={handleDropdownMouseLeave}
               >
-                <div className="p-4">
+                <div className="dropdown-content">
                   <div className="grid gap-3">
                     {item.submenu.map((subItem) => (
                       <a
                         key={subItem.href}
                         href={subItem.href}
                         onClick={(e) => handleNavClick(e, subItem.href)}
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-primary-gold/10 transition-colors group cursor-pointer"
+                        className="dropdown-item group"
                       >
-                        <div className="flex-shrink-0 w-8 h-8 bg-primary-gold/20 rounded-lg flex items-center justify-center group-hover:bg-primary-gold/30 transition-colors">
+                        <div className="dropdown-icon">
                           <subItem.icon className="w-4 h-4 text-primary-gold" />
                         </div>
                         <div className="flex-1 min-w-0">

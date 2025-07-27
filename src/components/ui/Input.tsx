@@ -40,18 +40,22 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     const inputType = showPasswordToggle && showPassword ? 'text' : type
 
     const inputClasses = cn(
-      // Base styles
-      'w-full transition-all duration-200 ease-in-out',
-      'font-medium placeholder:text-text-muted',
-      'focus:outline-none focus:ring-2 focus:ring-offset-1',
-      'disabled:opacity-50 disabled:cursor-not-allowed',
+      // Professional base styles - Windows & Mobile optimized
+      'form-input', // Use our professional form-input class
       'peer',
       
-      // Size variants
+      // Size variants - WCAG AA compliant
       {
-        'px-3 py-2 text-sm': size === 'sm',
-        'px-4 py-3 text-base': size === 'md',
-        'px-5 py-4 text-lg': size === 'lg',
+        'text-sm': size === 'sm',
+        'text-base': size === 'md',
+        'text-lg': size === 'lg',
+      },
+      
+      // Override padding for different sizes while maintaining touch targets
+      {
+        'px-3 py-2': size === 'sm',
+        'px-4 py-3': size === 'md',
+        'px-5 py-4': size === 'lg',
       },
       
       // Variant styles

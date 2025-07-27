@@ -270,11 +270,8 @@ const InvestorInquiryForm: React.FC<InvestorInquiryFormProps> = ({
             </label>
             <select
               className={cn(
-                'w-full px-4 py-3 border border-secondary-400',
-                'bg-white text-text-secondary font-medium',
-                'focus:outline-none focus:ring-2 focus:ring-accent-primary/20 focus:border-accent-primary',
-                'transition-all duration-200',
-                errors.investorType && 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                'form-select',
+                errors.investorType && 'error'
               )}
               {...register('investorType')}
             >
@@ -297,11 +294,8 @@ const InvestorInquiryForm: React.FC<InvestorInquiryFormProps> = ({
             </label>
             <select
               className={cn(
-                'w-full px-4 py-3 border border-secondary-400',
-                'bg-white text-text-secondary font-medium',
-                'focus:outline-none focus:ring-2 focus:ring-accent-primary/20 focus:border-accent-primary',
-                'transition-all duration-200',
-                errors.investmentRange && 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+                'form-select',
+                errors.investmentRange && 'error'
               )}
               {...register('investmentRange')}
             >
