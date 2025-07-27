@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section id="hero-section" className="relative bg-primary-navy text-primary-white py-24">
+      <section id="hero-section" className="relative bg-primary-navy text-primary-white py-24 pt-32" style={{ isolation: 'isolate' }}>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-[1]">
           <div className="text-center">
             {/* Main Content */}

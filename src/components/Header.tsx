@@ -117,9 +117,10 @@ const Header = () => {
   return (
     <header 
       className={`
-        ${isScrolled ? 'fixed top-0 left-0 right-0 bg-primary-navy/95 backdrop-blur-md shadow-xl' : 'bg-primary-navy shadow-lg'} 
+        fixed top-0 left-0 right-0 w-full z-[9999]
+        ${isScrolled ? 'bg-primary-navy/95 backdrop-blur-md shadow-xl' : 'bg-primary-navy/95 backdrop-blur-md shadow-lg'} 
         ${isVisible ? 'translate-y-0' : '-translate-y-full'}
-        transition-all duration-300 ease-in-out z-[9999] w-full
+        transition-all duration-300 ease-in-out
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

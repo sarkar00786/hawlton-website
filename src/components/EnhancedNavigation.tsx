@@ -257,7 +257,7 @@ const EnhancedNavigation = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-[10001]"
+                className="absolute top-full left-0 mt-2 w-80 bg-primary-navy/95 backdrop-blur-md border border-primary-gold/20 rounded-xl shadow-2xl z-[99999]"
                 onMouseEnter={() => handleDropdownMouseEnter(item.label)}
                 onMouseLeave={handleDropdownMouseLeave}
               >
