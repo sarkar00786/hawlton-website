@@ -17,11 +17,10 @@ export default function Home() {
           <div className="text-center">
             {/* Main Content */}
             <motion.div
-              className="space-y-8 max-w-4xl mx-auto relative z-[1]"
+              className="space-y-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              style={{ zIndex: 1 }}
             >
               <div className="space-y-6">
                 <motion.div
