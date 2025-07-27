@@ -49,8 +49,8 @@ value: `
           script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.tawk.to https://vercel.live;
           style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
           img-src 'self' data: blob: *.sanity.io *.googletagmanager.com https:;
-          font-src 'self' https://fonts.gstatic.com;
-          connect-src 'self' *.google-analytics.com *.sanity.io https://fonts.googleapis.com https://fonts.gstatic.com https://vercel.live wss://ws-us3.pusher.com;
+          font-src 'self' https://fonts.gstatic.com data:;
+          connect-src 'self' *.google-analytics.com *.sanity.io https://fonts.googleapis.com https://fonts.gstatic.com https://vercel.live wss://ws-us3.pusher.com data: blob:;
           frame-src 'self' *.tawk.to https://vercel.live;
           worker-src 'self' blob:;
           child-src 'self' blob:;
@@ -58,7 +58,6 @@ value: `
           base-uri 'self';
           form-action 'self';
           frame-ancestors 'self';
-          upgrade-insecure-requests;
         `.replace(/\s{2,}/g, ' ').trim()
       },
       {
