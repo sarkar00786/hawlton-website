@@ -42,7 +42,7 @@ const AdvancedCarousel: React.FC<AdvancedCarouselProps> = ({
   const [isPlaying, setIsPlaying] = useState(autoplay)
   const [dragStart, setDragStart] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  const intervalRef = useRef<NodeJS.Timeout>()
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const carouselRef = useRef<HTMLDivElement>(null)
 
   // Auto-progression logic
