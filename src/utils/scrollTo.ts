@@ -44,7 +44,10 @@ export const PAGE_SECTIONS = {
   // Solutions page sections - matching actual content
   '/solutions': {
     'services': 'hero-section', // Main solutions intro
+    'digital-transformation': 'digital-transformation-section', // Digital Transformation Section
     'partnerships': 'digital-partnerships-section', // Digital Growth Partnerships
+    'investment': 'investment-solutions-section', // Investment Solutions Section
+    'success-stories': 'success-stories-section', // Success Stories Section
     'results': 'impact-section', // Our Impact Section
     'process': 'cta-section' // CTA Section
   },
@@ -52,6 +55,9 @@ export const PAGE_SECTIONS = {
   // Partner page sections - matching actual content
   '/partner': {
     'benefits': 'benefits-section', // Benefits Section
+    'types': 'partnership-types-section', // Partnership Types Section
+    'portal': 'project-portal-section', // Project Portal Section
+    'resources': 'partner-resources-section', // Partner Resources Section
     'process': 'process-section', // Process Section
     'testimonials': 'testimonials-section', // Testimonials Section
     'application': 'partner-form' // Partner Form Section
@@ -60,7 +66,10 @@ export const PAGE_SECTIONS = {
   // Invest page sections - matching actual content
   '/invest': {
     'benefits': 'benefits-section', // Benefits Section
+    'portfolio': 'investment-portfolio-section', // Investment Portfolio Section
     'opportunities': 'opportunities-section', // Investment Opportunities Section
+    'relations': 'investor-relations-section', // Investor Relations Section
+    'documentation': 'investment-documentation-section', // Investment Documentation Section
     'testimonials': 'testimonials-section', // Testimonials Section
     'investment-form': 'investment-form' // Investment Form Section
   },
@@ -91,19 +100,28 @@ export const NAVIGATION_MAPPING = {
   
   // Solutions dropdown mappings - matching new structure
   '/solutions#services': 'services',
+  '/solutions#digital-transformation': 'digital-transformation',
   '/solutions#partnerships': 'partnerships',
+  '/solutions#investment': 'investment',
+  '/solutions#success-stories': 'success-stories',
   '/solutions#results': 'results',
   '/solutions#process': 'process',
   
   // Partner dropdown mappings - matching new structure
   '/partner#benefits': 'benefits',
+  '/partner#types': 'types',
+  '/partner#portal': 'portal',
+  '/partner#resources': 'resources',
   '/partner#process': 'process',
   '/partner#testimonials': 'testimonials',
   '/partner#application': 'application',
   
   // Invest dropdown mappings - matching new structure
   '/invest#benefits': 'benefits',
+  '/invest#portfolio': 'portfolio',
   '/invest#opportunities': 'opportunities',
+  '/invest#relations': 'relations',
+  '/invest#documentation': 'documentation',
   '/invest#testimonials': 'testimonials',
   '/invest#investment-form': 'investment-form',
   

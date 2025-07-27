@@ -33,9 +33,10 @@ const EnhancedNavigation = () => {
       href: '/solutions',
       submenu: [
         { label: 'Our Services', href: '/solutions#services', icon: TrendingUp, description: 'Comprehensive digital transformation solutions for your business' },
-        { label: 'Digital Partnerships', href: '/solutions#partnerships', icon: Users, description: 'Strategic partnerships for seamless digital growth' },
-        { label: 'Growth Results', href: '/solutions#results', icon: Building2, description: 'Tangible outcomes and measurable business impact' },
-        { label: 'Success Process', href: '/solutions#process', icon: Award, description: 'Our proven methodology for digital transformation' }
+        { label: 'Digital Transformation', href: '/solutions#digital-transformation', icon: Target, description: 'Complete digital transformation strategies and implementation' },
+        { label: 'Strategic Partnerships', href: '/solutions#partnerships', icon: Users, description: 'Partnership models and collaborative growth approaches' },
+        { label: 'Investment Solutions', href: '/solutions#investment', icon: Building2, description: 'Investment-focused solutions and growth funding' },
+        { label: 'Success Stories', href: '/solutions#success-stories', icon: Award, description: 'Real case studies and transformation results' }
       ]
     },
     {
@@ -43,9 +44,11 @@ const EnhancedNavigation = () => {
       href: '/partner',
       submenu: [
         { label: 'Partnership Benefits', href: '/partner#benefits', icon: TrendingUp, description: 'Why partner with Hawlton for exponential business growth' },
-        { label: 'Partnership Process', href: '/partner#process', icon: FileText, description: 'Our proven 4-step methodology for successful transformation' },
+        { label: 'Partnership Types', href: '/partner#types', icon: Building2, description: 'Different partnership models: inventory-based vs. full investment partnerships' },
+        { label: 'Project Portal', href: '/partner#portal', icon: Target, description: 'Access your dedicated project management and tracking portal' },
+        { label: 'Partner Resources', href: '/partner#resources', icon: FileText, description: 'Tools, materials, and support resources for partners' },
         { label: 'Success Stories', href: '/partner#testimonials', icon: Users, description: 'Hear from partners who transformed their businesses' },
-        { label: 'Apply Now', href: '/partner#application', icon: Building2, description: 'Start your partnership journey with Hawlton today' }
+        { label: 'Apply Now', href: '/partner#application', icon: Award, description: 'Start your partnership journey with Hawlton today' }
       ]
     },
     {
@@ -53,9 +56,11 @@ const EnhancedNavigation = () => {
       href: '/invest',
       submenu: [
         { label: 'Investment Benefits', href: '/invest#benefits', icon: TrendingUp, description: 'High returns through Pakistan\'s digital transformation' },
-        { label: 'Opportunities', href: '/invest#opportunities', icon: Building2, description: 'Diverse portfolio of high-growth digital ventures' },
-        { label: 'Investor Stories', href: '/invest#testimonials', icon: Users, description: 'Success stories from our satisfied investors' },
-        { label: 'Get Started', href: '/invest#investment-form', icon: FileText, description: 'Begin your investment journey with Hawlton' }
+        { label: 'Investment Portfolio', href: '/invest#portfolio', icon: Building2, description: 'Current investment portfolio showcase and performance metrics' },
+        { label: 'Investment Opportunities', href: '/invest#opportunities', icon: Target, description: 'Diverse portfolio of high-growth digital ventures' },
+        { label: 'Investor Relations', href: '/invest#relations', icon: Users, description: 'Ongoing investor communication, updates, and support' },
+        { label: 'Documentation', href: '/invest#documentation', icon: FileText, description: 'Investment documents, reports, and due diligence materials' },
+        { label: 'Get Started', href: '/invest#investment-form', icon: Award, description: 'Begin your investment journey with Hawlton' }
       ]
     },
     {

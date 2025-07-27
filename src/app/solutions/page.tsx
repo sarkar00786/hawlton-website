@@ -110,23 +110,251 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
+      {/* Digital Transformation Section */}
+      <section id="digital-transformation-section" className="bg-primary-platinum py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+              Complete Digital Transformation
+            </h2>
+            <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
+              We don't just digitize your business – we transform it entirely. From legacy systems to cutting-edge digital infrastructure, we ensure your business is future-ready.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Legacy System Modernization',
+                desc: 'Transform outdated processes into efficient, automated digital workflows that save time and reduce errors.',
+                icon: '🔄'
+              },
+              {
+                title: 'Cloud Infrastructure Setup',
+                desc: 'Migrate to scalable cloud solutions that grow with your business and ensure 99.9% uptime.',
+                icon: '☁️'
+              },
+              {
+                title: 'Data Analytics & Insights',
+                desc: 'Implement advanced analytics to turn your business data into actionable insights for growth.',
+                icon: '📊'
+              },
+              {
+                title: 'Digital Customer Experience',
+                desc: 'Create seamless, omnichannel customer experiences that increase satisfaction and loyalty.',
+                icon: '👥'
+              },
+              {
+                title: 'Process Automation',
+                desc: 'Automate repetitive tasks and workflows to increase efficiency and reduce operational costs.',
+                icon: '⚡'
+              },
+              {
+                title: 'Security & Compliance',
+                desc: 'Implement enterprise-grade security measures and ensure compliance with industry standards.',
+                icon: '🔒'
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-primary-navy mb-4">{item.title}</h3>
+                <p className="text-primary-charcoal leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Digital Growth Partnerships */}
       <section id="digital-partnerships-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
-              Empowering Your Business for the Digital Age.
+              Strategic Partnership Models
             </h2>
             <p className="text-lg text-primary-silver max-w-4xl mx-auto leading-relaxed">
-              Hawlton specializes in partnering with local businesses to seamlessly transition them 
-              into the digital marketplace, expanding their reach from local communities to a national 
-              customer base. We provide the expertise, infrastructure, and strategic guidance needed 
-              for sustainable online growth.
+              Choose from our flexible partnership approaches designed to align with your business goals, 
+              risk tolerance, and growth ambitions. Each model is crafted to maximize mutual success.
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-primary-gold mb-6">Revenue Share Partnership</h3>
+              <div className="space-y-4">
+                <p className="text-primary-silver leading-relaxed">
+                  We invest in your digital transformation and share in the revenue growth. Perfect for businesses ready to scale rapidly with shared risk.
+                </p>
+                <ul className="space-y-2 text-primary-silver">
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Full digital infrastructure investment</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Shared revenue model (60/40)</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Comprehensive growth support</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Long-term strategic partnership</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-primary-gold mb-6">Consulting & Implementation</h3>
+              <div className="space-y-4">
+                <p className="text-primary-silver leading-relaxed">
+                  Get expert guidance and implementation support while maintaining full ownership of your digital assets and revenue.
+                </p>
+                <ul className="space-y-2 text-primary-silver">
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Strategic planning and roadmap</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Implementation oversight</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Training and knowledge transfer</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Ongoing support and optimization</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+
+      {/* Investment Solutions Section */}
+      <section id="investment-solutions-section" className="bg-primary-platinum py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+              Investment-Focused Solutions
+            </h2>
+            <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
+              Access capital and strategic funding solutions designed to accelerate your digital transformation and business growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">💰</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Growth Capital</h3>
+                </div>
+                <p className="text-primary-charcoal">Strategic funding to accelerate your digital transformation and market expansion.</p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">🤝</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Investment Partnerships</h3>
+                </div>
+                <p className="text-primary-charcoal">Joint venture opportunities with shared risk and exponential growth potential.</p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">📈</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Revenue-Based Financing</h3>
+                </div>
+                <p className="text-primary-charcoal">Flexible funding tied to your business performance and growth milestones.</p>
+              </div>
+            </div>
+
+            <div className="bg-primary-navy rounded-xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-primary-white mb-6">Funding Statistics</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="text-4xl font-bold text-primary-gold mb-2">₨500M+</div>
+                  <div className="text-primary-silver">Total Investment Deployed</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-primary-gold mb-2">150+</div>
+                  <div className="text-primary-silver">Businesses Funded</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-primary-gold mb-2">300%</div>
+                  <div className="text-primary-silver">Average ROI Delivered</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section id="success-stories-section" className="bg-primary-navy py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+              Real Transformation Stories
+            </h2>
+            <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
+              See how Pakistani businesses have achieved remarkable growth through our digital transformation solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                company: 'Khan Electronics',
+                industry: 'Electronics Retail',
+                location: 'Lahore → Nationwide',
+                growth: '400% Revenue Increase',
+                timeframe: '18 Months',
+                story: 'Transformed from a single local store to a nationwide e-commerce leader with 50+ cities coverage.',
+                metric: '400%'
+              },
+              {
+                company: 'Sheikh Textiles',
+                industry: 'Textile Manufacturing',
+                location: 'Faisalabad → International',
+                growth: '250% Export Growth',
+                timeframe: '12 Months',
+                story: 'Digitized operations and reached international markets through our digital transformation program.',
+                metric: '250%'
+              },
+              {
+                company: 'Malik Foods',
+                industry: 'Food & Beverages',
+                location: 'Karachi → National',
+                growth: '300% Market Reach',
+                timeframe: '15 Months',
+                story: 'Expanded from regional to national distribution with automated supply chain and digital marketing.',
+                metric: '300%'
+              }
+            ].map((story, index) => (
+              <div key={index} className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-primary-white/15 transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold text-primary-gold mb-2">{story.metric}</div>
+                  <div className="text-sm text-primary-silver uppercase tracking-wider">{story.growth}</div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-white mb-1">{story.company}</h3>
+                    <p className="text-primary-silver text-sm">{story.industry}</p>
+                  </div>
+                  
+                  <p className="text-primary-silver leading-relaxed text-sm">{story.story}</p>
+                  
+                  <div className="flex justify-between text-xs text-primary-gold">
+                    <span>{story.location}</span>
+                    <span>{story.timeframe}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a 
+              href="/partner#testimonials" 
+              className="inline-flex items-center bg-primary-gold text-primary-navy px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold/90 transition-colors"
+            >
+              View More Success Stories
+              <TrendingUp className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Our Impact Section */}
       <section id="impact-section" className="bg-primary-platinum py-20">

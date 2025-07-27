@@ -170,8 +170,146 @@ export default function PartnerWithUsPage() {
         </div>
       </section>
 
+      {/* Partnership Types Section */}
+      <section id="partnership-types-section" className="bg-primary-platinum py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+              Partnership Models Available
+            </h2>
+            <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
+              Choose the partnership structure that aligns with your business goals, investment capacity, and growth ambitions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Inventory Partnership Model */}
+            <motion.div
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mr-4">
+                  <span className="text-3xl">📦</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-primary-navy">Inventory Partnership</h3>
+                  <p className="text-primary-charcoal">Partner with inventory contribution</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-primary-charcoal leading-relaxed">
+                  You provide the inventory and products, we handle the digital transformation, marketing, and sales infrastructure. Perfect for businesses with strong product lines looking to expand digitally.
+                </p>
+                
+                <div className="bg-primary-navy/5 rounded-lg p-4">
+                  <h4 className="font-semibold text-primary-navy mb-2">Revenue Share Model:</h4>
+                  <ul className="space-y-2 text-sm text-primary-charcoal">
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Partner: 60% of net revenue</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Hawlton: 40% of net revenue</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Minimum commitment: 12 months</li>
+                  </ul>
+                </div>
+                
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-primary-navy">What We Provide:</h4>
+                  <ul className="space-y-1 text-sm text-primary-charcoal">
+                    <li>• Digital platform development</li>
+                    <li>• Marketing and customer acquisition</li>
+                    <li>• Logistics and fulfillment</li>
+                    <li>• Customer service and support</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Full Investment Partnership Model */}
+            <motion.div
+              className="bg-gradient-to-br from-primary-navy to-primary-navy/90 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-white relative overflow-hidden"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="absolute top-4 right-4 bg-primary-gold text-primary-navy px-3 py-1 rounded-full text-xs font-bold">
+                PREMIUM
+              </div>
+              
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mr-4">
+                  <span className="text-3xl">🤝</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-primary-white">Full Investment Partnership</h3>
+                  <p className="text-primary-silver">Inventory + Direct running expenses</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-primary-silver leading-relaxed">
+                  You provide inventory AND cover direct running expenses (marketing, logistics, operations). Higher investment, significantly higher returns and control.
+                </p>
+                
+                <div className="bg-primary-white/10 rounded-lg p-4 backdrop-blur-sm">
+                  <h4 className="font-semibold text-primary-gold mb-2">Enhanced Revenue Share:</h4>
+                  <ul className="space-y-2 text-sm text-primary-silver">
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Partner: 75% of net revenue</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Hawlton: 25% of net revenue</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Priority support and features</li>
+                  </ul>
+                </div>
+                
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-primary-gold">Additional Benefits:</h4>
+                  <ul className="space-y-1 text-sm text-primary-silver">
+                    <li>• Dedicated account management</li>
+                    <li>• Priority in new market expansion</li>
+                    <li>• Advanced analytics and reporting</li>
+                    <li>• Co-branded marketing opportunities</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <p className="text-primary-charcoal mb-6">
+                Not sure which model fits your business? Let's discuss your specific needs and find the perfect partnership structure.
+              </p>
+              <Link href="/contact">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  icon={Users}
+                  iconPosition="right"
+                  className="transform hover:scale-105"
+                >
+                  Schedule Partnership Consultation
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
-      <section className="py-20">
+      <section id="benefits-section" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -248,8 +386,230 @@ export default function PartnerWithUsPage() {
         </div>
       </section>
 
+      {/* Project Portal Section */}
+      <section id="project-portal-section" className="bg-primary-platinum py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+              Your Dedicated Project Portal
+            </h2>
+            <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
+              Access your specialized project management portal where you can track progress, view analytics, manage resources, and communicate with our team in real-time.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Portal Features */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Real-Time Analytics</h3>
+                </div>
+                <p className="text-primary-charcoal">Track sales, revenue, customer data, and performance metrics with live dashboards and detailed reports.</p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">📎</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Project Management</h3>
+                </div>
+                <p className="text-primary-charcoal">Monitor project milestones, timelines, and deliverables with our integrated project tracking system.</p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">💬</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Direct Communication</h3>
+                </div>
+                <p className="text-primary-charcoal">Instant messaging, video calls, and file sharing with your dedicated Hawlton team members.</p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-2xl">📱</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary-navy">Mobile Access</h3>
+                </div>
+                <p className="text-primary-charcoal">Full mobile responsiveness allows you to manage your partnership from anywhere, anytime.</p>
+              </div>
+            </motion.div>
+
+            {/* Portal Preview */}
+            <motion.div
+              className="bg-primary-navy rounded-xl p-8 relative overflow-hidden"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="text-center text-white">
+                <h3 className="text-2xl font-bold mb-6">Portal Access Benefits</h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-primary-white/10 rounded-lg p-4 backdrop-blur-sm">
+                    <div className="text-3xl font-bold text-primary-gold mb-2">24/7</div>
+                    <div className="text-sm text-primary-silver">Portal Availability</div>
+                  </div>
+                  
+                  <div className="bg-primary-white/10 rounded-lg p-4 backdrop-blur-sm">
+                    <div className="text-3xl font-bold text-primary-gold mb-2">Real-Time</div>
+                    <div className="text-sm text-primary-silver">Data Updates</div>
+                  </div>
+                  
+                  <div className="bg-primary-white/10 rounded-lg p-4 backdrop-blur-sm">
+                    <div className="text-3xl font-bold text-primary-gold mb-2">Multi-Project</div>
+                    <div className="text-sm text-primary-silver">Management</div>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <Link href="/partner-portal">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-primary-navy transform hover:scale-105 transition-all duration-300"
+                    >
+                      <span className="mr-2">🚀</span>
+                      Experience Live Portal
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Resources Section */}
+      <section id="partner-resources-section" className="bg-primary-navy py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+              Comprehensive Partner Resources
+            </h2>
+            <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
+              Access our extensive library of tools, training materials, and support resources designed to maximize your partnership success.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Training Materials',
+                description: 'Comprehensive guides, video tutorials, and webinars to help you maximize your digital presence.',
+                icon: '📚',
+                items: ['Digital marketing courses', 'Platform tutorials', 'Best practices guides', 'Industry insights']
+              },
+              {
+                title: 'Marketing Assets',
+                description: 'Professional marketing materials, templates, and creative assets for your campaigns.',
+                icon: '🎨',
+                items: ['Brand guidelines', 'Social media templates', 'Email campaigns', 'Promotional materials']
+              },
+              {
+                title: 'Technical Support',
+                description: '24/7 technical assistance and dedicated support team for all your operational needs.',
+                icon: '🔧',
+                items: ['Live chat support', 'Technical documentation', 'System maintenance', 'Troubleshooting guides']
+              },
+              {
+                title: 'Analytics Tools',
+                description: 'Advanced reporting and analytics tools to track performance and optimize your business.',
+                icon: '📈',
+                items: ['Performance dashboards', 'Revenue tracking', 'Customer analytics', 'Market insights']
+              },
+              {
+                title: 'Community Network',
+                description: 'Connect with other successful partners and share experiences, insights, and strategies.',
+                icon: '🌐',
+                items: ['Partner forums', 'Networking events', 'Mentorship programs', 'Success stories']
+              },
+              {
+                title: 'Legal & Compliance',
+                description: 'Legal templates, compliance guides, and regulatory support for your business operations.',
+                icon: '⚖️',
+                items: ['Contract templates', 'Compliance checklists', 'Legal consultation', 'Policy updates']
+              }
+            ].map((resource, index) => (
+              <motion.div
+                key={index}
+                className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-primary-white/15 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="text-center mb-6">
+                  <div className="text-4xl mb-4">{resource.icon}</div>
+                  <h3 className="text-xl font-bold text-primary-white mb-3">{resource.title}</h3>
+                  <p className="text-primary-silver text-sm leading-relaxed">{resource.description}</p>
+                </div>
+                
+                <div className="space-y-2">
+                  {resource.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="flex items-center text-sm text-primary-silver">
+                      <span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <p className="text-primary-silver mb-6">
+                All resources are included in your partnership at no additional cost. Ready to access these tools?
+              </p>
+              <Button
+                variant="primary"
+                size="lg"
+                icon={ArrowRight}
+                iconPosition="right"
+                className="transform hover:scale-105"
+                onClick={() => document.getElementById('partner-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Start Your Partnership Today
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
-      <section className="py-20">
+      <section id="testimonials-section" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
