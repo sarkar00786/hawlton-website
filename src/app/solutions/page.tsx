@@ -270,8 +270,8 @@ export default async function SolutionsPage() {
                   <div className="text-primary-silver">Businesses Funded</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary-gold mb-2">300%</div>
-                  <div className="text-primary-silver">Average ROI Delivered</div>
+                  <div className="text-4xl font-bold text-primary-gold mb-2">95%</div>
+                  <div className="text-primary-silver">Client Satisfaction Rate</div>
                 </div>
               </div>
             </div>
@@ -292,33 +292,33 @@ export default async function SolutionsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+            {[ // Example success stories
               {
-                company: 'Khan Electronics',
-                industry: 'Electronics Retail',
-                location: 'Lahore → Nationwide',
-                growth: '400% Revenue Increase',
-                timeframe: '18 Months',
-                story: 'Transformed from a single local store to a nationwide e-commerce leader with 50+ cities coverage.',
-                metric: '400%'
+                company: 'Digital Innovators Inc.',
+                industry: 'Tech Solutions',
+                location: 'Islamabad → Global',
+                growth: 'Rapid Growth in the Digital Market',
+                timeframe: '24 Months',
+                story: 'Innovated with cutting-edge technology to expand global market reach and accelerate growth exponentially.',
+                metric: 'Innovative Solutions'
               },
               {
-                company: 'Sheikh Textiles',
-                industry: 'Textile Manufacturing',
-                location: 'Faisalabad → International',
-                growth: '250% Export Growth',
-                timeframe: '12 Months',
-                story: 'Digitized operations and reached international markets through our digital transformation program.',
-                metric: '250%'
+                company: 'AgriTech Ventures',
+                industry: 'Agricultural Technology',
+                location: 'Multan → International',
+                growth: 'Advanced Agricultural Solutions',
+                timeframe: '20 Months',
+                story: 'Implemented smart farming technologies resulting in enhanced agricultural productivity and market expansion.',
+                metric: 'Smart Farming Tech'
               },
               {
-                company: 'Malik Foods',
-                industry: 'Food & Beverages',
-                location: 'Karachi → National',
-                growth: '300% Market Reach',
-                timeframe: '15 Months',
-                story: 'Expanded from regional to national distribution with automated supply chain and digital marketing.',
-                metric: '300%'
+                company: 'Green Energy Corp.',
+                industry: 'Renewable Energy',
+                location: 'Karachi → Nationwide',
+                growth: 'Expansion into Renewable Energy',
+                timeframe: '22 Months',
+                story: 'Exploited renewable energy solutions to support sustainable development across various sectors.',
+                metric: 'Sustainable Energy'
               }
             ].map((story, index) => (
               <div key={index} className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-primary-white/15 transition-all duration-300">

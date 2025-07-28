@@ -47,8 +47,8 @@ export default function PartnerPortal() {
   // Mock data
   const projects = [
     {
-      id: 'hawlton-electronics',
-      name: 'Khan Electronics',
+      id: 'hawlton-project-1',
+      name: 'Project Alpha',
       status: 'active',
       revenue: '₨2.4M',
       growth: '+34%',
@@ -56,8 +56,8 @@ export default function PartnerPortal() {
       conversion: '3.8%'
     },
     {
-      id: 'textile-empire',
-      name: 'Sheikh Textiles',
+      id: 'hawlton-project-2',
+      name: 'Project Beta',
       status: 'scaling',
       revenue: '₨1.8M',
       growth: '+67%',
@@ -116,7 +116,7 @@ export default function PartnerPortal() {
                 </div>
                 <div>
                   <h1 className="text-white font-bold text-xl">Partner Portal</h1>
-                  <p className="text-slate-400 text-sm">Khan Electronics Dashboard</p>
+                  <p className="text-slate-400 text-sm">Partner Dashboard</p>
                 </div>
               </div>
               
