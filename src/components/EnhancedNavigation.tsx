@@ -3,14 +3,13 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin, Search, Globe } from 'lucide-react'
+import { ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin, Globe } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { handleNavigation } from '@/utils/scrollTo'
 
 const EnhancedNavigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [searchQuery, setSearchQuery] = useState('')
   const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const pathname = usePathname()
   const router = useRouter()
@@ -187,20 +186,6 @@ const EnhancedNavigation = () => {
 
   return (
     <nav className="hidden lg:flex items-center space-x-1">
-      {/* Professional Search Integration */}
-      <div className="relative mr-4">
-        <div className="search-container">
-          <Search className="search-icon" />
-          <input
-            type="text"
-            placeholder={t('common.search')}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
-        </div>
-      </div>
-
       {/* Language Switcher */}
       <div className="relative mr-4">
         <button

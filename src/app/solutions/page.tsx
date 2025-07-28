@@ -269,10 +269,6 @@ export default async function SolutionsPage() {
                   <div className="text-4xl font-bold text-primary-gold mb-2">150+</div>
                   <div className="text-primary-silver">Businesses Funded</div>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary-gold mb-2">95%</div>
-                  <div className="text-primary-silver">Client Satisfaction Rate</div>
-                </div>
               </div>
             </div>
           </div>
