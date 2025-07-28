@@ -6,7 +6,6 @@ import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import ClientSuccess from '@/components/ClientSuccess'
 import MagneticButton from '@/components/MagneticButton'
-import AnimatedStats from '@/components/AnimatedStats'
 
 export default function Home() {
   return (

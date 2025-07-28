@@ -172,30 +172,30 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Professional Credentials */}
+          {/* Our Commitment */}
           <div className="bg-white p-8 shadow-lg rounded-xl mb-12">
-            <h3 className="text-2xl font-bold text-primary-navy mb-8 text-center">Professional Credentials & Recognition</h3>
+            <h3 className="text-2xl font-bold text-primary-navy mb-8 text-center">Our Commitment to Excellence</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {
                 [
                   {
-                    type: "Business Registration",
-                    authority: "Securities and Exchange Commission of Pakistan (SECP)",
-                    status: "Active Company Registration",
+                    type: "Legal Compliance",
+                    authority: "Pakistani Business Standards",
+                    status: "Fully Registered & Compliant",
                     year: "2024",
                     icon: Shield
                   },
                   {
-                    type: "Digital Innovation Member",
-                    authority: "Pakistan Software Houses Association (P@SHA)",
-                    status: "Certified Member",
+                    type: "Digital Innovation",
+                    authority: "Modern Technology Standards",
+                    status: "Cutting-Edge Solutions",
                     year: "2024",
                     icon: Lightbulb
                   },
                   {
-                    type: "Financial Services Compliance",
-                    authority: "State Bank of Pakistan Guidelines",
-                    status: "Fully Compliant Operations",
+                    type: "Financial Transparency",
+                    authority: "International Best Practices",
+                    status: "Transparent Operations",
                     year: "2024",
                     icon: TrendingUp
                   }

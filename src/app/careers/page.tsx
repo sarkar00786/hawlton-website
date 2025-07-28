@@ -1,74 +1,34 @@
 import { Briefcase, Users, TrendingUp, Award, MapPin, Clock, DollarSign, Heart } from 'lucide-react'
 import Link from 'next/link'
 
-const jobOpenings = [
+const futureOpportunities = [
   {
     id: 1,
-    title: "Senior Full-Stack Developer",
+    title: "Full-Stack Developers",
     department: "Engineering",
-    location: "Karachi, Pakistan",
-    type: "Full-time",
-    experience: "3-5 years",
-    salary: "Competitive",
-    description: "Lead development of scalable web applications and digital platforms for our partner businesses.",
-    requirements: [
-      "Expert in React, Next.js, Node.js, and TypeScript",
-      "Experience with cloud platforms (AWS, GCP)",
-      "Strong database design skills (PostgreSQL, MongoDB)",
-      "Experience with e-commerce platforms and payment integrations"
-    ],
-    postedDate: "2024-01-15"
+    description: "We'll be seeking talented developers to build scalable digital platforms for our growing portfolio of partner businesses.",
+    skills: ["React/Next.js", "Node.js", "TypeScript", "Cloud Platforms"]
   },
   {
     id: 2,
-    title: "Digital Marketing Specialist",
+    title: "Digital Marketing Specialists",
     department: "Marketing",
-    location: "Karachi, Pakistan",
-    type: "Full-time",
-    experience: "2-4 years",
-    salary: "Competitive",
-    description: "Drive digital growth strategies for our partner businesses across Pakistan&apos;s emerging markets.",
-    requirements: [
-      "Proven track record in digital marketing campaigns",
-      "Experience with Google Ads, Facebook Ads, and SEO",
-      "Strong analytical skills and data-driven approach",
-      "Understanding of Pakistani market dynamics"
-    ],
-    postedDate: "2024-01-10"
+    description: "Marketing professionals who understand Pakistan's digital landscape and can drive growth for our partners.",
+    skills: ["Digital Marketing", "Analytics", "SEO/SEM", "Pakistani Market Knowledge"]
   },
   {
     id: 3,
-    title: "Business Development Manager",
+    title: "Business Development Professionals",
     department: "Business Development",
-    location: "Karachi, Pakistan",
-    type: "Full-time",
-    experience: "4-6 years",
-    salary: "Competitive + Commission",
-    description: "Identify and develop strategic partnerships with local businesses seeking digital transformation.",
-    requirements: [
-      "Strong network in Pakistani business community",
-      "Excellent communication and negotiation skills",
-      "Experience in B2B sales and partnership development",
-      "Understanding of digital transformation trends"
-    ],
-    postedDate: "2024-01-05"
+    description: "Relationship builders who can identify and develop strategic partnerships with ambitious Pakistani businesses.",
+    skills: ["B2B Sales", "Partnership Development", "Communication", "Business Networks"]
   },
   {
     id: 4,
-    title: "UI/UX Designer",
+    title: "UI/UX Designers",
     department: "Design",
-    location: "Karachi, Pakistan / Remote",
-    type: "Full-time",
-    experience: "2-4 years",
-    salary: "Competitive",
-    description: "Create intuitive and beautiful user experiences for our digital platforms and partner solutions.",
-    requirements: [
-      "Proficiency in Figma, Adobe Creative Suite",
-      "Strong portfolio of web and mobile designs",
-      "Experience with design systems and component libraries",
-      "Understanding of user-centered design principles"
-    ],
-    postedDate: "2023-12-28"
+    description: "Creative professionals who can design user-centric digital experiences for diverse business sectors.",
+    skills: ["UI/UX Design", "Figma", "User Research", "Design Systems"]
   }
 ]
 
@@ -143,7 +103,7 @@ export default function CareersPage() {
                 href="#open-positions"
                 className="bg-primary-gold hover:bg-primary-gold text-primary-navy px-6 py-3 font-semibold text-base transition-all duration-300 transform hover:scale-105"
               >
-                View Open Positions
+                View Future Opportunities
               </a>
               <a
                 href="#company-culture"
@@ -197,67 +157,50 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Open Positions */}
+      {/* Future Opportunities */}
       <section id="open-positions" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
-              Open Positions
+              Future Opportunities
             </h2>
             <p className="text-lg text-primary-charcoal max-w-3xl mx-auto leading-relaxed">
-              Discover opportunities to make a meaningful impact while advancing your career in Pakistan&apos;s 
-              most dynamic digital transformation company.
+              As we grow our partnership network and expand our digital transformation initiatives, 
+              we'll be seeking talented professionals to join our mission of empowering Pakistan's digital economy.
             </p>
+            <div className="mt-6 text-center">
+              <div className="inline-flex items-center bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full text-sm font-semibold">
+                <Users className="w-4 h-4 mr-2" />
+                Currently Building Our Team
+              </div>
+            </div>
           </div>
 
-          <div className="space-y-8">
-            {jobOpenings.map((job) => (
-              <div key={job.id} className="bg-primary-platinum rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary-navy mb-2">{job.title}</h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-primary-charcoal mb-4">
-                      <span className="flex items-center gap-2">
-                        <Briefcase className="w-4 h-4" />
-                        {job.department}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        {job.location}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {job.type}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <Award className="w-4 h-4" />
-                        {job.experience}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href={`/careers/${job.id}`}
-                      className="bg-primary-gold hover:bg-primary-gold text-primary-navy px-4 py-2 font-medium text-sm transition-colors duration-300"
-                    >
-                      View Details
-                    </Link>
-                    <Link
-                      href={`/careers/apply?job=${job.id}`}
-                      className="bg-primary-navy hover:bg-primary-navy/90 text-primary-white px-4 py-2 font-medium text-sm transition-colors duration-300"
-                    >
-                      Apply Now
-                    </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {futureOpportunities.map((opportunity) => (
+              <div key={opportunity.id} className="bg-primary-platinum rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-primary-navy mb-2">{opportunity.title}</h3>
+                  <div className="flex items-center gap-2 text-sm text-primary-charcoal mb-4">
+                    <Briefcase className="w-4 h-4" />
+                    <span>{opportunity.department}</span>
                   </div>
                 </div>
-                <p className="text-primary-charcoal leading-relaxed mb-4">{job.description}</p>
+                <p className="text-primary-charcoal leading-relaxed mb-6">{opportunity.description}</p>
                 <div>
-                  <h4 className="font-semibold text-primary-navy mb-2">Key Requirements:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-primary-charcoal">
-                    {job.requirements.slice(0, 2).map((req, index) => (
-                      <li key={index}>{req}</li>
+                  <h4 className="font-semibold text-primary-navy mb-3">Key Skills We'll Look For:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {opportunity.skills.map((skill, index) => (
+                      <span key={index} className="bg-primary-gold/20 text-primary-navy px-3 py-1 rounded-full text-sm font-medium">
+                        {skill}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-primary-gold/20">
+                  <p className="text-sm text-primary-silver">
+                    Interested in this role? Send us your resume and we'll keep you informed as opportunities develop.
+                  </p>
                 </div>
               </div>
             ))}

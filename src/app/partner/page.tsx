@@ -63,20 +63,6 @@ export default function PartnerWithUsPage() {
     }
   ]
 
-  const testimonials = [
-    {
-      quote: "Hawlton transformed our local retail business into a nationwide digital empire. Our revenue increased 400% in just 18 months.",
-      author: "Ahmed Khan",
-      company: "Khan Electronics",
-      location: "Lahore → Nationwide"
-    },
-    {
-      quote: "The partnership model allowed us to scale without massive upfront investment. Hawlton&apos;s expertise was game-changing.",
-      author: "Fatima Sheikh",
-      company: "Sheikh Textiles",
-      location: "Faisalabad → National"
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-primary-platinum">
@@ -143,7 +129,7 @@ export default function PartnerWithUsPage() {
               </div>
             </motion.div>
 
-            {/* Right Content - Stats */}
+            {/* Right Content - Vision */}
             <motion.div
               className="grid grid-cols-2 gap-6 relative z-[1]"
               initial={{ opacity: 0, x: 50 }}
@@ -152,19 +138,20 @@ export default function PartnerWithUsPage() {
               style={{ zIndex: 1 }}
             >
               {[
-                { number: '400%', label: 'Average Revenue Growth' },
-                { number: '18', label: 'Months to National Scale' },
-                { number: '50+', label: 'Cities Reached' },
-                { number: '95%', label: 'Partner Satisfaction' }
-              ].map((stat, index) => (
+                { icon: '🚀', label: 'Digital Transformation', description: 'Complete business digitization' },
+                { icon: '🤝', label: 'Strategic Partnership', description: 'Collaborative growth approach' },
+                { icon: '🌐', label: 'National Expansion', description: 'Reach customers nationwide' },
+                { icon: '📈', label: 'Sustainable Growth', description: 'Long-term success focus' }
+              ].map((item, index) => (
                 <motion.div
                   key={index}
                   className="bg-primary-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <div className="text-3xl font-bold text-accent-primary mb-2">{stat.number}</div>
-                  <div className="text-sm text-primary-silver">{stat.label}</div>
+                  <div className="text-3xl mb-2">{item.icon}</div>
+                  <div className="text-sm font-semibold text-accent-primary mb-1">{item.label}</div>
+                  <div className="text-xs text-primary-silver">{item.description}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -610,58 +597,6 @@ export default function PartnerWithUsPage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials-section" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
-              Success Stories
-            </h2>
-            <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
-              Hear from partners who transformed their businesses with Hawlton.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-accent-primary fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-primary-charcoal text-lg leading-relaxed mb-6 italic">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold text-primary-navy">{testimonial.author}</div>
-                    <div className="text-primary-charcoal">{testimonial.company}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm text-accent-primary font-semibold">{testimonial.location}</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Partner Form Section */}
       <section id="partner-form" className="py-20 bg-secondary-50">
