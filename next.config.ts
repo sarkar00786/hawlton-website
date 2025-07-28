@@ -29,7 +29,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 86400, // 24 hours
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
@@ -46,12 +45,12 @@ const nextConfig: NextConfig = {
         key: 'Content-Security-Policy',
         value: `
           default-src 'self';
-          script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.tawk.to https://vercel.live;
-          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-          img-src 'self' data: blob: *.sanity.io *.googletagmanager.com https: *.gstatic.com;
-          font-src 'self' https://fonts.gstatic.com data:;
-          connect-src 'self' *.google-analytics.com *.sanity.io https://fonts.googleapis.com https://fonts.gstatic.com https://vercel.live wss://ws-us3.pusher.com data: blob:;
-          frame-src 'self' *.tawk.to https://vercel.live;
+          script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://*.tawk.to https://vercel.live;
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+          img-src 'self' data: blob: https://*.sanity.io https://*.googletagmanager.com https: https://*.gstatic.com;
+          font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:;
+          connect-src 'self' https://*.google-analytics.com https://*.sanity.io https://fonts.googleapis.com https://fonts.gstatic.com https://vercel.live wss://ws-us3.pusher.com data: blob:;
+          frame-src 'self' https://*.tawk.to https://vercel.live;
           worker-src 'self' blob:;
           child-src 'self' blob:;
           object-src 'none';

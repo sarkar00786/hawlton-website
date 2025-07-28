@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { TrendingUp, DollarSign, PieChart, BarChart3, Users, Target, Award, FileText } from 'lucide-react'
+import { InvestorPortalIds } from '@/config/elementIds'
 
 const InvestorPortal = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -94,7 +95,7 @@ const InvestorPortal = () => {
                   <span className="text-primary-navy font-bold text-lg">H</span>
                 </div>
                 <div>
-                  <h1 className="text-white font-bold text-xl">Investor Portal</h1>
+                  <h1 id={InvestorPortalIds.PORTAL_TITLE} className="text-white font-bold text-xl">Investor Portal</h1>
                   <p className="text-primary-silver text-sm">Welcome back, Investor</p>
                 </div>
               </div>

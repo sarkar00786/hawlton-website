@@ -150,6 +150,15 @@ export const handleNavigation = (
   const targetPath = href.split('#')[0] // Remove any existing hash
   const sectionKey = NAVIGATION_MAPPING[href as keyof typeof NAVIGATION_MAPPING]
   
+  // Handle direct page routes (like portals) that don't need section scrolling
+  const isDirectPageRoute = ['/investor-portal', '/partner-portal', '/dashboard'].includes(targetPath)
+  
+  if (isDirectPageRoute) {
+    router.push(targetPath)
+    onComplete?.()
+    return true
+  }
+  
   // If we're already on the target page, just scroll to section
   if (currentPath === targetPath && sectionKey) {
     const pageSections = PAGE_SECTIONS[targetPath as keyof typeof PAGE_SECTIONS]

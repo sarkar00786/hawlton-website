@@ -8,6 +8,7 @@ import LiquidNav from './LiquidNav'
 import EnhancedNavigation from './EnhancedNavigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './ui/ErrorBoundary'
+import { HeaderIds } from '@/config/elementIds'
 
 // For now, just show auth links without checking session state
 // This makes the header work without requiring SessionProvider
@@ -136,7 +137,7 @@ const Header = () => {
           {/* Logo and Navigation */}
           <div className="flex items-center space-x-8">
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-primary-gold">
+              <Link href="/" id="logo-main" className="text-2xl font-bold text-primary-gold">
                 Hawlton
               </Link>
             </div>
@@ -151,6 +152,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-2">
             <Link
               href="/partner"
+              id="cta-partner-header"
               className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold rounded-md transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
                 isActive('/partner') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
@@ -161,6 +163,7 @@ const Header = () => {
             </Link>
             <Link
               href="/invest"
+              id="cta-invest-header"
               className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold rounded-md transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
                 isActive('/invest') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
@@ -171,6 +174,7 @@ const Header = () => {
             </Link>
             <Link
               href="/auth/signup"
+              id="cta-get-started-header"
               className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy rounded-md transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
             >
               Get Started
