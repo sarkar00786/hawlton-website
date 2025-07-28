@@ -56,16 +56,16 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'rounded-sm': variant === 'outline' || variant === 'ghost' || variant === 'link',
       },
       
-      // Professional size variants - WCAG AA compliant (Direct Tailwind)
+      // Professional size variants - WCAG AA compliant (Optimized for modern web)
       {
-        // Small buttons - 36px on desktop, 44px on mobile
-        'px-2 py-1.5 text-sm gap-1.5 min-h-[2.25rem] sm:min-h-[2.75rem]': size === 'sm',
-        // Medium buttons - 44px minimum
-        'px-3 py-2.5 text-base gap-2 min-h-[2.75rem]': size === 'md',  
-        // Large buttons - 52px
-        'px-4 py-3 text-lg gap-2 min-h-[3.25rem]': size === 'lg',
-        // Extra large buttons
-        'px-6 py-4 text-xl gap-3 min-h-[3.5rem]': size === 'xl',
+        // Small buttons - compact but touchable
+        'px-3 py-2 text-sm gap-1.5 min-h-[2.25rem] sm:min-h-[2.5rem]': size === 'sm',
+        // Medium buttons - standard professional size
+        'px-4 py-2.5 text-sm gap-2 min-h-[2.5rem]': size === 'md',  
+        // Large buttons - for primary CTAs
+        'px-5 py-3 text-base gap-2 min-h-[2.75rem]': size === 'lg',
+        // Extra large buttons - hero/landing use only
+        'px-6 py-3.5 text-base gap-2.5 min-h-[3rem]': size === 'xl',
       },
       
       // Variant styles - Use Tailwind-defined colors
@@ -97,9 +97,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'group-hover:scale-110 filter drop-shadow-sm',
       {
         'w-4 h-4': size === 'sm',
-        'w-5 h-5': size === 'md',
-        'w-6 h-6': size === 'lg',
-        'w-7 h-7': size === 'xl',
+        'w-4 h-4': size === 'md',
+        'w-5 h-5': size === 'lg',
+        'w-5 h-5': size === 'xl',
       },
       // Right icon specific hover effects
       iconPosition === 'right' && 'group-hover:translate-x-1'

@@ -10,8 +10,8 @@ export default function AboutPage() {
       <section id="hero-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
-              The Genesis of a Vision: Empowering Pakistan&apos;s Digital &amp; Economic Future.
+            <h1 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
+              The Genesis of a Vision: Empowering Pakistan&apos;s Digital & Economic Future.
             </h1>
             <div className="text-lg text-primary-charcoal leading-relaxed space-y-6">
               <p>
@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section id="vision-mission-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-8">
               Our Guiding Principles: Vision for a Digital Pakistan.
             </h2>
           </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
       <section id="team-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
               The Architects of Digital Growth & Investment Impact.
             </h2>
             <p className="text-lg text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -230,7 +230,7 @@ export default function AboutPage() {
       <section id="philosophy-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-8">
               Our Commitment: Partnership, Innovation & Impact.
             </h2>
           </div>

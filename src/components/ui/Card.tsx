@@ -32,9 +32,10 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       // Professional responsive padding system
       {
         'p-0': padding === 'none',
-        'card-padding': padding === 'sm' || padding === 'md', // Responsive padding
-        'p-6 md:p-8 lg:p-10': padding === 'lg', // 24px->32px->40px
-        'p-8 md:p-10 lg:p-12': padding === 'xl', // 32px->40px->48px
+        'p-4 md:p-5': padding === 'sm', // 16px->20px
+        'p-5 md:p-6': padding === 'md', // 20px->24px  
+        'p-6 md:p-8': padding === 'lg', // 24px->32px
+        'p-8 md:p-10': padding === 'xl', // 32px->40px
       },
       
       // Default responsive padding if no specific padding set

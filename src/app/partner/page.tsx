@@ -95,12 +95,12 @@ export default function PartnerWithUsPage() {
                   Strategic Partnership Program
                 </motion.div>
                 
-                <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold leading-tight">
+                <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight">
                   Partner With{' '}
                   <span className="text-gradient-gold">Hawlton</span>
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-primary-silver leading-relaxed max-w-2xl">
+                <p className="text-lg md:text-xl text-primary-silver leading-relaxed max-w-2xl">
                   Transform your business through strategic partnership. Scale operations, expand nationwide, and achieve exponential growth together.
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
               Partnership Models Available
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -307,7 +307,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
               Why Partner With Hawlton?
             </h2>
             <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
@@ -346,7 +346,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
               Partnership Process
             </h2>
             <p className="text-xl text-primary-silver max-w-3xl mx-auto">
@@ -365,7 +365,7 @@ export default function PartnerWithUsPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="bg-primary-platinum rounded-xl p-8 h-full">
-                  <div className="text-6xl font-bold text-accent-primary mb-4">{step.step}</div>
+                  <div className="text-3xl font-bold text-accent-primary mb-4">{step.step}</div>
                   <h3 className="text-xl font-semibold text-primary-navy mb-4">{step.title}</h3>
                   <p className="text-primary-charcoal">{step.description}</p>
                 </div>
@@ -385,7 +385,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
               Your Dedicated Project Portal
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -499,7 +499,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-8">
               Comprehensive Partner Resources
             </h2>
             <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
@@ -608,7 +608,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
@@ -637,7 +637,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
               Questions About Partnership?
             </h2>
             <p className="text-xl text-primary-silver max-w-3xl mx-auto">

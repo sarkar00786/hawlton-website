@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Enhanced Visual Appeal */}
-      <section id="hero-section" className="relative bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 text-primary-white py-20 pt-32 overflow-hidden" style={{ isolation: 'isolate' }}>
+      <section id="hero-section" className="relative bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 text-primary-white py-16 pt-24 overflow-hidden" style={{ isolation: 'isolate' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-gold/5 to-transparent transform -skew-y-6 scale-150"></div>
@@ -41,7 +41,7 @@ export default function Home() {
                   Digital Transformation Partner
                 </motion.div>
                 
-                <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
+                <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
               Driving Digital Growth Through Strategic Partnerships
             </h2>
             <div className="max-w-4xl mx-auto text-lg text-primary-charcoal leading-relaxed">
@@ -186,7 +186,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
               Strategic Partnerships & Impact Investment for Accelerated Growth.
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-primary-silver leading-relaxed">
@@ -231,7 +231,7 @@ export default function Home() {
                   whileHover={{ y: -5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <div className="text-3xl font-bold text-accent-primary mb-4">{item.step}</div>
+                  <div className="text-2xl font-bold text-accent-primary mb-4">{item.step}</div>
                   <h3 className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
                   <p className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
                 </motion.div>
@@ -251,7 +251,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
               Driving Exponential Growth: Our Collective Journey.
             </h2>
           </motion.div>
@@ -333,7 +333,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
               Ready to Transform Your Business or Invest in Pakistan&apos;s Digital Future?
             </h2>
             <p className="text-xl text-primary-silver mb-12 max-w-3xl mx-auto">

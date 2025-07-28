@@ -53,9 +53,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       
       // Override padding for different sizes while maintaining touch targets
       {
-        'px-3 py-2': size === 'sm',
-        'px-4 py-3': size === 'md',
-        'px-5 py-4': size === 'lg',
+        'px-3 py-2 text-sm': size === 'sm',
+        'px-3 py-2.5 text-sm': size === 'md',
+        'px-4 py-3 text-base': size === 'lg',
       },
       
       // Variant styles
