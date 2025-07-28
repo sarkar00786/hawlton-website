@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Enhanced Visual Appeal */}
-      <section id="hero-section" className="relative bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 text-primary-white py-32 pt-40 overflow-hidden" style={{ isolation: 'isolate' }}>
+      <section id="hero-section" className="relative bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 text-primary-white py-20 pt-32 overflow-hidden" style={{ isolation: 'isolate' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-gold/5 to-transparent transform -skew-y-6 scale-150"></div>
@@ -32,16 +32,16 @@ export default function Home() {
             >
               <div className="space-y-8">
                 <motion.div
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-accent-primary/20 to-accent-primary/10 text-accent-primary px-6 py-3 rounded-full text-base font-bold border border-accent-primary/30 shadow-glow-gold backdrop-blur-sm"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-primary/20 to-accent-primary/10 text-accent-primary px-4 py-2 rounded-full text-sm font-semibold border border-accent-primary/30 backdrop-blur-sm"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 300 }}
                 >
-                  <Building className="w-5 h-5 animate-bounce-gentle" />
+                  <Building className="w-4 h-4" />
                   Digital Transformation Partner
                 </motion.div>
                 
-                <h1 className="text-6xl md:text-7xl xl:text-8xl font-black leading-none tracking-tight">
+                <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function Home() {
                 </h1>
                 
                 <motion.p 
-                  className="text-2xl md:text-3xl text-primary-100 leading-relaxed max-w-4xl mx-auto font-light"
+                  className="text-lg md:text-xl text-primary-100 leading-relaxed max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.1, duration: 0.8 }}
@@ -90,10 +90,10 @@ export default function Home() {
                   <Link href="/partner">
                     <Button
                       variant="primary"
-                      size="lg"
+                      size="md"
                       icon={ArrowRight}
                       iconPosition="right"
-                      className="bg-gradient-to-r from-accent-primary to-yellow-400 hover:from-yellow-400 hover:to-accent-primary text-primary-navy font-bold px-8 py-4 text-lg shadow-glow-gold hover:shadow-xl transition-all duration-300"
+                      className="bg-gradient-to-r from-accent-primary to-yellow-400 hover:from-yellow-400 hover:to-accent-primary text-primary-navy font-semibold px-6 py-3 text-base shadow-gold hover:shadow-glow-gold transition-all duration-300"
                     >
                       Start Your Digital Growth Journey
                     </Button>
@@ -108,10 +108,10 @@ export default function Home() {
                   <Link href="/invest">
                     <Button
                       variant="outline"
-                      size="lg"
+                      size="md"
                       icon={ArrowRight}
                       iconPosition="right"
-                      className="border-2 border-primary-white text-primary-white hover:bg-gradient-to-r hover:from-primary-white hover:to-primary-100 hover:text-primary-navy font-bold px-8 py-4 text-lg backdrop-blur-sm hover:shadow-xl transition-all duration-300"
+                      className="border-2 border-primary-white text-primary-white hover:bg-gradient-to-r hover:from-primary-white hover:to-primary-100 hover:text-primary-navy font-semibold px-6 py-3 text-base backdrop-blur-sm hover:shadow-lg transition-all duration-300"
                     >
                       Explore Investment Opportunities
                     </Button>
@@ -158,18 +158,18 @@ export default function Home() {
             ].map((item, index) => (
               <motion.div 
                 key={index} 
-                className="text-center bg-white p-10 shadow-soft hover:shadow-elevated transition-all duration-500 rounded-2xl border border-gray-100 group"
+                className="text-center bg-white p-6 shadow-soft hover:shadow-elevated transition-all duration-300 rounded-xl border border-gray-100 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.15 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ y: -4, scale: 1.01 }}
               >
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-accent-primary to-yellow-400 rounded-2xl flex items-center justify-center shadow-gold group-hover:shadow-glow-gold transition-all duration-300 group-hover:rotate-3">
-                  <item.icon className="w-10 h-10 text-primary-navy" />
+                <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-accent-primary to-yellow-400 rounded-xl flex items-center justify-center shadow-gold group-hover:shadow-glow-gold transition-all duration-300">
+                  <item.icon className="w-7 h-7 text-primary-navy" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-navy mb-4 group-hover:text-accent-primary transition-colors duration-300">{item.title}</h3>
-                <p className="text-primary-charcoal leading-relaxed text-lg">{item.description}</p>
+                <h3 className="text-lg font-semibold text-primary-navy mb-3 group-hover:text-accent-primary transition-colors duration-300">{item.title}</h3>
+                <p className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -231,9 +231,9 @@ export default function Home() {
                   whileHover={{ y: -5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <div className="text-5xl font-bold text-accent-primary mb-4">{item.step}</div>
-                  <h3 className="text-2xl font-semibold text-primary-navy mb-4">{item.title}</h3>
-                  <p className="text-primary-charcoal leading-relaxed">{item.description}</p>
+                  <div className="text-3xl font-bold text-accent-primary mb-4">{item.step}</div>
+                  <h3 className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
+                  <p className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
                 </motion.div>
               </motion.div>
             ))}
