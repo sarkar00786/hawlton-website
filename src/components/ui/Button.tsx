@@ -96,10 +96,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'transition-all duration-300 ease-out',
       'group-hover:scale-110 filter drop-shadow-sm',
       {
-        'w-4 h-4': size === 'sm',
-        'w-4 h-4': size === 'md',
-        'w-5 h-5': size === 'lg',
-        'w-5 h-5': size === 'xl',
+        'w-4 h-4': size === 'sm' || size === 'md',
+        'w-5 h-5': size === 'lg' || size === 'xl',
       },
       // Right icon specific hover effects
       iconPosition === 'right' && 'group-hover:translate-x-1'
