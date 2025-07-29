@@ -22,13 +22,13 @@ export default function AboutPage() {
               </p>
               <p>
                 This revelation sparked our commitment to bridging that critical gap through strategic partnerships, 
-                cutting-edge digital innovation, and secure investment avenues. We are dedicated to fostering a 
+                cutting-edge digital innovation, and secure partnership avenues. We are dedicated to fostering a
                 vibrant digital ecosystem that not only transforms individual businesses but contributes significantly 
                 to Pakistan&apos;s long-term economic uplift and national prosperity.
               </p>
               <p>
                 Today, Hawlton stands as a catalyst for change, empowering local enterprises to achieve national 
-                prominence while creating unprecedented opportunities for strategic investors to participate in 
+                prominence while creating unprecedented opportunities for strategic partners to participate in
                 Pakistan&apos;s digital transformation journey.
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-primary-navy">Our Vision</h3>
               </div>
               <p className="text-primary-charcoal leading-relaxed">
-                To be the leading catalyst for digital growth and a trusted conduit for impactful investment, 
+                To be the leading catalyst for digital growth and a trusted conduit for impactful partnerships,
                 empowering every local enterprise in Pakistan to achieve national prominence and beyond, thereby 
                 contributing significantly to the nation&apos;s economic prosperity.
               </p>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               <p className="text-primary-charcoal leading-relaxed">
                 To forge strategic partnerships with ambitious businesses, providing unparalleled digital transformation 
                 expertise, innovative solutions, and unwavering support for shared, sustainable success. Simultaneously, 
-                to offer secure, transparent, and high-potential investment opportunities that fuel real economic growth 
+                to offer secure, transparent, and high-potential partnership opportunities that fuel real economic growth 
                 and deliver exceptional returns.
               </p>
             </div>
@@ -85,12 +85,12 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
-              The Architects of Digital Growth & Investment Impact.
+              The Architects of Digital Growth & Partnership Impact.
             </h2>
             <p className="text-lg text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
               Our leadership team brings a wealth of collective experience in conceptualizing, building, and scaling 
               high-growth digital ventures across diverse sectors. Our expertise is rooted in strategic foresight, 
-              operational excellence, and a deep understanding of market dynamics and secure investment principles.
+              operational excellence, and a deep understanding of market dynamics and secure partnership principles.
             </p>
           </div>
 
@@ -126,11 +126,11 @@ export default function AboutPage() {
               </div>
               <p className="text-primary-charcoal leading-relaxed">
                 Jahangir is the strategic mind and driving force behind Hawlton, fueled by an unwavering vision to 
-                revolutionize Pakistan&apos;s digital economy and create robust investment pathways. His entrepreneurial 
+                revolutionize Pakistan's digital economy and create robust partnership pathways. His entrepreneurial
                 journey is marked by a proven ability to identify market gaps, conceptualize groundbreaking digital 
                 solutions, and lead teams to achieve exponential growth across various online ventures. His expertise 
                 spans strategic planning, market entry, building resilient digital ecosystems, and identifying 
-                high-potential investment opportunities.
+                high-potential partnership opportunities.
               </p>
             </div>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 extensive experience in managing complex digital initiatives, he ensures seamless implementation, 
                 efficient resource allocation, and timely delivery of results. His focus on precision, team coordination, 
                 and problem-solving is instrumental in translating Hawlton&apos;s strategic visions into tangible, successful 
-                digital realities, ensuring operational excellence for both our partners and our investors.
+                digital realities, ensuring operational excellence for both our partners and our collaborators.
               </p>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               Our &apos;remote collective&apos; model allows us to tap into a diverse pool of top-tier talent, ensuring agile, 
               innovative, and geographically diverse problem-solving capabilities. We pride ourselves on our strategic 
               thinking, proven methodologies, and a relentless pursuit of excellence that transcends specific industry 
-              boundaries, delivering tangible value for both our partners and our investors.
+              boundaries, delivering tangible value for both our partners and our collaborators.
             </p>
           </div>
         </div>
@@ -245,17 +245,17 @@ export default function AboutPage() {
               {
                 icon: Lightbulb,
                 title: 'Innovation',
-                description: 'Continuously exploring cutting-edge digital strategies, technologies, and investment models.'
+                description: 'Continuously exploring cutting-edge digital strategies, technologies, and partnership models.'
               },
               {
                 icon: TrendingUp,
                 title: 'Mutual Success',
-                description: 'Our growth is intrinsically linked to our partners\' and investors\' success.'
+                description: 'Our growth is intrinsically linked to our partners\' and collaborators\' success.'
               },
               {
                 icon: Globe,
                 title: 'Commitment to Pakistan',
-                description: 'Dedicated to fostering digital economic growth, creating opportunities nationwide, and attracting impactful investment.'
+                description: 'Dedicated to fostering digital economic growth, creating opportunities nationwide, and attracting impactful partnerships.'
               }
             ].map((item, index) => (
               <div key={index} className="bg-primary-platinum p-6 text-center hover:transform hover:scale-105 transition-all duration-300 rounded-xl">

@@ -28,7 +28,7 @@ const EnhancedNavigation = () => {
       href: '/about',
       submenu: [
         { label: 'Our Story', href: '/about#overview', icon: Building2, description: 'Learn about Hawlton\'s vision and mission to transform Pakistan\'s digital economy', id: 'nav-about-story' },
-        { label: 'Leadership Team', href: '/about#team', icon: Users, description: 'Meet the architects of digital growth and investment impact', id: 'nav-about-team' },
+        { label: 'Leadership Team', href: '/about#team', icon: Users, description: 'Meet the architects of digital growth and transformation', id: 'nav-about-team' },
         { label: 'Vision & Mission', href: '/about#vision', icon: Target, description: 'Our guiding principles for Pakistan\'s digital transformation', id: 'nav-about-vision' },
         { label: 'Our Values', href: '/about#values', icon: Award, description: 'Partnership, innovation, and commitment to mutual success', id: 'nav-about-values' }
       ]
@@ -40,7 +40,6 @@ const EnhancedNavigation = () => {
         { label: 'Our Services', href: '/solutions#services', icon: TrendingUp, description: 'Comprehensive digital transformation solutions for your business', id: 'nav-solutions-services' },
         { label: 'Digital Transformation', href: '/solutions#digital-transformation', icon: Target, description: 'Complete digital transformation strategies and implementation', id: 'nav-solutions-digital' },
         { label: 'Strategic Partnerships', href: '/solutions#partnerships', icon: Users, description: 'Partnership models and collaborative growth approaches', id: 'nav-solutions-partnerships' },
-        { label: 'Investment Solutions', href: '/solutions#investment', icon: Building2, description: 'Investment-focused solutions and growth funding', id: 'nav-solutions-investment' },
         { label: 'Success Stories', href: '/solutions#success-stories', icon: Award, description: 'Real case studies and transformation results', id: 'nav-solutions-success' }
       ]
     },
@@ -49,7 +48,7 @@ const EnhancedNavigation = () => {
       href: '/partner',
       submenu: [
         { label: 'Partnership Benefits', href: '/partner#benefits', icon: TrendingUp, description: 'Why partner with Hawlton for exponential business growth', id: 'nav-partner-benefits' },
-        { label: 'Partnership Types', href: '/partner#types', icon: Building2, description: 'Different partnership models: inventory-based vs. full investment partnerships', id: 'nav-partner-types' },
+        { label: 'Partnership Types', href: '/partner#types', icon: Building2, description: 'Different partnership models and collaboration approaches', id: 'nav-partner-types' },
         { label: 'Project Portal', href: '/partner-portal', icon: Target, description: 'Access your dedicated project management and tracking portal', id: 'nav-partner-portal' },
         { label: 'Partner Resources', href: '/partner#resources', icon: FileText, description: 'Tools, materials, and support resources for partners', id: 'nav-partner-resources' },
         { label: 'Success Stories', href: '/partner#testimonials', icon: Users, description: 'Hear from partners who transformed their businesses', id: 'nav-partner-testimonials' },
@@ -57,22 +56,10 @@ const EnhancedNavigation = () => {
       ]
     },
     {
-      label: t('nav.invest'),
-      href: '/invest',
-      submenu: [
-        { label: 'Investment Benefits', href: '/invest#benefits', icon: TrendingUp, description: 'High returns through Pakistan\'s digital transformation', id: 'nav-invest-benefits' },
-        { label: 'Investment Portfolio', href: '/invest#portfolio', icon: Building2, description: 'Current investment portfolio showcase and performance metrics', id: 'nav-invest-portfolio' },
-        { label: 'Investment Opportunities', href: '/invest#opportunities', icon: Target, description: 'Diverse portfolio of high-growth digital ventures', id: 'nav-invest-opportunities' },
-        { label: 'Investor Portal', href: '/investor-portal', icon: Users, description: 'Access your personalized investment dashboard and reports', id: 'nav-invest-portal' },
-        { label: 'Documentation', href: '/invest#documentation', icon: FileText, description: 'Investment documents, reports, and due diligence materials', id: 'nav-invest-docs' },
-        { label: 'Get Started', href: '/invest#investment-form', icon: Award, description: 'Begin your investment journey with Hawlton', id: 'nav-invest-start' }
-      ]
-    },
-    {
       label: t('nav.contact'),
       href: '/contact',
       submenu: [
-        { label: 'Get In Touch', href: '/contact#form', icon: Phone, description: 'Contact us for partnerships, investments, or general inquiries', id: 'nav-contact-form' },
+        { label: 'Get In Touch', href: '/contact#form', icon: Phone, description: 'Contact us for partnerships, collaboration, or general inquiries', id: 'nav-contact-form' },
         { label: 'Contact Info', href: '/contact#info', icon: MapPin, description: 'Our contact details and office information', id: 'nav-contact-info' },
         { label: 'Careers', href: '/careers#openings', icon: Users, description: 'Join our mission to transform Pakistan\'s digital future', id: 'nav-contact-careers' }
       ]

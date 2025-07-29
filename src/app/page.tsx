@@ -72,7 +72,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.1, duration: 0.8 }}
                 >
-                  We transform ambitious Pakistani businesses into <span className="font-semibold text-accent-primary">national digital leaders</span> through strategic partnerships and secure investment opportunities, delivering <span className="font-semibold text-accent-primary">measurable growth</span> and sustainable ROI across Pakistan&apos;s thriving digital economy.
+                We transform ambitious Pakistani businesses into <span className="font-semibold text-accent-primary">national digital leaders</span> through strategic partnerships and innovative digital solutions, delivering <span className="font-semibold text-accent-primary">measurable growth</span> and sustainable success across Pakistan&apos;s thriving digital economy.
                 </motion.p>
               </div>
 
@@ -100,23 +100,6 @@ export default function Home() {
                   </Link>
                 </motion.div>
                 
-                <motion.div
-                  whileHover={{ scale: 1.08, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                >
-                  <Link href="/invest">
-                    <Button
-                      variant="outline"
-                      size="md"
-                      icon={ArrowRight}
-                      iconPosition="right"
-                      className="border-2 border-primary-white text-primary-white hover:bg-gradient-to-r hover:from-primary-white hover:to-primary-100 hover:text-primary-navy font-semibold px-6 py-3 text-base backdrop-blur-sm hover:shadow-lg transition-all duration-300"
-                    >
-                      Explore Investment Opportunities
-                    </Button>
-                  </Link>
-                </motion.div>
               </motion.div>
             </motion.div>
           </div>
@@ -187,7 +170,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
-              Strategic Partnerships & Impact Investment for Accelerated Growth.
+              Strategic Partnerships & Digital Innovation for Accelerated Growth.
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-primary-silver leading-relaxed">
               <motion.p
@@ -198,15 +181,6 @@ export default function Home() {
               >
                 Hawlton collaborates closely with partners, leveraging existing assets and our deep digital expertise 
                 to co-create and scale online ventures.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-              >
-                We offer a transparent, secure platform for investors to participate directly in Pakistan&apos;s digital 
-                economic boom, ensuring mutual success and sustainable expansion.
               </motion.p>
             </div>
           </motion.div>
@@ -283,12 +257,6 @@ export default function Home() {
                 icon: Target
               },
               {
-                title: 'Creating High-Impact Investment Opportunities',
-                desc: 'Delivering secure, substantial returns by fueling real economic growth.',
-                metric: 'ROI Excellence',
-                icon: Star
-              },
-              {
                 title: 'Empowering Pakistan&apos;s Digital Economy',
                 desc: 'Contributing to national economic development and job creation.',
                 metric: 'Economic Impact',
@@ -334,10 +302,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
-              Ready to Transform Your Business or Invest in Pakistan&apos;s Digital Future?
+              Ready to Transform Your Business with Pakistan's Digital Leader?
             </h2>
             <p className="text-xl text-primary-silver mb-12 max-w-3xl mx-auto">
-              Connect with our team to explore how Hawlton can empower your national expansion or secure your impactful investment.
+              Connect with our team to explore how Hawlton can empower your national expansion and digital transformation.
             </p>
             
             {/* CTA Buttons */}

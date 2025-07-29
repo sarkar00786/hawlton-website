@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react'
 const Footer = () => {
   const pathname = usePathname()
   
-  const isPortalPage = pathname.startsWith('/investor-portal') || pathname.startsWith('/partner-portal')
+  const isPortalPage = pathname.startsWith('/partner-portal')
   if (isPortalPage) return null;
 
   const isActive = (href: string) => {
@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-primary-white mb-4">Hawlton</h3>
             <p className="text-primary-silver mb-6 leading-relaxed">
-              Empowering Pakistan&apos;s Digital Future through Strategic Partnerships and Impactful Investment. 
+              Empowering Pakistan&apos;s Digital Future through Strategic Partnerships and Digital Innovation. 
               Catalyzing National Digital Transformation for sustainable growth and prosperity.
             </p>
             <div className="space-y-3">
@@ -58,11 +58,6 @@ const Footer = () => {
               <li>
                 <Link href="/partner" className={`${isActive('/partner') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
                   Partner With Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/invest" className={`${isActive('/invest') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
-                  Invest With Us
                 </Link>
               </li>
               <li>

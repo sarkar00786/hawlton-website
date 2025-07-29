@@ -72,7 +72,7 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your business or explore investment opportunities? 
+            Ready to transform your business or explore partnership opportunities?
             Our team is here to answer your questions and guide you towards digital success.
           </p>
         </div>
@@ -103,15 +103,15 @@ export default function ContactPage() {
             </a>
             
             <a
-              href="/invest"
+              href="/solutions"
               className="group bg-white rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold rounded-full flex items-center justify-center group-hover:bg-primary-gold transition-colors duration-300">
                 <Phone className="w-8 h-8 text-primary-navy" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-navy mb-2">Investment Opportunities</h3>
+              <h3 className="text-xl font-semibold text-primary-navy mb-2">Solution Discovery</h3>
               <p className="text-primary-charcoal text-sm">
-                Explore secure, high-impact investment opportunities in Pakistan&apos;s digital economy.
+                Explore our comprehensive digital transformation solutions for your business.
               </p>
             </a>
             
@@ -151,8 +151,8 @@ export default function ContactPage() {
                 answer: "Please include your business details, current digital presence, target market, expected partnership outcomes, and any specific challenges you&apos;re facing. This helps us provide more targeted recommendations."
               },
               {
-                question: "What are the minimum investment requirements?",
-                answer: "Investment opportunities vary based on the specific project and partnership type. We work with various investment levels and can discuss options that align with your budget and risk tolerance during our consultation."
+                question: "What are the partnership requirements?",
+                answer: "Partnership opportunities vary based on the specific project and business type. We work with various partnership levels and can discuss options that align with your business goals and growth objectives during our consultation."
               },
               {
                 question: "Do you work with businesses outside of Karachi?",
@@ -160,7 +160,7 @@ export default function ContactPage() {
               },
               {
                 question: "What makes Hawlton different from other digital agencies?",
-                answer: "We focus specifically on Pakistan&apos;s emerging digital economy, offering both business development services and investment opportunities. Our approach combines deep local market knowledge with international best practices."
+                answer: "We focus specifically on Pakistan&apos;s emerging digital economy, offering both business development services and partnership opportunities. Our approach combines deep local market knowledge with international best practices."
               },
               {
                 question: "Can I schedule a video consultation instead of an in-person meeting?",
@@ -216,8 +216,8 @@ export default function ContactPage() {
                     Let&apos;s Start a Conversation
                   </h2>
                   <p className="text-lg text-primary-charcoal leading-relaxed mb-8">
-                    Whether you&apos;re a business owner looking to expand digitally or an investor 
-                    seeking impactful opportunities in Pakistan&apos;s growing digital economy, 
+                    Whether you&apos;re a business owner looking to expand digitally or seeking partnership 
+                    opportunities in Pakistan&apos;s growing digital economy, 
                     we&apos;re here to help you succeed.
                   </p>
                 </div>
@@ -346,7 +346,7 @@ export default function ContactPage() {
                       >
                         <option value="">Select a subject</option>
                         <option value="Partnership Inquiry">Partnership Inquiry</option>
-                        <option value="Investment Opportunity">Investment Opportunity</option>
+                        <option value="Collaboration Opportunity">Collaboration Opportunity</option>
                         <option value="General Question">General Question</option>
                         <option value="Technical Support">Technical Support</option>
                       </select>

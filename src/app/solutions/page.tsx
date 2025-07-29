@@ -183,10 +183,10 @@ export default async function SolutionsPage() {
               <h3 className="text-2xl font-bold text-primary-gold mb-6">Revenue Share Partnership</h3>
               <div className="space-y-4">
                 <p className="text-primary-silver leading-relaxed">
-                  We invest in your digital transformation and share in the revenue growth. Perfect for businesses ready to scale rapidly with shared risk.
+                  We provide comprehensive support for your digital transformation with flexible partnership models. Perfect for businesses ready to scale rapidly.
                 </p>
                 <ul className="space-y-2 text-primary-silver">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Full digital infrastructure investment</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Full digital infrastructure support</li>
                   <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Shared revenue model (60/40)</li>
                   <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Comprehensive growth support</li>
                   <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Long-term strategic partnership</li>
@@ -212,68 +212,6 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
-
-      {/* Investment Solutions Section */}
-      <section id="investment-solutions-section" className="bg-primary-platinum py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
-              Investment-Focused Solutions
-            </h2>
-            <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
-              Access capital and strategic funding solutions designed to accelerate your digital transformation and business growth.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">💰</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Growth Capital</h3>
-                </div>
-                <p className="text-primary-charcoal">Strategic funding to accelerate your digital transformation and market expansion.</p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">🤝</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Investment Partnerships</h3>
-                </div>
-                <p className="text-primary-charcoal">Joint venture opportunities with shared risk and exponential growth potential.</p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📈</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Revenue-Based Financing</h3>
-                </div>
-                <p className="text-primary-charcoal">Flexible funding tied to your business performance and growth milestones.</p>
-              </div>
-            </div>
-
-            <div className="bg-primary-navy rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-primary-white mb-6">Funding Statistics</h3>
-              <div className="space-y-6">
-                <div>
-                  <div className="text-4xl font-bold text-primary-gold mb-2">₨500M+</div>
-                  <div className="text-primary-silver">Total Investment Deployed</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary-gold mb-2">150+</div>
-                  <div className="text-primary-silver">Businesses Funded</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Success Stories Section */}
       <section id="success-stories-section" className="bg-primary-navy py-20">

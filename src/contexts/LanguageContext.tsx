@@ -19,7 +19,6 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About Us',
     'nav.solutions': 'Solutions',
     'nav.partner': 'Partner',
-    'nav.invest': 'Invest',
     'nav.contact': 'Contact',
     'nav.careers': 'Careers',
     
@@ -36,11 +35,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Solutions submenu
     'nav.solutions.digital': 'Digital Transformation',
     'nav.solutions.partnerships': 'Partnership Programs',
-    'nav.solutions.investment': 'Investment Services',
     'nav.solutions.success': 'Success Stories',
     'nav.solutions.digital.desc': 'Enterprise modernization solutions',
     'nav.solutions.partnerships.desc': 'Strategic collaboration opportunities',
-    'nav.solutions.investment.desc': 'Professional investment management',
     'nav.solutions.success.desc': 'Client transformation case studies',
     
     // Partner submenu
@@ -53,16 +50,6 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.partner.portal.desc': 'Access partner resources',
     'nav.partner.resources.desc': 'Tools and documentation',
     
-    // Invest submenu
-    'nav.invest.opportunities': 'Investment Opportunities',
-    'nav.invest.portfolio': 'Portfolio',
-    'nav.invest.relations': 'Investor Relations',
-    'nav.invest.docs': 'Documentation',
-    'nav.invest.opportunities.desc': 'Current investment options',
-    'nav.invest.portfolio.desc': 'Our investment portfolio',
-    'nav.invest.relations.desc': 'Connect with our investor team',
-    'nav.invest.docs.desc': 'Legal and compliance documents',
-    
     // Contact submenu
     'nav.contact.touch': 'Get in Touch',
     'nav.contact.locations': 'Office Locations',
@@ -72,9 +59,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Homepage sections
     'home.hero.title': 'Empowering Pakistan\'s Digital Future',
-    'home.hero.subtitle': 'We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and secure investment opportunities, delivering measurable growth and sustainable ROI across Pakistan\'s thriving digital economy.',
+    'home.hero.subtitle': 'We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and innovative digital solutions, delivering measurable growth and sustainable success across Pakistan\'s thriving digital economy.',
     'home.hero.partner.btn': 'Start Your Digital Growth Journey',
-    'home.hero.invest.btn': 'Explore Investment Opportunities',
     
     // Value Proposition
     'home.value.title': 'Driving Digital Growth Through Strategic Partnerships',
@@ -89,9 +75,8 @@ const translations: Record<Language, Record<string, string>> = {
     'home.value.impact.desc': 'Creating measurable economic value',
     
     // Approach Section
-    'home.approach.title': 'Strategic Partnerships & Impact Investment for Accelerated Growth.',
+    'home.approach.title': 'Strategic Partnerships & Digital Innovation for Accelerated Growth.',
     'home.approach.desc1': 'Hawlton collaborates closely with partners, leveraging existing assets and our deep digital expertise to co-create and scale online ventures.',
-    'home.approach.desc2': 'We offer a transparent, secure platform for investors to participate directly in Pakistan\'s digital economic boom, ensuring mutual success and sustainable expansion.',
     'home.approach.step1': 'Partner',
     'home.approach.step1.desc': 'Collaborate with ambitious businesses ready for digital transformation',
     'home.approach.step2': 'Transform',
@@ -108,7 +93,6 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'ہمارے بارے میں',
     'nav.solutions': 'حل',
     'nav.partner': 'شراکت دار',
-    'nav.invest': 'سرمایہ کاری',
     'nav.contact': 'رابطہ',
     'nav.careers': 'کریئر',
     
@@ -125,11 +109,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Solutions submenu  
     'nav.solutions.digital': 'ڈیجیٹل تبدیلی',
     'nav.solutions.partnerships': 'شراکت داری پروگرام',
-    'nav.solutions.investment': 'سرمایہ کاری کی خدمات',
     'nav.solutions.success': 'کامیابی کی کہانیاں',
     'nav.solutions.digital.desc': 'انٹرپرائز جدیدیت کے حل',
     'nav.solutions.partnerships.desc': 'اسٹریٹجک تعاون کے مواقع',
-    'nav.solutions.investment.desc': 'پیشہ ورانہ سرمایہ کاری کا انتظام',
     'nav.solutions.success.desc': 'کلائنٹ کی تبدیلی کے کیس اسٹڈیز',
     
     // Partner submenu
@@ -142,16 +124,6 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.partner.portal.desc': 'پارٹنر کے وسائل تک رسائی',
     'nav.partner.resources.desc': 'ٹولز اور دستاویزات',
     
-    // Invest submenu
-    'nav.invest.opportunities': 'سرمایہ کاری کے مواقع',
-    'nav.invest.portfolio': 'پورٹ فولیو',
-    'nav.invest.relations': 'سرمایہ کار کے تعلقات',
-    'nav.invest.docs': 'دستاویزات',
-    'nav.invest.opportunities.desc': 'موجودہ سرمایہ کاری کے اختیارات',
-    'nav.invest.portfolio.desc': 'ہمارا سرمایہ کاری پورٹ فولیو',
-    'nav.invest.relations.desc': 'ہماری پرمایہ کار ٹیم سے رابطہ کریں',
-    'nav.invest.docs.desc': 'قانونی اور کمپلائنس دستاویزات',
-    
     // Contact submenu
     'nav.contact.touch': 'رابطے میں رہیں',
     'nav.contact.locations': 'دفتر کے مقامات',
@@ -161,9 +133,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Homepage sections
     'home.hero.title': 'پاکستان کے ڈیجیٹل مستقبل کو بااختیار بنانا',
-    'home.hero.subtitle': 'ہم اسٹریٹجک شراکت داری اور محفوظ سرمایہ کاری کے مواقع کے ذریعے پرامید پاکستانی کاروبار کو قومی ڈیجیٹل رہنماؤں میں تبدیل کرتے ہیں، پاکستان کی ترقی پذیر ڈیجیٹل معیشت میں قابل پیمائش نمو اور پائیدار ROI فراہم کرتے ہیں۔',
+    'home.hero.subtitle': 'ہم اسٹریٹجک شراکت داری اور جدید ڈیجیٹل حل کے ذریعے پرامید پاکستانی کاروبار کو قومی ڈیجیٹل رہنماؤں میں تبدیل کرتے ہیں، پاکستان کی ترقی پذیر ڈیجیٹل معیشت میں قابل پیمائش نمو اور پائیدار کامیابی فراہم کرتے ہیں۔',
     'home.hero.partner.btn': 'اپنا ڈیجیٹل نمو کا سفر شروع کریں',
-    'home.hero.invest.btn': 'سرمایہ کاری کے مواقع دریافت کریں',
     
     // Value Proposition
     'home.value.title': 'اسٹریٹجک شراکت داری کے ذریعے ڈیجیٹل نمو کو آگے بڑھانا',
@@ -178,9 +149,8 @@ const translations: Record<Language, Record<string, string>> = {
     'home.value.impact.desc': 'قابل پیمائش اقتصادی قدر پیدا کرنا',
     
     // Approach Section
-    'home.approach.title': 'تیز رفتار ترقی کے لیے اسٹریٹجک شراکت داری اور اثر انگیز سرمایہ کاری۔',
+    'home.approach.title': 'تیز رفتار ترقی کے لیے اسٹریٹجک شراکت داری اور ڈیجیٹل اختراع۔',
     'home.approach.desc1': 'Hawlton شراکت داروں کے ساتھ قریبی تعاون کرتا ہے، موجودہ اثاثوں اور ہماری گہری ڈیجیٹل مہارت کا فائدہ اٹھا کر آن لائن منصوبوں کو مشترکہ طور پر بنانے اور پیمانے پر لانے کے لیے۔',
-    'home.approach.desc2': 'ہم سرمایہ کاروں کے لیے پاکستان کی ڈیجیٹل اقتصادی تیزی میں براہ راست حصہ لینے کے لیے ایک شفاف، محفوظ پلیٹ فارم پیش کرتے ہیں، باہمی کامیابی اور پائیدار توسیع کو یقینی بناتے ہیں۔',
     'home.approach.step1': 'شراکت دار',
     'home.approach.step1.desc': 'ڈیجیٹل تبدیلی کے لیے تیار پرامید کاروبار کے ساتھ تعاون کریں',
     'home.approach.step2': 'تبدیل کریں',

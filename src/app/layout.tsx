@@ -21,9 +21,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://hawlton.com'),
-  title: "Hawlton - Pakistan's Premier Digital Transformation & Investment Partner",
-  description: "Empowering Pakistani businesses through strategic digital partnerships and secure investment opportunities. Transform your local business into a national digital powerhouse with proven ROI and sustainable growth strategies.",
-  keywords: "Pakistan digital transformation, strategic business partnerships, digital investment opportunities, e-commerce growth Pakistan, online business development, Pakistan startup ecosystem, digital marketing Pakistan, business scaling solutions, venture capital Pakistan, digital economy investment",
+  title: "Hawlton - Pakistan's Premier Digital Transformation & Partnership Platform",
+  description: "Empowering Pakistani businesses through strategic digital partnerships and innovative solutions. Transform your local business into a national digital powerhouse with proven growth strategies and measurable success.",
+  keywords: "Pakistan digital transformation, strategic business partnerships, digital growth opportunities, e-commerce development Pakistan, online business solutions, Pakistan startup ecosystem, digital marketing Pakistan, business scaling solutions, digital economy partnerships, technology consulting Pakistan",
   authors: [{ name: "Hawlton" }],
   creator: "Hawlton",
   publisher: "Hawlton",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Hawlton - Empowering Pakistan's Digital Future",
-    description: "Catalyzing National Digital Transformation through Strategic Partnerships & Impactful Investment.",
+    description: "Catalyzing National Digital Transformation through Strategic Partnerships & Digital Innovation.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://hawlton.com",
     siteName: "Hawlton",
     locale: "en_US",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hawlton - Empowering Pakistan's Digital Future",
-    description: "Catalyzing National Digital Transformation through Strategic Partnerships & Impactful Investment.",
+    description: "Catalyzing National Digital Transformation through Strategic Partnerships & Digital Innovation.",
     creator: "@hawlton",
     images: ["/images/backgrounds/home-hero.jpg"],
   },
@@ -76,9 +76,9 @@ const organizationSchema = {
   "name": "Hawlton",
   "alternateName": "Hawlton Digital Transformation",
   "legalName": "Hawlton Private Limited",
-  "description": "Empowering Pakistan's Digital Future through Strategic Partnerships and Impactful Investment. Leading digital transformation company specializing in e-commerce, business development, and strategic investment opportunities in Pakistan's emerging digital economy.",
+  "description": "Empowering Pakistan's Digital Future through Strategic Partnerships and Digital Innovation. Leading digital transformation company specializing in e-commerce, business development, and strategic partnership opportunities in Pakistan's emerging digital economy.",
   "url": "https://hawlton.com",
-  "slogan": "Partner. Invest. Grow.",
+  "slogan": "Partner. Transform. Grow.",
   "logo": {
     "@type": "ImageObject",
     "url": "https://hawlton.com/favicon.svg",
@@ -129,12 +129,6 @@ const organizationSchema = {
       "contactType": "Sales",
       "email": "partnerships@hawlton.com",
       "availableLanguage": ["English", "Urdu"]
-    },
-    {
-      "@type": "ContactPoint",
-      "contactType": "Investment Inquiries",
-      "email": "invest@hawlton.com",
-      "availableLanguage": ["English"]
     }
   ],
   "foundingDate": "2024",
@@ -143,7 +137,7 @@ const organizationSchema = {
     "name": "Jahangir Hussain",
     "alternateName": "Sarkar Hussain",
     "jobTitle": "Founder & Visionary Lead",
-    "description": "Strategic mind behind Hawlton with proven expertise in digital transformation and investment opportunities"
+    "description": "Strategic mind behind Hawlton with proven expertise in digital transformation and partnership opportunities"
   },
   "employee": [
     {
@@ -164,7 +158,7 @@ const organizationSchema = {
   "serviceType": [
     "Digital Transformation",
     "Strategic Business Partnerships",
-    "Investment Opportunities",
+    "Digital Growth Solutions",
     "E-commerce Development",
     "Business Development",
     "Digital Marketing Solutions",
@@ -174,13 +168,13 @@ const organizationSchema = {
     "Digital Marketing",
     "E-commerce",
     "Business Development",
-    "Investment Management",
+    "Growth Strategy",
     "Partnership Development",
     "Pakistan Digital Economy",
     "Strategic Planning",
     "Technology Implementation",
     "Market Expansion",
-    "ROI Optimization"
+    "Performance Optimization"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -205,8 +199,8 @@ const organizationSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Investment Opportunities",
-          "description": "High-return investment opportunities in Pakistan's digital economy"
+          "name": "Digital Growth Solutions",
+          "description": "Comprehensive digital transformation solutions for Pakistan's growing businesses"
         }
       }
     ]

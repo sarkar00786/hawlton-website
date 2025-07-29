@@ -152,21 +152,21 @@ const HeroSection = () => {
             {/* Tagline as per blueprint */}
             <motion.div variants={staggerAnimation.item}>
               <p className="text-xl lg:text-2xl text-text-muted leading-relaxed font-medium">
-                Partner. Invest. Grow.
+                Partner. Transform. Grow.
               </p>
             </motion.div>
 
             {/* Sub-tagline as per blueprint */}
             <motion.div variants={staggerAnimation.item}>
               <p className="text-lg text-text-muted leading-relaxed">
-                Catalyzing National Digital Transformation through Strategic Partnerships & Impactful Investment.
+                Catalyzing National Digital Transformation through Strategic Partnerships & Digital Innovation.
               </p>
             </motion.div>
 
             {/* Sub-text as per blueprint */}
             <motion.div variants={staggerAnimation.item}>
               <p className="text-lg lg:text-xl text-text-light leading-relaxed max-w-2xl">
-                Hawlton transforms traditional enterprises into digital powerhouses and offers unparalleled opportunities for those investing in Pakistan&apos;s vibrant growth story.
+                Hawlton transforms traditional enterprises into digital powerhouses and offers unparalleled opportunities for strategic partnerships in Pakistan&apos;s vibrant growth story.
               </p>
             </motion.div>
 
@@ -206,7 +206,7 @@ const HeroSection = () => {
                 </Button>
               </Link>
               
-              <Link href="/invest">
+              <Link href="/contact">
                 <Button 
                   variant="secondary"
                   size="lg"
@@ -214,7 +214,7 @@ const HeroSection = () => {
                   iconPosition="right"
                   className="transform hover:scale-105 transition-all duration-300"
                 >
-                  Invest With Us
+                  Get In Touch
                 </Button>
               </Link>
             </motion.div>
@@ -222,7 +222,7 @@ const HeroSection = () => {
             {/* Sub-text as per blueprint */}
             <motion.div variants={staggerAnimation.item}>
               <p className="text-sm text-text-muted italic max-w-lg">
-                &quot;Connect with our team to explore how Hawlton can empower your national expansion or secure your impactful investment.&quot;
+                &quot;Connect with our team to explore how Hawlton can empower your national expansion through strategic partnerships.&quot;
               </p>
             </motion.div>
           </motion.div>

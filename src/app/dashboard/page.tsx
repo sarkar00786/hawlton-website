@@ -74,7 +74,7 @@ function DashboardContent() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
                   href="/solutions"
                   className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200"
@@ -91,13 +91,6 @@ function DashboardContent() {
                   <p className="text-gray-600">Join our network of strategic partners</p>
                 </Link>
                 
-                <Link 
-                  href="/invest"
-                  className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Investment Options</h3>
-                  <p className="text-gray-600">Explore investment opportunities</p>
-                </Link>
               </div>
               
               <div className="mt-8">

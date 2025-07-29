@@ -72,7 +72,7 @@ const ClientSuccess = () => {
           </h3>
           <p className="text-primary-silver mb-8 max-w-2xl mx-auto">
             Join us in building Pakistan's digital future. Whether you're a business owner looking to scale 
-            or an investor seeking growth opportunities, we're here to create something extraordinary together.
+            or a collaborator seeking partnership opportunities, we're here to create something extraordinary together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
@@ -85,13 +85,13 @@ const ClientSuccess = () => {
               Partner With Us
             </motion.a>
             <motion.a
-              href="/invest"
+              href="/contact"
               className="inline-flex items-center px-6 py-3 border-2 border-primary-white text-primary-white font-semibold rounded-lg hover:bg-primary-white hover:text-primary-navy transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <TrendingUp className="w-5 h-5 mr-2" />
-              Explore Investment
+              Get In Touch
             </motion.a>
           </div>
         </motion.div>

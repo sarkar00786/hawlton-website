@@ -16,7 +16,6 @@ const navItems: NavItem[] = [
   { href: '/about', label: 'About Us', description: 'Our story & vision' },
   { href: '/solutions', label: 'Our Solutions', description: 'Digital services' },
   { href: '/partner', label: 'Partner', description: 'Collaborate with us' },
-  { href: '/invest', label: 'Invest', description: 'Investment opportunities' },
   { href: '/careers', label: 'Careers', description: 'Join our team' },
   { href: '/contact', label: 'Contact', description: 'Get in touch' },
 ]

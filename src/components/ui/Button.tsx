@@ -4,10 +4,10 @@
  * Hawlton Hybrid Theme Button Component
  * 
  * Design Philosophy:
- * - Sharp corners for primary CTAs (investment/partnership buttons) - conveys authority & trust
+ * - Sharp corners for primary CTAs (partnership/business buttons) - conveys authority & trust
  * - Rounded corners for cards and secondary elements - provides approachability 
  * 
- * This creates a balanced user experience that builds trust for financial decisions
+ * This creates a balanced user experience that builds trust for business decisions
  * while maintaining approachability for general interactions.
  */
 
@@ -49,23 +49,24 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       
       // Hybrid approach: Sharp corners for primary CTAs, subtle rounding for secondary buttons
       {
-        // Sharp corners for primary CTAs (conveys authority & trust for investment/partnership buttons)
-        'rounded-none': variant === 'primary',
+        // Sharp corners for primary CTAs (conveys authority & trust for partnership/business buttons)
+        // Using 8px border-radius for modern crispness as per branding guidelines
+        'rounded-lg': variant === 'primary',
         // Subtle rounding for secondary buttons (more approachable for navigation/utility buttons)
         'rounded-md': variant === 'secondary',
         'rounded-sm': variant === 'outline' || variant === 'ghost' || variant === 'link',
       },
       
-      // Professional size variants - WCAG AA compliant (Optimized for modern web)
+      // Professional size variants - WCAG AA compliant (Aligned with branding guidelines)
       {
-        // Small buttons - compact but touchable
-        'px-3 py-2 text-sm gap-1.5 min-h-[2.25rem] sm:min-h-[2.5rem]': size === 'sm',
-        // Medium buttons - standard professional size
-        'px-4 py-2.5 text-sm gap-2 min-h-[2.5rem]': size === 'md',  
-        // Large buttons - for primary CTAs
-        'px-5 py-3 text-base gap-2 min-h-[2.75rem]': size === 'lg',
+        // Small buttons - 36px desktop, 44px mobile (as per guidelines)
+        'px-4 py-2 text-sm gap-1.5 min-h-[2.25rem] sm:min-h-[2.75rem]': size === 'sm',
+        // Medium buttons - 44px minimum (standard professional size)
+        'px-6 py-3 text-base gap-2 min-h-[2.75rem]': size === 'md',  
+        // Large buttons - 52px for primary CTAs (comfortable touch target)
+        'px-8 py-4 text-lg gap-2 min-h-[3.25rem]': size === 'lg',
         // Extra large buttons - hero/landing use only
-        'px-6 py-3.5 text-base gap-2.5 min-h-[3rem]': size === 'xl',
+        'px-10 py-5 text-xl gap-2.5 min-h-[3.75rem]': size === 'xl',
       },
       
       // Variant styles - Use Tailwind-defined colors

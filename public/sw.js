@@ -7,7 +7,6 @@ const urlsToCache = [
   '/about',
   '/solutions',
   '/partner',
-  '/invest',
   '/contact',
   '/careers',
   '/offline',

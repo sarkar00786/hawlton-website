@@ -5,7 +5,6 @@ Allow: /
 Allow: /about
 Allow: /solutions
 Allow: /partner
-Allow: /invest
 Allow: /careers
 Allow: /contact
 Allow: /privacy

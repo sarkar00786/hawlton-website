@@ -11,10 +11,8 @@ export const ELEMENT_IDS = {
     NAV_ABOUT: 'nav-about',
     NAV_SOLUTIONS: 'nav-solutions',
     NAV_PARTNER: 'nav-partner',
-    NAV_INVEST: 'nav-invest',
     NAV_CONTACT: 'nav-contact',
     CTA_PARTNER: 'cta-partner-header',
-    CTA_INVEST: 'cta-invest-header',
     CTA_GET_STARTED: 'cta-get-started-header',
     LANGUAGE_SWITCHER: 'language-switcher',
     MOBILE_MENU_TOGGLE: 'mobile-menu-toggle'
@@ -32,7 +30,6 @@ export const ELEMENT_IDS = {
     SOLUTIONS_SERVICES: 'nav-solutions-services',
     SOLUTIONS_DIGITAL: 'nav-solutions-digital',
     SOLUTIONS_PARTNERSHIPS: 'nav-solutions-partnerships',
-    SOLUTIONS_INVESTMENT: 'nav-solutions-investment',
     SOLUTIONS_SUCCESS: 'nav-solutions-success',
     
     // Partner Submenu
@@ -42,14 +39,6 @@ export const ELEMENT_IDS = {
     PARTNER_RESOURCES: 'nav-partner-resources',
     PARTNER_TESTIMONIALS: 'nav-partner-testimonials',
     PARTNER_APPLY: 'nav-partner-apply',
-    
-    // Invest Submenu
-    INVEST_BENEFITS: 'nav-invest-benefits',
-    INVEST_PORTFOLIO: 'nav-invest-portfolio',
-    INVEST_OPPORTUNITIES: 'nav-invest-opportunities',
-    INVEST_PORTAL: 'nav-invest-portal',
-    INVEST_DOCS: 'nav-invest-docs',
-    INVEST_START: 'nav-invest-start',
     
     // Contact Submenu
     CONTACT_FORM: 'nav-contact-form',
@@ -64,7 +53,6 @@ export const ELEMENT_IDS = {
     HERO_TITLE: 'hero-title',
     HERO_SUBTITLE: 'hero-subtitle',
     HERO_PARTNER_BTN: 'hero-partner-btn',
-    HERO_INVEST_BTN: 'hero-invest-btn',
     
     // Value Proposition Section
     VALUE_SECTION: 'value-proposition',
@@ -113,8 +101,6 @@ export const ELEMENT_IDS = {
     DIGITAL_TITLE: 'solutions-digital-title',
     PARTNERSHIPS_SECTION: 'digital-partnerships-section',
     PARTNERSHIPS_TITLE: 'solutions-partnerships-title',
-    INVESTMENT_SECTION: 'investment-solutions-section',
-    INVESTMENT_TITLE: 'solutions-investment-title',
     SUCCESS_SECTION: 'success-stories-section',
     SUCCESS_TITLE: 'solutions-success-title',
     IMPACT_SECTION: 'impact-section',
@@ -134,38 +120,6 @@ export const ELEMENT_IDS = {
     TESTIMONIALS_SECTION: 'testimonials-section',
     APPLICATION_FORM: 'partner-form',
     APPLY_BTN: 'partner-apply-btn'
-  },
-
-  // Invest Page Elements
-  INVEST: {
-    HERO_SECTION: 'invest-hero-section',
-    BENEFITS_SECTION: 'benefits-section',
-    BENEFITS_TITLE: 'invest-benefits-title',
-    PORTFOLIO_SECTION: 'investment-portfolio-section',
-    PORTFOLIO_TITLE: 'invest-portfolio-title',
-    OPPORTUNITIES_SECTION: 'opportunities-section',
-    OPPORTUNITIES_TITLE: 'invest-opportunities-title',
-    RELATIONS_SECTION: 'investor-relations-section',
-    DOCUMENTATION_SECTION: 'investment-documentation-section',
-    TESTIMONIALS_SECTION: 'testimonials-section',
-    INVESTMENT_FORM: 'investment-form',
-    START_BTN: 'invest-start-btn'
-  },
-
-  // Investor Portal Elements
-  INVESTOR_PORTAL: {
-    PORTAL_TITLE: 'portal-title',
-    DASHBOARD_TITLE: 'dashboard-title',
-    STATS_GRID: 'stats-grid',
-    STAT_TOTAL_INVESTMENT: 'stat-total-investment',
-    STAT_PORTFOLIO_VALUE: 'stat-portfolio-value',
-    STAT_ACTIVE_PROJECTS: 'stat-active-projects',
-    STAT_ROI: 'stat-roi',
-    RECENT_INVESTMENTS_SECTION: 'recent-investments-section',
-    RECENT_INVESTMENTS_TITLE: 'recent-investments-title',
-    QUICK_ACTIONS_SECTION: 'quick-actions-section',
-    QUICK_ACTIONS_TITLE: 'quick-actions-title',
-    BACK_TO_HAWLTON_BTN: 'back-to-hawlton-btn'
   },
 
   // Partner Portal Elements
@@ -237,8 +191,6 @@ export const HomepageIds = ELEMENT_IDS.HOMEPAGE
 export const AboutIds = ELEMENT_IDS.ABOUT
 export const SolutionsIds = ELEMENT_IDS.SOLUTIONS
 export const PartnerIds = ELEMENT_IDS.PARTNER
-export const InvestIds = ELEMENT_IDS.INVEST
-export const InvestorPortalIds = ELEMENT_IDS.INVESTOR_PORTAL
 export const PartnerPortalIds = ELEMENT_IDS.PARTNER_PORTAL
 export const ContactIds = ELEMENT_IDS.CONTACT
 export const CareersIds = ELEMENT_IDS.CAREERS

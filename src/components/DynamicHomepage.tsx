@@ -119,7 +119,7 @@ export default function DynamicHomepage() {
                 </h1>
                 
                 <p className="text-xl md:text-2xl text-primary-silver leading-relaxed max-w-3xl mx-auto">
-                  {data.heroSection?.subheadline || "We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and secure investment opportunities."}
+                  {data.heroSection?.subheadline || "We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and innovative digital solutions."}
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export default function DynamicHomepage() {
                 </motion.div>
                 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href={data.heroSection?.secondaryCtaLink || "/invest"}>
+                  <Link href={data.heroSection?.secondaryCtaLink || "/contact"}>
                     <Button
                       variant="outline"
                       size="lg"
@@ -147,7 +147,7 @@ export default function DynamicHomepage() {
                       iconPosition="right"
                       className="border-primary-white text-primary-white hover:bg-primary-white hover:text-primary-navy"
                     >
-                      {data.heroSection?.secondaryCtaText || "Explore Investment Opportunities"}
+                      {data.heroSection?.secondaryCtaText || "Get In Touch"}
                     </Button>
                   </Link>
                 </motion.div>
@@ -219,7 +219,7 @@ export default function DynamicHomepage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
-              {data.approachSection?.headline || "Strategic Partnerships & Impact Investment for Accelerated Growth."}
+              {data.approachSection?.headline || "Strategic Partnerships & Digital Innovation for Accelerated Growth."}
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-primary-silver leading-relaxed">
               <motion.p
@@ -315,10 +315,10 @@ export default function DynamicHomepage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
-              {data.ctaSection?.headline || "Ready to Transform Your Business or Invest in Pakistan's Digital Future?"}
+              {data.ctaSection?.headline || "Ready to Transform Your Business with Pakistan's Digital Future?"}
             </h2>
             <p className="text-xl text-primary-silver mb-12 max-w-3xl mx-auto">
-              {data.ctaSection?.description || "Connect with our team to explore how Hawlton can empower your national expansion or secure your impactful investment."}
+              {data.ctaSection?.description || "Connect with our team to explore how Hawlton can empower your national expansion through strategic partnerships."}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

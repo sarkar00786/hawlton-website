@@ -25,7 +25,7 @@ export default function PrivacyPage() {
               <div>
                 <h2 className="text-2xl font-bold text-primary-navy mb-4">Introduction</h2>
                 <p className="text-primary-charcoal leading-relaxed">
-                  At Hawlton, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or engage with us as a partner or investor.
+                  At Hawlton, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or engage with us as a partner.
                 </p>
               </div>
 
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
                     <ul className="list-disc pl-6 text-primary-charcoal space-y-1">
                       <li>Name, email address, and contact information</li>
                       <li>Business information and professional details</li>
-                      <li>Investment preferences and financial information (for investors)</li>
+                      <li>Partnership preferences and collaboration information</li>
                       <li>Partnership inquiry details and business requirements</li>
                     </ul>
                   </div>
@@ -68,9 +68,9 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="list-disc pl-6 text-primary-charcoal space-y-2">
                   <li>To provide and improve our services and partnership opportunities</li>
-                  <li>To communicate with you about investment and partnership opportunities</li>
+                  <li>To communicate with you about partnership and collaboration opportunities</li>
                   <li>To process inquiries and respond to your requests</li>
-                  <li>To conduct due diligence for potential partnerships and investments</li>
+                  <li>To conduct due diligence for potential partnerships and collaborations</li>
                   <li>To comply with legal obligations and regulatory requirements</li>
                   <li>To analyze and improve our website and user experience</li>
                 </ul>

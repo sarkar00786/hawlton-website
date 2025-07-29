@@ -78,7 +78,7 @@ export default function NotFound() {
                 { href: '/about', label: 'About Us' },
                 { href: '/solutions', label: 'Our Solutions' },
                 { href: '/partner', label: 'Partner With Us' },
-                { href: '/invest', label: 'Invest With Us' }
+                { href: '/contact', label: 'Contact Us' }
               ].map((link, index) => (
                 <motion.div
                   key={link.href}

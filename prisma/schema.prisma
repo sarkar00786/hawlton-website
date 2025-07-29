@@ -64,7 +64,7 @@ model User {
   accounts          Account[]
   sessions          Session[]
   partnerInquiries  PartnerInquiry[]
-  investorInquiries InvestorInquiry[]
+  collaborationInquiries CollaborationInquiry[]
   dashboardAccess   DashboardAccess[]
   notifications     Notification[]
 }
@@ -111,8 +111,8 @@ model PartnerInquiry {
   followUpDate      DateTime?
 }
 
-// Investor Inquiry System
-model InvestorInquiry {
+// Collaboration Inquiry System
+model CollaborationInquiry {
   id                String   @id @default(cuid())
   userId            String?  // Optional: link to user if logged in
   user              User?    @relation(fields: [userId], references: [id])
@@ -124,9 +124,9 @@ model InvestorInquiry {
   organization      String?
   country           String
   
-  // Investment Details
-  investmentInterest String
-  investmentRange   String?
+  // Collaboration Details
+  collaborationInterest String
+  collaborationType String?
   experience        String?
   message           String
   
@@ -173,7 +173,7 @@ model Notification {
 enum UserRole {
   USER          // Regular user/client
   PARTNER       // Business partner
-  INVESTOR      // Investor
+  COLLABORATOR  // Collaborator
   STAFF         // Hawlton staff member
   ADMIN         // Full admin access
   SUPER_ADMIN   // Highest level access
@@ -210,5 +210,5 @@ enum NotificationType {
   ACCOUNT_UPDATE
   SYSTEM_ALERT
   PARTNERSHIP_UPDATE
-  INVESTMENT_UPDATE
+  COLLABORATION_UPDATE
 }

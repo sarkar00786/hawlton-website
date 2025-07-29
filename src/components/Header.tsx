@@ -23,7 +23,6 @@ const SimpleNavigation = () => {
     { label: 'About', href: '/about' },
     { label: 'Solutions', href: '/solutions' },
     { label: 'Partner', href: '/partner' },
-    { label: 'Invest', href: '/invest' },
     { label: 'Contact', href: '/contact' }
   ]
 
@@ -59,7 +58,7 @@ const Header = () => {
   const isActive = (path: string) => pathname === path
 
   // Hide header on portal pages for focused app experience
-  const isPortalPage = pathname.startsWith('/investor-portal') || pathname.startsWith('/partner-portal')
+  const isPortalPage = pathname.startsWith('/partner-portal')
   
   // Don't render header at all on portal pages
   if (isPortalPage) {
@@ -162,17 +161,6 @@ const Header = () => {
               Partner
             </Link>
             <Link
-              href="/invest"
-              id="cta-invest-header"
-              className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold rounded-md transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
-                isActive('/invest') 
-                  ? 'bg-primary-gold text-primary-navy shadow-md' 
-                  : ''
-              }`}
-            >
-              Invest
-            </Link>
-            <Link
               href="/auth/signup"
               id="cta-get-started-header"
               className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy rounded-md transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
@@ -256,19 +244,8 @@ const Header = () => {
                   Partner With Us
                 </Link>
                 <Link
-                  href="/invest"
-                  className={`block w-full border border-primary-gold px-4 py-2.5 font-semibold text-center transition-all duration-200 ${
-                    isActive('/invest') 
-                      ? 'bg-primary-gold text-primary-navy shadow-lg' 
-                      : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
-                  }`}
-                  onClick={toggleMenu}
-                >
-                  Invest With Us
-                </Link>
-                <Link
                   href="/auth/signup"
-className="block w-full bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-4 py-3 font-semibold text-center transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  className="block w-full bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-4 py-3 font-semibold text-center transition-all duration-200 transform hover:scale-105 shadow-lg"
                   onClick={toggleMenu}
                 >
                   Get Started

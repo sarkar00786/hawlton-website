@@ -46,7 +46,6 @@ export const PAGE_SECTIONS = {
     'services': 'hero-section', // Main solutions intro
     'digital-transformation': 'digital-transformation-section', // Digital Transformation Section
     'partnerships': 'digital-partnerships-section', // Digital Growth Partnerships
-    'investment': 'investment-solutions-section', // Investment Solutions Section
     'success-stories': 'success-stories-section', // Success Stories Section
     'results': 'impact-section', // Our Impact Section
     'process': 'cta-section' // CTA Section
@@ -61,17 +60,6 @@ export const PAGE_SECTIONS = {
     'process': 'process-section', // Process Section
     'testimonials': 'testimonials-section', // Testimonials Section
     'application': 'partner-form' // Partner Form Section
-  },
-  
-  // Invest page sections - matching actual content
-  '/invest': {
-    'benefits': 'benefits-section', // Benefits Section
-    'portfolio': 'investment-portfolio-section', // Investment Portfolio Section
-    'opportunities': 'opportunities-section', // Investment Opportunities Section
-    'relations': 'investor-relations-section', // Investor Relations Section
-    'documentation': 'investment-documentation-section', // Investment Documentation Section
-    'testimonials': 'testimonials-section', // Testimonials Section
-    'investment-form': 'investment-form' // Investment Form Section
   },
   
   // Contact page sections - matching actual content
@@ -102,7 +90,6 @@ export const NAVIGATION_MAPPING = {
   '/solutions#services': 'services',
   '/solutions#digital-transformation': 'digital-transformation',
   '/solutions#partnerships': 'partnerships',
-  '/solutions#investment': 'investment',
   '/solutions#success-stories': 'success-stories',
   '/solutions#results': 'results',
   '/solutions#process': 'process',
@@ -115,15 +102,6 @@ export const NAVIGATION_MAPPING = {
   '/partner#process': 'process',
   '/partner#testimonials': 'testimonials',
   '/partner#application': 'application',
-  
-  // Invest dropdown mappings - matching new structure
-  '/invest#benefits': 'benefits',
-  '/invest#portfolio': 'portfolio',
-  '/invest#opportunities': 'opportunities',
-  '/invest#relations': 'relations',
-  '/invest#documentation': 'documentation',
-  '/invest#testimonials': 'testimonials',
-  '/invest#investment-form': 'investment-form',
   
   // Contact dropdown mappings - matching new structure
   '/contact#form': 'form',
@@ -151,7 +129,7 @@ export const handleNavigation = (
   const sectionKey = NAVIGATION_MAPPING[href as keyof typeof NAVIGATION_MAPPING]
   
   // Handle direct page routes (like portals) that don't need section scrolling
-  const isDirectPageRoute = ['/investor-portal', '/partner-portal', '/dashboard'].includes(targetPath)
+  const isDirectPageRoute = ['/partner-portal', '/dashboard'].includes(targetPath)
   
   if (isDirectPageRoute) {
     router.push(targetPath)

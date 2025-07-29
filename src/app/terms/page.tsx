@@ -25,7 +25,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold text-primary-navy mb-4">Agreement to Terms</h2>
                 <p className="text-primary-charcoal leading-relaxed">
-                  By accessing and using the Hawlton website and services, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our website or services. These terms apply to all visitors, users, partners, and investors who access or use our service.
+                  By accessing and using the Hawlton website and services, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our website or services. These terms apply to all visitors, users, and partners who access or use our service.
                 </p>
               </div>
 
@@ -37,7 +37,7 @@ export default function TermsPage() {
                 </p>
                 <ul className="list-disc pl-6 text-primary-charcoal space-y-2">
                   <li>Digital transformation and strategic partnership services</li>
-                  <li>Investment opportunities and financial services</li>
+                  <li>Partnership development and collaboration services</li>
                   <li>Business consultancy and advisory services</li>
                   <li>Technology solutions and digital innovation support</li>
                 </ul>
@@ -70,16 +70,16 @@ export default function TermsPage() {
                 </div>
               </div>
 
-              {/* Investment Terms */}
+              {/* Partnership Terms */}
               <div>
-                <h2 className="text-2xl font-bold text-primary-navy mb-4">Investment Terms</h2>
+                <h2 className="text-2xl font-bold text-primary-navy mb-4">Collaboration Terms</h2>
                 <div className="space-y-4">
                   <p className="text-primary-charcoal leading-relaxed">
-                    Investment opportunities presented by Hawlton are subject to additional terms and conditions. All investments carry risk, and past performance does not guarantee future results.
+                    Partnership and collaboration opportunities presented by Hawlton are subject to additional terms and conditions. All partnerships carry mutual obligations and responsibilities.
                   </p>
                   <div className="bg-primary-gold/10 border-l-4 border-primary-gold p-4 rounded">
                     <p className="text-primary-charcoal font-semibold">
-                      <strong>Important:</strong> Investment advice and opportunities are provided for informational purposes only. You should consult with qualified financial advisors before making any investment decisions.
+                      <strong>Important:</strong> Partnership advice and opportunities are provided for informational purposes only. You should consult with qualified advisors before making any partnership decisions.
                     </p>
                   </div>
                 </div>

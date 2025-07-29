@@ -31,7 +31,7 @@ export default function PartnerWithUsPage() {
     {
       icon: Shield,
       title: 'Risk Mitigation',
-      description: 'Reduce expansion risks through our proven methodologies and shared investment model.'
+      description: 'Reduce expansion risks through our proven methodologies and shared partnership model.'
     },
     {
       icon: Target,
@@ -173,7 +173,7 @@ export default function PartnerWithUsPage() {
               Partnership Models Available
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
-              Choose the partnership structure that aligns with your business goals, investment capacity, and growth ambitions.
+              Choose the partnership structure that aligns with your business goals, resource capacity, and growth ambitions.
             </p>
           </motion.div>
 
@@ -222,7 +222,7 @@ export default function PartnerWithUsPage() {
               </div>
             </motion.div>
 
-            {/* Full Investment Partnership Model */}
+            {/* Full Collaboration Partnership Model */}
             <motion.div
               className="bg-gradient-to-br from-primary-navy to-primary-navy/90 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-white relative overflow-hidden"
               initial={{ opacity: 0, x: 20 }}
@@ -239,14 +239,14 @@ export default function PartnerWithUsPage() {
                   <span className="text-3xl">🤝</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-primary-white">Full Investment Partnership</h3>
+                  <h3 className="text-2xl font-bold text-primary-white">Full Collaboration Partnership</h3>
                   <p className="text-primary-silver">Inventory + Direct running expenses</p>
                 </div>
               </div>
               
               <div className="space-y-4">
                 <p className="text-primary-silver leading-relaxed">
-                  You provide inventory AND cover direct running expenses (marketing, logistics, operations). Higher investment, significantly higher returns and control.
+                  You provide inventory AND cover direct running expenses (marketing, logistics, operations). Higher resource commitment, significantly higher returns and control.
                 </p>
                 
                 <div className="bg-primary-white/10 rounded-lg p-4 backdrop-blur-sm">
