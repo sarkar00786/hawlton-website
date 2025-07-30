@@ -91,7 +91,7 @@ const EnhancedVisualBackground = ({
   return (
     <div 
       ref={containerRef}
-      className={`fixed inset-0 overflow-hidden ${className}`}
+      className={`absolute inset-0 overflow-hidden ${className}`}
       style={maskStyles}
     >
       {/* Base Layer - Always visible with low opacity */}
