@@ -100,10 +100,10 @@ export default async function SolutionsPage() {
       </section>
 
       {/* Animated Moving Text Section */}
-      <section className="bg-primary-gold py-12 overflow-hidden relative -z-10">
+      <section className="bg-primary-gold py-8 overflow-hidden relative -z-10">
         <div className="relative">
           <div className="animate-marquee whitespace-nowrap">
-            <span className="text-4xl md:text-6xl font-black text-primary-navy tracking-wide">
+            <span className="text-2xl md:text-3xl font-bold text-primary-navy tracking-normal">
               Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • 
             </span>
           </div>
