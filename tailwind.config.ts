@@ -10,65 +10,46 @@ const config: Config = {
     extend: {
       colors: {
         // Hawlton "Pinnacle of Trust" Color Scheme
-        primary: {
-          50: '#f0f4f8',
-          100: '#d9e6f2',
-          200: '#b5cde3',
-          300: '#86abd0',
-          400: '#5a85ba',
-          500: '#1A3A5F',        // Deep Sapphire Navy - Primary Background
-          600: '#173451',
-          700: '#142d44',
-          800: '#12263a',
-          900: '#111f31',
-          navy: '#1A3A5F',        // Deep Sapphire Navy - Primary Background
-          platinum: '#F5F8FA',    // Soft Platinum Gray - Secondary Background
-          white: '#FFFFFF',       // Pure White - Headings on dark
-          silver: '#A0B0C0',      // Refined Silver-Blue Gray - Subheadings
-          charcoal: '#333333',    // Classic Charcoal - Body text
-          gold: '#FFD700',        // Vibrant Classic Gold - Primary accent/CTAs
-          'gold-metallic': '#FFD700', // Vibrant Gold - Consistent accent
-          'dusty-teal': '#5A9B9B', // Dusty Teal - Professional secondary accent
-        },
-        secondary: {
-          50: '#F5F8FA',         // Soft Platinum Gray
-          100: '#E6EAED',
-          200: '#CDD5DA',
-          300: '#B4C0C7',
-          400: '#A0B0C0',        // Refined Silver-Blue Gray
-          500: '#8A9BA8',
-          600: '#748591',
-          700: '#5E707A',
-          800: '#485A63',
-          900: '#32444C',
-        },
-        accent: {
-          primary: '#FFD700',      // Vibrant Classic Gold
-          secondary: '#FFD700',    // Vibrant Gold
-          hover: '#E6C200',
-          focus: '#F4E04D',
-        },
-        text: {
-          primary: '#FFFFFF',      // Pure White for headings on dark
-          secondary: '#333333',    // Classic Charcoal for body text
-          muted: '#A0B0C0',        // Refined Silver-Blue Gray for subheadings
-          light: '#F5F8FA',        // Soft Platinum Gray for text on dark
-        },
-        // Alias for easier usage
-        background: '#F5F8FA',
-        foreground: '#333333',
+        'primary-navy': '#1A3A5F',
+        'primary-platinum': '#F5F8FA',
+        'primary-charcoal': '#333333',
+        'primary-silver': '#A0A0A0',
+        'primary-gold': '#FFD700',
+        'metallic-gold': '#D4AF37',
+        'primary-white': '#FFFFFF',
+        'error': '#EF4444',
+        'success': '#10B981',
+        'warning': '#F59E0B',
+        'info': '#3B82F6',
       },
       fontFamily: {
-        primary: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Inter', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'Roboto', 'system-ui', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['3.75rem', { lineHeight: '1', letterSpacing: '-0.025em' }],
-        'hero-mobile': ['2.5rem', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
-        'display': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'subtitle': ['1.125rem', { lineHeight: '1.6', letterSpacing: '0.01em' }],
+        // Elite Typography Scale - From Design Prompt
+        // Desktop
+        'h1-desktop': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.03em', fontWeight: '800' }],
+        'h2-desktop': ['3.5rem', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '700' }],
+        'h3-desktop': ['2.5rem', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'h4-desktop': ['1.875rem', { lineHeight: '1.4', letterSpacing: '-0.015em', fontWeight: '600' }],
+        'h5-desktop': ['1.5rem', { lineHeight: '1.5', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'h6-desktop': ['1.25rem', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '500' }],
+        'body-desktop': ['1.125rem', { lineHeight: '1.7', letterSpacing: '0em', fontWeight: '400' }],
+        'lead-desktop': ['1.25rem', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
+        // Mobile
+        'h1-mobile': ['3rem', { lineHeight: '1.15' }],
+        'h2-mobile': ['2.5rem', { lineHeight: '1.2' }],
+        'h3-mobile': ['2rem', { lineHeight: '1.3' }],
+        'h4-mobile': ['1.5rem', { lineHeight: '1.4' }],
+        'body-mobile': ['1rem', { lineHeight: '1.6' }],
+        'lead-mobile': ['1.125rem', { lineHeight: '1.5' }],
+        'micro-mobile': ['0.75rem', { lineHeight: '1.4' }],
+        // Specific Elements
+        'micro': ['0.875rem', { lineHeight: '1.5', letterSpacing: '0.01em' }],
+        'button-sm': ['0.875rem', { letterSpacing: '0.02em', fontWeight: '600' }],
+        'button-md': ['1rem', { letterSpacing: '0.02em', fontWeight: '600' }],
+        'button-lg': ['1.125rem', { letterSpacing: '0.02em', fontWeight: '600' }],
+        'button-xl': ['1.25rem', { letterSpacing: '0.02em', fontWeight: '600' }],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

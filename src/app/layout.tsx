@@ -229,7 +229,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-inter antialiased bg-primary-platinum text-primary-charcoal">
+<body className={`${inter.variable} font-inter antialiased`}>
         {/* Google Analytics - Only load with valid ID */}
         {shouldLoadGA && (
           <>

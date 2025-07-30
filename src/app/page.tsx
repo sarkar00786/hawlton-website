@@ -11,98 +11,18 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Enhanced Visual Appeal */}
-      <section id="hero-section" className="relative bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 text-primary-white py-16 pt-24 overflow-hidden" style={{ isolation: 'isolate' }}>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-gold/5 to-transparent transform -skew-y-6 scale-150"></div>
-          <div className="absolute top-0 left-0 w-full h-full" style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(26, 58, 95, 0.1) 0%, transparent 50%)`,
-            backgroundSize: '150px 150px'
-          }}></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 z-[1]">
-          <div className="text-center">
-            {/* Main Content */}
-            <motion.div
-              className="space-y-12 max-w-5xl mx-auto"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <div className="space-y-8">
-                <motion.div
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-primary/20 to-accent-primary/10 text-accent-primary px-4 py-2 rounded-full text-sm font-semibold border border-accent-primary/30 backdrop-blur-sm"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 300 }}
-                >
-                  <Building className="w-4 h-4" />
-                  Digital Transformation Partner
-                </motion.div>
-                
-                <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                  >
-                    Empowering{' '}
-                  </motion.div>
-                  <motion.span 
-                    className="bg-gradient-to-r from-accent-primary via-yellow-300 to-accent-primary bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.7, duration: 0.8 }}
-                  >
-                    Pakistan&apos;s
-                  </motion.span>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.9, duration: 0.8 }}
-                  >
-                    Digital Future
-                  </motion.div>
-                </h1>
-                
-                <motion.p 
-                  className="text-lg md:text-xl text-primary-100 leading-relaxed max-w-3xl mx-auto"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.1, duration: 0.8 }}
-                >
-                We transform ambitious Pakistani businesses into <span className="font-semibold text-accent-primary">national digital leaders</span> through strategic partnerships and innovative digital solutions, delivering <span className="font-semibold text-accent-primary">measurable growth</span> and sustainable success across Pakistan&apos;s thriving digital economy.
-                </motion.p>
-              </div>
-
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.3, duration: 0.8 }}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.08, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                >
-                  <Link href="/partner">
-                    <Button
-                      variant="primary"
-                      size="md"
-                      icon={ArrowRight}
-                      iconPosition="right"
-                      className="bg-gradient-to-r from-accent-primary to-yellow-400 hover:from-yellow-400 hover:to-accent-primary text-primary-navy font-semibold px-6 py-3 text-base shadow-gold hover:shadow-glow-gold transition-all duration-300"
-                    >
-                      Start Your Digital Growth Journey
-                    </Button>
-                  </Link>
-                </motion.div>
-                
-              </motion.div>
-            </motion.div>
-          </div>
+      <section className="relative overflow-hidden bg-primary-navy py-32 text-white on-dark-bg">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.primary-gold/5),transparent_40%)]"></div>
+        <div className="page-container relative text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
+            <h1 className="h1"><span className="text-primary-gold">Empowering</span> Pakistan's Digital Future</h1>
+            <p className="lead mt-6 max-w-3xl mx-auto">We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and innovative digital solutions, delivering measurable growth and sustainable success.</p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/partner"><Button size="xl" icon={ArrowRight} iconPosition="right">Partner With Us</Button></Link>
+              <Link href="/about"><Button variant="outline" size="xl">Learn More</Button></Link>
+            </div>
+          </motion.div>
         </div>
       </section>
       

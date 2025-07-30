@@ -40,127 +40,49 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     children,
     ...props
   }, ref) => {
-  const baseClasses = cn(
-      // Professional base styling - Windows & Mobile optimized
-      'relative inline-flex items-center justify-center font-heading font-semibold',
-      'select-none text-center transition-all duration-200 ease-in-out',
-      'focus:outline-none focus:ring-2 focus:ring-offset-2',
-      'disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group',
-      
-      // Hybrid approach: Sharp corners for primary CTAs, subtle rounding for secondary buttons
-      {
-        // Sharp corners for primary CTAs (conveys authority & trust for partnership/business buttons)
-        // Using 8px border-radius for modern crispness as per branding guidelines
-        'rounded-lg': variant === 'primary',
-        // Subtle rounding for secondary buttons (more approachable for navigation/utility buttons)
-        'rounded-md': variant === 'secondary',
-        'rounded-sm': variant === 'outline' || variant === 'ghost' || variant === 'link',
-      },
-      
-      // Professional size variants - WCAG AA compliant (Aligned with branding guidelines)
-      {
-        // Small buttons - 36px desktop, 44px mobile (as per guidelines)
-        'px-4 py-2 text-sm gap-1.5 min-h-[2.25rem] sm:min-h-[2.75rem]': size === 'sm',
-        // Medium buttons - 44px minimum (standard professional size)
-        'px-6 py-3 text-base gap-2 min-h-[2.75rem]': size === 'md',  
-        // Large buttons - 52px for primary CTAs (comfortable touch target)
-        'px-8 py-4 text-lg gap-2 min-h-[3.25rem]': size === 'lg',
-        // Extra large buttons - hero/landing use only
-        'px-10 py-5 text-xl gap-2.5 min-h-[3.75rem]': size === 'xl',
-      },
-      
-      // Variant styles - Use Tailwind-defined colors
-      {
-        // Primary - Professional Gold Button with all states
-        'bg-primary-gold text-primary-navy shadow-gold hover:bg-primary-gold/90 hover:shadow-glow-gold hover:scale-105 focus:ring-primary-gold/30': variant === 'primary',
-        
-        // Secondary - Gold Outline Button with all states
-        'bg-accent-secondary text-primary-navy shadow-navy hover:bg-accent-hover hover:shadow-elevated focus:ring-accent-secondary/30': variant === 'secondary',
-        
-        // Outline - Professional Border Button with all states
-        'border-2 border-primary-gold text-primary-gold bg-transparent hover:bg-primary-gold hover:text-primary-navy focus:ring-primary-gold/30': variant === 'outline',
-        
-        // Ghost - Subtle Text Button with all states
-        'text-primary-gold bg-transparent hover:bg-primary-gold/10 focus:ring-primary-gold/30': variant === 'ghost',
-        
-        // Link - Text Link Button with all states
-        'text-primary-gold bg-transparent underline-offset-4 hover:underline focus:ring-primary-gold/30': variant === 'link',
-      },
-      
-      // Full width
+    // Enhanced sizing with 8-point grid system and WCAG AA compliance
+    const sizeClasses = {
+      sm: 'px-4 py-2 text-button-sm min-h-[40px] gap-2',
+      md: 'px-5 py-3 text-button-md min-h-[44px] gap-2',
+      lg: 'px-6 py-3 text-button-lg min-h-[48px] gap-2.5',
+      xl: 'px-8 py-4 text-button-xl min-h-[56px] gap-3',
+    };
+
+    // Refined color variants with enhanced hover states and premium effects
+    const variantClasses = {
+      primary: 'bg-primary-gold text-primary-navy hover:bg-primary-gold/90 hover:shadow-glow-gold focus-visible:ring-primary-gold shadow-gold',
+      secondary: 'bg-primary-navy text-primary-white hover:bg-primary-navy/90 hover:shadow-navy focus-visible:ring-primary-navy shadow-soft',
+      outline: 'border-2 border-primary-silver text-primary-silver hover:bg-primary-silver hover:text-primary-white focus-visible:ring-primary-silver',
+      ghost: 'text-primary-charcoal hover:bg-primary-silver/10 focus-visible:ring-primary-silver',
+      link: 'text-primary-gold underline-offset-4 hover:underline focus-visible:ring-primary-gold font-medium',
+    };
+
+    const baseClasses = cn(
+      'inline-flex items-center justify-center font-semibold tracking-[0.02em] transition-all duration-200 ease-in-out',
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+      sizeClasses[size],
+      variantClasses[variant],
       fullWidth && 'w-full',
-      
       className
-    )
-
-    const iconClasses = cn(
-      'transition-all duration-300 ease-out',
-      'group-hover:scale-110 filter drop-shadow-sm',
-      {
-        'w-4 h-4': size === 'sm' || size === 'md',
-        'w-5 h-5': size === 'lg' || size === 'xl',
-      },
-      // Right icon specific hover effects
-      iconPosition === 'right' && 'group-hover:translate-x-1'
-    )
-
-    const shimmerClasses = cn(
-      'absolute inset-0 -translate-x-full',
-      'bg-gradient-to-r from-transparent via-white/20 to-transparent',
-      'group-hover:translate-x-full transition-transform duration-1000 ease-out'
-    )
+    );
 
     return (
       <motion.button
         ref={ref}
         className={baseClasses}
         disabled={disabled || loading}
-        whileHover={{ scale: variant === 'primary' ? 1.05 : 1.02 }}
+        whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.98 }}
-        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         {...props}
       >
-        {/* Shimmer effect */}
-        <div className={shimmerClasses} />
-        
-        {/* Content */}
-        <div className="relative flex items-center justify-center gap-3">
-          {loading ? (
-            <div className={cn(iconClasses, 'animate-spin')}>
-              <svg viewBox="0 0 24 24" fill="none">
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeDasharray="32"
-                  strokeDashoffset="32"
-                  className="animate-spin"
-                />
-              </svg>
-            </div>
-          ) : (
-            <>
-              {Icon && iconPosition === 'left' && (
-                <Icon className={iconClasses} />
-              )}
-              <span className="relative z-10">{children}</span>
-              {Icon && iconPosition === 'right' && (
-                <Icon className={iconClasses} />
-              )}
-            </>
-          )}
-        </div>
-        
-        {/* Pulse effect for primary variant */}
-        {variant === 'primary' && (
-          <motion.div
-            className="absolute inset-0 bg-accent-primary opacity-0"
-            animate={loading ? { opacity: [0, 0.3, 0] } : {}}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
+        {loading ? (
+          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-current" />
+        ) : (
+          <>
+            {Icon && iconPosition === 'left' && <Icon className="mr-2 h-5 w-5" />}
+            {children}
+            {Icon && iconPosition === 'right' && <Icon className="ml-2 h-5 w-5" />}
+          </>
         )}
       </motion.button>
     )

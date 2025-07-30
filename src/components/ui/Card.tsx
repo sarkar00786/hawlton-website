@@ -22,105 +22,44 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     children,
     ...props
   }, ref) => {
-    const baseClasses = cn(
-      // Professional card base - responsive and consistent
-      'card', // Use our professional card class
-      'relative',
-      // Consistent rounded corners for cards (hybrid approach)
-      'rounded-xl',
-      
-      // Professional responsive padding system
-      {
-        'p-0': padding === 'none',
-        'p-4 md:p-5': padding === 'sm', // 16px->20px
-        'p-5 md:p-6': padding === 'md', // 20px->24px  
-        'p-6 md:p-8': padding === 'lg', // 24px->32px
-        'p-8 md:p-10': padding === 'xl', // 32px->40px
-      },
-      
-      // Default responsive padding if no specific padding set
-      padding === 'md' && 'card-padding',
-      
-      // Variant styles using Tailwind-defined colors
-      {
-        // Default - Soft Platinum Gray background
-        'bg-primary-platinum shadow-soft': variant === 'default',
-        
-        // Elevated - Premium white with elevated shadow  
-        'bg-white shadow-elevated': variant === 'elevated',
-        
-        // Premium - Enhanced styling with gold accents
-        'bg-white shadow-premium border-primary-gold/20': variant === 'premium',
-        'before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-gold/5 before:to-transparent': variant === 'premium',
-        
-        // Glass - Glassmorphism effect
-        'bg-white/80 backdrop-blur-sm border-white/20 shadow-soft': variant === 'glass',
-        
-        // Navy - Deep navy background for dark sections
-        'bg-primary-navy border-primary-700 shadow-navy text-primary-white': variant === 'navy',
-      },
-      
-      // Interactive states
-      {
-        'hover:shadow-elevated hover:-translate-y-1': hover && variant !== 'navy',
-        'hover:shadow-glow-gold hover:-translate-y-1': hover && variant === 'navy',
-        'cursor-pointer': clickable,
-        'hover:scale-[1.02]': clickable,
-      },
-      
-      className
-    )
+    // Enhanced padding system following 8-point grid with generous white space
+    const paddingClasses = {
+      none: 'p-0',
+      sm: 'p-4', // 16px
+      md: 'p-6', // 24px - refined for better breathing room
+      lg: 'p-8', // 32px
+      xl: 'p-12', // 48px
+    };
 
-    const cardVariants = {
-      hidden: { 
-        opacity: 0, 
-        y: 20,
-        scale: 0.95
-      },
-      visible: { 
-        opacity: 1, 
-        y: 0,
-        scale: 1,
-        transition: {
-          duration: 0.5,
-          ease: [0.04, 0.62, 0.23, 0.98] as const
-        }
-      },
-      hover: {
-        y: hover ? -4 : 0,
-        scale: clickable ? 1.02 : 1,
-        transition: {
-          duration: 0.2,
-          ease: 'easeOut' as const
-        }
-      }
-    }
+    // Refined variants with enhanced shadows and premium effects
+    const variantClasses = {
+      default: 'bg-white border border-primary-silver shadow-soft hover:shadow-elevated transition-all duration-300',
+      elevated: 'bg-white border border-primary-silver shadow-elevated hover:shadow-premium transition-all duration-300',
+      premium: 'bg-white border border-metallic-gold/30 shadow-glow-gold backdrop-blur-sm',
+      glass: 'bg-white/10 backdrop-blur-md border border-primary-white/20 shadow-soft text-primary-white',
+      navy: 'bg-primary-navy border border-primary-gold/20 text-primary-white shadow-navy',
+    };
+
+    const baseClasses = cn(
+      'rounded-lg transition-all duration-300 ease-in-out',
+      paddingClasses[padding],
+      variantClasses[variant],
+      hover && 'hover:shadow-xl hover:-translate-y-1',
+      clickable && 'cursor-pointer',
+      className
+    );
 
     return (
       <motion.div
         ref={ref}
         className={baseClasses}
-        variants={cardVariants}
-        initial="hidden"
-        whileInView="visible"
-        whileHover="hover"
-        viewport={{ once: true, margin: "-50px" }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
         {...props}
       >
-        {/* Premium variant gradient overlay */}
-        {variant === 'premium' && (
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-gold" />
-        )}
-        
-        {/* Content */}
-        <div className="relative z-10">
-          {children}
-        </div>
-        
-        {/* Subtle inner glow for navy variant */}
-        {variant === 'navy' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 to-transparent pointer-events-none" />
-        )}
+        {children}
       </motion.div>
     )
   }

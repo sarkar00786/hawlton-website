@@ -469,63 +469,54 @@ body {
 }
 
 :root {
-  --font-inter: 'Inter', sans-serif;
-  
-  /* Professional Spacing Scale - Mobile First */
-  --space-xs: 0.25rem;   /* 4px */
-  --space-sm: 0.5rem;    /* 8px */
-  --space-md: 0.75rem;   /* 12px */
-  --space-lg: 1rem;      /* 16px */
-  --space-xl: 1.5rem;    /* 24px */
-  --space-2xl: 2rem;     /* 32px */
-  --space-3xl: 3rem;     /* 48px */
-  
-  /* Professional Touch Targets */
-  --touch-target-sm: 2.25rem;  /* 36px - minimum for desktop */
-  --touch-target-md: 2.75rem;  /* 44px - WCAG AA standard */
-  --touch-target-lg: 3.25rem;  /* 52px - comfortable touch */
-  
-  /* Professional Typography Scale */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px Mobile */
-  --text-5xl: 3rem;      /* 48px Desktop */
-  
-  /* Professional Border Radius */
-  --radius-sm: 0.375rem;  /* 6px */
-  --radius-md: 0.5rem;    /* 8px */
-  --radius-lg: 0.75rem;   /* 12px */
-  --radius-xl: 1rem;      /* 16px */
-  
-  /* Professional Shadows */
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Pinnacle of Trust Color Palette */
+  --primary-navy: #1A3A5F;
+  --primary-platinum: #F5F8FA;
+  --primary-charcoal: #333333;
+  --primary-silver: #A0A0A0;
+  --primary-gold: #FFD700;
+  --metallic-gold: #D4AF37;
+  --primary-white: #FFFFFF;
+  --error: #dc2626;
+  --success: #16a34a;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
   body {
+    @apply bg-primary-platinum font-inter text-primary-charcoal;
     font-feature-settings: 'cv11', 'ss01';
-    font-variation-settings: 'opsz' 32;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
-  }
+
+  h1, .h1 { @apply text-h1-desktop lg:text-h1-desktop; }
+  h2, .h2 { @apply text-h2-desktop lg:text-h2-desktop; }
+  h3, .h3 { @apply text-h3-desktop lg:text-h3-desktop; }
+  h4, .h4 { @apply text-h4-desktop lg:text-h4-desktop; }
+  h5, .h5 { @apply text-h5-desktop lg:text-h5-desktop; }
+  h6, .h6 { @apply text-h6-desktop lg:text-h6-desktop; }
   
   p {
-    line-height: 1.6;
+    @apply text-body-desktop mb-4;
+  }
+
+  .lead {
+    @apply text-lead-desktop;
+  }
+
+  .micro-text {
+    @apply text-micro;
+  }
+
+  a {
+    @apply text-primary-gold font-medium transition-colors duration-200 ease-in-out;
+    &:hover, &:focus-visible {
+      @apply underline;
+    }
   }
 }
 
@@ -598,7 +589,7 @@ body {
   
   /* Professional Card System */
   .card {
-    @apply bg-white border border-secondary-200;
+    @apply bg-white border border-primary-silver;
     @apply transition-all duration-300 ease-out;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
@@ -634,7 +625,7 @@ body {
   .form-input,
   .form-select,
   .form-textarea {
-    @apply w-full bg-white border border-secondary-400;
+    @apply w-full bg-white border border-primary-silver;
     @apply text-primary-charcoal font-medium;
     @apply transition-all duration-200;
     @apply focus:outline-none focus:ring-2 focus:ring-primary-gold/20 focus:border-primary-gold;
@@ -668,7 +659,7 @@ body {
   .form-radio {
     width: 1.25rem; /* 20px - better for touch */
     height: 1.25rem;
-    @apply text-primary-gold bg-white border-secondary-400;
+    @apply text-primary-gold bg-white border-primary-silver;
     @apply focus:ring-primary-gold/20 focus:ring-2;
     border-radius: var(--radius-sm);
   }
@@ -784,7 +775,7 @@ body {
   }
   
   .success-notification {
-    @apply bg-primary-dusty-teal/10 border border-primary-dusty-teal/30 text-primary-dusty-teal;
+    @apply bg-green-50 border border-green-200 text-green-800;
     padding: var(--space-md) var(--space-lg);
     border-radius: var(--radius-lg);
   }
