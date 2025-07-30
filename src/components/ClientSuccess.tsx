@@ -9,7 +9,7 @@ const ClientSuccess = () => {
     <section id="client1" className="bg-primary-navy on-dark-bg">
       <div id="cont6" className="page-container">
         <div id="header1" className="text-center max-w-4xl mx-auto">
-          <h2 id="h6" className="h2">Client Success Testimonials</h2>
+          <h2 id="h6" className="h2 text-primary-white">Client Success Testimonials</h2>
           <p id="p17" className="lead mt-4 text-primary-silver">Our partnerships are built on trust, transparency, and a shared vision for success. Here's what our partners have to say about their journey with Hawlton.</p>
         </div>
         <div id="grid4" className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
