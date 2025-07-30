@@ -187,6 +187,15 @@ body {
   z-index: 1000;
 }
 
+/* Developer hover tooltip feedback */
+[data-developer-tooltip].copied-feedback {
+  @apply border-green-400 bg-green-900;
+}
+
+[data-developer-tooltip].copied-feedback .text-gray-400 {
+  @apply text-green-300;
+}
+
 /* Enhanced button styles */
 .btn-premium {
   position: relative;

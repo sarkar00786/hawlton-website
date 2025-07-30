@@ -49,11 +49,17 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
     }
 
     const handleKeyDown = async (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.key === 'c') {
+      if (event.altKey && event.key === 'c') {
+        event.preventDefault() // Prevent any default browser behavior
         try {
           await navigator.clipboard.writeText(currentElementId)
-          // Optional: show a toast or other feedback
           console.log(`Copied ID to clipboard: ${currentElementId}`)
+          // Show a brief visual feedback
+          const tooltip = document.querySelector('[data-developer-tooltip]')
+          if (tooltip) {
+            tooltip.classList.add('copied-feedback')
+            setTimeout(() => tooltip.classList.remove('copied-feedback'), 1000)
+          }
         } catch (err) {
           console.error('Failed to copy ID:', err)
         }

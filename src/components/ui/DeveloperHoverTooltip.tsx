@@ -48,7 +48,10 @@ export const DeveloperHoverTooltip: React.FC<DeveloperHoverTooltipProps> = ({
             top: hoverInfo.position.y,
           }}
         >
-          <div className="bg-gray-900 text-white px-3 py-2 rounded-lg shadow-lg border border-gray-700 max-w-xs pointer-events-auto">
+          <div 
+            data-developer-tooltip="true" 
+            className="bg-gray-900 text-white px-3 py-2 rounded-lg shadow-lg border border-gray-700 max-w-xs pointer-events-auto transition-all duration-200"
+          >
             <div className="flex items-center justify-between gap-2">
               <div className="text-xs font-mono flex-1">
                 <div className="text-yellow-400 font-semibold mb-1">
@@ -58,7 +61,7 @@ export const DeveloperHoverTooltip: React.FC<DeveloperHoverTooltipProps> = ({
                   ID: {hoverInfo.elementId}
                 </div>
                 <div className="text-gray-400 text-[10px]">
-                  Press Ctrl+C to copy
+                  Press Alt+C to copy
                 </div>
               </div>
               <button
