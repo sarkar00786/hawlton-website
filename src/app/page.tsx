@@ -8,15 +8,15 @@ import ElectricButton from '@/components/ui/ElectricButton'
 import LightningCursor from '@/components/ui/LightningCursor'
 import PremiumTypography from '@/components/ui/PremiumTypography'
 import InteractiveCard from '@/components/ui/InteractiveCard'
-import HulyGrid from '@/components/ui/HulyGrid'
+import EnhancedVisualBackground from '@/components/ui/EnhancedVisualBackground'
 import ClientSuccess from '@/components/ClientSuccess'
 import MagneticButton from '@/components/MagneticButton'
 
 export default function Home() {
   return (
     <div id="hp1" className="min-h-screen">
-      {/* Huly.io-inspired Background Grid */}
-      <HulyGrid intensity="medium" interactive={true} />
+      {/* Enhanced Visual Background with Cursor-Following Masks */}
+      <EnhancedVisualBackground intensity="medium" interactive={true} />
       
       {/* Lightning Cursor Effect */}
       <LightningCursor />
