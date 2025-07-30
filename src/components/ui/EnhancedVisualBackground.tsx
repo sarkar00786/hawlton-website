@@ -84,13 +84,15 @@ const EnhancedVisualBackground = ({
     '--hero-mask-x': `${mousePos.x}%`,
     '--hero-mask-y': `${mousePos.y}%`,
     '--hero-mask-size': isHovering ? maskSize : '10rem',
+    zIndex: 1,
+    pointerEvents: interactive ? 'auto' : 'none'
   } as React.CSSProperties
 
   return (
     <div 
       ref={containerRef}
       className={`fixed inset-0 overflow-hidden ${className}`}
-      style={{ zIndex: 0, ...maskStyles, pointerEvents: interactive ? 'auto' : 'none' }}
+      style={maskStyles}
     >
       {/* Base Layer - Always visible with low opacity */}
       <div className="absolute inset-0 opacity-20">

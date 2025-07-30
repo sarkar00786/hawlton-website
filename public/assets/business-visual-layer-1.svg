@@ -1,5 +1,84 @@
 <svg width="1574" height="1474" viewBox="0 0 1574 1474" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Business Network Pattern -->
+    <pattern id="businessNetwork" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- Central Node -->
+      <circle cx="100" cy="100" r="8" fill="rgba(255, 215, 0, 0.3)" stroke="rgba(255, 215, 0, 0.6)" stroke-width="2"/>
+      
+      <!-- Connecting Lines -->
+      <line x1="100" y1="100" x2="170" y2="50" stroke="rgba(255, 215, 0, 0.2)" stroke-width="1.5"/>
+      <line x1="100" y1="100" x2="30" y2="50" stroke="rgba(255, 215, 0, 0.2)" stroke-width="1.5"/>
+      <line x1="100" y1="100" x2="170" y2="150" stroke="rgba(255, 215, 0, 0.2)" stroke-width="1.5"/>
+      <line x1="100" y1="100" x2="30" y2="150" stroke="rgba(255, 215, 0, 0.2)" stroke-width="1.5"/>
+      
+      <!-- Satellite Nodes -->
+      <circle cx="170" cy="50" r="4" fill="rgba(255, 215, 0, 0.4)"/>
+      <circle cx="30" cy="50" r="4" fill="rgba(255, 215, 0, 0.4)"/>
+      <circle cx="170" cy="150" r="4" fill="rgba(255, 215, 0, 0.4)"/>
+      <circle cx="30" cy="150" r="4" fill="rgba(255, 215, 0, 0.4)"/>
+      
+      <!-- Business Icons -->
+      <rect x="95" y="95" width="10" height="10" fill="rgba(33, 64, 154, 0.6)" rx="2"/>
+      <rect x="166" y="46" width="8" height="8" fill="rgba(33, 64, 154, 0.5)" rx="1"/>
+      <rect x="26" y="46" width="8" height="8" fill="rgba(33, 64, 154, 0.5)" rx="1"/>
+    </pattern>
+    
+    <!-- Digital Transformation Grid -->
+    <pattern id="digitalGrid" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse">
+      <!-- Grid Lines -->
+      <path d="M0 0L150 0L150 150L0 150Z" fill="none" stroke="rgba(255, 215, 0, 0.1)" stroke-width="1"/>
+      <path d="M75 0L75 150M0 75L150 75" stroke="rgba(255, 215, 0, 0.15)" stroke-width="0.5"/>
+      
+      <!-- Corner Accents -->
+      <polygon points="0,0 15,0 0,15" fill="rgba(255, 215, 0, 0.2)"/>
+      <polygon points="150,0 135,0 150,15" fill="rgba(255, 215, 0, 0.2)"/>
+      <polygon points="0,150 15,150 0,135" fill="rgba(255, 215, 0, 0.2)"/>
+      <polygon points="150,150 135,150 150,135" fill="rgba(255, 215, 0, 0.2)"/>
+      
+      <!-- Center Diamond -->
+      <polygon points="75,65 85,75 75,85 65,75" fill="rgba(255, 215, 0, 0.3)"/>
+    </pattern>
+    
+    <!-- Pakistan Economic Growth Pattern -->
+    <pattern id="growthPattern" x="0" y="0" width="300" height="300" patternUnits="userSpaceOnUse">
+      <!-- Ascending Steps -->
+      <rect x="50" y="250" width="40" height="50" fill="rgba(255, 215, 0, 0.15)"/>
+      <rect x="100" y="200" width="40" height="100" fill="rgba(255, 215, 0, 0.2)"/>
+      <rect x="150" y="150" width="40" height="150" fill="rgba(255, 215, 0, 0.25)"/>
+      <rect x="200" y="100" width="40" height="200" fill="rgba(255, 215, 0, 0.3)"/>
+      
+      <!-- Growth Arrow -->
+      <path d="M60 270L220 110" stroke="rgba(255, 215, 0, 0.4)" stroke-width="2"/>
+      <polygon points="220,110 210,120 230,120" fill="rgba(255, 215, 0, 0.4)"/>
+      
+      <!-- Digital Elements -->
+      <circle cx="270" cy="50" r="3" fill="rgba(33, 64, 154, 0.6)"/>
+      <circle cx="280" cy="40" r="2" fill="rgba(33, 64, 154, 0.5)"/>
+      <circle cx="260" cy="40" r="2" fill="rgba(33, 64, 154, 0.5)"/>
+    </pattern>
+    
+    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255, 215, 0, 0.4)"/>
+      <stop offset="70%" stop-color="rgba(255, 215, 0, 0.1)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#businessNetwork)" opacity="0.6"/>
+  
+  <!-- Overlaying Patterns -->
+  <rect width="100%" height="100%" fill="url(#digitalGrid)" opacity="0.4"/>
+  <rect width="100%" height="100%" fill="url(#growthPattern)" opacity="0.3"/>
+  
+  <!-- Strategic Glow Effects -->
+  <circle cx="400" cy="300" r="150" fill="url(#radialGlow)" opacity="0.3"/>
+  <circle cx="1200" cy="800" r="200" fill="url(#radialGlow)" opacity="0.25"/>
+  <circle cx="300" cy="1100" r="120" fill="url(#radialGlow)" opacity="0.35"/>
+</svg>
+
+<svg width="1574" height="1474" viewBox="0 0 1574 1474" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
     <!-- Business Grid Pattern -->
     <pattern id="business-grid" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
       <rect width="120" height="120" fill="none" stroke="rgba(255, 215, 0, 0.08)" stroke-width="1"/>
