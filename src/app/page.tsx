@@ -212,7 +212,7 @@ export default function Home() {
                 <h3 id={`h5_${index + 1}`} className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
                 <p id={`p${index + 11}`} className="text-primary-charcoal leading-relaxed">{item.desc}</p>
               </motion.div>
-            ))
+            ))}
           </div>
         </div>
       </section>
