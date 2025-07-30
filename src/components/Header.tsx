@@ -135,7 +135,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-14">
           {/* Logo and Navigation */}
           <div className="flex items-center space-x-8">
-            <div className="flex-shrink-0">
+            <div id="logo-wrapper" className="flex-shrink-0">
               <Link href="/" id="logo-main" className="text-2xl font-bold text-primary-gold">
                 Hawlton
               </Link>
@@ -148,7 +148,7 @@ const Header = () => {
           </div>
 
           {/* CTA Buttons Section - Desktop */}
-          <div className="hidden md:flex items-center space-x-2">
+          <div id="cta-desktop" className="hidden md:flex items-center space-x-2">
             <Link
               href="/partner"
               id="cta-partner-header"
@@ -170,8 +170,9 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div id="mobile-menu-btn-wrapper" className="md:hidden">
             <button
+              id="mobile-menu-btn"
               onClick={toggleMenu}
               className="text-primary-silver hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0"
             >
