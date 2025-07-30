@@ -15,7 +15,7 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
     position: { x: 0, y: 0 },
     visible: false
   })
-  const [currentElementId, setCurrentElementId] = useState<string>('')
+  const [currentElement, setCurrentElement] = useState<{ id: string; type: string }>({ id: '', type: '' })
 
   useEffect(() => {
     if (!isDevelopmentMode) return
@@ -24,11 +24,10 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
       const target = event.target as HTMLElement
       if (!target) return
 
-      // Get element ID or generate one based on content/class
       const elementId = target.id || target.getAttribute('data-element-id') || generateElementId(target)
       const elementType = getElementType(target)
 
-      setCurrentElementId(elementId)
+      setCurrentElement({ id: elementId, type: elementType })
       setHoverInfo({
         elementId,
         elementType,
@@ -48,21 +47,28 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
       setHoverInfo(prev => ({ ...prev, visible: false }))
     }
 
+    const copyElementDetails = async () => {
+      const detailsText = `Type: ${currentElement.type}\nID: ${currentElement.id}`
+      try {
+        await navigator.clipboard.writeText(detailsText)
+        console.log(`Copied element details to clipboard:\n${detailsText}`)
+        // Show visual feedback
+        const tooltip = document.querySelector('[data-developer-tooltip]')
+        if (tooltip) {
+          tooltip.classList.add('copied-feedback')
+          setTimeout(() => tooltip.classList.remove('copied-feedback'), 1000)
+        }
+        return true
+      } catch (err) {
+        console.error('Failed to copy element details:', err)
+        return false
+      }
+    }
+
     const handleKeyDown = async (event: KeyboardEvent) => {
       if (event.altKey && event.key === 'c') {
-        event.preventDefault() // Prevent any default browser behavior
-        try {
-          await navigator.clipboard.writeText(currentElementId)
-          console.log(`Copied ID to clipboard: ${currentElementId}`)
-          // Show a brief visual feedback
-          const tooltip = document.querySelector('[data-developer-tooltip]')
-          if (tooltip) {
-            tooltip.classList.add('copied-feedback')
-            setTimeout(() => tooltip.classList.remove('copied-feedback'), 1000)
-          }
-        } catch (err) {
-          console.error('Failed to copy ID:', err)
-        }
+        event.preventDefault()
+        await copyElementDetails()
       }
     }
 
@@ -78,7 +84,7 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
       document.removeEventListener('mouseout', handleMouseOut)
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [isDevelopmentMode, currentElementId])
+  }, [isDevelopmentMode, currentElement])
 
   return hoverInfo
 }
