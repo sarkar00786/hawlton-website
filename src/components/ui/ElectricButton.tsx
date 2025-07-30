@@ -30,6 +30,8 @@ const ElectricButton = ({
   const [isHovered, setIsHovered] = useState(false)
   const [isPressed, setIsPressed] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [cursorPosition, setCursorPosition] = useState({ x: 50, y: 50 }) // Percentage position
+  const [lastExitSide, setLastExitSide] = useState('right') // Track exit side
 
   // Electric glow intensities
   const glowIntensity = {
@@ -122,7 +124,7 @@ const ElectricButton = ({
     }
   }
 
-  // Handle mouse movement for magnetic effect
+  // Handle mouse movement for magnetic effect and cursor tracking
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!buttonRef.current) return
     
@@ -130,17 +132,117 @@ const ElectricButton = ({
     const centerX = rect.left + rect.width / 2
     const centerY = rect.top + rect.height / 2
     
+    // Magnetic pull effect
     setMousePosition({
-      x: (e.clientX - centerX) / 10, // Subtle magnetic pull
+      x: (e.clientX - centerX) / 10,
       y: (e.clientY - centerY) / 10
+    })
+    
+    // Track cursor position as percentage for electric effect
+    const relativeX = ((e.clientX - rect.left) / rect.width) * 100
+    const relativeY = ((e.clientY - rect.top) / rect.height) * 100
+    
+    setCursorPosition({
+      x: Math.max(0, Math.min(100, relativeX)),
+      y: Math.max(0, Math.min(100, relativeY))
     })
   }
 
-  // Reset position when mouse leaves
-  const handleMouseLeave = () => {
+  // Handle mouse enter to track entry side
+  const handleMouseEnter = (e: React.MouseEvent) => {
+    if (!buttonRef.current) return
+    
+    const rect = buttonRef.current.getBoundingClientRect()
+    const relativeX = ((e.clientX - rect.left) / rect.width) * 100
+    
+    // Determine entry side
+    if (relativeX < 25) {
+      setLastExitSide('left')
+    } else if (relativeX > 75) {
+      setLastExitSide('right')
+    } else {
+      setLastExitSide(relativeX < 50 ? 'left' : 'right')
+    }
+    
+    setCursorPosition({ x: relativeX, y: 50 })
+    setIsHovered(true)
+  }
+
+  // Reset position when mouse leaves and maintain exit position
+  const handleMouseLeave = (e: React.MouseEvent) => {
+    if (!buttonRef.current) return
+    
+    const rect = buttonRef.current.getBoundingClientRect()
+    const relativeX = ((e.clientX - rect.left) / rect.width) * 100
+    
+    // Determine exit side and maintain position
+    if (relativeX <= 0) {
+      setLastExitSide('left')
+      setCursorPosition({ x: 5, y: 50 })
+    } else if (relativeX >= 100) {
+      setLastExitSide('right')
+      setCursorPosition({ x: 95, y: 50 })
+    } else {
+      setLastExitSide(relativeX < 50 ? 'left' : 'right')
+      setCursorPosition({ 
+        x: relativeX < 50 ? 5 : 95, 
+        y: 50 
+      })
+    }
+    
     setMousePosition({ x: 0, y: 0 })
     setIsHovered(false)
   }
+
+  // Electric trail effect that follows cursor
+  const ElectricTrail = () => (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-full">
+      {/* Main electric glow at cursor position */}
+      <motion.div
+        className="absolute w-4 h-4 -translate-x-1/2 -translate-y-1/2"
+        style={{
+          left: `${cursorPosition.x}%`,
+          top: `${cursorPosition.y}%`,
+        }}
+        animate={{
+          opacity: isHovered ? 1 : 0,
+          scale: isHovered ? 1 : 0,
+        }}
+        transition={{ duration: 0.2 }}
+      >
+        <div className="w-full h-full bg-primary-gold/80 rounded-full shadow-glow-gold animate-pulse" />
+        <div className="absolute inset-0 w-full h-full bg-primary-gold/40 rounded-full animate-ping" />
+      </motion.div>
+      
+      {/* Electric sparks radiating from cursor */}
+      {isHovered && [...Array(4)].map((_, i) => {
+        const angle = (i * 90) + (Date.now() / 10) % 360
+        const radius = 15 + Math.sin(Date.now() / 500 + i) * 5
+        const sparkX = cursorPosition.x + Math.cos(angle * Math.PI / 180) * radius
+        const sparkY = cursorPosition.y + Math.sin(angle * Math.PI / 180) * radius
+        
+        return (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-primary-gold rounded-full -translate-x-1/2 -translate-y-1/2"
+            style={{
+              left: `${Math.max(0, Math.min(100, sparkX))}%`,
+              top: `${Math.max(0, Math.min(100, sparkY))}%`,
+            }}
+            animate={{
+              opacity: [0.8, 0.2, 0.8],
+              scale: [1, 0.5, 1],
+            }}
+            transition={{
+              duration: 0.8,
+              repeat: Infinity,
+              delay: i * 0.2,
+            }}
+          />
+        )
+      })}
+    </div>
+  )
 
   // Create electric spark elements
   const ElectricSparks = () => (
@@ -188,7 +290,7 @@ const ElectricButton = ({
       ${className}
     `,
     onMouseMove: handleMouseMove,
-    onMouseEnter: () => setIsHovered(true),
+    onMouseEnter: handleMouseEnter,
     onMouseLeave: handleMouseLeave,
     onMouseDown: () => setIsPressed(true),
     onMouseUp: () => setIsPressed(false),
@@ -214,6 +316,9 @@ const ElectricButton = ({
     >
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-gold/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      
+      {/* Electric trail that follows cursor */}
+      <ElectricTrail />
       
       {/* Electric sparks */}
       <ElectricSparks />

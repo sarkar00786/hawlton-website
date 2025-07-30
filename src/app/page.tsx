@@ -6,21 +6,17 @@ import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import ElectricButton from '@/components/ui/ElectricButton'
 import LightningCursor from '@/components/ui/LightningCursor'
-import DynamicGrid from '@/components/ui/DynamicGrid'
 import PremiumTypography from '@/components/ui/PremiumTypography'
 import InteractiveCard from '@/components/ui/InteractiveCard'
-import ParticleSystem from '@/components/ui/ParticleSystem'
+import HulyGrid from '@/components/ui/HulyGrid'
 import ClientSuccess from '@/components/ClientSuccess'
 import MagneticButton from '@/components/MagneticButton'
 
 export default function Home() {
   return (
     <div id="hp1" className="min-h-screen">
-      {/* Particle System for Background */}
-      <ParticleSystem count={100} speed="medium" size="medium" density="high" pattern="flowing" />
-
-      {/* Dynamic Grid Enhancement */}
-      <DynamicGrid intensity="medium" pattern="corporate" animated={true} />
+      {/* Huly.io-inspired Background Grid */}
+      <HulyGrid intensity="medium" interactive={true} />
       
       {/* Lightning Cursor Effect */}
       <LightningCursor />
