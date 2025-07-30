@@ -8,7 +8,7 @@ interface HoverInfo {
   visible: boolean
 }
 
-export const useDeveloperHover = (isDevelopmentMode: boolean = process.env.NODE_ENV === 'development') => {
+export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
   const [hoverInfo, setHoverInfo] = useState<HoverInfo>({
     elementId: '',
     elementType: '',

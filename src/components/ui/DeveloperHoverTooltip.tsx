@@ -17,7 +17,7 @@ interface DeveloperHoverTooltipProps {
 
 export const DeveloperHoverTooltip: React.FC<DeveloperHoverTooltipProps> = ({ 
   hoverInfo, 
-  isDevelopmentMode = process.env.NODE_ENV === 'development' 
+  isDevelopmentMode = true 
 }) => {
   const [copied, setCopied] = useState(false)
 

@@ -10,7 +10,7 @@ interface DeveloperToolsProps {
 
 const DeveloperTools: React.FC<DeveloperToolsProps> = ({ 
   children, 
-  enabled = process.env.NODE_ENV === 'development' 
+  enabled = true 
 }) => {
   const hoverInfo = useDeveloperHover(enabled)
 
