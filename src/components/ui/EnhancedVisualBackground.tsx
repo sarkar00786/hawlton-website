@@ -84,7 +84,7 @@ const EnhancedVisualBackground = ({
     '--hero-mask-x': `${mousePos.x}%`,
     '--hero-mask-y': `${mousePos.y}%`,
     '--hero-mask-size': isHovering ? maskSize : '10rem',
-    zIndex: 0,
+    zIndex: 5,
     pointerEvents: interactive ? 'auto' : 'none'
   } as React.CSSProperties
 

@@ -22,8 +22,8 @@ export default function Home() {
       <LightningCursor />
       
       {/* Hero Section with Enhanced Visual Appeal */}
-      <section id="hero1" className="relative overflow-hidden py-32 text-white on-dark-bg">
-        <div id="bg1" className="absolute inset-0 bg-gradient-to-br from-primary-navy/95 via-primary-700/90 to-primary-800/95"></div>
+      <section id="hero1" className="relative overflow-hidden bg-primary-navy py-32 text-white on-dark-bg">
+        <div id="bg1" className="absolute inset-0 bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800"></div>
         <div id="cont1" className="page-container relative text-center">
           <PremiumTypography variant="h1" gradient={true} staggerWords={true} highlightWords={["Empowering", "Future"]} glowOnHover={true} className="h1 text-center" id="h1">
             Empowering Pakistan's Digital Future
