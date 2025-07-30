@@ -89,8 +89,8 @@ const EnhancedVisualBackground = ({
   return (
     <div 
       ref={containerRef}
-      className={`fixed inset-0 pointer-events-none overflow-hidden ${className}`}
-      style={{ zIndex: 0, ...maskStyles }}
+      className={`fixed inset-0 overflow-hidden ${className}`}
+      style={{ zIndex: 0, ...maskStyles, pointerEvents: interactive ? 'auto' : 'none' }}
     >
       {/* Base Layer - Always visible with low opacity */}
       <div className="absolute inset-0 opacity-20">
