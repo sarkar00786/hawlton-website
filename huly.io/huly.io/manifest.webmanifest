@@ -1,0 +1,46 @@
+{
+  "name": "Huly",
+  "short_name": "Huly",
+  "icons": [
+    {
+      "src": "/favicon/favicon-48x48.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-72x72.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-96x96.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-144x144.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-192x192.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-256x256.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-384x384.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-512x512.png?v=c798c246a24c6a85cb1e5ef0de135114",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

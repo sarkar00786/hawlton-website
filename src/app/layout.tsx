@@ -13,6 +13,7 @@ import ScrollProgress from "@/components/ui/ScrollProgress";
 import { LoadingProvider } from "@/components/ui/LoadingStates";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import DeveloperTools from "@/components/DeveloperTools";
+import LightningCursor from "@/components/ui/LightningCursor";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -300,6 +301,7 @@ export default function RootLayout({
                 <ErrorBoundary>
                   <ScrollProgress showReadingTime={true} />
                   <AccessibilityEnhancer />
+                  <LightningCursor />
                   <Header />
                   <main id="main-content">{children}</main>
                   <Footer />
