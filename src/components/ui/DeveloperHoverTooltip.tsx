@@ -54,8 +54,11 @@ export const DeveloperHoverTooltip: React.FC<DeveloperHoverTooltipProps> = ({
                 <div className="text-yellow-400 font-semibold mb-1">
                   {hoverInfo.elementType}
                 </div>
-                <div className="text-green-400 break-all">
+                <div className="text-green-400 break-all mb-1">
                   ID: {hoverInfo.elementId}
+                </div>
+                <div className="text-gray-400 text-[10px]">
+                  Press Ctrl+C to copy
                 </div>
               </div>
               <button

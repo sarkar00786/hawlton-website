@@ -15,6 +15,7 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
     position: { x: 0, y: 0 },
     visible: false
   })
+  const [currentElementId, setCurrentElementId] = useState<string>('')
 
   useEffect(() => {
     if (!isDevelopmentMode) return
@@ -27,6 +28,7 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
       const elementId = target.id || target.getAttribute('data-element-id') || generateElementId(target)
       const elementType = getElementType(target)
 
+      setCurrentElementId(elementId)
       setHoverInfo({
         elementId,
         elementType,
@@ -46,17 +48,31 @@ export const useDeveloperHover = (isDevelopmentMode: boolean = true) => {
       setHoverInfo(prev => ({ ...prev, visible: false }))
     }
 
+    const handleKeyDown = async (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.key === 'c') {
+        try {
+          await navigator.clipboard.writeText(currentElementId)
+          // Optional: show a toast or other feedback
+          console.log(`Copied ID to clipboard: ${currentElementId}`)
+        } catch (err) {
+          console.error('Failed to copy ID:', err)
+        }
+      }
+    }
+
     // Add event listeners to all elements
     document.addEventListener('mouseover', handleMouseOver)
     document.addEventListener('mousemove', handleMouseMove)
     document.addEventListener('mouseout', handleMouseOut)
+    document.addEventListener('keydown', handleKeyDown)
 
     return () => {
       document.removeEventListener('mouseover', handleMouseOver)
       document.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseout', handleMouseOut)
+      document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [isDevelopmentMode])
+  }, [isDevelopmentMode, currentElementId])
 
   return hoverInfo
 }
