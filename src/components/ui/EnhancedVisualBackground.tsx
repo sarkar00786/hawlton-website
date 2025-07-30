@@ -84,7 +84,7 @@ const EnhancedVisualBackground = ({
     '--hero-mask-x': `${mousePos.x}%`,
     '--hero-mask-y': `${mousePos.y}%`,
     '--hero-mask-size': isHovering ? maskSize : '10rem',
-    zIndex: 1,
+    zIndex: -1,
     pointerEvents: interactive ? 'auto' : 'none'
   } as React.CSSProperties
 
@@ -189,49 +189,6 @@ const EnhancedVisualBackground = ({
         </div>
       </motion.div>
 
-      {/* Dynamic Business Icons that appear on hover */}
-      {isHovering && (
-        <motion.div 
-          className="absolute inset-0 pointer-events-none"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          {/* Business icons scattered around cursor */}
-          {[...Array(6)].map((_, i) => {
-            const angle = (360 / 6) * i
-            const radius = 120 + Math.sin(Date.now() / 1000 + i) * 20
-            const x = mousePos.x + (Math.cos(angle * Math.PI / 180) * radius) / 10
-            const y = mousePos.y + (Math.sin(angle * Math.PI / 180) * radius) / 10
-            
-            return (
-              <motion.div
-                key={i}
-                className="absolute w-8 h-8 -translate-x-1/2 -translate-y-1/2"
-                style={{
-                  left: `${Math.max(5, Math.min(95, x))}%`,
-                  top: `${Math.max(5, Math.min(95, y))}%`,
-                }}
-                animate={{
-                  opacity: [0.3, 0.8, 0.3],
-                  scale: [0.8, 1.2, 0.8],
-                  rotate: [0, 360]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  delay: i * 0.5,
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-accent-primary to-yellow-400 shadow-glow-gold flex items-center justify-center">
-                  <div className="w-4 h-4 bg-primary-navy rounded-sm"></div>
-                </div>
-              </motion.div>
-            )
-          })}
-        </motion.div>
-      )}
 
       {/* Ambient glow effect */}
       <div 
