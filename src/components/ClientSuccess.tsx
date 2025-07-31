@@ -6,8 +6,7 @@ import { Card, CardContent } from '@/components/ui/Card'
 
 const ClientSuccess = () => {
   return (
-<section id="client1" className="relative bg-primary-navy on-dark-bg" style={{ backgroundImage: "url('/images/backgrounds/2.png')", backgroundPosition: 'center', backgroundSize: 'cover' }}>
-      <div className="absolute inset-0 bg-primary-navy opacity-80"></div>
+<section id="client1" className="bg-primary-navy on-dark-bg">
       <div id="cont6" className="page-container py-20 relative z-10">
         <div id="header1" className="text-center max-w-4xl mx-auto">
           <h2 id="h6" className="h2 text-primary-white">Client Success Testimonials</h2>

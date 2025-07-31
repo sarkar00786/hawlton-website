@@ -6,25 +6,13 @@ import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import ClientSuccess from '@/components/ClientSuccess'
 import MagneticButton from '@/components/MagneticButton'
+import HeroCarousel from '@/components/sections/HeroCarousel'
 
 export default function Home() {
   return (
     <div id="hp1" className="min-h-screen">
-      {/* Hero Section with Enhanced Visual Appeal */}
-<section id="hero1" className="relative overflow-hidden bg-primary-navy py-32 text-white on-dark-bg" style={{ backgroundImage: "url('/images/backgrounds/hero-home.png')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
-        <div id="bg1" className="absolute inset-0 bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 opacity-10"></div>
-        <div id="bg2" className="absolute inset-0 bg-[linear-gradient(rgba(255,215,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,215,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-40"></div>
-        <div id="cont1" className="page-container relative text-center">
-          <motion.div id="anim1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
-            <h1 id="h1" className="h1"><span id="span1" className="text-primary-gold">Empowering</span> Pakistan's Digital Future</h1>
-            <p id="p1" className="lead mt-6 max-w-3xl mx-auto">We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and innovative digital solutions, delivering measurable growth and sustainable success.</p>
-            <div id="btns1" className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link id="link1" href="/partner"><Button id="btn1" size="xl" icon={ArrowRight} iconPosition="right">Partner With Us</Button></Link>
-              <Link id="link2" href="/about"><Button id="btn2" variant="outline" size="xl">Learn More</Button></Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Dynamic Hero Carousel */}
+      <HeroCarousel />
       
       {/* Value Proposition Section */}
       <section id="sec1" className="bg-primary-platinum py-20">
@@ -83,9 +71,8 @@ export default function Home() {
       </section>
 
       {/* Our Approach Section */}
-      <section id="sec2" className="relative bg-primary-navy py-20" style={{ backgroundImage: "url('/images/backgrounds/0.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
-        <div className="absolute inset-0 bg-primary-navy opacity-10"></div>
-        <div id="cont3" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="sec2" className="bg-primary-navy py-20">
+        <div id="cont3" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             id="anim3"
             className="text-center mb-16"
@@ -222,9 +209,8 @@ export default function Home() {
       <ClientSuccess />
 
       {/* CTA Section */}
-      <section id="cta1" className="relative bg-gradient-navy py-20" style={{ backgroundImage: "url('/images/backgrounds/home-hero.jpg')", backgroundPosition: 'center', backgroundSize: 'cover' }}>
-        <div className="absolute inset-0 bg-primary-navy opacity-10"></div>
-        <div id="cont5" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section id="cta1" className="bg-gradient-navy py-20">
+        <div id="cont5" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             id="anim5"
             className="space-y-8"
