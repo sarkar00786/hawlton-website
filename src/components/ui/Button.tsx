@@ -48,13 +48,22 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       xl: 'px-8 py-4 text-button-xl min-h-[56px] gap-3',
     };
 
-    // Refined color variants with enhanced hover states and premium effects
+    // Blueprint-compliant corner strategy
+    const cornerClasses = {
+      primary: '', // Sharp corners for primary CTAs (partnership/business buttons)
+      secondary: 'rounded-md', // Subtle rounded for secondary
+      outline: 'rounded-md',
+      ghost: 'rounded-md',
+      link: '',
+    };
+
+    // Enhanced color variants with premium effects and accessibility
     const variantClasses = {
-      primary: 'bg-primary-gold text-primary-navy hover:bg-primary-gold/90 hover:shadow-glow-gold focus-visible:ring-primary-gold shadow-gold',
-      secondary: 'bg-primary-navy text-primary-white hover:bg-primary-navy/90 hover:shadow-navy focus-visible:ring-primary-navy shadow-soft',
-      outline: 'border-2 border-primary-silver text-primary-silver hover:bg-primary-silver hover:text-primary-white focus-visible:ring-primary-silver',
-      ghost: 'text-primary-charcoal hover:bg-primary-silver/10 focus-visible:ring-primary-silver',
-      link: 'text-primary-gold underline-offset-4 hover:underline focus-visible:ring-primary-gold font-medium',
+      primary: `bg-gradient-to-r from-primary-gold to-[#FFA500] text-primary-navy hover:from-primary-gold/95 hover:to-[#FFA500]/95 hover:shadow-[0_8px_32px_rgba(255,215,0,0.4)] hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 shadow-[0_4px_16px_rgba(255,215,0,0.3)] active:scale-[0.98] transition-all duration-300 ease-out ${cornerClasses.primary}`,
+      secondary: `bg-gradient-to-r from-primary-navy to-[#2A4A6F] text-primary-white hover:from-primary-navy/95 hover:to-[#2A4A6F]/95 hover:shadow-[0_8px_24px_rgba(26,58,95,0.4)] hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary-navy focus-visible:ring-offset-2 shadow-[0_4px_12px_rgba(26,58,95,0.2)] active:scale-[0.98] transition-all duration-300 ease-out ${cornerClasses.secondary}`,
+      outline: `border-2 border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-primary-navy hover:shadow-[0_4px_16px_rgba(255,215,0,0.3)] hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 active:scale-[0.98] transition-all duration-300 ease-out ${cornerClasses.outline}`,
+      ghost: `text-primary-charcoal hover:bg-primary-gold/10 hover:text-primary-navy hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 active:scale-[0.98] transition-all duration-300 ease-out ${cornerClasses.ghost}`,
+      link: `text-primary-gold underline-offset-4 hover:underline hover:text-primary-gold/80 focus-visible:ring-2 focus-visible:ring-primary-gold focus-visible:ring-offset-2 font-medium transition-all duration-200 ease-out ${cornerClasses.link}`,
     };
 
     const baseClasses = cn(

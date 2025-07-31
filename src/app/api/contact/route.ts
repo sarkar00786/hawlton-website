@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { Resend } from 'resend'
 
 // Validation schema for contact form
 const contactSchema = z.object({
@@ -45,21 +46,94 @@ function sanitizeInput(input: string): string {
   return input.trim().replace(/[<>"']/g, '')
 }
 
+// Initialize Resend
+const resend = new Resend(process.env.RESEND_API_KEY)
+
 async function sendNotificationEmail(data: z.infer<typeof contactSchema>) {
-  // Implement your email service here (SendGrid, AWS SES, etc.)
+  // Log submission
   console.log('Contact form submission received:', {
     from: data.email,
     subject: data.subject,
     timestamp: new Date().toISOString()
   })
   
-  // Example: Send to your support team
-  // await emailService.send({
-  //   to: 'info@hawlton.com',
-  //   subject: `New Contact: ${data.subject}`,
-  //   template: 'contact-form',
-  //   data
-  // })
+  // Send email using Resend if API key is configured
+  if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 'your-resend-api-key') {
+    try {
+      await resend.emails.send({
+        from: process.env.FROM_EMAIL || 'noreply@hawlton.com',
+        to: ['info@hawlton.com'],
+        subject: `New Contact Inquiry: ${data.subject}`,
+        html: `
+          <div style="font-family: 'Inter', Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #F5F8FA;">
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #1A3A5F 0%, #2A4A6F 100%); color: white; padding: 30px 20px; text-align: center; border-radius: 12px 12px 0 0;">
+              <h1 style="margin: 0; color: #FFD700; font-size: 28px; font-weight: 800;">Hawlton</h1>
+              <p style="margin: 10px 0 0 0; color: #A0A0A0; font-size: 16px;">New Contact Inquiry</p>
+            </div>
+            
+            <!-- Content -->
+            <div style="background-color: white; padding: 40px 30px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <h2 style="color: #1A3A5F; margin: 0 0 30px 0; font-size: 24px; font-weight: 700;">Contact Details</h2>
+              
+              <div style="background-color: #F5F8FA; padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <div style="margin-bottom: 15px;">
+                  <strong style="color: #1A3A5F; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Full Name</strong>
+                  <p style="margin: 5px 0 0 0; color: #333333; font-size: 16px; font-weight: 500;">${data.name}</p>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                  <strong style="color: #1A3A5F; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Email Address</strong>
+                  <p style="margin: 5px 0 0 0;">
+                    <a href="mailto:${data.email}" style="color: #FFD700; text-decoration: none; font-size: 16px; font-weight: 500;">${data.email}</a>
+                  </p>
+                </div>
+                
+                ${data.phone ? `
+                  <div style="margin-bottom: 15px;">
+                    <strong style="color: #1A3A5F; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Phone Number</strong>
+                    <p style="margin: 5px 0 0 0; color: #333333; font-size: 16px; font-weight: 500;">${data.phone}</p>
+                  </div>
+                ` : ''}
+                
+                <div style="margin-bottom: 0;">
+                  <strong style="color: #1A3A5F; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Inquiry Type</strong>
+                  <p style="margin: 5px 0 0 0; color: #333333; font-size: 16px; font-weight: 500;">${data.subject}</p>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 30px;">
+                <strong style="color: #1A3A5F; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: block;">Message</strong>
+                <div style="background-color: #F5F8FA; padding: 20px; border-left: 4px solid #FFD700; border-radius: 0 8px 8px 0; color: #333333; line-height: 1.6; font-size: 15px;">
+                  ${data.message.replace(/\n/g, '<br>')}
+                </div>
+              </div>
+              
+              <!-- Call to Action -->
+              <div style="text-align: center; padding: 25px 0; border-top: 1px solid #E5E7EB;">
+                <a href="mailto:${data.email}" style="display: inline-block; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #1A3A5F; text-decoration: none; padding: 12px 30px; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3); transition: all 0.3s ease;">
+                  Reply to Inquiry
+                </a>
+              </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="text-align: center; padding: 20px; color: #A0A0A0; font-size: 12px;">
+              <p style="margin: 0 0 5px 0;">This inquiry was submitted via the Hawlton.com contact form</p>
+              <p style="margin: 0;">Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi' })} PKT</p>
+            </div>
+          </div>
+        `,
+      })
+      
+      console.log('Email sent successfully via Resend')
+    } catch (emailError) {
+      console.error('Failed to send email via Resend:', emailError)
+      // Don't throw error - contact form should still work even if email fails
+    }
+  } else {
+    console.log('Resend not configured - email not sent (this is normal in development)')
+  }
 }
 
 export async function POST(request: NextRequest) {

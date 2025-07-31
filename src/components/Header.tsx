@@ -32,10 +32,10 @@ const SimpleNavigation = () => {
         <Link
           key={item.href}
           href={item.href}
-          className={`px-3 py-1.5 rounded-md transition-all duration-200 text-sm ${
+          className={`px-3 py-1.5 rounded-md transition-all duration-200 text-sm relative ${
             isActive(item.href)
-              ? 'bg-primary-gold/10 text-primary-gold font-semibold'
-              : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
+              ? 'bg-primary-gold/10 text-primary-gold font-semibold shadow-sm border border-primary-gold/20'
+              : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5 hover:shadow-sm'
           }`}
         >
           {item.label}

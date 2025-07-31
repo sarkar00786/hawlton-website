@@ -2,6 +2,7 @@
 
 import { Shield, Globe, TrendingUp, Users, Heart, Lightbulb } from 'lucide-react'
 import Image from 'next/image'
+import FAQSection from '@/components/FAQSection'
 
 export default function AboutPage() {
   return (
@@ -224,7 +225,12 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+    </section>
+
+    {/* FAQ Section */}
+    <section id="faq-section">
+      <FAQSection />
+    </section>
 
       {/* Our Philosophy Section */}
       <section id="philosophy-section" className="bg-primary-navy py-20">
