@@ -191,7 +191,7 @@ export default function PartnerWithUsPage() {
                   <span className="text-3xl">📦</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-primary-navy">Inventory Partnership</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-primary-white mb-4">Inventory Partnership</h3>
                   <p className="text-primary-charcoal">Partner with inventory contribution</p>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function PartnerWithUsPage() {
                 </p>
                 
                 <div className="bg-primary-navy/5 rounded-lg p-4">
-                  <h4 className="font-semibold text-primary-navy mb-2">Revenue Share Model:</h4>
+                  <h4 className="text-lg font-semibold text-primary-gold mb-4">Revenue Share:</h4>
                   <ul className="space-y-2 text-sm text-primary-charcoal">
                     <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Partner: 60% of net revenue</li>
                     <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Hawlton: 40% of net revenue</li>
@@ -211,7 +211,7 @@ export default function PartnerWithUsPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-primary-navy">What We Provide:</h4>
+                  <h4 className="text-lg font-semibold text-primary-gold mb-4">What We Provide:</h4>
                   <ul className="space-y-1 text-sm text-primary-charcoal">
                     <li>• Digital platform development</li>
                     <li>• Marketing and customer acquisition</li>
@@ -239,7 +239,7 @@ export default function PartnerWithUsPage() {
                   <span className="text-3xl">🤝</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-primary-white">Full Collaboration Partnership</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-primary-white mb-4">Full Collaboration Partnership</h3>
                   <p className="text-primary-silver">Inventory + Direct running expenses</p>
                 </div>
               </div>
@@ -250,7 +250,7 @@ export default function PartnerWithUsPage() {
                 </p>
                 
                 <div className="bg-primary-white/10 rounded-lg p-4 backdrop-blur-sm">
-                  <h4 className="font-semibold text-primary-gold mb-2">Enhanced Revenue Share:</h4>
+                  <h4 className="text-lg font-semibold text-primary-gold mb-4">Enhanced Revenue Share:</h4>
                   <ul className="space-y-2 text-sm text-primary-silver">
                     <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Partner: 75% of net revenue</li>
                     <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Hawlton: 25% of net revenue</li>
@@ -259,7 +259,7 @@ export default function PartnerWithUsPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-primary-gold">Additional Benefits:</h4>
+                  <h4 className="text-lg font-semibold text-primary-gold mb-4">Additional Benefits:</h4>
                   <ul className="space-y-1 text-sm text-primary-silver">
                     <li>• Dedicated account management</li>
                     <li>• Priority in new market expansion</li>
@@ -307,7 +307,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary-navy mb-8">
               Why Partner With Hawlton?
             </h2>
             <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
@@ -328,7 +328,7 @@ export default function PartnerWithUsPage() {
                 <div className="w-16 h-16 bg-gradient-gold rounded-xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-navy mb-4">{benefit.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-6">{benefit.title}</h3>
                 <p className="text-primary-charcoal leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
@@ -346,7 +346,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary-white mb-8">
               Partnership Process
             </h2>
             <p className="text-xl text-primary-silver max-w-3xl mx-auto">
@@ -366,7 +366,7 @@ export default function PartnerWithUsPage() {
               >
                 <div className="bg-primary-platinum rounded-xl p-8 h-full">
                   <div className="text-3xl font-bold text-accent-primary mb-4">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-primary-navy mb-4">{step.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-6">{step.title}</h3>
                   <p className="text-primary-charcoal">{step.description}</p>
                 </div>
               </motion.div>
@@ -385,7 +385,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary-navy mb-8">
               Your Dedicated Project Portal
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -407,7 +407,7 @@ export default function PartnerWithUsPage() {
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
                     <span className="text-2xl">📊</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Real-Time Analytics</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-4">Real-Time Analytics</h3>
                 </div>
                 <p className="text-primary-charcoal">Track sales, revenue, customer data, and performance metrics with live dashboards and detailed reports.</p>
               </div>
