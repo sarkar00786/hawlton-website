@@ -30,6 +30,7 @@ import {
 import PartnerInquiryForm from '@/components/forms/PartnerInquiryForm'
 import Button from '@/components/ui/Button'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function PartnerWithUsPage() {
   const benefits = [
@@ -144,33 +145,69 @@ export default function PartnerWithUsPage() {
               </div>
             </motion.div>
 
-            {/* Right Content - Vision */}
+            {/* Right Content - Hero Image */}
             <motion.div
-              className="grid grid-cols-2 gap-6 relative z-[1]"
+              className="relative z-[1] flex justify-center lg:justify-end"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               style={{ zIndex: 1 }}
             >
-              {[
-                { icon: Zap, label: 'Digital Transformation', description: 'Complete business digitization' },
-                { icon: Users2, label: 'Strategic Partnership', description: 'Collaborative growth approach' },
-                { icon: Building2, label: 'National Expansion', description: 'Reach customers nationwide' },
-                { icon: BarChart3, label: 'Sustainable Growth', description: 'Long-term success focus' }
-              ].map((item, index) => (
+              <div className="relative w-full max-w-lg">
+                {/* Main Hero Image */}
                 <motion.div
-                  key={index}
-                  className="bg-primary-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="relative overflow-hidden rounded-2xl shadow-2xl"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-10 h-10 flex items-center justify-center mb-2">
-                    <item.icon className="w-8 h-8 text-primary-gold" />
-                  </div>
-                  <div className="text-sm font-semibold text-accent-primary mb-1">{item.label}</div>
-                  <div className="text-xs text-primary-silver">{item.description}</div>
+                  <Image
+                    src="/images/backgrounds/0.png"
+                    alt="Partnership Success - Business Growth with Hawlton"
+                    width={500}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                  
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/20 to-transparent" />
                 </motion.div>
-              ))}
+                
+                {/* Floating Stats Cards */}
+                <motion.div
+                  className="absolute -top-4 -left-4 bg-primary-white rounded-xl p-4 shadow-lg backdrop-blur-sm"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary-gold/20 rounded-lg flex items-center justify-center">
+                      <TrendingUp className="w-5 h-5 text-primary-navy" />
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-primary-navy">300%</div>
+                      <div className="text-xs text-primary-charcoal">Growth Rate</div>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  className="absolute -bottom-4 -right-4 bg-primary-white rounded-xl p-4 shadow-lg backdrop-blur-sm"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-accent-primary/20 rounded-lg flex items-center justify-center">
+                      <Users className="w-5 h-5 text-primary-navy" />
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-primary-navy">50+</div>
+                      <div className="text-xs text-primary-charcoal">Partners</div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
