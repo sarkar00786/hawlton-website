@@ -21,7 +21,7 @@ export default function NotFound() {
             transition={{ duration: 0.8, type: "spring" }}
             className="text-center"
           >
-            h1 className="text-8xl md:text-9xl font-bold text-primary-gold opacity-10"
+            <h1 className="text-8xl md:text-9xl font-bold text-primary-gold opacity-10">
               404
             </h1>
             <div className="relative -mt-16">

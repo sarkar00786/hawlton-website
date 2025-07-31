@@ -170,7 +170,7 @@ export default function ContactPage() {
                 answer: "Absolutely! We offer flexible consultation options including video calls, phone meetings, and in-person sessions based on your preference and location."
               }
             ].map((faq, index) => (
-              div key={index} className="bg-white bg-opacity-5 backdrop-blur-sm border border-primary-white border-opacity-10 rounded-xl p-6 shadow-lg hover:shadow-xl hover:bg-white hover:bg-opacity-10 transition-all duration-300"
+              <div key={index} className="bg-white bg-opacity-5 backdrop-blur-sm border border-primary-white border-opacity-10 rounded-xl p-6 shadow-lg hover:shadow-xl hover:bg-white hover:bg-opacity-10 transition-all duration-300">
                 <button onClick={() => toggleFAQ(index)} className="flex justify-between items-center w-full text-left focus:outline-none group">
                   <span className="text-lg font-semibold text-primary-white pr-4 group-hover:text-primary-gold transition-colors duration-200">{faq.question}</span>
                   <div className="flex-shrink-0 w-8 h-8 bg-primary-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
