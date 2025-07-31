@@ -246,7 +246,7 @@ const EnhancedNavigation = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-full left-0 mt-2 min-w-[320px] max-w-sm bg-primary-navy border border-primary-gold/20 rounded-lg shadow-xl z-50 px-3 py-3"
+                className="absolute top-full left-0 mt-2 min-w-[320px] max-w-sm bg-primary-navy border border-primary-gold/20 shadow-xl z-50 px-3 py-3"
                 onMouseEnter={() => handleDropdownMouseEnter(item.label)}
                 onMouseLeave={handleDropdownMouseLeave}
               >
@@ -258,7 +258,7 @@ const EnhancedNavigation = () => {
                       onClick={(e) => handleNavClick(e, subItem.href)}
                       className="flex items-start gap-2 p-1.5 hover:bg-primary-gold/10 transition-colors duration-200 cursor-pointer group"
                     >
-                      <div className="flex-shrink-0 w-6 h-6 bg-primary-gold/20 rounded-lg flex items-center justify-center group-hover:bg-primary-gold/30 transition-colors">
+                      <div className="flex-shrink-0 w-6 h-6 bg-primary-gold/20 flex items-center justify-center group-hover:bg-primary-gold/30 transition-colors">
                         <subItem.icon className="w-3.5 h-3.5 text-primary-gold" />
                       </div>
                       <div className="flex-1 min-w-0">

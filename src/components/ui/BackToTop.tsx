@@ -41,7 +41,7 @@ const BackToTop: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          className="fixed bottom-8 right-8 z-50 bg-primary-gold hover:bg-primary-gold/90 text-primary-navy p-3 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 bg-primary-gold hover:bg-primary-gold/90 text-primary-navy p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2"
           onClick={scrollToTop}
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

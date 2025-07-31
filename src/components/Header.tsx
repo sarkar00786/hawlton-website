@@ -152,7 +152,7 @@ const Header = () => {
             <Link
               href="/partner"
               id="cta-partner-header"
-              className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold rounded-md transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
+              className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
                 isActive('/partner') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
                   : ''
@@ -179,7 +179,7 @@ const Header = () => {
             <Link
               href="/auth/signup"
               id="cta-get-started-header"
-              className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy rounded-md transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
+              className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
               onBlur={(e) => {
                 setTimeout(() => {
                   if (e.target instanceof HTMLElement) {
