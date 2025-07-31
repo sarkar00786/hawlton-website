@@ -95,7 +95,7 @@ export default function PartnerWithUsPage() {
                   Strategic Partnership Program
                 </motion.div>
                 
-                <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight">
+                <h1 className="h1">
                   Partner With{' '}
                   <span className="text-gradient-gold">Hawlton</span>
                 </h1>
