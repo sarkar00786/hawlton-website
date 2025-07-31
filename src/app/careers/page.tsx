@@ -91,7 +91,7 @@ export default function CareersPage() {
       <section className="relative bg-primary-navy text-primary-white py-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary-gold mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-bold text-primary-gold mb-6 animate-fade-in">
               Join Our Mission
             </h1>
             <p className="text-lg md:text-xl text-primary-silver mb-8 max-w-3xl mx-auto animate-slide-up">
@@ -120,7 +120,7 @@ export default function CareersPage() {
       <section id="company-culture" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
               Why Choose Hawlton?
             </h2>
             <p className="text-lg text-primary-charcoal max-w-3xl mx-auto leading-relaxed">
@@ -161,7 +161,7 @@ export default function CareersPage() {
       <section id="open-positions" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
               Future Opportunities
             </h2>
             <p className="text-lg text-primary-charcoal max-w-3xl mx-auto leading-relaxed">

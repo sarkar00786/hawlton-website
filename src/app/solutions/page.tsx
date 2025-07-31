@@ -120,7 +120,7 @@ export default async function SolutionsPage() {
       <section id="digital-transformation-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
               Complete Digital Transformation
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -177,7 +177,7 @@ export default async function SolutionsPage() {
       <section id="digital-partnerships-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
               Strategic Partnership Models
             </h2>
             <p className="text-lg text-primary-silver max-w-4xl mx-auto leading-relaxed">
@@ -225,7 +225,7 @@ export default async function SolutionsPage() {
       <section id="success-stories-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
               Real Transformation Stories
             </h2>
             <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
@@ -302,7 +302,7 @@ export default async function SolutionsPage() {
       <section id="impact-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
               What You Can Expect: Tangible Results.
             </h2>
           </div>
@@ -358,7 +358,7 @@ export default async function SolutionsPage() {
       {/* CTA Section */}
       <section id="cta-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-primary-silver mb-12 max-w-3xl mx-auto">
