@@ -192,7 +192,7 @@ export default function PartnerWithUsPage() {
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-primary-white mb-4">Inventory Partnership</h3>
-                  <p className="text-primary-charcoal">Partner with inventory contribution</p>
+                  <p className="text-xl md:text-2xl font-bold text-primary-charcoal">Partner with inventory contribution</p>
                 </div>
               </div>
               
