@@ -6,13 +6,25 @@ import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import ClientSuccess from '@/components/ClientSuccess'
 import MagneticButton from '@/components/MagneticButton'
-import HeroCarousel from '@/components/sections/HeroCarousel'
 
 export default function Home() {
   return (
     <div id="hp1" className="min-h-screen">
-      {/* Dynamic Hero Carousel */}
-      <HeroCarousel />
+      {/* Hero Section with Enhanced Visual Appeal */}
+<section id="hero1" className="relative overflow-hidden bg-primary-navy py-32 text-white on-dark-bg" style={{ backgroundImage: "url('/images/backgrounds/hero-home.png')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
+        <div id="bg1" className="absolute inset-0 bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 opacity-10"></div>
+        <div id="bg2" className="absolute inset-0 bg-[linear-gradient(rgba(255,215,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,215,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-40"></div>
+        <div id="cont1" className="page-container relative text-center">
+          <motion.div id="anim1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
+            <h1 id="h1" className="h1"><span id="span1" className="text-primary-gold">Empowering</span> Pakistan's Digital Future</h1>
+            <p id="p1" className="lead mt-6 max-w-3xl mx-auto">We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and innovative digital solutions, delivering measurable growth and sustainable success.</p>
+            <div id="btns1" className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link id="link1" href="/partner"><Button id="btn1" size="xl" icon={ArrowRight} iconPosition="right">Partner With Us</Button></Link>
+              <Link id="link2" href="/about"><Button id="btn2" variant="outline" size="xl">Learn More</Button></Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       
       {/* Value Proposition Section */}
       <section id="sec1" className="bg-primary-platinum py-20">
