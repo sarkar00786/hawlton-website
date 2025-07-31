@@ -129,12 +129,12 @@ export default function Home() {
               >
                 <motion.div 
                   id={`box${index + 1}`}
-                  className="bg-primary-platinum p-8 h-full rounded-xl"
+                  className="bg-primary-platinum p-6 h-full rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100"
                   whileHover={{ y: -5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <div id={`num${index + 1}`} className="text-2xl font-bold text-accent-primary mb-4">{item.step}</div>
-                  <h3 id={`h4_${index + 1}`} className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
+                  <div id={`num${index + 1}`} className="text-xl font-bold text-accent-primary mb-3">{item.step}</div>
+                  <h3 id={`h4_${index + 1}`} className="text-lg font-bold text-primary-navy mb-3 leading-tight">{item.title}</h3>
                   <p id={`p${index + 8}`} className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
                 </motion.div>
               </motion.div>
@@ -195,7 +195,7 @@ export default function Home() {
               <motion.div 
                 key={index}
                 id={`impact${index + 1}`}
-                className="bg-white p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover rounded-xl"
+                className="bg-white p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover rounded-lg hover:scale-105 border border-gray-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -210,8 +210,8 @@ export default function Home() {
                     {item.metric}
                   </span>
                 </div>
-                <h3 id={`h5_${index + 1}`} className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
-                <p id={`p${index + 11}`} className="text-primary-charcoal leading-relaxed">{item.desc}</p>
+                <h3 id={`h5_${index + 1}`} className="text-lg font-bold text-primary-navy mb-3 leading-tight">{item.title}</h3>
+                <p id={`p${index + 11}`} className="text-primary-charcoal leading-relaxed text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
