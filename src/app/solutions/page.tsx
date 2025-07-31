@@ -109,8 +109,8 @@ export default async function SolutionsPage() {
         <section className="bg-primary-gold py-12 overflow-hidden relative -z-10">
           <div className="relative">
             <div className="animate-marquee whitespace-nowrap">
-              <span className="text-3xl md:text-5xl font-bold text-primary-navy tracking-wider">
-                Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • 
+              <span className="text-5xl md:text-7xl font-extrabold text-primary-navy tracking-wider">
+                Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us •
             </span>
           </div>
         </div>

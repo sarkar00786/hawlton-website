@@ -893,6 +893,7 @@ body {
   .animate-marquee {
     animation: marquee 20s linear infinite;
     display: inline-block;
-    font-weight: bold;
-    font-size: 1.25em;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
