@@ -289,7 +289,7 @@ export default async function SolutionsPage() {
           <div className="text-center mt-12">
             <a 
               href="/partner#testimonials" 
-              className="inline-flex items-center bg-primary-gold text-primary-navy px-6 py-3 rounded-lg font-semibold hover:bg-primary-gold/90 transition-colors"
+              className="inline-flex items-center bg-primary-gold text-primary-navy px-6 py-3 font-semibold hover:bg-primary-gold/90 transition-colors"
             >
               View More Success Stories
               <TrendingUp className="ml-2 w-5 h-5" />
