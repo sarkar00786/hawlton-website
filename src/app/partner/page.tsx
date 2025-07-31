@@ -169,7 +169,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary-navy mb-8">
               Partnership Models Available
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
