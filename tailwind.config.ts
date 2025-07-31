@@ -17,7 +17,6 @@ const config: Config = {
         'primary-gold': '#FFD700',
         'metallic-gold': '#D4AF37',
         'primary-white': '#FFFFFF',
-        'accent-primary': '#FFD700',
         'error': '#EF4444',
         'success': '#10B981',
         'warning': '#F59E0B',

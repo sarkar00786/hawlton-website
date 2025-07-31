@@ -684,13 +684,13 @@ body {
   }
   
   .dropdown-content {
-    padding: var(--space-lg);
+    padding: var(--space-lg) var(--space-xl); /* Increase side padding for professional appearance */
   }
   
   .dropdown-item {
     @apply flex items-start transition-colors duration-200;
     @apply hover:bg-primary-gold/10 cursor-pointer;
-    padding: var(--space-md);
+    padding: var(--space-lg) var(--space-md); /* Increase vertical padding for better breathing room */
     gap: var(--space-md);
     border-radius: var(--radius-md);
   }
