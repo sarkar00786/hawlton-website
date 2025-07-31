@@ -161,12 +161,12 @@ export default async function SolutionsPage() {
                 icon: Lock
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon className="w-8 h-8 text-primary-navy" />
+              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100">
+                <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mb-3">
+                  <item.icon className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-navy mb-4">{item.title}</h3>
-                <p className="text-primary-charcoal leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg font-bold text-primary-navy mb-3 leading-tight">{item.title}</h3>
+                <p className="text-primary-charcoal text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -340,15 +340,15 @@ export default async function SolutionsPage() {
                 metric: 'Availability'
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-between mb-4">
+              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100">
+                <div className="flex items-center justify-between mb-3">
                   <div className="w-3 h-3 bg-primary-gold rounded-full"></div>
-                  <span className="text-sm font-semibold text-primary-gold uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-primary-gold uppercase tracking-wider">
                     {item.metric}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
-                <p className="text-primary-charcoal leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg font-bold text-primary-navy mb-3 leading-tight">{item.title}</h3>
+                <p className="text-primary-charcoal text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
