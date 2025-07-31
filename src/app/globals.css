@@ -673,34 +673,29 @@ body {
     border-radius: var(--radius-sm);
   }
   
-  /* Professional Dropdown System */
+  /* Professional Dropdown System - Simplified */
   .dropdown {
     @apply absolute bg-primary-navy border border-primary-gold/20;
-    @apply shadow-xl z-50;
-    border-radius: var(--radius-lg);
-    /* Responsive width - critical fix */
+    @apply shadow-xl z-50 rounded-lg;
     width: min(320px, calc(100vw - 2rem));
     max-width: 90vw;
   }
   
   .dropdown-content {
-    padding: var(--space-lg) var(--space-xl); /* Increase side padding for professional appearance */
+    @apply p-6;
   }
   
   .dropdown-item {
     @apply flex items-start transition-colors duration-200;
     @apply hover:bg-primary-gold/10 cursor-pointer;
-    padding: var(--space-lg) var(--space-md); /* Increase vertical padding for better breathing room */
-    gap: var(--space-md);
-    border-radius: var(--radius-md);
+    @apply p-4 gap-4 rounded-md;
   }
   
   .dropdown-icon {
     @apply flex-shrink-0 bg-primary-gold/20 rounded-lg;
     @apply flex items-center justify-center;
     @apply group-hover:bg-primary-gold/30 transition-colors;
-    width: 2rem; /* 32px - properly sized for 16px icons */
-    height: 2rem;
+    @apply w-8 h-8;
   }
   
   /* Professional Navigation */

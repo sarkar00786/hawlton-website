@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section id="hero-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
+            <h1 className="text-5xl md:text-6xl font-bold text-primary-navy mb-8">
               The Genesis of a Vision: Empowering Pakistan&apos;s Digital & Economic Future.
             </h1>
             <div className="text-lg text-primary-charcoal leading-relaxed space-y-6">
@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section id="vision-mission-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
               Our Guiding Principles: Vision for a Digital Pakistan.
             </h2>
           </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-primary-gold flex items-center justify-center mr-4">
                   <TrendingUp className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-navy">Our Vision</h3>
+                <h3 className="text-3xl font-bold text-primary-navy">Our Vision</h3>
               </div>
               <p className="text-primary-charcoal leading-relaxed">
                 To be the leading catalyst for digital growth and a trusted conduit for impactful partnerships,
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-primary-gold flex items-center justify-center mr-4">
                   <Heart className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-navy">Our Mission</h3>
+                <h3 className="text-3xl font-bold text-primary-navy">Our Mission</h3>
               </div>
               <p className="text-primary-charcoal leading-relaxed">
                 To forge strategic partnerships with ambitious businesses, providing unparalleled digital transformation 
@@ -84,7 +84,7 @@ export default function AboutPage() {
       <section id="team-section" className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
               The Architects of Digital Growth & Partnership Impact.
             </h2>
             <p className="text-lg text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -113,7 +113,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-bold text-primary-navy mb-2">
+                  <h3 className="text-3xl font-bold text-primary-navy mb-2">
                     Jahangir Hussain
                   </h3>
                   <p className="text-primary-silver text-sm mb-2">
@@ -151,7 +151,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-bold text-primary-navy mb-2">
+                  <h3 className="text-3xl font-bold text-primary-navy mb-2">
                     Muhammad Ismail
                   </h3>
                   <p className="text-primary-silver text-sm mb-2">
@@ -174,7 +174,7 @@ export default function AboutPage() {
 
           {/* Our Commitment */}
           <div className="bg-white p-8 shadow-lg rounded-xl mb-12">
-            <h3 className="text-2xl font-bold text-primary-navy mb-8 text-center">Our Commitment to Excellence</h3>
+            <h3 className="text-3xl font-bold text-primary-navy mb-8 text-center">Our Commitment to Excellence</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {
                 [
@@ -215,7 +215,7 @@ export default function AboutPage() {
 
           {/* Collective Expertise */}
           <div className="bg-primary-navy p-8 text-center rounded-xl">
-            <h3 className="text-2xl font-bold text-primary-white mb-6">Collective Expertise</h3>
+            <h3 className="text-3xl font-bold text-primary-white mb-6">Collective Expertise</h3>
             <p className="text-primary-silver leading-relaxed max-w-4xl mx-auto">
               Our &apos;remote collective&apos; model allows us to tap into a diverse pool of top-tier talent, ensuring agile, 
               innovative, and geographically diverse problem-solving capabilities. We pride ourselves on our strategic 
@@ -230,7 +230,7 @@ export default function AboutPage() {
       <section id="philosophy-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
               Our Commitment: Partnership, Innovation & Impact.
             </h2>
           </div>
