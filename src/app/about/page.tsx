@@ -262,7 +262,7 @@ export default function AboutPage() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold flex items-center justify-center">
                   <item.icon className="w-8 h-8 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
                 <p className="text-primary-charcoal text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}

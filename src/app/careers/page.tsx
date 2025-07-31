@@ -133,7 +133,7 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {companyValues.map((value, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-xl font-semibold text-primary-navy mb-4">{value.title}</h3>
+                <h3 className="text-2xl font-bold text-primary-navy mb-4">{value.title}</h3>
                 <p className="text-primary-charcoal leading-relaxed">{value.description}</p>
               </div>
             ))}
@@ -148,7 +148,7 @@ export default function CareersPage() {
                   <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold rounded-full flex items-center justify-center group-hover:bg-primary-gold transition-colors duration-300">
                     <IconComponent className="w-8 h-8 text-primary-navy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-navy mb-2">{benefit.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary-navy mb-2">{benefit.title}</h3>
                   <p className="text-primary-charcoal">{benefit.description}</p>
                 </div>
               )
@@ -232,7 +232,7 @@ export default function CareersPage() {
                 <div className="bg-primary-gold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-primary-navy">{item.step}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-primary-white mb-2">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-primary-white mb-2">{item.title}</h3>
                 <p className="text-primary-silver text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}

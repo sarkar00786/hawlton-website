@@ -74,7 +74,7 @@ export default function Home() {
                 <div id={`icon${index + 1}`} className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-accent-primary to-yellow-400 rounded-xl flex items-center justify-center shadow-gold group-hover:shadow-glow-gold transition-all duration-300">
                   <item.icon className="w-7 h-7 text-primary-navy" />
                 </div>
-                <h3 id={`h3_${index + 1}`} className="text-lg font-semibold text-primary-navy mb-3 group-hover:text-accent-primary transition-colors duration-300">{item.title}</h3>
+                <h3 id={`h3_${index + 1}`} className="text-2xl font-bold text-primary-navy mb-3 group-hover:text-accent-primary transition-colors duration-300">{item.title}</h3>
                 <p id={`p${index + 3}`} className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
               </motion.div>
             ))}
@@ -133,7 +133,7 @@ export default function Home() {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <div id={`num${index + 1}`} className="text-2xl font-bold text-accent-primary mb-4">{item.step}</div>
-                  <h3 id={`h4_${index + 1}`} className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
+                  <h3 id={`h4_${index + 1}`} className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
                   <p id={`p${index + 8}`} className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
                 </motion.div>
               </motion.div>
@@ -209,7 +209,7 @@ export default function Home() {
                     {item.metric}
                   </span>
                 </div>
-                <h3 id={`h5_${index + 1}`} className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
+                <h3 id={`h5_${index + 1}`} className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
                 <p id={`p${index + 11}`} className="text-primary-charcoal leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}

@@ -345,7 +345,7 @@ export default function PartnerWithUsPage() {
                 <div className="w-16 h-16 bg-gradient-gold rounded-xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-primary-navy" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-6">{benefit.title}</h3>
+                <h3 className="text-2xl font-bold text-primary-navy mb-6">{benefit.title}</h3>
                 <p className="text-primary-charcoal leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
@@ -383,7 +383,7 @@ export default function PartnerWithUsPage() {
               >
                 <div className="bg-primary-platinum rounded-xl p-8 h-full">
                   <div className="text-3xl font-bold text-accent-primary mb-4">{step.step}</div>
-                  <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-6">{step.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary-navy mb-6">{step.title}</h3>
                   <p className="text-primary-charcoal">{step.description}</p>
                 </div>
               </motion.div>
@@ -424,7 +424,7 @@ export default function PartnerWithUsPage() {
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
                     <BarChart4 className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-4">Real-Time Analytics</h3>
+                  <h3 className="text-2xl font-bold text-primary-navy mb-4">Real-Time Analytics</h3>
                 </div>
                 <p className="text-primary-charcoal">Track sales, revenue, customer data, and performance metrics with live dashboards and detailed reports.</p>
               </div>
@@ -434,7 +434,7 @@ export default function PartnerWithUsPage() {
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
                     <Paperclip className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Project Management</h3>
+                  <h3 className="text-2xl font-bold text-primary-navy">Project Management</h3>
                 </div>
                 <p className="text-primary-charcoal">Monitor project milestones, timelines, and deliverables with our integrated project tracking system.</p>
               </div>
@@ -444,7 +444,7 @@ export default function PartnerWithUsPage() {
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
                     <MessageSquare className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Direct Communication</h3>
+                  <h3 className="text-2xl font-bold text-primary-navy">Direct Communication</h3>
                 </div>
                 <p className="text-primary-charcoal">Instant messaging, video calls, and file sharing with your dedicated Hawlton team members.</p>
               </div>
@@ -454,7 +454,7 @@ export default function PartnerWithUsPage() {
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
                     <Smartphone className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-navy">Mobile Access</h3>
+                  <h3 className="text-2xl font-bold text-primary-navy">Mobile Access</h3>
                 </div>
                 <p className="text-primary-charcoal">Full mobile responsiveness allows you to manage your partnership from anywhere, anytime.</p>
               </div>
@@ -575,7 +575,7 @@ export default function PartnerWithUsPage() {
                   <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <resource.icon className="w-8 h-8 text-primary-gold" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary-white mb-3">{resource.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary-white mb-3">{resource.title}</h3>
                   <p className="text-primary-silver text-sm leading-relaxed">{resource.description}</p>
                 </div>
                 

@@ -106,10 +106,10 @@ export default async function SolutionsPage() {
       </section>
 
       {/* Animated Moving Text Section */}
-      <section className="bg-primary-gold py-5 overflow-hidden relative -z-10">
+      <section className="bg-primary-gold py-10 overflow-hidden relative -z-10">
         <div className="relative">
           <div className="animate-marquee whitespace-nowrap">
-            <span className="text-lg md:text-xl font-medium text-primary-navy tracking-wider">
+            <span className="text-2xl md:text-4xl font-medium text-primary-navy tracking-wider">
               Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • Grow and Succeed with Us • 
             </span>
           </div>
@@ -165,7 +165,7 @@ export default async function SolutionsPage() {
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-8 h-8 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-navy mb-4">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-primary-navy mb-4">{item.title}</h3>
                 <p className="text-primary-charcoal leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -265,7 +265,7 @@ export default async function SolutionsPage() {
             ].map((story, index) => (
               <div key={index} className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-primary-white/15 transition-all duration-300">
                 <div className="text-center mb-6">
-                  <div className="text-4xl font-bold text-primary-gold mb-2">{story.metric}</div>
+                  <div className="text-2xl font-bold text-primary-gold mb-2">{story.metric}</div>
                   <div className="text-sm text-primary-silver uppercase tracking-wider">{story.growth}</div>
                 </div>
                 
@@ -347,7 +347,7 @@ export default async function SolutionsPage() {
                     {item.metric}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-primary-navy mb-3">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
                 <p className="text-primary-charcoal leading-relaxed">{item.desc}</p>
               </div>
             ))}

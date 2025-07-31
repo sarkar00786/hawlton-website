@@ -96,7 +96,7 @@ export default function ContactPage() {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold rounded-full flex items-center justify-center group-hover:bg-primary-gold transition-colors duration-300">
                 <MessageCircle className="w-8 h-8 text-primary-navy" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-navy mb-2">Partnership Inquiries</h3>
+              <h3 className="text-2xl font-bold text-primary-navy mb-2">Partnership Inquiries</h3>
               <p className="text-primary-charcoal text-sm">
                 Ready to grow your business? Let&apos;s discuss partnership opportunities.
               </p>
@@ -109,7 +109,7 @@ export default function ContactPage() {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold rounded-full flex items-center justify-center group-hover:bg-primary-gold transition-colors duration-300">
                 <Phone className="w-8 h-8 text-primary-navy" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-navy mb-2">Solution Discovery</h3>
+              <h3 className="text-2xl font-bold text-primary-navy mb-2">Solution Discovery</h3>
               <p className="text-primary-charcoal text-sm">
                 Explore our comprehensive digital transformation solutions for your business.
               </p>
@@ -119,7 +119,7 @@ export default function ContactPage() {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold rounded-full flex items-center justify-center group-hover:bg-primary-gold transition-colors duration-300">
                 <Mail className="w-8 h-8 text-primary-navy" />
               </div>
-              <h3 className="text-xl font-semibold text-primary-navy mb-2">General Support</h3>
+              <h3 className="text-2xl font-bold text-primary-navy mb-2">General Support</h3>
               <p className="text-primary-charcoal text-sm">
                 Questions about our services? We&apos;re here to help with any inquiries.
               </p>
