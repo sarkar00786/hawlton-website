@@ -890,7 +890,9 @@ body {
   }
 }
 
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-  display: inline-block;
-}
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
