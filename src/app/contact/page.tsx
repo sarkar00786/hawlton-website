@@ -226,58 +226,56 @@ export default function ContactPage() {
                 </div>
 
                 {/* Contact Details */}
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-primary-navy" />
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-primary-navy" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-navy">Email</h3>
-                      <p className="text-primary-charcoal">info@hawlton.com</p>
+                      <h3 className="font-medium text-primary-navy text-sm">Email</h3>
+                      <p className="text-primary-charcoal text-sm">info@hawlton.com</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-primary-navy" />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-primary-navy" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-navy">Phone</h3>
-                      <p className="text-primary-charcoal">+92-XXX-XXXXXXX</p>
-                      <p className="text-sm text-primary-silver">Available 9 AM - 6 PM PKT</p>
+                      <h3 className="font-medium text-primary-navy text-sm">Phone</h3>
+                      <p className="text-primary-charcoal text-sm">+92-XXX-XXXXXXX</p>
+                      <p className="text-xs text-primary-silver">9 AM - 6 PM PKT</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-primary-navy" />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center">
+                      <MapPin className="w-5 h-5 text-primary-navy" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-navy">Location</h3>
-                      <p className="text-primary-charcoal">Karachi, Pakistan</p>
-                      <p className="text-sm text-primary-silver">Serving businesses nationwide</p>
+                      <h3 className="font-medium text-primary-navy text-sm">Location</h3>
+                      <p className="text-primary-charcoal text-sm">Karachi, Pakistan</p>
+                      <p className="text-xs text-primary-silver">Nationwide service</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-primary-navy" />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-primary-navy" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-navy">Response Time</h3>
-                      <p className="text-primary-charcoal">Within 24-48 hours</p>
-                      <p className="text-sm text-primary-silver">We prioritize every inquiry</p>
+                      <h3 className="font-medium text-primary-navy text-sm">Response Time</h3>
+                      <p className="text-primary-charcoal text-sm">24-48 hours</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center">
-                      <MessageCircle className="w-6 h-6 text-primary-navy" />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center">
+                      <MessageCircle className="w-5 h-5 text-primary-navy" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-navy">Live Chat</h3>
-                      <p className="text-primary-charcoal">Available on this website</p>
-                      <p className="text-sm text-primary-silver">Instant support for quick questions</p>
+                      <h3 className="font-medium text-primary-navy text-sm">Live Chat</h3>
+                      <p className="text-primary-charcoal text-sm">Available on website</p>
                     </div>
                   </div>
                 </div>

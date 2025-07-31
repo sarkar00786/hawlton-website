@@ -25,18 +25,18 @@ const Footer = () => {
               Empowering Pakistan&apos;s Digital Future through Strategic Partnerships and Digital Innovation. 
               Catalyzing National Digital Transformation for sustainable growth and prosperity.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary-gold" />
-                <span className="text-primary-silver">info@hawlton.com</span>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-primary-gold" />
+                <span className="text-primary-silver text-sm">info@hawlton.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-gold" />
-                <span className="text-primary-silver">+92-XXX-XXXXXXX</span>
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-primary-gold" />
+                <span className="text-primary-silver text-sm">+92-XXX-XXXXXXX</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary-gold" />
-                <span className="text-primary-silver">Karachi, Pakistan</span>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-primary-gold" />
+                <span className="text-primary-silver text-sm">Karachi, Pakistan</span>
               </div>
             </div>
           </div>
