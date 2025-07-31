@@ -48,13 +48,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       xl: 'px-8 py-4 text-button-xl min-h-[56px] gap-3',
     };
 
-    // Blueprint-compliant corner strategy
+    // Sharp corners for all button variants - corporate/professional look
     const cornerClasses = {
-      primary: '', // Sharp corners for primary CTAs (partnership/business buttons)
-      secondary: 'rounded-md', // Subtle rounded for secondary
-      outline: 'rounded-md',
-      ghost: 'rounded-md',
-      link: '',
+      primary: '', // Sharp corners for primary CTAs
+      secondary: '', // Sharp corners for secondary
+      outline: '',  // Sharp corners for outline
+      ghost: '',    // Sharp corners for ghost
+      link: '',     // Sharp corners for link
     };
 
     // Enhanced color variants with premium effects and accessibility
@@ -82,6 +82,23 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || loading}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.98 }}
+        onMouseDown={(e) => {
+          // Remove focus after click to prevent focus ring from showing
+          setTimeout(() => {
+            if (e.target instanceof HTMLElement) {
+              e.target.blur();
+            }
+          }, 100);
+          props.onMouseDown?.(e);
+        }}
+        onBlur={(e) => {
+          // Ensure focus is completely removed
+          if (e.target instanceof HTMLElement) {
+            e.target.style.outline = 'none';
+            e.target.style.boxShadow = 'none';
+          }
+          props.onBlur?.(e);
+        }}
         {...props}
       >
         {loading ? (

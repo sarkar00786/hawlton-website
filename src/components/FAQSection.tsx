@@ -16,7 +16,27 @@ const FAQSection = () => {
         <Accordion className="space-y-4" type="single">
           <AccordionItem value="item-1" className="border-b border-gray-200 pb-4">
             <AccordionHeader>
-              <button className="flex justify-between w-full text-left">
+              <button 
+                className="flex justify-between w-full text-left faq-button"
+                onBlur={(e) => {
+                  // Remove focus after interaction
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                      e.target.style.outline = 'none';
+                      e.target.style.boxShadow = 'none';
+                    }
+                  }, 100);
+                }}
+                onMouseDown={(e) => {
+                  // Remove focus after click
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                    }
+                  }, 100);
+                }}
+              >
                 <span className="font-semibold text-lg">What is Hawlton's mission?</span>
                 <ChevronDown className="w-5 h-5 text-primary-navy" />
               </button>
@@ -27,7 +47,25 @@ const FAQSection = () => {
           </AccordionItem>
           <AccordionItem value="item-2" className="border-b border-gray-200 pb-4">
             <AccordionHeader>
-              <button className="flex justify-between w-full text-left">
+              <button 
+                className="flex justify-between w-full text-left faq-button"
+                onBlur={(e) => {
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                      e.target.style.outline = 'none';
+                      e.target.style.boxShadow = 'none';
+                    }
+                  }, 100);
+                }}
+                onMouseDown={(e) => {
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                    }
+                  }, 100);
+                }}
+              >
                 <span className="font-semibold text-lg">How can I start a partnership with Hawlton?</span>
                 <ChevronDown className="w-5 h-5 text-primary-navy" />
               </button>
@@ -38,7 +76,25 @@ const FAQSection = () => {
           </AccordionItem>
           <AccordionItem value="item-3" className="border-b border-gray-200 pb-4">
             <AccordionHeader>
-              <button className="flex justify-between w-full text-left">
+              <button 
+                className="flex justify-between w-full text-left faq-button"
+                onBlur={(e) => {
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                      e.target.style.outline = 'none';
+                      e.target.style.boxShadow = 'none';
+                    }
+                  }, 100);
+                }}
+                onMouseDown={(e) => {
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                    }
+                  }, 100);
+                }}
+              >
                 <span className="font-semibold text-lg">What services do you offer?</span>
                 <ChevronDown className="w-5 h-5 text-primary-navy" />
               </button>

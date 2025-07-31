@@ -105,20 +105,20 @@ export default function CookieConsent() {
             <div className="flex flex-col sm:flex-row gap-3 lg:flex-shrink-0">
               <button
                 onClick={() => setShowPreferences(true)}
-                className="flex items-center gap-2 px-4 py-2 border border-primary-silver text-primary-silver hover:bg-primary-silver hover:text-primary-navy transition-colors duration-300 rounded font-medium text-sm"
+                className="flex items-center gap-2 px-4 py-2 border border-primary-silver text-primary-silver hover:bg-primary-silver hover:text-primary-navy transition-colors duration-300 font-medium text-sm"
               >
                 <Settings className="w-4 h-4" />
                 Customize
               </button>
               <button
                 onClick={handleRejectAll}
-                className="px-4 py-2 border border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-primary-navy transition-colors duration-300 rounded font-medium text-sm"
+                className="px-4 py-2 border border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-primary-navy transition-colors duration-300 font-medium text-sm"
               >
                 Reject All
               </button>
               <button
                 onClick={handleAcceptAll}
-                className="px-6 py-2 bg-primary-gold text-primary-navy hover:bg-primary-gold/90 transition-colors duration-300 rounded font-semibold text-sm"
+                className="px-6 py-2 bg-primary-gold text-primary-navy hover:bg-primary-gold/90 transition-colors duration-300 font-semibold text-sm"
               >
                 Accept All
               </button>
@@ -225,13 +225,13 @@ export default function CookieConsent() {
               <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-primary-silver/30">
                 <button
                   onClick={() => setShowPreferences(false)}
-                  className="px-6 py-3 border border-primary-silver text-primary-charcoal hover:bg-primary-silver/10 transition-colors duration-300 rounded font-medium"
+                  className="px-6 py-3 border border-primary-silver text-primary-charcoal hover:bg-primary-silver/10 transition-colors duration-300 font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSavePreferences}
-                  className="px-6 py-3 bg-primary-gold text-primary-navy hover:bg-primary-gold/90 transition-colors duration-300 rounded font-semibold flex-1 sm:flex-none"
+                  className="px-6 py-3 bg-primary-gold text-primary-navy hover:bg-primary-gold/90 transition-colors duration-300 font-semibold flex-1 sm:flex-none"
                 >
                   Save Preferences
                 </button>

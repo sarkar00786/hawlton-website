@@ -196,7 +196,7 @@ const ElectricButton = ({
 
   // Electric trail effect that follows cursor
   const ElectricTrail = () => (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-full">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {/* Main electric glow at cursor position */}
       <motion.div
         className="absolute w-4 h-4 -translate-x-1/2 -translate-y-1/2"
@@ -210,8 +210,8 @@ const ElectricButton = ({
         }}
         transition={{ duration: 0.2 }}
       >
-        <div className="w-full h-full bg-primary-gold/80 rounded-full shadow-glow-gold animate-pulse" />
-        <div className="absolute inset-0 w-full h-full bg-primary-gold/40 rounded-full animate-ping" />
+        <div className="w-full h-full bg-primary-gold/80 shadow-glow-gold animate-pulse" />
+        <div className="absolute inset-0 w-full h-full bg-primary-gold/40 animate-ping" />
       </motion.div>
       
       {/* Electric sparks radiating from cursor */}
@@ -246,7 +246,7 @@ const ElectricButton = ({
 
   // Create electric spark elements
   const ElectricSparks = () => (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-full">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
@@ -283,7 +283,7 @@ const ElectricButton = ({
   const buttonProps = {
     ref: buttonRef,
     className: `
-      relative inline-flex items-center justify-center font-semibold rounded-full
+      relative inline-flex items-center justify-center font-semibold
       transition-all duration-300 ease-out cursor-pointer select-none overflow-hidden
       ${sizeClasses[size]}
       ${currentVariant.base}
@@ -329,9 +329,9 @@ const ElectricButton = ({
       </span>
       
       {/* Ripple effect */}
-      <div className="absolute inset-0 rounded-full overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
         <div className={`
-          absolute inset-0 rounded-full transform scale-0 transition-transform duration-500
+          absolute inset-0 transform scale-0 transition-transform duration-500
           ${isPressed ? 'scale-150' : 'scale-0'}
           ${variant === 'primary' ? 'bg-primary-navy/20' : 'bg-primary-gold/20'}
         `} />

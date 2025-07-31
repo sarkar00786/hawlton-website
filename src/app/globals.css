@@ -623,7 +623,6 @@ body {
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
     @apply disabled:opacity-50 disabled:cursor-not-allowed;
     @apply select-none relative overflow-hidden;
-    border-radius: var(--radius-md);
   }
   
   /* Button Sizes - WCAG AA Compliant */
@@ -949,10 +948,164 @@ body {
 
 /* Animation delay utilities are now handled by Tailwind config */
 
-/* Focus styles for accessibility */
+/* BULLETPROOF FOCUS MANAGEMENT - 100% COVERAGE */
+/* Remove focus outline when clicked but keep it for keyboard navigation */
+
+/* Core interactive elements */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible),
+[tabindex="0"]:focus:not(:focus-visible),
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Form elements */
+input[type="submit"]:focus:not(:focus-visible),
+input[type="button"]:focus:not(:focus-visible),
+input[type="reset"]:focus:not(:focus-visible),
+input[type="image"]:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Interactive content elements */
+summary:focus:not(:focus-visible),
+details:focus:not(:focus-visible),
+label:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Custom component classes */
+.btn:focus:not(:focus-visible),
+.button:focus:not(:focus-visible),
+.nav-item:focus:not(:focus-visible),
+.dropdown-item:focus:not(:focus-visible),
+.card:focus:not(:focus-visible),
+.card-hover:focus:not(:focus-visible),
+.card-interactive:focus:not(:focus-visible),
+.faq-button:focus:not(:focus-visible),
+.accordion-trigger:focus:not(:focus-visible),
+.accordion-button:focus:not(:focus-visible),
+.tab-button:focus:not(:focus-visible),
+.menu-item:focus:not(:focus-visible),
+.toggle-button:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Motion and animation components */
+[data-framer-name]:focus:not(:focus-visible),
+.motion-div:focus:not(:focus-visible),
+.motion-button:focus:not(:focus-visible),
+.interactive-element:focus:not(:focus-visible),
+.animated-element:focus:not(:focus-visible),
+.hover-element:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* React component specific */
+[data-testid]:focus:not(:focus-visible),
+[data-cy]:focus:not(:focus-visible),
+[data-component]:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Framework specific classes */
+.MuiButton-root:focus:not(:focus-visible),
+.ant-btn:focus:not(:focus-visible),
+.chakra-button:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure focus is removed after click completion */
+button:active,
+a:active,
+input:active,
+textarea:active,
+select:active,
+[role="button"]:active,
+[tabindex]:active {
+  outline: none !important;
+  
+  /* Remove focus after action is complete */
+  animation: removeFocus 0.1s ease-out forwards;
+}
+
+@keyframes removeFocus {
+  to {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Remove focus from elements after interaction */
+button,
+a,
+input[type="submit"],
+input[type="button"],
+[role="button"],
+[tabindex] {
+  /* Prevent focus ring on mouse click */
+  -webkit-tap-highlight-color: transparent;
+  
+  /* Remove focus after click */
+  transition: outline 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Ensure Accordion items don't retain focus */
+[role="button"][aria-expanded],
+.accordion-trigger,
+.faq-button {
+  outline: none !important;
+}
+
+[role="button"][aria-expanded]:focus:not(:focus-visible),
+.accordion-trigger:focus:not(:focus-visible),
+.faq-button:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Fix for motion components and interactive elements */
+[data-framer-name],
+.motion-div,
+.interactive-element {
+  outline: none !important;
+}
+
+[data-framer-name]:focus:not(:focus-visible),
+.motion-div:focus:not(:focus-visible),
+.interactive-element:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Focus styles for accessibility - only show on keyboard navigation */
 :focus-visible {
-  outline: 2px solid #FFD700;
-  outline-offset: 2px;
+  outline: 2px solid #FFD700 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2) !important;
+}
+
+/* Specific fixes for common interactive elements */
+.card:focus:not(:focus-visible),
+.card-hover:focus:not(:focus-visible),
+.btn:focus:not(:focus-visible),
+.nav-item:focus:not(:focus-visible),
+.dropdown-item:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Selection styles */

@@ -157,6 +157,22 @@ const Header = () => {
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
                   : ''
               }`}
+              onBlur={(e) => {
+                setTimeout(() => {
+                  if (e.target instanceof HTMLElement) {
+                    e.target.blur();
+                    e.target.style.outline = 'none';
+                    e.target.style.boxShadow = 'none';
+                  }
+                }, 100);
+              }}
+              onMouseDown={(e) => {
+                setTimeout(() => {
+                  if (e.target instanceof HTMLElement) {
+                    e.target.blur();
+                  }
+                }, 100);
+              }}
             >
               Partner
             </Link>
@@ -164,6 +180,22 @@ const Header = () => {
               href="/auth/signup"
               id="cta-get-started-header"
               className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy rounded-md transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
+              onBlur={(e) => {
+                setTimeout(() => {
+                  if (e.target instanceof HTMLElement) {
+                    e.target.blur();
+                    e.target.style.outline = 'none';
+                    e.target.style.boxShadow = 'none';
+                  }
+                }, 100);
+              }}
+              onMouseDown={(e) => {
+                setTimeout(() => {
+                  if (e.target instanceof HTMLElement) {
+                    e.target.blur();
+                  }
+                }, 100);
+              }}
             >
               Get Started
             </Link>

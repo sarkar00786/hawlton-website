@@ -293,6 +293,222 @@ export default function RootLayout({
           }}
         />
         
+        {/* BULLETPROOF FOCUS MANAGEMENT SYSTEM */}
+        <Script
+          id="focus-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // BULLETPROOF Focus Management - 100% Coverage Guarantee
+              (function() {
+                'use strict';
+                
+                // Comprehensive list of interactive selectors
+                const INTERACTIVE_SELECTORS = [
+                  'button', 'a', 'input[type="submit"]', 'input[type="button"]', 'input[type="reset"]',
+                  '[role="button"]', '[tabindex]', '[tabindex="0"]', '[tabindex="-1"]',
+                  'summary', 'details', 'label[for]',
+                  '.btn', '.button', '.nav-item', '.dropdown-item', '.card', '.card-hover', '.card-interactive',
+                  '.faq-button', '.accordion-trigger', '.accordion-button', '.tab-button', '.menu-item',
+                  '.toggle-button', '.motion-div', '.motion-button', '.interactive-element',
+                  '.animated-element', '.hover-element', '[data-framer-name]', '[data-testid]',
+                  '[data-cy]', '[data-component]', '.MuiButton-root', '.ant-btn', '.chakra-button'
+                ];
+                
+                // Enhanced focus removal function
+                const removeFocus = (element) => {
+                  if (element && typeof element.blur === 'function') {
+                    try {
+                      element.blur();
+                      element.style.outline = 'none';
+                      element.style.boxShadow = 'none';
+                      element.style.border = element.style.border || '';
+                      
+                      // Remove any lingering focus classes
+                      element.classList.remove('focus', 'focused', 'active-focus');
+                      
+                      // Force style recalculation
+                      element.offsetHeight;
+                    } catch (e) {
+                      // Silently handle any errors
+                    }
+                  }
+                };
+                
+                // Enhanced interaction handler
+                const handleInteraction = (event) => {
+                  const target = event.target;
+                  if (!target) return;
+                  
+                  // Check if target matches any interactive element
+                  const isInteractive = INTERACTIVE_SELECTORS.some(selector => {
+                    try {
+                      return target.matches && target.matches(selector);
+                    } catch (e) {
+                      return false;
+                    }
+                  });
+                  
+                  if (isInteractive || target.tagName === 'BUTTON' || target.tagName === 'A' || 
+                      target.getAttribute('role') === 'button' || target.hasAttribute('tabindex')) {
+                    
+                    // Immediate focus removal
+                    setTimeout(() => removeFocus(target), 50);
+                    
+                    // Delayed focus removal for stubborn elements
+                    setTimeout(() => removeFocus(target), 150);
+                    
+                    // Final cleanup
+                    setTimeout(() => removeFocus(target), 300);
+                  }
+                };
+                
+                // Global event handler for all interactions
+                const addGlobalListeners = () => {
+                  const events = ['mousedown', 'click', 'touchstart', 'touchend', 'blur', 'focusout'];
+                  
+                  events.forEach(eventType => {
+                    document.addEventListener(eventType, handleInteraction, {
+                      capture: true,
+                      passive: true
+                    });
+                  });
+                };
+                
+                // Mutation observer for dynamic content
+                const observeChanges = () => {
+                  if (typeof MutationObserver === 'undefined') return;
+                  
+                  const observer = new MutationObserver((mutations) => {
+                    let hasNewElements = false;
+                    
+                    mutations.forEach(mutation => {
+                      if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(node => {
+                          if (node.nodeType === Node.ELEMENT_NODE) {
+                            hasNewElements = true;
+                          }
+                        });
+                      }
+                    });
+                    
+                    if (hasNewElements) {
+                      setTimeout(() => {
+                        // Apply focus removal to new elements
+                        const newElements = document.querySelectorAll(INTERACTIVE_SELECTORS.join(', '));
+                        newElements.forEach(element => {
+                          element.addEventListener('mousedown', handleInteraction, { passive: true });
+                          element.addEventListener('click', handleInteraction, { passive: true });
+                        });
+                      }, 100);
+                    }
+                  });
+                  
+                  observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                  });
+                };
+                
+                // Enhanced style injection
+                const injectStyles = () => {
+                  const styleId = 'bulletproof-focus-manager';
+                  if (document.getElementById(styleId)) return;
+                  
+                  const style = document.createElement('style');
+                  style.id = styleId;
+                  style.textContent = \`
+                    /* BULLETPROOF FOCUS REMOVAL - MAXIMUM COVERAGE */
+                    button:focus:not(:focus-visible),
+                    a:focus:not(:focus-visible),
+                    input:focus:not(:focus-visible),
+                    textarea:focus:not(:focus-visible),
+                    select:focus:not(:focus-visible),
+                    [role="button"]:focus:not(:focus-visible),
+                    [tabindex]:focus:not(:focus-visible),
+                    [tabindex="0"]:focus:not(:focus-visible),
+                    [tabindex="-1"]:focus:not(:focus-visible),
+                    summary:focus:not(:focus-visible),
+                    details:focus:not(:focus-visible),
+                    label:focus:not(:focus-visible),
+                    .btn:focus:not(:focus-visible),
+                    .button:focus:not(:focus-visible),
+                    .nav-item:focus:not(:focus-visible),
+                    .dropdown-item:focus:not(:focus-visible),
+                    .card:focus:not(:focus-visible),
+                    .card-hover:focus:not(:focus-visible),
+                    .card-interactive:focus:not(:focus-visible),
+                    .faq-button:focus:not(:focus-visible),
+                    .accordion-trigger:focus:not(:focus-visible),
+                    .accordion-button:focus:not(:focus-visible),
+                    [data-framer-name]:focus:not(:focus-visible),
+                    .motion-div:focus:not(:focus-visible),
+                    .motion-button:focus:not(:focus-visible),
+                    .interactive-element:focus:not(:focus-visible) {
+                      outline: none !important;
+                      box-shadow: none !important;
+                      border-color: inherit !important;
+                    }
+                    
+                    /* Ensure accessibility is preserved */
+                    :focus-visible {
+                      outline: 2px solid #FFD700 !important;
+                      outline-offset: 2px !important;
+                      box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2) !important;
+                    }
+                    
+                    /* Remove tap highlights */
+                    * {
+                      -webkit-tap-highlight-color: transparent;
+                    }
+                  \`;
+                  
+                  document.head.appendChild(style);
+                };
+                
+                // Comprehensive initialization
+                const init = () => {
+                  try {
+                    injectStyles();
+                    addGlobalListeners();
+                    observeChanges();
+                    
+                    // Initial cleanup of existing elements
+                    setTimeout(() => {
+                      const elements = document.querySelectorAll(INTERACTIVE_SELECTORS.join(', '));
+                      elements.forEach(element => {
+                        if (element !== document.activeElement) {
+                          removeFocus(element);
+                        }
+                      });
+                    }, 500);
+                    
+                    console.log('🎯 Bulletproof Focus Manager: Initialized successfully');
+                  } catch (error) {
+                    console.warn('Focus Manager initialization warning:', error);
+                  }
+                };
+                
+                // Multi-stage initialization for maximum compatibility
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', init);
+                } else if (document.readyState === 'interactive') {
+                  setTimeout(init, 0);
+                } else {
+                  init();
+                }
+                
+                // Backup initialization
+                setTimeout(init, 1000);
+                
+                // Final initialization on window load
+                window.addEventListener('load', init);
+                
+              })();
+            `,
+          }}
+        />
+        
         <DeveloperTools>
           <LanguageProvider>
             <LoadingProvider>

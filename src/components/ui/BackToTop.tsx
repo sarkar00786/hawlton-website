@@ -41,7 +41,7 @@ const BackToTop: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          className="fixed bottom-8 right-8 z-50 bg-primary-gold hover:bg-primary-gold/90 text-primary-navy p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 bg-primary-gold hover:bg-primary-gold/90 text-primary-navy p-3 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2"
           onClick={scrollToTop}
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -49,9 +49,25 @@ const BackToTop: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Back to top"
+          onBlur={(e) => {
+            setTimeout(() => {
+              if (e.target instanceof HTMLElement) {
+                e.target.blur();
+                e.target.style.outline = 'none';
+                e.target.style.boxShadow = 'none';
+              }
+            }, 100);
+          }}
+          onMouseDown={(e) => {
+            setTimeout(() => {
+              if (e.target instanceof HTMLElement) {
+                e.target.blur();
+              }
+            }, 100);
+          }}
         >
           {/* Progress ring */}
-          <div className="absolute inset-0 rounded-full">
+          <div className="absolute inset-0">
             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
               <circle
                 cx="50"
