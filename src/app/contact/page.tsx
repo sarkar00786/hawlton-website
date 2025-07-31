@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, MessageCircle, Send, X } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, MessageCircle, Send, X, Minus, Plus } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ContactPage() {
