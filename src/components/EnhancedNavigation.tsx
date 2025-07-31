@@ -178,7 +178,7 @@ const EnhancedNavigation = () => {
       <div className="relative mr-4">
         <button
           onClick={() => setLanguage(language === 'EN' ? 'UR' : 'EN')}
-          className="flex items-center space-x-1 text-primary-silver hover:text-primary-gold transition-colors px-1.5 py-1 rounded"
+          className="flex items-center space-x-1 text-primary-silver hover:text-primary-gold transition-colors px-1.5 py-1"
           onBlur={(e) => {
             setTimeout(() => {
               if (e.target instanceof HTMLElement) {
@@ -212,7 +212,7 @@ const EnhancedNavigation = () => {
           {item.submenu ? (
             <button
               onClick={(e) => handleNavItemClick(e, item)}
-              className={`flex items-center space-x-1 px-3 py-1.5 rounded-md transition-all duration-200 w-full text-left ${
+              className={`flex items-center space-x-1 px-3 py-1.5 transition-all duration-200 w-full text-left ${
                 isActive(item.href)
                   ? 'bg-primary-gold/10 text-primary-gold font-semibold'
                   : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
@@ -228,7 +228,7 @@ const EnhancedNavigation = () => {
           ) : (
             <Link
               href={item.href}
-              className={`flex items-center space-x-1 px-3 py-1.5 rounded-md transition-all duration-200 ${
+              className={`flex items-center space-x-1 px-3 py-1.5 transition-all duration-200 ${
                 isActive(item.href)
                   ? 'bg-primary-gold/10 text-primary-gold font-semibold'
                   : 'text-primary-silver hover:text-primary-gold hover:bg-primary-gold/5'
@@ -256,7 +256,7 @@ const EnhancedNavigation = () => {
                       key={subItem.href}
                       href={subItem.href}
                       onClick={(e) => handleNavClick(e, subItem.href)}
-                      className="flex items-start gap-2 p-1.5 rounded-md hover:bg-primary-gold/10 transition-colors duration-200 cursor-pointer group"
+                      className="flex items-start gap-2 p-1.5 hover:bg-primary-gold/10 transition-colors duration-200 cursor-pointer group"
                     >
                       <div className="flex-shrink-0 w-6 h-6 bg-primary-gold/20 rounded-lg flex items-center justify-center group-hover:bg-primary-gold/30 transition-colors">
                         <subItem.icon className="w-3.5 h-3.5 text-primary-gold" />
