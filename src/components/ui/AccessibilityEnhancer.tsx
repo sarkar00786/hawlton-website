@@ -82,7 +82,7 @@ const AccessibilityEnhancer: React.FC = () => {
   return (
     <>
       {/* Accessibility Button */}
-      motion.button
+      <motion.button
         className="fixed bottom-8 left-8 z-50 bg-primary-navy text-primary-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
@@ -107,7 +107,7 @@ const AccessibilityEnhancer: React.FC = () => {
             />
 
             {/* Panel */}
-            motion.div
+            <motion.div
               className="fixed bottom-20 left-8 z-50 bg-white rounded-xl shadow-2xl p-6 w-80 max-w-[calc(100vw-2rem)]"
               initial={{ opacity: 0, x: -50, scale: 0.9 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
