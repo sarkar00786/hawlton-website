@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageCircle, Plus, Minus, Loader2, CheckCircle } from 'lucide-react';
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Clock, MessageCircle, Send, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ContactPage() {
@@ -288,7 +288,7 @@ export default function ContactPage() {
                     onClick={() => setShowContactForm(false)}
                     className="text-primary-silver hover:text-primary-navy transition-colors duration-200 focus:outline-none focus:ring-0"
                   >
-                    ✕
+                    <X className="w-6 h-6" />
                   </button>
                 </div>
                 

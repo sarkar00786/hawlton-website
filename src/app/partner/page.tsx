@@ -10,7 +10,22 @@ import {
   Handshake,
   Rocket,
   Globe,
-  Star
+  Star,
+  Zap,
+  Building2,
+  Network,
+  BarChart3,
+  Package,
+  Users2,
+  BarChart4,
+  Paperclip,
+  MessageSquare,
+  Smartphone,
+  BookOpen,
+  Palette,
+  Wrench,
+  Scale,
+  Sparkles
 } from 'lucide-react'
 import PartnerInquiryForm from '@/components/forms/PartnerInquiryForm'
 import Button from '@/components/ui/Button'
@@ -138,10 +153,10 @@ export default function PartnerWithUsPage() {
               style={{ zIndex: 1 }}
             >
               {[
-                { icon: '🚀', label: 'Digital Transformation', description: 'Complete business digitization' },
-                { icon: '🤝', label: 'Strategic Partnership', description: 'Collaborative growth approach' },
-                { icon: '🌐', label: 'National Expansion', description: 'Reach customers nationwide' },
-                { icon: '📈', label: 'Sustainable Growth', description: 'Long-term success focus' }
+                { icon: Zap, label: 'Digital Transformation', description: 'Complete business digitization' },
+                { icon: Users2, label: 'Strategic Partnership', description: 'Collaborative growth approach' },
+                { icon: Building2, label: 'National Expansion', description: 'Reach customers nationwide' },
+                { icon: BarChart3, label: 'Sustainable Growth', description: 'Long-term success focus' }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -149,7 +164,9 @@ export default function PartnerWithUsPage() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <div className="text-3xl mb-2">{item.icon}</div>
+                  <div className="w-10 h-10 flex items-center justify-center mb-2">
+                    <item.icon className="w-8 h-8 text-primary-gold" />
+                  </div>
                   <div className="text-sm font-semibold text-accent-primary mb-1">{item.label}</div>
                   <div className="text-xs text-primary-silver">{item.description}</div>
                 </motion.div>
@@ -188,7 +205,7 @@ export default function PartnerWithUsPage() {
             >
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mr-4">
-                  <span className="text-3xl">📦</span>
+                  <Package className="w-8 h-8 text-primary-navy" />
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-primary-white mb-4">Inventory Partnership</h3>
@@ -236,7 +253,7 @@ export default function PartnerWithUsPage() {
               
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mr-4">
-                  <span className="text-3xl">🤝</span>
+                  <Handshake className="w-8 h-8 text-primary-gold" />
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-primary-white mb-4">Full Collaboration Partnership</h3>
@@ -405,7 +422,7 @@ export default function PartnerWithUsPage() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📊</span>
+                    <BarChart4 className="w-6 h-6 text-primary-navy" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-primary-navy mb-4">Real-Time Analytics</h3>
                 </div>
@@ -415,7 +432,7 @@ export default function PartnerWithUsPage() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📎</span>
+                    <Paperclip className="w-6 h-6 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary-navy">Project Management</h3>
                 </div>
@@ -425,7 +442,7 @@ export default function PartnerWithUsPage() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">💬</span>
+                    <MessageSquare className="w-6 h-6 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary-navy">Direct Communication</h3>
                 </div>
@@ -435,7 +452,7 @@ export default function PartnerWithUsPage() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📱</span>
+                    <Smartphone className="w-6 h-6 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary-navy">Mobile Access</h3>
                 </div>
@@ -478,7 +495,7 @@ export default function PartnerWithUsPage() {
                       size="lg"
                       className="border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-primary-navy transform hover:scale-105 transition-all duration-300"
                     >
-                      <span className="mr-2">🚀</span>
+                      <Sparkles className="w-4 h-4 mr-2" />
                       Experience Live Portal
                     </Button>
                   </Link>
@@ -512,37 +529,37 @@ export default function PartnerWithUsPage() {
               {
                 title: 'Training Materials',
                 description: 'Comprehensive guides, video tutorials, and webinars to help you maximize your digital presence.',
-                icon: '📚',
+                icon: BookOpen,
                 items: ['Digital marketing courses', 'Platform tutorials', 'Best practices guides', 'Industry insights']
               },
               {
                 title: 'Marketing Assets',
                 description: 'Professional marketing materials, templates, and creative assets for your campaigns.',
-                icon: '🎨',
+                icon: Palette,
                 items: ['Brand guidelines', 'Social media templates', 'Email campaigns', 'Promotional materials']
               },
               {
                 title: 'Technical Support',
                 description: '24/7 technical assistance and dedicated support team for all your operational needs.',
-                icon: '🔧',
+                icon: Wrench,
                 items: ['Live chat support', 'Technical documentation', 'System maintenance', 'Troubleshooting guides']
               },
               {
                 title: 'Analytics Tools',
                 description: 'Advanced reporting and analytics tools to track performance and optimize your business.',
-                icon: '📈',
+                icon: BarChart3,
                 items: ['Performance dashboards', 'Revenue tracking', 'Customer analytics', 'Market insights']
               },
               {
                 title: 'Community Network',
                 description: 'Connect with other successful partners and share experiences, insights, and strategies.',
-                icon: '🌐',
+                icon: Network,
                 items: ['Partner forums', 'Networking events', 'Mentorship programs', 'Success stories']
               },
               {
                 title: 'Legal & Compliance',
                 description: 'Legal templates, compliance guides, and regulatory support for your business operations.',
-                icon: '⚖️',
+                icon: Scale,
                 items: ['Contract templates', 'Compliance checklists', 'Legal consultation', 'Policy updates']
               }
             ].map((resource, index) => (
@@ -555,7 +572,9 @@ export default function PartnerWithUsPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="text-center mb-6">
-                  <div className="text-4xl mb-4">{resource.icon}</div>
+                  <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <resource.icon className="w-8 h-8 text-primary-gold" />
+                  </div>
                   <h3 className="text-xl font-bold text-primary-white mb-3">{resource.title}</h3>
                   <p className="text-primary-silver text-sm leading-relaxed">{resource.description}</p>
                 </div>

@@ -8,7 +8,13 @@ import {
   TrendingUp, 
   Globe, 
   Shield,
-  Zap
+  Zap,
+  RefreshCw,
+  Cloud,
+  BarChart3,
+  Users,
+  Bolt,
+  Lock
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -127,36 +133,38 @@ export default async function SolutionsPage() {
               {
                 title: 'Legacy System Modernization',
                 desc: 'Transform outdated processes into efficient, automated digital workflows that save time and reduce errors.',
-                icon: '🔄'
+                icon: RefreshCw
               },
               {
                 title: 'Cloud Infrastructure Setup',
                 desc: 'Migrate to scalable cloud solutions that grow with your business and ensure 99.9% uptime.',
-                icon: '☁️'
+                icon: Cloud
               },
               {
                 title: 'Data Analytics & Insights',
                 desc: 'Implement advanced analytics to turn your business data into actionable insights for growth.',
-                icon: '📊'
+                icon: BarChart3
               },
               {
                 title: 'Digital Customer Experience',
                 desc: 'Create seamless, omnichannel customer experiences that increase satisfaction and loyalty.',
-                icon: '👥'
+                icon: Users
               },
               {
                 title: 'Process Automation',
                 desc: 'Automate repetitive tasks and workflows to increase efficiency and reduce operational costs.',
-                icon: '⚡'
+                icon: Bolt
               },
               {
                 title: 'Security & Compliance',
                 desc: 'Implement enterprise-grade security measures and ensure compliance with industry standards.',
-                icon: '🔒'
+                icon: Lock
               }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="w-16 h-16 bg-primary-gold/20 rounded-xl flex items-center justify-center mb-4">
+                  <item.icon className="w-8 h-8 text-primary-navy" />
+                </div>
                 <h3 className="text-xl font-semibold text-primary-navy mb-4">{item.title}</h3>
                 <p className="text-primary-charcoal leading-relaxed">{item.desc}</p>
               </div>
