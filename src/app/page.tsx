@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Suspense } from "react";
-import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone } from 'lucide-react'
+import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone, FileCheck, Search } from 'lucide-react'
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -98,29 +98,29 @@ export default function HomePage() {
             </div>
             
             {/* Three Steps Visual */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
-                <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-primary-navy">1</span>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-navy mb-4">Your Expertise</h3>
-                <p className="text-primary-charcoal">Your proven business model and exceptional products</p>
+                <h3 className="text-lg font-bold text-primary-navy mb-3">Your Expertise</h3>
+                <p className="text-sm text-primary-charcoal">Your proven business model and exceptional products</p>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
-                <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-primary-navy">+</span>
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Building2 className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-navy mb-4">Our Platform</h3>
-                <p className="text-primary-charcoal">Complete digital infrastructure and nationwide reach</p>
+                <h3 className="text-lg font-bold text-primary-navy mb-3">Our Platform</h3>
+                <p className="text-sm text-primary-charcoal">Complete digital infrastructure and nationwide reach</p>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
-                <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-primary-navy">=</span>
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Handshake className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-navy mb-4">Shared Success</h3>
-                <p className="text-primary-charcoal">Exponential growth for both partners</p>
+                <h3 className="text-lg font-bold text-primary-navy mb-3">Shared Success</h3>
+                <p className="text-sm text-primary-charcoal">Exponential growth for both partners</p>
               </Card>
             </div>
           </div>
@@ -280,38 +280,38 @@ export default function HomePage() {
     </div>
     
     {/* Enhanced Credibility Grid */}
-    <div className="grid md:grid-cols-3 gap-10 mb-16">
-      <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 border-primary-gold/20 hover:border-primary-gold rounded-xl" padding="lg">
-        <div className="w-20 h-20 bg-primary-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <Shield className="w-10 h-10 text-primary-navy" />
+    <div className="grid md:grid-cols-3 gap-6 mb-12">
+      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+        <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+          <FileCheck className="w-6 h-6 text-primary-navy" />
         </div>
-        <h3 className="text-xl font-bold text-primary-navy mb-4">Registered & Compliant</h3>
-        <p className="text-primary-charcoal text-base leading-relaxed mb-4">
+        <h3 className="text-lg font-bold text-primary-navy mb-3">Registered & Compliant</h3>
+        <p className="text-sm text-primary-charcoal leading-relaxed mb-3">
           Fully registered Pakistani business entity operating under local regulations and international digital commerce standards.
         </p>
-        <div className="text-sm text-primary-gold font-medium">SECP Registered • PKI Compliant</div>
+        <div className="text-xs text-primary-gold font-medium">SECP Registered • PKI Compliant</div>
       </Card>
       
-      <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 border-primary-gold/20 hover:border-primary-gold rounded-xl" padding="lg">
-        <div className="w-20 h-20 bg-primary-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <TrendingUp className="w-10 h-10 text-primary-navy" />
+      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+        <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+          <Search className="w-6 h-6 text-primary-navy" />
         </div>
-        <h3 className="text-xl font-bold text-primary-navy mb-4">Market Research Driven</h3>
-        <p className="text-primary-charcoal text-base leading-relaxed mb-4">
+        <h3 className="text-lg font-bold text-primary-navy mb-3">Market Research Driven</h3>
+        <p className="text-sm text-primary-charcoal leading-relaxed mb-3">
           Our strategies are built on comprehensive analysis of Pakistan's digital economy using data from State Bank, PBS, and international sources.
         </p>
-        <div className="text-sm text-primary-gold font-medium">Research-Based Approach</div>
+        <div className="text-xs text-primary-gold font-medium">Research-Based Approach</div>
       </Card>
       
-      <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 border-primary-gold/20 hover:border-primary-gold rounded-xl" padding="lg">
-        <div className="w-20 h-20 bg-primary-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <Users className="w-10 h-10 text-primary-navy" />
+      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+        <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+          <Award className="w-6 h-6 text-primary-navy" />
         </div>
-        <h3 className="text-xl font-bold text-primary-navy mb-4">Founder Expertise</h3>
-        <p className="text-primary-charcoal text-base leading-relaxed mb-4">
+        <h3 className="text-lg font-bold text-primary-navy mb-3">Founder Expertise</h3>
+        <p className="text-sm text-primary-charcoal leading-relaxed mb-3">
           Led by experienced entrepreneurs with proven track records in identifying market opportunities and building scalable digital businesses.
         </p>
-        <div className="text-sm text-primary-gold font-medium">Jahangir Hussain • Muhammad Ismail</div>
+        <div className="text-xs text-primary-gold font-medium">Jahangir Hussain • Muhammad Ismail</div>
       </Card>
     </div>
     
