@@ -38,7 +38,7 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
   return (
     <div
       ref={containerRef}
-      className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${className}`}
+      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}
     >
       {stats.map((stat, index) => {
         const progressWidth = getProgressWidth(stat)
@@ -46,30 +46,30 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
         return (
           <div
             key={index}
-            className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-white rounded-lg border border-primary-navy/10 p-6 shadow-sm hover:shadow-md hover:border-primary-navy/20 transition-all duration-300"
           >
             {/* Stat Value */}
-            <div className="mb-6">
-              <div className="text-5xl font-bold text-gray-900 mb-3">
+            <div className="mb-4">
+              <div className="text-3xl font-bold text-primary-navy mb-2">
                 {stat.value}
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 leading-tight">
+              <h3 className="text-sm font-semibold text-primary-charcoal leading-tight">
                 {stat.label}
               </h3>
             </div>
 
             {/* Progress Bar */}
-            <div className="space-y-3">
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-600 font-medium">Market Potential</span>
-                <span className="font-bold text-gray-900">
+            <div className="space-y-2">
+              <div className="flex justify-between items-center text-xs">
+                <span className="text-primary-silver font-medium">Market Potential</span>
+                <span className="font-bold text-primary-navy">
                   {progressWidth}%
                 </span>
               </div>
               
-              <div className="relative h-2 bg-gray-100 rounded-full overflow-hidden">
+              <div className="relative h-1.5 bg-primary-platinum rounded-full overflow-hidden">
                 <motion.div
-                  className="absolute left-0 top-0 h-full bg-gray-900 rounded-full"
+                  className="absolute left-0 top-0 h-full bg-primary-navy rounded-full"
                   initial={{ width: '0%' }}
                   animate={isInView ? { width: `${progressWidth}%` } : { width: '0%' }}
                   transition={{
