@@ -93,13 +93,13 @@ export default function HomePage() {
 
         {/* 3. SOLUTION & VALUE PROPOSITION */}
         {/* How Our Business Model Works */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-primary-platinum">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-primary-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-gold-shadow mb-6 sm:mb-8">
                 How Our Business Model Works.
               </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-primary-charcoal leading-relaxed mb-8 sm:mb-12">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-white/90 leading-relaxed mb-8 sm:mb-12">
                 We're building a partnership model that eliminates upfront investment risks. Our vision is to create
                 comprehensive e-commerce solutions where we handle digital infrastructure while you focus on your
                 products. Together, we share in the growth and success of your expanded market reach.
@@ -108,28 +108,28 @@ export default function HomePage() {
             
             {/* Three Steps Visual */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-lg font-bold text-primary-navy mb-3">Your Expertise</h3>
-                <p className="text-sm text-primary-charcoal">Your proven business model and exceptional products</p>
+                <h3 className="text-lg font-bold text-primary-white mb-3">Your Expertise</h3>
+                <p className="text-sm text-primary-white/80">Your proven business model and exceptional products</p>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building2 className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-lg font-bold text-primary-navy mb-3">Our Platform</h3>
-                <p className="text-sm text-primary-charcoal">Complete digital infrastructure and nationwide reach</p>
+                <h3 className="text-lg font-bold text-primary-white mb-3">Our Platform</h3>
+                <p className="text-sm text-primary-white/80">Complete digital infrastructure and nationwide reach</p>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Handshake className="w-6 h-6 text-primary-navy" />
                 </div>
-                <h3 className="text-lg font-bold text-primary-navy mb-3">Shared Success</h3>
-                <p className="text-sm text-primary-charcoal">Exponential growth for both partners</p>
+                <h3 className="text-lg font-bold text-primary-white mb-3">Shared Success</h3>
+                <p className="text-sm text-primary-white/80">Exponential growth for both partners</p>
               </Card>
             </div>
           </div>
@@ -189,17 +189,17 @@ export default function HomePage() {
         </section>
 
         {/* 4. MARKET OPPORTUNITY DATA SECTION */}
-        <section id="market-data" className="py-12 sm:py-16 lg:py-20 bg-primary-white">
+        <section id="market-data" className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-primary-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-gold-shadow mb-6 sm:mb-8">
                 Pakistan's Massive Digital Commerce Opportunity
               </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-primary-navy max-w-3xl mx-auto mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-white/90 max-w-3xl mx-auto mb-6 sm:mb-8">
                 While global e-commerce thrives, Pakistan's digital market remains vastly underpenetrated. 
                 The data reveals an unprecedented opportunity for first-movers.
               </p>
-              <div className="text-xs sm:text-sm text-primary-silver mb-6 sm:mb-8">
+              <div className="text-xs sm:text-sm text-primary-white/70 mb-6 sm:mb-8">
                 <span className="font-medium">Sources: State Bank of Pakistan, Pakistan Bureau of Statistics, McKinsey Global Institute</span>
               </div>
             </div>
@@ -216,55 +216,55 @@ export default function HomePage() {
             
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 max-w-6xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
                 <div className="w-12 sm:w-16 h-12 sm:h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-6 sm:w-8 h-6 sm:h-8 text-primary-navy" />
+                  <TrendingUp className="w-6 sm:w-8 h-6 sm:h-8 text-primary-gold" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-primary-navy mb-3">Digital Payment Surge</h3>
-                <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-primary-white mb-3">Digital Payment Surge</h3>
+                <p className="text-primary-white/80 text-sm leading-relaxed mb-3">
                   Mobile banking transactions grew 67% in 2023, creating infrastructure for online commerce.
                 </p>
                 <div className="text-2xl font-bold text-primary-gold">PKR 14T</div>
-                <div className="text-xs text-primary-silver">Digital transaction volume 2023</div>
+                <div className="text-xs text-primary-white/70">Digital transaction volume 2023</div>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary-navy" />
+                  <Users className="w-8 h-8 text-primary-gold" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-navy mb-3">Youth Demographics</h3>
-                <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+                <h3 className="text-xl font-bold text-primary-white mb-3">Youth Demographics</h3>
+                <p className="text-primary-white/80 text-sm leading-relaxed mb-3">
                   64% of Pakistan's population is under 30, representing the most digitally-native consumer base in the region.
                 </p>
                 <div className="text-2xl font-bold text-primary-gold">140M</div>
-                <div className="text-xs text-primary-silver">Digital-first consumers under 30</div>
+                <div className="text-xs text-primary-white/70">Digital-first consumers under 30</div>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-primary-navy" />
+                  <Globe className="w-8 h-8 text-primary-gold" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-navy mb-3">Regional Advantage</h3>
-                <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+                <h3 className="text-xl font-bold text-primary-white mb-3">Regional Advantage</h3>
+                <p className="text-primary-white/80 text-sm leading-relaxed mb-3">
                   Pakistan's e-commerce penetration (2.4%) lags far behind regional averages (8.1%), indicating massive catch-up potential.
                 </p>
                 <div className="text-2xl font-bold text-primary-gold">235%</div>
-                <div className="text-xs text-primary-silver">Growth potential vs regional average</div>
+                <div className="text-xs text-primary-white/70">Growth potential vs regional average</div>
               </Card>
             </div>
             
             {/* Call to Action */}
             <div className="text-center mt-12">
-              <div className="bg-primary-gold/10 rounded-xl p-6 max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold text-primary-navy mb-4">
+              <div className="bg-primary-white/10 border border-primary-gold/20 rounded-xl p-6 max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-primary-gold mb-4">
                   The Window is Open. But Not Forever.
                 </h3>
-                <p className="text-primary-charcoal mb-6">
+                <p className="text-primary-white/90 mb-6">
                   First-mover advantage in Pakistan's digital economy won't last. International players and tech giants 
                   are already eyeing this market. The businesses that act now will own their categories.
                 </p>
                 <Link href="/partnership">
-                  <Button className="bg-primary-navy text-primary-white hover:bg-primary-navy/90 px-8 py-3">
+                  <Button className="bg-primary-gold text-primary-navy hover:bg-primary-gold/90 px-8 py-3">
                     Secure Your Market Position
                   </Button>
                 </Link>

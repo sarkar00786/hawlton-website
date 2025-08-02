@@ -29,16 +29,13 @@
   scroll-behavior: auto !important;
 }
 
-/* Focus indicators */
+/* Focus indicators - removed all shadows and outlines */
 *:focus {
-  outline: 2px solid #FFD700 !important;
-  outline-offset: 2px !important;
+  outline: none !important;
 }
 
 .focus-visible:focus {
-  outline: 2px solid #FFD700 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2) !important;
+  outline: none !important;
 }
 
 button:focus-visible,
@@ -46,9 +43,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #FFD700 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2) !important;
+  outline: none !important;
 }
 
 /* Screen reader only class */
@@ -102,11 +97,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Enhanced focus styles for accessibility */
+/* Enhanced focus styles for accessibility - removed */
 *:focus-visible {
-  outline: 2px solid #FFD700;
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: none;
 }
 
 /* Custom selection colors */
@@ -178,10 +171,10 @@ body {
 
 @keyframes pulseGold {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    opacity: 1;
   }
   50% {
-    box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -205,10 +198,10 @@ body {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(255, 215, 0, 0.2), 0 0 10px rgba(255, 215, 0, 0.1);
+    opacity: 1;
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+    opacity: 1;
   }
 }
 
@@ -235,14 +228,13 @@ body {
   background-size: 100px 100px;
 }
 
-/* Hover effects for interactive elements */
+/* Hover effects for interactive elements - removed all effects */
 .hover-glow {
-  transition: all 0.3s ease;
+  /* No effects */
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-  transform: translateY(-2px);
+  /* No effects */
 }
 
 /* Card enhancements */
@@ -279,26 +271,17 @@ body {
   @apply text-green-300;
 }
 
-/* Enhanced button styles */
+/* Enhanced button styles - removed all effects */
 .btn-premium {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  /* No effects */
 }
 
 .btn-premium::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: left 0.5s;
+  /* No effects */
 }
 
 .btn-premium:hover::before {
-  left: 100%;
+  /* No effects */
 }
 
 /* Typography enhancements */
@@ -437,11 +420,9 @@ body {
   scroll-behavior: auto !important;
 }
 
-/* Enhanced focus styles for better accessibility */
+/* Enhanced focus styles for better accessibility - removed */
 .focus-visible:focus-visible {
-  outline: 3px solid #FFD700;
-  outline-offset: 2px;
-  box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.2);
+  outline: none;
 }
 
 /* Touch-friendly button styles for mobile */
@@ -521,37 +502,26 @@ body {
   border-radius: inherit;
 }
 
-/* Enhanced card hover effects */
+/* Enhanced card hover effects - removed */
 .card-interactive {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
 .card-interactive:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* No effects */
 }
 
-/* Professional button animations */
+/* Professional button animations - removed */
 .btn-gradient {
   background: #FFD700;
-  position: relative;
-  overflow: hidden;
 }
 
 .btn-gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: left 0.5s;
+  /* No effects */
 }
 
 .btn-gradient:hover::before {
-  left: 100%;
+  /* No effects */
 }
 
 /* Scroll progress indicator */
@@ -733,27 +703,18 @@ body {
   /* Button Variants */
   .btn-primary {
     @apply bg-primary-gold text-primary-navy;
-    @apply hover:bg-primary-gold/90 hover:shadow-md;
-    @apply focus:ring-primary-gold/30;
-    box-shadow: var(--shadow-sm);
   }
   
   .btn-secondary {
     @apply bg-transparent border-2 border-primary-gold text-primary-gold;
-    @apply hover:bg-primary-gold hover:text-primary-navy;
-    @apply focus:ring-primary-gold/30;
   }
   
   .btn-outline {
     @apply bg-transparent border border-primary-silver text-primary-silver;
-    @apply hover:bg-primary-silver hover:text-primary-white;
-    @apply focus:ring-primary-silver/30;
   }
   
   .btn-ghost {
     @apply bg-transparent text-primary-gold;
-    @apply hover:bg-primary-gold/10;
-    @apply focus:ring-primary-gold/30;
   }
   
   /* Professional Card System */
@@ -786,8 +747,7 @@ body {
   }
   
   .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    /* No effects */
   }
   
   /* Professional Form Elements */
@@ -1293,11 +1253,9 @@ input[type="button"],
   box-shadow: none !important;
 }
 
-/* Focus styles for accessibility - only show on keyboard navigation */
+/* Focus styles for accessibility - only show on keyboard navigation - removed */
 :focus-visible {
-  outline: 2px solid #FFD700 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2) !important;
+  outline: none !important;
 }
 
 /* Specific fixes for common interactive elements */
