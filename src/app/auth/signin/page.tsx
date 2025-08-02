@@ -41,10 +41,30 @@ function SignInForm() {
 
   const handleGoogleSignIn = async () => {
     setIsLoading(true)
+    setError('')
+    
     try {
-      await signIn('google', { callbackUrl: '/dashboard' })
-    } catch (error) {
-      setError('Google sign-in failed')
+      const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
+      const { auth } = await import('@/lib/firebase')
+      
+      const provider = new GoogleAuthProvider()
+      const result = await signInWithPopup(auth, provider)
+      
+      // User signed in successfully with Google
+      console.log('Google signin successful:', result.user)
+      
+      // Redirect to dashboard
+      router.push('/dashboard')
+    } catch (error: any) {
+      console.error('Google signin error:', error)
+      if (error.code === 'auth/account-exists-with-different-credential') {
+        setError('An account already exists with this email. Please try a different sign-in method.')
+      } else if (error.code === 'auth/popup-closed-by-user') {
+        setError('Sign-in was cancelled. Please try again.')
+      } else {
+        setError('Google sign-in failed. Please try again.')
+      }
+    } finally {
       setIsLoading(false)
     }
   }
