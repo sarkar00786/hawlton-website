@@ -103,56 +103,75 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
             <h2 className="text-4xl font-bold text-primary-navy mb-8">
               Why Choose Partnership Over Traditional Agencies?
             </h2>
-            <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
+            <p className="text-xl text-primary-charcoal max-w-3xl mx-auto mb-8">
               Compare our innovative partnership model with traditional digital agencies. 
               See why forward-thinking businesses choose Hawlton for sustainable growth.
             </p>
           </div>
 
-    <Card className="overflow-hidden" padding="none">
-        <div className="bg-primary-navy py-4 px-6">
-          <div className="grid grid-cols-3 gap-6">
-            <div className="text-center flex flex-col items-center justify-center py-2">
-              <div className="flex items-center justify-center mb-1">
-                <CheckCircle className="w-6 h-6 text-primary-gold mr-2" />
-                <h3 className="text-xl font-bold text-primary-white tracking-wide">KEY POINTS</h3>
+          <Card className="overflow-hidden shadow-lg border border-primary-navy/10" padding="none">
+            {/* Enhanced Header */}
+            <div className="bg-gradient-to-r from-primary-navy to-primary-navy/90 py-6 px-8">
+              <div className="grid grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="flex items-center justify-center mb-3">
+                    <CheckCircle className="w-7 h-7 text-primary-gold mr-3" />
+                    <h3 className="text-xl font-bold text-primary-white tracking-wide">KEY POINTS</h3>
+                  </div>
+                  <p className="text-sm font-medium text-primary-white/80">For Businesses</p>
+                </div>
+                <div className="text-center border-x border-primary-white/20">
+                  <div className="flex items-center justify-center mb-3">
+                    <Star className="w-7 h-7 text-primary-gold mr-3" />
+                    <h3 className="text-xl font-bold text-primary-white tracking-wide">HAWLTON PARTNERSHIP</h3>
+                  </div>
+                  <p className="text-sm font-medium text-primary-white/80">Strategic Growth Partner</p>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center mb-3">
+                    <Building2 className="w-7 h-7 text-primary-gold mr-3" />
+                    <h3 className="text-xl font-bold text-primary-white tracking-wide">TRADITIONAL AGENCIES</h3>
+                  </div>
+                  <p className="text-sm font-medium text-primary-white/80">Service Providers</p>
+                </div>
               </div>
-              <p className="text-sm font-medium text-primary-white/70">For Businesses</p>
             </div>
-            <div className="text-center flex flex-col items-center justify-center py-2">
-              <div className="flex items-center justify-center mb-1">
-                <Star className="w-6 h-6 text-primary-gold mr-2" />
-                <h3 className="text-xl font-bold text-primary-white tracking-wide">HAWLTON PARTNERSHIP</h3>
-              </div>
-              <p className="text-sm font-medium text-primary-white/70">Strategic Growth Partner</p>
-            </div>
-            <div className="text-center flex flex-col items-center justify-center py-2">
-              <div className="flex items-center justify-center mb-1">
-                <Building2 className="w-6 h-6 text-primary-gold mr-2" />
-                <h3 className="text-xl font-bold text-primary-white tracking-wide">TRADITIONAL AGENCIES</h3>
-              </div>
-              <p className="text-sm font-medium text-primary-white/70">Service Providers</p>
-            </div>
-          </div>
-        </div>
 
-            <div className="divide-y divide-primary-silver/20">
+            {/* Enhanced Comparison Rows */}
+            <div className="bg-white">
               {comparisonData.map((item, index) => (
-                <div key={index} className="py-4 px-6 hover:bg-primary-platinum/50 transition-colors">
-                  <div className="grid grid-cols-3 gap-6 items-center">
-                    <div>
-                      <h4 className="text-sm font-semibold text-primary-navy uppercase tracking-wide">{item.feature}</h4>
+                <div 
+                  key={index} 
+                  className={`py-5 px-8 border-b border-primary-silver/20 hover:bg-primary-platinum/30 transition-all duration-300 ${
+                    index % 2 === 0 ? 'bg-primary-platinum/10' : 'bg-white'
+                  }`}
+                >
+                  <div className="grid grid-cols-3 gap-8 items-center">
+                    {/* Key Point */}
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-primary-navy rounded-full mr-4 flex-shrink-0"></div>
+                      <h4 className="text-base font-bold text-primary-navy tracking-wide leading-tight">
+                        {item.feature}
+                      </h4>
                     </div>
-                    <div className="py-3 px-4">
-                      <div className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
-                        <span className="text-sm text-primary-navy font-medium">{item.hawlton}</span>
+                    
+                    {/* Hawlton Partnership */}
+                    <div className="py-3 px-4 border-x border-primary-silver/20">
+                      <div className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-primary-navy font-semibold leading-relaxed">
+                          {item.hawlton}
+                        </span>
                       </div>
                     </div>
+                    
+                    {/* Traditional Agencies */}
                     <div className="py-3 px-4">
-                      <div className="flex items-center">
-                        <X className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
-                        <span className="text-sm text-primary-charcoal">{item.traditional}</span>
+                      <div className="flex items-start">
+                        <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-primary-charcoal font-medium leading-relaxed">
+                          {item.traditional}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -160,35 +179,30 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
               ))}
             </div>
 
-            {/* Trust Badges Section at Bottom */}
-            <div className="bg-primary-platinum px-6 py-8 border-t border-primary-silver/30">
-              <div className="text-center mb-6">
-                <h3 className="text-lg font-bold text-primary-navy mb-2">Trusted & Certified</h3>
-                <p className="text-primary-charcoal text-sm">Your partnership is backed by industry-leading certifications and standards</p>
+            {/* Enhanced Trust Badges Section */}
+            <div className="bg-gradient-to-r from-primary-platinum to-primary-platinum/80 px-8 py-10 border-t-2 border-primary-navy/10">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-primary-navy mb-3">Trusted & Certified</h3>
+                <p className="text-primary-charcoal font-medium">Your partnership is backed by industry-leading certifications and standards</p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {trustBadges.map((badge, index) => {
                   const IconComponent = badge.icon
                   return (
-                    <motion.div
+                    <div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="text-center group p-4 bg-white rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                      className="text-center p-5 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-primary-navy/5"
                     >
-                      <div className="w-12 h-12 bg-primary-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md group-hover:shadow-lg transition-shadow">
-                        <IconComponent className={`w-6 h-6 ${badge.color}`} />
+                      <div className="w-14 h-14 bg-primary-navy/5 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <IconComponent className={`w-7 h-7 ${badge.color}`} />
                       </div>
-                      <h4 className="text-sm font-bold text-primary-navy mb-1">{badge.title}</h4>
+                      <h4 className="text-sm font-bold text-primary-navy mb-2">{badge.title}</h4>
                       <p className="text-primary-charcoal text-xs leading-relaxed">{badge.description}</p>
-                    </motion.div>
+                    </div>
                   )
                 })}
               </div>
             </div>
-
           </Card>
 
         </div>
