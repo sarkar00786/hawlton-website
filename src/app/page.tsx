@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Suspense } from "react";
-import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone, FileCheck, Search, FileText } from 'lucide-react'
+import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone, FileCheck, Search, FileText, AlertTriangle, TrendingDown } from 'lucide-react'
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -54,22 +54,32 @@ export default function HomePage() {
                 <strong>"We watched talented Pakistani entrepreneurs slowly suffocate in their local markets."</strong>
               </p>
               <div className="grid md:grid-cols-2 gap-8 mb-8 text-left">
-                <div className="bg-red-900/30 border-l-4 border-red-400 p-6 rounded-r-lg backdrop-blur-sm">
-                  <h3 className="text-lg font-bold text-red-300 mb-3">The Pain We Witnessed</h3>
-                  <ul className="space-y-2 text-primary-white/80">
-                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Brilliant artisans with 5-10 customers per month</li>
-                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Quality manufacturers competing on price alone</li>
-                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Traditional businesses watching younger competitors fail online</li>
-                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Customers paying premium for imports while local quality goes unseen</li>
+                <div className="bg-primary-white/5 border border-primary-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center mr-3">
+                      <AlertTriangle className="w-5 h-5 text-primary-navy" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary-gold mb-0">The Pain We Witnessed</h3>
+                  </div>
+                  <ul className="space-y-3 text-primary-white/90">
+                    <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Brilliant artisans with 5-10 customers per month</li>
+                    <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Quality manufacturers competing on price alone</li>
+                    <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Traditional businesses watching younger competitors fail online</li>
+                    <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Customers paying premium for imports while local quality goes unseen</li>
                   </ul>
                 </div>
-                <div className="bg-green-900/30 border-l-4 border-green-400 p-6 rounded-r-lg backdrop-blur-sm">
-                  <h3 className="text-lg font-bold text-green-300 mb-3">The Solution We Built</h3>
-                  <ul className="space-y-2 text-primary-white/80">
-                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Professional digital infrastructure with zero upfront cost</li>
-                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Nationwide customer reach for local businesses</li>
-                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Profit-sharing model that aligns our success with yours</li>
-                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Complete digital management so you focus on what you do best</li>
+                <div className="bg-primary-white/5 border border-primary-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center mr-3">
+                      <Lightbulb className="w-5 h-5 text-primary-navy" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary-gold mb-0">The Solution We Built</h3>
+                  </div>
+                  <ul className="space-y-3 text-primary-white/90">
+                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Professional digital infrastructure with zero upfront cost</li>
+                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Nationwide customer reach for local businesses</li>
+                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Profit-sharing model that aligns our success with yours</li>
+                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-primary-gold mr-3 mt-0.5 flex-shrink-0" />Complete digital management so you focus on what you do best</li>
                   </ul>
                 </div>
               </div>
