@@ -136,13 +136,13 @@ export default function HomePage() {
         </section>
 
         {/* The Hawlton Advantage Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-primary-white">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-platinum">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-gold-shadow mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
                 A Partnership with Zero Digital Headaches.
               </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-primary-white/90 leading-relaxed mb-8 sm:mb-12">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-charcoal leading-relaxed mb-8 sm:mb-12">
                 We provide a complete digital ecosystem for your business, from a professional 
                 e-commerce platform and targeted marketing to nationwide logistics. The best part? 
                 There is no upfront investment required from your side. We absorb the costs and 
@@ -151,37 +151,37 @@ export default function HomePage() {
               </p>
               
               {/* Key Benefits Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
-                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
-                    <ShoppingCart className="w-10 h-10 text-primary-navy" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-6xl mx-auto">
+                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                  <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <ShoppingCart className="w-7 h-7 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-primary-white">Professional Platform</h3>
-                  <p className="text-sm text-primary-white/80 leading-relaxed">Enterprise-grade e-commerce solution</p>
+                  <h3 className="text-lg font-bold mb-3 text-primary-navy">Professional Platform</h3>
+                  <p className="text-sm text-primary-charcoal leading-relaxed">Enterprise-grade e-commerce solution</p>
                 </Card>
                 
-                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
-                    <Target className="w-10 h-10 text-primary-navy" />
+                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                  <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-7 h-7 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-primary-white">Targeted Marketing</h3>
-                  <p className="text-sm text-primary-white/80 leading-relaxed">Data-driven customer acquisition</p>
+                  <h3 className="text-lg font-bold mb-3 text-primary-navy">Targeted Marketing</h3>
+                  <p className="text-sm text-primary-charcoal leading-relaxed">Data-driven customer acquisition</p>
                 </Card>
                 
-                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
-                    <Truck className="w-10 h-10 text-primary-navy" />
+                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                  <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Truck className="w-7 h-7 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-primary-white">Nationwide Logistics</h3>
-                  <p className="text-sm text-primary-white/80 leading-relaxed">Seamless delivery across Pakistan</p>
+                  <h3 className="text-lg font-bold mb-3 text-primary-navy">Nationwide Logistics</h3>
+                  <p className="text-sm text-primary-charcoal leading-relaxed">Seamless delivery across Pakistan</p>
                 </Card>
                 
-                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
-                    <BarChart3 className="w-10 h-10 text-primary-navy" />
+                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                  <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-7 h-7 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-primary-white">Zero Investment</h3>
-                  <p className="text-sm text-primary-white/80 leading-relaxed">We handle all upfront costs</p>
+                  <h3 className="text-lg font-bold mb-3 text-primary-navy">Zero Investment</h3>
+                  <p className="text-sm text-primary-charcoal leading-relaxed">We handle all upfront costs</p>
                 </Card>
               </div>
             </div>
