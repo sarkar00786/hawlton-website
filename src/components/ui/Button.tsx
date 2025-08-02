@@ -50,11 +50,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     // Sharp corners for all button variants - corporate/professional look
     const cornerClasses = {
-      primary: '', // Sharp corners for primary CTAs
-      secondary: '', // Sharp corners for secondary
-      outline: '',  // Sharp corners for outline
-      ghost: '',    // Sharp corners for ghost
-      link: '',     // Sharp corners for link
+      primary: 'rounded-none', // Sharp corners for primary CTAs
+      secondary: 'rounded-none', // Sharp corners for secondary
+      outline: 'rounded-none',  // Sharp corners for outline
+      ghost: 'rounded-none',    // Sharp corners for ghost
+      link: 'rounded-none',     // Sharp corners for link
     };
 
     // Sharp, solid button variants - no shadows, animations, or effects

@@ -664,10 +664,8 @@ body {
   /* Professional Button System - Windows & Mobile Optimized */
   .btn {
     @apply inline-flex items-center justify-center font-semibold text-center;
-    @apply transition-all duration-200 ease-in-out;
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
     @apply disabled:opacity-50 disabled:cursor-not-allowed;
-    @apply select-none relative overflow-hidden;
+    @apply select-none relative overflow-hidden rounded-none;
   }
   
   /* Button Sizes - WCAG AA Compliant */
@@ -702,19 +700,19 @@ body {
   
   /* Button Variants */
   .btn-primary {
-    @apply bg-primary-gold text-primary-navy;
+    @apply bg-primary-gold text-primary-navy rounded-none;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-primary-gold text-primary-gold;
+    @apply bg-transparent border-2 border-primary-gold text-primary-gold rounded-none;
   }
   
   .btn-outline {
-    @apply bg-transparent border border-primary-silver text-primary-silver;
+    @apply bg-transparent border border-primary-silver text-primary-silver rounded-none;
   }
   
   .btn-ghost {
-    @apply bg-transparent text-primary-gold;
+    @apply bg-transparent text-primary-gold rounded-none;
   }
   
   /* Professional Card System */
