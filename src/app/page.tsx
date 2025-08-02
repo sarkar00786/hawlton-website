@@ -40,10 +40,6 @@ export default function HomePage() {
             text: "See The Untapped Opportunity",
             href: "#market-data",
           }}
-          secondaryAction={{
-            text: "Calculate Your Revenue Potential",
-            href: "/partnership",
-          }}
           backgroundImage="/images/backgrounds/hero-home.png"
         />
 

@@ -30,7 +30,7 @@ export default function PartnershipPage() {
             text: "Start Your Partnership Journey",
             href: "#application",
           }}
-          backgroundImage="/images/backgrounds/partnership-hero.jpg"
+          backgroundImage="/images/backgrounds/11.jpg"
         />
 
         {/* Why Partner with Hawlton Section */}

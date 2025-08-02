@@ -74,21 +74,21 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
           </div>
 
           <Card className="overflow-hidden" padding="none">
-            <div className="bg-primary-navy p-8">
+            <div className="bg-primary-navy py-4 px-6">
               <div className="grid grid-cols-3 gap-6">
-                <div className="text-center flex items-center justify-center p-4">
-                  <h3 className="text-2xl font-extrabold text-primary-white tracking-wide">FEATURE</h3>
+                <div className="text-center flex items-center justify-center py-2">
+                  <h3 className="text-xl font-bold text-primary-white tracking-wide">FEATURE</h3>
                 </div>
-                <div className="text-center bg-primary-gold/20 rounded-lg p-6 border-2 border-primary-gold/30">
-                  <div className="flex items-center justify-center mb-3">
-                    <Star className="w-8 h-8 text-primary-gold mr-3" />
-                    <h3 className="text-2xl font-extrabold text-primary-gold tracking-wide">HAWLTON PARTNERSHIP</h3>
+                <div className="text-center bg-primary-gold/20 rounded-lg py-3 px-4 border-2 border-primary-gold/30">
+                  <div className="flex items-center justify-center mb-1">
+                    <Star className="w-6 h-6 text-primary-gold mr-2" />
+                    <h3 className="text-xl font-bold text-primary-gold tracking-wide">HAWLTON PARTNERSHIP</h3>
                   </div>
-                  <p className="text-base font-semibold text-primary-white/90">Strategic Growth Partner</p>
+                  <p className="text-sm font-medium text-primary-white/90">Strategic Growth Partner</p>
                 </div>
-                <div className="text-center flex flex-col items-center justify-center p-4">
-                  <h3 className="text-2xl font-extrabold text-primary-white mb-3 tracking-wide">TRADITIONAL AGENCIES</h3>
-                  <p className="text-base font-medium text-primary-white/70">Service Providers</p>
+                <div className="text-center flex flex-col items-center justify-center py-2">
+                  <h3 className="text-xl font-bold text-primary-white mb-1 tracking-wide">TRADITIONAL AGENCIES</h3>
+                  <p className="text-sm font-medium text-primary-white/70">Service Providers</p>
                 </div>
               </div>
             </div>
