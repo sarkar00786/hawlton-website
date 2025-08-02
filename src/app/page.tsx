@@ -353,6 +353,9 @@ export default function HomePage() {
 {/* Comparison Matrix Section */}
 <ComparisonMatrix />
 
+{/* Success Guarantee Section */}
+<SuccessGuarantee className="my-20" />
+
 {/* Final Call to Action Section */}
 <section className="py-20 bg-primary-navy text-white">
   <div className="container mx-auto px-6">

@@ -189,50 +189,6 @@ const SuccessGuarantee = ({
             )}
           </Card>
 
-          {/* Trust & Recognition Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <Card variant="elevated" className="text-center">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-primary-navy mb-4">
-                  Trusted & Recognized
-                </h3>
-                <p className="text-primary-charcoal max-w-2xl mx-auto">
-                  Our commitment to excellence has earned recognition from leading Pakistani 
-                  business organizations and international certification bodies.
-                </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              </div>
-
-              {/* Additional Trust Elements */}
-              <div className="mt-12 pt-8 border-t border-primary-silver/30">
-                <div className="flex flex-wrap justify-center items-center gap-8 text-primary-charcoal/60">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary-navy">5+ Years</div>
-                    <div className="text-sm">Market Experience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary-navy">100+</div>
-                    <div className="text-sm">Successful Partnerships</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary-navy">24/7</div>
-                    <div className="text-sm">Support Available</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary-navy">99.9%</div>
-                    <div className="text-sm">Uptime Guarantee</div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
         </div>
       </div>
     </section>
