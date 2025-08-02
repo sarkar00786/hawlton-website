@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "We are Hawlton. We are building Pakistan's digital future, one partner at a time.",
     type: 'website',
     locale: 'en_US',
-    images: ["/images/backgrounds/home-hero.jpg"],
+    images: ["/images/backgrounds/hero-home.png"],
   },
   alternates: {
     canonical: 'https://hawlton.com'
@@ -45,7 +45,7 @@ export default function HomePage() {
             text: "Calculate Your Revenue Potential",
             href: "/partnership",
           }}
-          backgroundImage="/images/backgrounds/home-hero.jpg"
+          backgroundImage="/images/backgrounds/hero-home.png"
         />
 
         {/* The Crisis That Changed Everything */}
