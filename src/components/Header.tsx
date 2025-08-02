@@ -67,7 +67,7 @@ const Header = () => {
     
     if (newMobileView) {
       // Switch to mobile view - create mobile frame
-      body.style.maxWidth = '414px' // iPhone 14 Pro Max width
+      body.style.maxWidth = '375px' // iPhone standard width
       body.style.margin = '20px auto'
       body.style.border = '8px solid #1a1a1a'
       body.style.borderRadius = '25px'
@@ -75,19 +75,31 @@ const Header = () => {
       body.style.backgroundColor = '#000'
       body.style.padding = '0'
       body.style.minHeight = 'calc(100vh - 40px)'
+      body.style.overflow = 'hidden' // Prevent body scroll
       
       // Add mobile device chrome
       html.style.backgroundColor = '#f0f0f0'
       html.style.padding = '0'
+      html.style.overflow = 'hidden'
       
       // Force mobile responsive behavior
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
-        viewport.setAttribute('content', 'width=414, initial-scale=1, maximum-scale=1, user-scalable=no')
+        viewport.setAttribute('content', 'width=375, initial-scale=1, maximum-scale=1, user-scalable=no')
       }
       
       // Add mobile class to body for additional styling
       body.classList.add('mobile-preview-mode')
+      
+      // Create mobile scrollable container
+      const mainContent = document.getElementById('main-content')
+      if (mainContent) {
+        mainContent.style.height = 'calc(100vh - 100px)'
+        mainContent.style.overflowY = 'auto'
+        mainContent.style.overflowX = 'hidden'
+        mainContent.style.position = 'relative'
+        mainContent.style.zIndex = '1'
+      }
       
     } else {
       // Switch back to desktop view

@@ -303,29 +303,30 @@ body {
 
 /* Typography enhancements */
 .text-gradient {
-  color: #D4AF00;
+  color: #FFD700;
 }
 
 /* Premium heading styles for 75 Million Pakistani theme */
 .heading-75million {
-  color: #D4AF00;
-  text-shadow: 0 2px 4px rgba(212, 175, 0, 0.3);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  color: #FFD700;
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: normal;
 }
 
 .heading-gold-shadow {
-  color: #D4AF00;
-  text-shadow: 0 2px 8px rgba(212, 175, 0, 0.4), 0 4px 16px rgba(212, 175, 0, 0.2);
-  font-weight: 700;
+  color: #FFD700;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: normal;
 }
 
 /* Enhanced heading variants */
 .heading-hero-gold {
-  color: #D4AF00;
-  text-shadow: 0 4px 12px rgba(212, 175, 0, 0.25);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  color: #FFD700;
+  font-weight: 900;
+  font-size: 3.5rem;
+  letter-spacing: normal;
   position: relative;
 }
 
@@ -336,7 +337,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: #D4AF00;
+  background: #FFD700;
   border-radius: 2px;
   opacity: 0.6;
 }
@@ -598,7 +599,7 @@ body {
   --primary-charcoal: #333333;
   --primary-silver: #A0A0A0;
   --primary-gold: #FFD700;
-  --metallic-gold: #D4AF37;
+  --metallic-gold: #FFD700;
   --primary-white: #FFFFFF;
   --error: #dc2626;
   --success: #16a34a;
@@ -940,6 +941,133 @@ body {
     focus:ring-offset-2;
     focus:ring-offset-primary-platinum;
   }
+}
+
+/* Mobile Preview Mode Styles */
+.mobile-preview-mode {
+  /* Reset margins and ensure full mobile layout */
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.mobile-preview-mode main {
+  /* Ensure main content respects header height and flows properly */
+  padding-top: 60px; /* Adjust for header height */
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+}
+
+.mobile-preview-mode header {
+  /* Ensure header stays on top with proper z-index */
+  z-index: 9999 !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.mobile-preview-mode .container,
+.mobile-preview-mode .max-w-7xl {
+  /* Force mobile container behavior */
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.mobile-preview-mode section {
+  /* Optimize section spacing for mobile */
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.mobile-preview-mode h1,
+.mobile-preview-mode .text-4xl,
+.mobile-preview-mode .text-5xl,
+.mobile-preview-mode .text-6xl {
+  /* Scale down large headings for mobile */
+  font-size: 1.875rem !important; /* 30px */
+  line-height: 1.2 !important;
+}
+
+.mobile-preview-mode h2,
+.mobile-preview-mode .text-3xl {
+  /* Scale down h2 for mobile */
+  font-size: 1.5rem !important; /* 24px */
+  line-height: 1.3 !important;
+}
+
+.mobile-preview-mode h3,
+.mobile-preview-mode .text-2xl {
+  /* Scale down h3 for mobile */
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.4 !important;
+}
+
+.mobile-preview-mode p,
+.mobile-preview-mode .text-lg {
+  /* Optimize paragraph text for mobile reading */
+  font-size: 1rem !important; /* 16px */
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+.mobile-preview-mode .btn,
+.mobile-preview-mode button {
+  /* Ensure all buttons are touch-friendly */
+  min-height: 44px !important;
+  padding: 12px 20px !important;
+  font-size: 16px !important;
+  border-radius: 8px !important;
+}
+
+.mobile-preview-mode img {
+  /* Ensure images are responsive */
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.mobile-preview-mode .grid {
+  /* Force single column grid on mobile preview */
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-preview-mode .flex {
+  /* Fix flex layouts for mobile */
+  flex-wrap: wrap !important;
+}
+
+.mobile-preview-mode .hidden {
+  /* Override hidden classes that might break mobile layout */
+  display: block !important;
+}
+
+.mobile-preview-mode .lg\:block,
+.mobile-preview-mode .md\:block {
+  /* Hide desktop-only elements */
+  display: none !important;
+}
+
+.mobile-preview-mode .sm\:hidden {
+  /* Show mobile-hidden elements */
+  display: block !important;
+}
+
+/* Mobile scrolling optimizations */
+.mobile-preview-mode {
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-preview-mode * {
+  /* Prevent horizontal overflow */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Custom animations */
