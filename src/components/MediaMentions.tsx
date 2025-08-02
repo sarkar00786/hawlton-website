@@ -46,30 +46,7 @@ const MediaMentions = ({ className = '', variant = 'default' }: MediaMentionsPro
   ]
 
   if (variant === 'compact') {
-    return (
-      <section className={`py-12 bg-primary-platinum ${className}`}>
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-primary-navy mb-4">
-              Trusted & Recognized
-            </h3>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {certifications.map((cert, index) => {
-                const IconComponent = cert.icon
-                return (
-                  <div key={index} className="flex items-center space-x-2">
-                    <IconComponent className="w-5 h-5 text-primary-gold" />
-                    <span className="text-sm font-medium text-primary-charcoal">
-                      {cert.title}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-    )
+    return null
   }
 
   return (

@@ -111,24 +111,24 @@ const SuccessGuarantee = ({
   }
 
   return (
-    <section className={`py-20 bg-primary-white ${className}`}>
+    <section className={`py-16 bg-primary-white ${className}`}>
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           
           {/* Main Success Guarantee Section */}
-          <Card variant="navy" padding="none" className="mb-12">
+          <Card variant="navy" padding="none">
             {/* Header */}
-            <div className="bg-gradient-to-r from-primary-navy to-primary-navy/90 px-8 py-8 text-center">
+            <div className="bg-gradient-to-r from-primary-navy to-primary-navy/90 px-6 py-6 text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-3">
                   Our Success Guarantee
                 </h2>
-                <p className="text-xl text-primary-white/90 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg text-primary-white/90 max-w-2xl mx-auto leading-relaxed">
                   Unlike traditional agencies that get paid regardless of results, we only succeed when you succeed. 
                   Our profit-sharing model ensures we're fully invested in your growth.
                 </p>
@@ -136,8 +136,8 @@ const SuccessGuarantee = ({
             </div>
 
             {/* Guarantee Features */}
-            <div className="px-8 py-12 bg-primary-navy">
-              <div className="grid md:grid-cols-3 gap-8">
+            <div className="px-6 py-8 bg-primary-navy">
+              <div className="grid md:grid-cols-3 gap-6">
                 {guaranteeFeatures.map((feature, index) => {
                   const IconComponent = feature.icon
                   return (
@@ -149,44 +149,18 @@ const SuccessGuarantee = ({
                       viewport={{ once: true }}
                       className="text-center group"
                     >
-                      <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="w-8 h-8 text-primary-navy" />
+                      <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-6 h-6 text-primary-navy" />
                       </div>
-                      <h3 className="text-xl font-bold text-primary-white mb-3">{feature.title}</h3>
-                      <p className="text-primary-white/90 mb-3 font-medium">{feature.description}</p>
-                      <p className="text-primary-white/70 text-sm leading-relaxed">{feature.detail}</p>
+                      <h3 className="text-lg font-bold text-primary-white mb-2">{feature.title}</h3>
+                      <p className="text-primary-white/90 mb-2 font-medium text-sm">{feature.description}</p>
+                      <p className="text-primary-white/70 text-xs leading-relaxed">{feature.detail}</p>
                     </motion.div>
                   )
                 })}
               </div>
             </div>
 
-            {/* Call to Action */}
-            {showCTA && (
-              <div className="bg-primary-gold px-8 py-8 text-center">
-                <h3 className="text-xl font-bold text-primary-navy mb-3">
-                  Ready to Experience Risk-Free Growth?
-                </h3>
-                <p className="text-primary-navy/80 mb-6 max-w-2xl mx-auto">
-                  Join successful Pakistani businesses who chose partnership over traditional agency services.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/partnership"
-                    className="inline-flex items-center bg-primary-navy text-primary-white px-8 py-3 font-semibold hover:bg-primary-navy/90 transition-colors group"
-                  >
-                    Start Your Partnership Journey
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                  <a
-                    href="/case-studies"
-                    className="inline-flex items-center border-2 border-primary-navy text-primary-navy px-8 py-3 font-semibold hover:bg-primary-navy hover:text-primary-white transition-colors"
-                  >
-                    View Success Stories
-                  </a>
-                </div>
-              </div>
-            )}
           </Card>
 
         </div>
