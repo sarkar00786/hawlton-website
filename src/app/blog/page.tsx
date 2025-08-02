@@ -155,7 +155,7 @@ export default function BlogPage() {
                   {post.featuredImage && (
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={urlFor(post.featuredImage).width(600).height(300).url()}
+                        src={urlFor(post.featuredImage)?.width(600)?.height(300)?.url() || ''}
                         alt={post.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -258,7 +258,7 @@ export default function BlogPage() {
                   {post.featuredImage && (
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={urlFor(post.featuredImage).width(600).height(300).url()}
+                        src={urlFor(post.featuredImage)?.width(600)?.height(300)?.url() || ''}
                         alt={post.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"

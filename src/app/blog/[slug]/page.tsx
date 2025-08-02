@@ -93,7 +93,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           {post.featuredImage && (
             <div className="relative h-80 rounded-lg overflow-hidden mb-8">
               <Image
-                src={urlFor(post.featuredImage).width(800).height(400).url()}
+                src={urlFor(post.featuredImage)?.width(800)?.height(400)?.url() || ''}
                 alt={post.title}
                 fill
                 className="object-cover"
@@ -183,7 +183,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                   {relatedPost.featuredImage && (
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={urlFor(relatedPost.featuredImage).width(600).height(300).url()}
+                        src={urlFor(relatedPost.featuredImage)?.width(600)?.height(300)?.url() || ''}
                         alt={relatedPost.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
