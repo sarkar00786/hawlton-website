@@ -24,19 +24,19 @@ const DynamicGrid = ({
   const patterns = {
     corporate: {
       size: '80px 80px',
-      lines: 'linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px)',
+      lines: 'none',
       hoverSize: '80px 80px',
       hoverIntensity: 0.15
     },
     social: {
       size: '60px 60px',
-      lines: 'linear-gradient(rgba(255,215,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,215,0,0.04) 1px, transparent 1px)',
+      lines: 'none',
       hoverSize: '60px 60px',
       hoverIntensity: 0.2
     },
     basic: {
       size: '40px 40px',
-      lines: 'linear-gradient(rgba(255,215,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,215,0,0.02) 1px, transparent 1px)',
+      lines: 'none',
       hoverSize: '40px 40px',
       hoverIntensity: 0.1
     }
@@ -109,7 +109,7 @@ const DynamicGrid = ({
           <motion.div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: `linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.1) 50%, transparent 100%)`,
+              backgroundColor: 'rgba(255,215,0,0.1)',
               height: '2px',
               top: `${mousePosition.y}%`,
               opacity: isHovered ? 0.6 : 0.2
@@ -130,7 +130,7 @@ const DynamicGrid = ({
           <motion.div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: `linear-gradient(0deg, transparent 0%, rgba(255,215,0,0.1) 50%, transparent 100%)`,
+              backgroundColor: 'rgba(255,215,0,0.1)',
               width: '2px',
               left: `${mousePosition.x}%`,
               opacity: isHovered ? 0.6 : 0.2

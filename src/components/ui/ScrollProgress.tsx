@@ -37,7 +37,7 @@ const ScrollProgress: React.FC<ScrollProgressProps> = ({ showReadingTime = false
   return (
     <div className="fixed top-0 left-0 w-full h-1 bg-transparent z-50 pointer-events-none">
       <motion.div
-        className="h-full bg-gradient-to-r from-primary-gold to-accent-primary shadow-sm"
+        className="h-full bg-primary-gold shadow-sm"
         style={{ width: `${scrollProgress}%` }}
         initial={{ width: 0 }}
         animate={{ width: `${scrollProgress}%` }}

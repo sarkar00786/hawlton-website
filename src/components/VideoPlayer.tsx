@@ -66,7 +66,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         const style = document.createElement('style')
         style.textContent = `
           .video-js.hawlton-theme .vjs-big-play-button {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+          background: #FFD700;
             border: 2px solid #FFD700;
             border-radius: 50%;
             width: 80px;
@@ -78,23 +78,23 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           }
           
           .video-js.hawlton-theme .vjs-big-play-button:hover {
-            background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+            background: #FFD700;
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
           }
           
           .video-js.hawlton-theme .vjs-control-bar {
-            background: linear-gradient(90deg, rgba(26, 35, 126, 0.9) 0%, rgba(26, 35, 126, 0.7) 100%);
+            background: rgba(26, 35, 126, 0.9);
             backdrop-filter: blur(10px);
             border-radius: 8px 8px 0 0;
           }
           
           .video-js.hawlton-theme .vjs-play-progress {
-            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            background: #FFD700;
           }
           
           .video-js.hawlton-theme .vjs-volume-level {
-            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            background: #FFD700;
           }
           
           .video-js.hawlton-theme .vjs-control:focus,

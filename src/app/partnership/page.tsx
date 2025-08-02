@@ -31,6 +31,7 @@ export default function PartnershipPage() {
             href: "#application",
           }}
           backgroundImage="/images/backgrounds/11.jpg"
+          titleClassName="heading-hero-gold text-shadow-lg"
         />
 
         {/* Why Partner with Hawlton Section */}
@@ -38,7 +39,7 @@ export default function PartnershipPage() {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                <h2 className="text-4xl font-bold heading-75million mb-8">
                   Four Undeniable Reasons to Choose Hawlton.
                 </h2>
               </div>
@@ -109,7 +110,7 @@ export default function PartnershipPage() {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                <h2 className="text-4xl font-bold heading-75million mb-8">
                   Your Journey to Digital Success in Three Simple Steps.
                 </h2>
               </div>
@@ -159,7 +160,7 @@ export default function PartnershipPage() {
         <section className="py-20 bg-primary-navy text-primary-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-primary-white mb-8">
+              <h2 className="text-4xl font-bold heading-gold-shadow mb-8">
                 Our Vision for Digital Transformation.
               </h2>
               <p className="text-xl text-primary-white/90 leading-relaxed mb-12">
@@ -197,7 +198,7 @@ export default function PartnershipPage() {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                <h2 className="text-4xl font-bold heading-75million mb-8">
                   Let's Build Your Digital Legacy.
                 </h2>
                 <p className="text-xl text-primary-charcoal">

@@ -155,7 +155,7 @@ const VideoTestimonials = () => {
                   <div className="relative mb-6 group cursor-pointer" onClick={() => handleVideoPlay(testimonial.id)}>
                     <div className="aspect-video bg-primary-charcoal rounded-lg overflow-hidden">
                       {/* Video Thumbnail Image - Placeholder for now */}
-                      <div className="w-full h-full bg-gradient-to-br from-primary-gold/20 to-primary-navy/60 flex items-center justify-center">
+                      <div className="w-full h-full bg-primary-gold/20 flex items-center justify-center">
                         <div className="text-center">
                           <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-3">
                             <Play className="w-8 h-8 text-primary-navy ml-1" />

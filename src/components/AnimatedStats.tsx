@@ -43,6 +43,24 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
     }
   }
 
+  const progressVariants = {
+    hidden: { width: '0%', opacity: 0 },
+    visible: (width: number) => ({
+      width: `${width}%`,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeOut"
+      }
+    }),
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut"
+      }
+    }
+  }
   const itemVariants = {
     hidden: { 
       opacity: 0, 
@@ -80,16 +98,7 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
 
   const getBarColor = (stat: StatItem) => {
     // Color coding based on what the statistic represents
-    if (stat.label.includes('Lack') || stat.label.includes('Gap')) {
-      return 'bg-red-500' // Red for gaps/problems
-    }
-    if (stat.label.includes('Growth') || stat.label.includes('Market')) {
-      return 'bg-green-500' // Green for growth/opportunities
-    }
-    if (stat.label.includes('Users') || stat.label.includes('Ready')) {
-      return 'bg-blue-500' // Blue for user metrics
-    }
-    return 'bg-primary-gold' // Default gold
+    return 'bg-primary-gold' // Use gold for all bars to match theme
   }
 
   return (
@@ -99,12 +108,14 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
       variants={containerVariants}
       initial="hidden"
       animate={controls}
+      whileHover={{ scale: 1.02 }}
     >
       {animatedStats.map((stat, index) => (
         <motion.div
           key={index}
-          className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-platinum hover:border-primary-gold/30"
           variants={itemVariants}
+          whileHover={{ y: -4 }}
         >
           {/* Stat Value and Label */}
           <div className="flex justify-between items-center mb-4">
@@ -113,18 +124,35 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
           </div>
           
           {/* Progress Bar Background */}
-          <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+          <div className="w-full bg-primary-platinum rounded-full h-5 mb-3 shadow-inner overflow-hidden">
             {/* Animated Progress Bar */}
             <motion.div
-              className={`h-3 rounded-full ${getBarColor(stat)}`}
+              className="h-5 rounded-full shadow-lg bg-gradient-to-r from-primary-gold to-metallic-gold relative overflow-hidden"
               initial={{ width: '0%' }}
               animate={isInView ? { width: `${getProgressWidth(stat)}%` } : { width: '0%' }}
               transition={{
-                duration: 1.5,
+                duration: 1.8,
                 ease: "easeOut",
-                delay: index * 0.2
+                delay: index * 0.3
               }}
-            />
+              whileHover={{
+                scaleY: 1.1,
+                transition: { duration: 0.2 }
+              }}
+            >
+              {/* Shimmer effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                initial={{ x: '-100%' }}
+                animate={{ x: '100%' }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: "linear"
+                }}
+              />
+            </motion.div>
           </div>
           
           {/* Progress Percentage */}

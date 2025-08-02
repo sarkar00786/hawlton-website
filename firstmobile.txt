@@ -1,0 +1,924 @@
+# Mobile Optimization for Hawlton Website
+
+This document outlines the changes needed to optimize our site for mobile devices. We will update this document section by section, starting with the homepage.
+
+## Homepage Optimization
+
+### 1. Hero Section
+- **Responsive Typography:** Scale down the heading and subheading font sizes using `clamp()` to ensure readability across small screens.
+- **Button Sizing:** Ensure buttons are large enough for touch interactions (minimum 44x44 pixels) and use `rem` units for consistent scaling.
+- **Background Image:** Utilize responsive images (`<picture>` element with `srcset`) to adapt to different screen resolutions.
+
+### 2. Problem Narrative
+- **Grid Layout:** Switch to a single-column layout on screens narrower than 640px to ensure ample space for content.
+- **Text Alignment:** Center-align text to maintain readability on small screens.
+
+### 3. Solution & Value Proposition
+- **Three Steps Visual:** Implement a horizontal scrolling carousel for the steps to ensure they fit comfortably on mobile screens.
+
+### 4. Market Opportunity
+- **Data Visualization:** Ensure all graphs and charts resize correctly using relative units and maintain readability on small screens.
+- **Text Size:** Use responsive font sizes for optimal readability.
+
+### 5. Trust & Authority Section
+- **Grid Layout:** Optimize the grid layout to ensure proper spacing between cards on mobile.
+- **Text Alignment:** Ensure text is legible and well-spaced on smaller screens.
+
+### 6. Call to Action
+- **Button Sizing:** Ensure the call to action button is large enough for easy tapping on mobile devices.
+
+## Component-Specific Mobile Optimization
+
+### Header Component (Header.tsx)
+- **Navigation Menu:** Hamburger menu implementation is good, but ensure mobile menu items have minimum 44px touch targets
+- **Logo Sizing:** Ensure logo scales appropriately on mobile (currently using text-2xl which may be too large)
+- **Sticky Header:** Current implementation is good with scroll-based visibility
+- **Mobile CTA Buttons:** Good implementation with full-width buttons in mobile menu
+- **Recommended Updates:**
+  - Add `min-height: 44px` to all navigation links in mobile menu
+  - Consider reducing logo font size on mobile: `text-xl sm:text-2xl`
+  - Add haptic feedback for touch interactions
+
+### Footer Component (Footer.tsx)
+- **Grid Layout:** Currently uses `md:grid-cols-4` which is appropriate
+- **Contact Information:** Good vertical stacking on mobile
+- **Social Icons:** Icons are appropriately sized (w-5 h-5)
+- **Recommended Updates:**
+  - Add more padding between sections on mobile
+  - Consider larger touch targets for social media icons (minimum 44px)
+  - Improve text readability with better line-height on mobile
+
+### Global CSS (globals.css) Analysis
+- **Good Implementations:**
+  - Touch-friendly button styles with min-height: 44px on mobile
+  - Responsive font scaling system
+  - Focus management for accessibility
+  - Professional animation system
+
+- **Areas for Improvement:**
+  - Add more mobile-specific breakpoints
+  - Implement better spacing scale for mobile devices
+  - Add mobile-specific hover states (touch states)
+
+## Recommended Mobile-First Improvements
+
+### 1. Typography Scale
+```css
+/* Mobile-first typography improvements */
+@media (max-width: 640px) {
+  .text-hero { font-size: clamp(2rem, 8vw, 3rem); }
+  .text-display { font-size: clamp(1.5rem, 6vw, 2.5rem); }
+  .text-heading { font-size: clamp(1.25rem, 5vw, 2rem); }
+  
+  /* Improve line-height for mobile reading */
+  h1, h2, h3 { line-height: 1.2; }
+  p { line-height: 1.6; }
+}
+```
+
+### 2. Spacing Improvements
+```css
+/* Mobile spacing optimization */
+@media (max-width: 640px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  section { padding-top: 3rem; padding-bottom: 3rem; }
+  .card { margin-bottom: 1.5rem; }
+}
+```
+
+### 3. Touch Interactions
+```css
+/* Enhanced touch targets */
+@media (max-width: 768px) {
+  button, a[role="button"], .btn {
+    min-height: 48px; /* Increased from 44px for better UX */
+    min-width: 48px;
+    padding: 12px 20px;
+  }
+  
+  /* Touch feedback */
+  button:active, .btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+```
+
+### 4. Grid System Improvements
+```css
+/* Mobile-first grid improvements */
+@media (max-width: 640px) {
+  .grid-cols-2 { grid-template-columns: 1fr; }
+  .grid-cols-3 { grid-template-columns: 1fr; }
+  .grid-cols-4 { grid-template-columns: 1fr; }
+  
+  /* Add proper gap scaling */
+  .gap-8 { gap: 1.5rem; }
+  .gap-6 { gap: 1rem; }
+}
+```
+
+## Page-Specific Mobile Optimizations Needed
+
+### Homepage (page.tsx) - Detailed Section Analysis
+
+#### Hero Section (Lines 37-46)
+- **Current Issues:**
+  - Background image may not scale properly on mobile
+  - Title font size needs mobile optimization
+  - Button positioning needs adjustment
+- **Recommended Fixes:**
+  - Add responsive background image handling
+  - Implement `clamp()` for title typography
+  - Center-align content on mobile
+
+#### Problem Narrative Section (Lines 50-85)
+- **Current Issues:**
+  - Grid layout `md:grid-cols-2` needs mobile consideration
+  - Text blocks may be too dense on mobile
+- **Recommended Fixes:**
+  - Add mobile-specific padding
+  - Improve text spacing and readability
+  - Consider card-style presentation on mobile
+
+#### Solution & Value Proposition (Lines 89-129)
+- **Current Issues:**
+  - Three-column grid needs mobile stacking
+  - Card spacing may be too tight
+- **Recommended Fixes:**
+  - Implement single-column layout on mobile
+  - Add better card spacing
+  - Ensure icons scale appropriately
+
+#### Market Opportunity Data (Lines 185-267)
+- **Current Issues:**
+  - AnimatedStats component needs mobile optimization
+  - Three-column grid for insights needs mobile layout
+- **Recommended Fixes:**
+  - Ensure stats are readable on small screens
+  - Stack cards vertically on mobile
+  - Improve data visualization for mobile
+
+#### Trust & Authority Section (Lines 272-345)
+- **Current Issues:**
+  - Three-column grid needs mobile optimization
+  - Text density may be overwhelming on mobile
+- **Recommended Fixes:**
+  - Single-column layout for mobile
+  - Better card spacing
+  - Improved typography hierarchy
+
+## Implementation Priority
+
+### Phase 1: Critical Mobile Issues
+1. **Typography Scaling:** Implement clamp() for all headings
+2. **Touch Targets:** Ensure all interactive elements meet 44px minimum
+3. **Grid Layouts:** Fix all multi-column grids for mobile
+4. **Spacing:** Implement mobile-first spacing system
+
+### Phase 2: Enhanced Mobile Experience
+1. **Animations:** Optimize animations for mobile performance
+2. **Images:** Implement responsive image system
+3. **Forms:** Enhance form UX for mobile users
+4. **Navigation:** Improve mobile navigation experience
+
+### Phase 3: Advanced Mobile Features
+1. **Gestures:** Add swipe gestures where appropriate
+2. **Performance:** Optimize loading for mobile networks
+3. **PWA Features:** Consider progressive web app features
+4. **Accessibility:** Enhanced mobile accessibility features
+
+## Testing Checklist
+- [ ] Test on iPhone SE (375px width)
+- [ ] Test on iPhone 12/13/14 (390px width)
+- [ ] Test on Samsung Galaxy S21 (384px width)
+- [ ] Test on iPad Mini (768px width)
+- [ ] Verify touch targets with finger testing
+- [ ] Test with slow 3G connection
+- [ ] Verify text readability without zoom
+- [ ] Test form inputs and interactions
+- [ ] Verify navigation functionality
+- [ ] Test landscape orientation
+
+## Additional Component Analysis
+
+### HeroSectionWithProps Component
+- **Critical Issues:**
+  - Title uses fixed `text-6xl` (96px) which is too large for mobile
+  - No responsive typography scaling
+  - Background image uses inline styles which don't support responsive images
+  - Missing mobile-specific optimizations
+
+- **Recommended Fixes:**
+  ```jsx
+  // Replace line 47:
+  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+  
+  // Add responsive background:
+  <picture>
+    <source media="(max-width: 768px)" srcSet="/hero-mobile.jpg" />
+    <source media="(min-width: 769px)" srcSet="/hero-desktop.jpg" />
+    <img src="/hero-desktop.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+  </picture>
+  ```
+
+### AnimatedStats Component
+- **Mobile Issues:**
+  - Grid uses `md:grid-cols-2` which may be too cramped on mobile
+  - Stats cards need better mobile spacing
+  - Text size `text-3xl` for values may be too large on small screens
+
+- **Recommended Fixes:**
+  - Change grid to single column on mobile: `grid-cols-1 lg:grid-cols-2`
+  - Reduce stat value font size on mobile: `text-2xl sm:text-3xl`
+  - Add better padding between cards
+
+### Card Component Analysis
+- **Good Implementations:**
+  - Already has mobile-first responsive padding system
+  - Proper touch targets and hover states
+  - Motion animations are appropriate
+
+- **Minor Improvements:**
+  - Consider reducing animation complexity on mobile for performance
+
+### Button Component Analysis
+- **Excellent Mobile Support:**
+  - Already includes proper min-height for touch targets
+  - Good sizing system with WCAG compliance
+  - Proper focus management
+
+## Page-Specific Analysis
+
+### Contact Page (contact/page.tsx)
+- **Mobile Issues:**
+  - Hero title `text-5xl md:text-6xl` needs better mobile scaling
+  - Grid layout `md:grid-cols-3` for quick links needs mobile optimization
+  - Contact form has `md:grid-cols-2` which may be cramped on mobile
+  - FAQ section needs better mobile accordion design
+
+- **Recommended Fixes:**
+  - Hero title: `text-3xl sm:text-4xl md:text-5xl lg:text-6xl`
+  - Quick links: Single column on mobile with better spacing
+  - Contact form: Full single column on mobile
+  - FAQ: Improve touch targets and spacing
+
+### Partnership Page (partnership/page.tsx)
+- **Mobile Issues:**
+  - Reasons grid `md:grid-cols-2` needs single column on mobile
+  - Process steps `md:grid-cols-3` should stack vertically on mobile
+  - Commitment stats `md:grid-cols-4` need better mobile layout
+
+- **Recommended Fixes:**
+  - All grids should use single column on mobile with proper spacing
+  - Add progressive disclosure for long content sections
+  - Improve card spacing and touch targets
+
+## Critical Mobile Fixes Needed
+
+### 1. Typography System Overhaul
+```css
+/* Add to globals.css */
+@media (max-width: 640px) {
+  /* Hero titles */
+  .text-6xl { font-size: clamp(2.5rem, 8vw, 3.75rem); }
+  .text-5xl { font-size: clamp(2.25rem, 7vw, 3rem); }
+  .text-4xl { font-size: clamp(2rem, 6vw, 2.25rem); }
+  .text-3xl { font-size: clamp(1.75rem, 5vw, 1.875rem); }
+  .text-2xl { font-size: clamp(1.5rem, 4vw, 1.5rem); }
+  
+  /* Improve line heights for mobile reading */
+  h1, .text-6xl, .text-5xl { line-height: 1.1; }
+  h2, .text-4xl, .text-3xl { line-height: 1.2; }
+  h3, .text-2xl, .text-xl { line-height: 1.3; }
+  
+  /* Body text optimization */
+  p { line-height: 1.6; font-size: 1rem; }
+}
+```
+
+### 2. Grid System Mobile-First
+```css
+/* Add responsive grid utilities */
+@media (max-width: 640px) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .md\:grid-cols-2, .md\:grid-cols-3, .md\:grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .md\:grid-cols-3, .md\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+```
+
+### 3. Container and Spacing Optimization
+```css
+/* Mobile-first container improvements */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .px-4, .px-6 { padding-left: 1rem; padding-right: 1rem; }
+  .py-20 { padding-top: 3rem; padding-bottom: 3rem; }
+  .py-16 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .py-12 { padding-top: 2rem; padding-bottom: 2rem; }
+  
+  /* Card spacing */
+  .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.5rem;
+  }
+  
+  .gap-8 { gap: 1.5rem; }
+  .gap-6 { gap: 1rem; }
+}
+```
+
+### 4. Form Optimization for Mobile
+```css
+/* Mobile form improvements */
+@media (max-width: 768px) {
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1.125rem;
+    padding: 14px 20px;
+  }
+}
+```
+
+### 5. Animation Performance for Mobile
+```css
+/* Reduce animations on mobile for performance */
+@media (max-width: 768px) {
+  .hover\:scale-105:hover,
+  .hover\:scale-\[1\.02\]:hover,
+  .hover\:scale-\[1\.03\]:hover {
+    transform: none;
+  }
+  
+  /* Simplify transitions */
+  * {
+    transition-duration: 0.2s;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .hover\:shadow-lg:hover,
+  .hover\:shadow-xl:hover {
+    box-shadow: none;
+  }
+}
+
+/* Add touch-specific interactions */
+@media (hover: none) and (pointer: coarse) {
+  .card-interactive:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+```
+
+## Mobile Performance Optimizations
+
+### 1. Image Optimization
+- Implement responsive images with `srcset`
+- Use WebP format with fallbacks
+- Add proper `loading="lazy"` attributes
+- Optimize image sizes for mobile (max 800px width)
+
+### 2. Font Loading Strategy
+```css
+/* Add to globals.css */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap; /* Improves loading performance */
+}
+```
+
+### 3. JavaScript Bundle Optimization
+- Implement code splitting for mobile
+- Lazy load non-critical components
+- Reduce motion library usage on mobile
+
+## Mobile-Specific Features to Add
+
+### 1. Touch Gestures
+- Swipe navigation for carousels
+- Pull-to-refresh functionality
+- Touch-friendly image galleries
+
+### 2. Mobile-Specific UI Patterns
+- Bottom navigation for key actions
+- Floating action buttons for primary CTAs
+- Collapsible sections for long content
+
+### 3. Progressive Web App Features
+- Add to home screen capability
+- Offline functionality for key pages
+- Push notifications for updates
+
+## Implementation Phases
+
+### Phase 1: Critical Mobile Fixes (Week 1)
+1. Fix all typography scaling issues
+2. Implement proper grid responsiveness
+3. Optimize form layouts for mobile
+4. Fix touch target sizes
+
+### Phase 2: Enhanced Mobile Experience (Week 2)
+1. Implement responsive images
+2. Optimize animations for mobile
+3. Add mobile-specific interactions
+4. Improve loading performance
+
+### Phase 3: Advanced Mobile Features (Week 3)
+1. Add progressive web app features
+2. Implement advanced touch gestures
+3. Add mobile-specific navigation patterns
+4. Performance optimization and testing
+
+## Final Mobile Testing Protocol
+
+### Device Testing Matrix
+- iPhone SE (375px) - Smallest modern iPhone
+- iPhone 12/13/14 (390px) - Standard iPhone size
+- iPhone 12/13/14 Plus (428px) - Large iPhone
+- Samsung Galaxy S21 (384px) - Standard Android
+- iPad Mini (768px) - Small tablet
+- iPad (834px) - Standard tablet
+
+### Testing Checklist
+- [ ] All text is readable without zooming
+- [ ] All buttons are easily tappable (44px minimum)
+- [ ] Forms work correctly with virtual keyboards
+- [ ] Images load and display properly
+- [ ] Navigation is intuitive and accessible
+- [ ] Page load time is under 3 seconds on 3G
+- [ ] All animations are smooth and performant
+- [ ] Content doesn't overflow horizontally
+- [ ] Vertical scrolling is smooth
+- [ ] All interactive elements provide visual feedback
+
+## Additional Page Analysis
+
+### Solutions Page (solutions/page.tsx)
+- **Identified Issues:**
+  - Hero background image needs mobile responsiveness
+  - Grid sections like `md:grid-cols-2`, `md:grid-cols-3` require single column on small screens
+  - Text size requires mobile optimization
+
+- **Proposed Fixes:**
+  - Adjust HeroSectionWithProps for responsive image loading
+  - Refactor all grid layouts to use `grid-cols-1` for small screens
+  - Apply `clamp()` in typography for flexible scaling
+
+### Our Vision Page (our-vision/page.tsx)
+- **Identified Issues:**
+  - Story section has dense text that requires increased line height
+  - Team members grid `md:grid-cols-2` needs adjustment for small devices
+  - CTA Buttons need larger touch targets
+
+- **Proposed Fixes:**
+  - Increase line height in story sections for readability
+  - Implement single column grid on mobile
+  - Ensure CTA button touch targets meet or exceed 44px minimum
+
+## Component-Specific Optimizations
+
+### ComparisonMatrix Component
+- **Mobile Adjustments Required:**
+  - Ensure table elements stack vertically on mobile
+  - Improve space allocation and text sizes
+
+- **Implemented: vertical stacking for smaller screens using media queries, optimized text wrapping**
+
+### MediaMentions Component
+- **Key Observations:**
+  - Column grid may overflow on small devices
+  - Certification logos require better touch support
+
+- **Steps for Correction:**
+  - Implement responsive column stacking
+  - Enlarge logos and add padding for better clickability
+
+## Universal Mobile Enhancements
+
+### Global CSS (globals.css) Additions
+- **Implement Responsive Spacing with Flexibility**
+  ```css
+  @media (max-width: 640px) {
+    /* Padding adjustments for universally better spacing */
+    .px-4, .px-6, .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    .py-16 { padding-top: 32px; padding-bottom: 32px; }
+    .gap-10    { gap: 32px; }
+  }
+  
+  /* Ensure flexbox supports stacking on mobile */
+  .flex-col {
+    flex-direction: column !important;
+  }
+  
+  /* Texts */
+  .text-4xl { font-size: clamp(2rem, 6vw, 2.5rem); }
+  .text-3xl { font-size: clamp(1.75rem, 4.5vw, 2rem); }
+  .text-2xl { font-size: clamp(1.5rem, 4vw, 1.75rem); }
+  
+  /* Button Elements */
+  button, a[role="button"] {
+    min-height: 44px;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+  }
+  
+  /* Active state improvements */
+  button:active {
+    transform: translateY(2px);
+  }
+  ```
+
+## Next Steps for Implementation
+
+### Phase 1: Immediate High-Impact Changes
+- Typography: Overhaul styles for readability and fit
+- Grid: Refactor all grids to stack properly on mobile
+- CTA: Ensure all call-to-action sections are accessible
+
+### Phase 2: Advanced UI/UX Improvements
+- Gesture Implementations
+- Lazy loading of remaining image resources
+- Fine-tune animations and ensure no performance lag
+
+### Phase 3: Comprehensive Testing and Rollout
+- Thorough cross-device testing
+- Accessibility checks on all hotspots
+- Validate SEO parameters for mobile
+
+## Full Checklist for Mobile Compliance
+- [x] Fully responsive typography
+- [ ] All grids shift to column-direction on mobile
+- [ ] Every interactive element sized for easy tap (40px+)
+- [ ] All images lazily loaded and optimized
+- [ ] Responsive images using `srcset`
+- [ ] Accessibility tools enabled and activated
+- [ ] Visual hierarchy followed on all pages
+- [ ] Verify semantics in HTML for SEO
+
+## Blog Pages Mobile Optimization Analysis
+
+### Blog Index Page (blog/page.tsx)
+
+#### Identified Mobile Issues:
+
+**1. Hero Section (Lines 98-130)**
+- **Typography Problems:**
+  - Title uses `text-5xl md:text-6xl` which may be too large on smallest screens
+  - Subtitle `text-xl md:text-2xl` needs better mobile scaling
+  - Search bar sizing needs mobile optimization
+
+- **Mobile-First Fixes:**
+  ```jsx
+  // Replace line 106:
+  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+  
+  // Replace line 111:
+  <p className="text-lg sm:text-xl md:text-2xl text-primary-silver mb-8 leading-relaxed">
+  
+  // Search input optimization:
+  <input
+    className="w-full pl-12 pr-4 py-4 rounded-lg text-primary-charcoal text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-primary-gold"
+    style={{ fontSize: '16px' }} // Prevents iOS zoom
+  />
+  ```
+
+**2. Featured Posts Grid (Lines 145-203)**
+- **Current Issues:**
+  - Grid `md:grid-cols-2 lg:grid-cols-3` creates cramped layout on tablets
+  - Card images fixed at `h-48` may be too small on mobile
+  - Text content needs better mobile spacing
+
+- **Recommended Solutions:**
+  ```jsx
+  // Replace line 145:
+  <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+  
+  // Image container height adjustment:
+  <div className="relative h-52 sm:h-48 overflow-hidden">
+  
+  // Improve mobile padding:
+  <div className="p-4 sm:p-6">
+  ```
+
+**3. Category Filter Buttons (Lines 209-237)**
+- **Mobile Issues:**
+  - `flex-wrap gap-4` may cause buttons to wrap awkwardly
+  - Button text may be too small on mobile
+  - Touch targets need verification
+
+- **Mobile Optimization:**
+  ```jsx
+  // Better mobile flex layout:
+  <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
+  
+  // Improved button sizing:
+  <button className="px-4 py-3 sm:px-6 rounded-full font-semibold text-sm sm:text-base transition-all min-h-[44px]">
+  ```
+
+**4. All Posts Grid (Lines 248-319)**
+- **Similar Issues to Featured Posts:**
+  - Same grid layout problems
+  - Card spacing and image sizing
+  - Text readability on small screens
+
+### Blog Post Detail Page (blog/[slug]/page.tsx)
+
+#### Identified Mobile Issues:
+
+**1. Hero Section with Featured Image (Lines 92-133)**
+- **Image Display Problems:**
+  - Fixed height `h-80` may be too large on mobile screens
+  - Image container needs responsive sizing
+  - Title typography needs mobile scaling
+
+- **Mobile-First Solutions:**
+  ```jsx
+  // Responsive image container:
+  <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mb-6 sm:mb-8">
+  
+  // Better title scaling:
+  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+  
+  // Subtitle improvements:
+  <p className="text-base sm:text-lg md:text-xl text-primary-silver leading-relaxed">
+  ```
+
+**2. Content Section (Lines 136-160)**
+- **Reading Experience Issues:**
+  - PortableText component needs mobile typography optimization
+  - Tag display may overflow on small screens
+  - Content width needs better mobile spacing
+
+- **Recommended Fixes:**
+  ```jsx
+  // Better mobile container:
+  <div className="max-w-none sm:max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+  
+  // Tag improvements:
+  <div className="flex flex-wrap gap-2 mt-6 sm:mt-8">
+  <span className="px-2 sm:px-3 py-1 bg-primary-gold text-primary-white text-xs sm:text-sm rounded-full">
+  ```
+
+**3. Related Posts Section (Lines 163-234)**
+- **Grid Layout Issues:**
+  - Same grid problems as main blog page
+  - Card sizing and spacing need mobile optimization
+
+## Critical Mobile Fixes for Blog Pages
+
+### 1. Typography System for Blog Content
+```css
+/* Add to globals.css - Blog-specific mobile typography */
+@media (max-width: 640px) {
+  /* Blog hero titles */
+  .blog-hero h1 {
+    font-size: clamp(1.875rem, 8vw, 3rem);
+    line-height: 1.1;
+  }
+  
+  /* Blog post titles in cards */
+  .blog-card h3 {
+    font-size: clamp(1.125rem, 4vw, 1.25rem);
+    line-height: 1.3;
+  }
+  
+  /* Blog content typography */
+  .blog-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .blog-content p {
+    margin-bottom: 1.5rem;
+  }
+}
+```
+
+### 2. Blog-Specific Grid System
+```css
+/* Mobile-first blog grids */
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .blog-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+```
+
+### 3. Blog Image Optimization
+```css
+/* Responsive blog images */
+@media (max-width: 640px) {
+  .blog-featured-image {
+    height: 200px;
+  }
+  
+  .blog-card-image {
+    height: 180px;
+  }
+  
+  .blog-hero-image {
+    height: 250px;
+  }
+}
+
+@media (min-width: 641px) {
+  .blog-featured-image {
+    height: 320px;
+  }
+  
+  .blog-card-image {
+    height: 192px;
+  }
+  
+  .blog-hero-image {
+    height: 320px;
+  }
+}
+```
+
+### 4. Search and Filter Mobile Optimization
+```css
+/* Mobile search and filters */
+@media (max-width: 640px) {
+  .blog-search {
+    margin-bottom: 2rem;
+  }
+  
+  .blog-search input {
+    font-size: 16px; /* Prevents iOS zoom */
+    padding: 12px 16px 12px 48px;
+    height: 48px;
+  }
+  
+  .blog-filters {
+    gap: 0.5rem;
+  }
+  
+  .blog-filter-button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+    min-height: 44px;
+  }
+}
+```
+
+### 5. Blog Reading Experience Enhancement
+```css
+/* Mobile reading optimization */
+@media (max-width: 640px) {
+  .blog-content-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .blog-content {
+    max-width: none;
+  }
+  
+  .blog-content img {
+    width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+  }
+  
+  .blog-tags {
+    gap: 0.5rem;
+  }
+  
+  .blog-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+```
+
+## Blog Pages Implementation Priority
+
+### Phase 1: Critical Blog Mobile Fixes
+1. **Typography Scaling**: Fix all heading sizes across blog pages
+2. **Grid Responsiveness**: Implement proper mobile-first grid layouts
+3. **Search UX**: Optimize search input and filter buttons for mobile
+4. **Image Sizing**: Responsive image containers for all blog images
+
+### Phase 2: Enhanced Blog Reading Experience
+1. **Content Typography**: Optimize PortableText rendering for mobile
+2. **Tag Display**: Better mobile tag layout and sizing
+3. **Related Posts**: Improve related posts section mobile layout
+4. **Loading States**: Optimize loading animations for mobile
+
+### Phase 3: Advanced Blog Features
+1. **Infinite Scroll**: Consider implementing for better mobile UX
+2. **Share Buttons**: Add mobile-optimized social sharing
+3. **Reading Progress**: Add reading progress indicator
+4. **Offline Reading**: Consider service worker for offline blog access
+
+## Blog Mobile Testing Checklist
+
+### Blog Index Page Testing
+- [ ] Hero section readable on iPhone SE (375px)
+- [ ] Search input works properly with virtual keyboard
+- [ ] Category filters are easily tappable (44px minimum)
+- [ ] Featured posts grid stacks properly on mobile
+- [ ] All posts grid maintains readability on small screens
+- [ ] Image loading and display works across all devices
+- [ ] Animations perform well on mobile devices
+
+### Blog Post Detail Page Testing
+- [ ] Featured image displays properly on mobile
+- [ ] Article title doesn't overflow on small screens
+- [ ] Content typography is readable without zooming
+- [ ] Tags wrap properly and don't overflow
+- [ ] Related posts section works on mobile
+- [ ] PortableText content renders correctly on all screen sizes
+- [ ] Navigation back to blog index is easily accessible
+
+## Blog-Specific Mobile Best Practices Applied
+
+### 1. Reading Experience Optimization
+- **Line Height**: 1.7 for body text on mobile for better readability
+- **Font Size**: Minimum 16px to prevent iOS zoom
+- **Content Width**: Full width on mobile with proper padding
+- **Paragraph Spacing**: Adequate spacing between paragraphs
+
+### 2. Image and Media Handling
+- **Responsive Images**: Different sizes for different screen breakpoints
+- **Lazy Loading**: Implemented for better mobile performance
+- **Alt Text**: Proper alt text for accessibility
+- **Aspect Ratios**: Consistent aspect ratios across all blog images
+
+### 3. Navigation and Discoverability
+- **Category Filters**: Touch-friendly filter buttons
+- **Search Optimization**: Mobile-optimized search input
+- **Related Content**: Easy discovery of related articles
+- **Breadcrumbs**: Clear navigation path for users
+
+### 4. Performance Considerations
+- **Image Optimization**: WebP format with fallbacks
+- **Code Splitting**: Lazy load blog components
+- **Bundle Size**: Optimize for mobile networks
+- **Caching**: Proper caching strategies for blog content
+
+Ensure that every change is iteratively verified and cross-checked against user feedback as well. Extend this document to include future components and new page designs as they are incorporated.

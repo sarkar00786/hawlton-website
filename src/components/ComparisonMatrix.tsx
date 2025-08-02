@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckCircle, X, Star, TrendingUp, Crown, Shield, Zap, Award, Globe } from 'lucide-react'
+import { CheckCircle, X, Star, TrendingUp, Crown, Shield, Zap, Award, Globe, Sparkles, Target, HandHeart, Rocket } from 'lucide-react'
 import { Card } from './ui/Card'
 import { motion } from 'framer-motion'
 
@@ -14,48 +14,56 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
       feature: "Investment Required",
       hawlton: "Zero upfront cost",
       traditional: "High upfront investment",
+      icon: Sparkles,
       hawltonBetter: true
     },
     {
       feature: "Revenue Model",
       hawlton: "Profit sharing partnership",
       traditional: "Fixed project fees",
+      icon: HandHeart,
       hawltonBetter: true
     },
     {
       feature: "Long-term Support",
       hawlton: "Ongoing strategic partnership",
       traditional: "Limited post-project support",
+      icon: Target,
       hawltonBetter: true
     },
     {
       feature: "Risk Distribution",
       hawlton: "Shared risk and reward",
       traditional: "Client bears all risk",
+      icon: Shield,
       hawltonBetter: true
     },
     {
       feature: "Digital Infrastructure",
       hawlton: "Complete ecosystem provided",
       traditional: "Build from scratch each time",
+      icon: Rocket,
       hawltonBetter: true
     },
     {
       feature: "Market Expertise",
       hawlton: "Pakistan-focused specialists",
       traditional: "Generic digital services",
+      icon: Star,
       hawltonBetter: true
     },
     {
       feature: "Success Alignment",
       hawlton: "We succeed when you succeed",
       traditional: "Paid regardless of results",
+      icon: TrendingUp,
       hawltonBetter: true
     },
     {
       feature: "Nationwide Reach",
       hawlton: "Built-in national logistics",
       traditional: "Client must arrange separately",
+      icon: Globe,
       hawltonBetter: true
     }
   ]

@@ -235,7 +235,7 @@ const InteractiveCard = ({
       <motion.div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent)',
+            background: 'none',
           transform: 'translateX(-100%)',
         }}
         animate={isHovered ? {

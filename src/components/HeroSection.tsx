@@ -48,7 +48,7 @@ const HeroSection = ({ title, subtitle, primaryAction, secondaryAction, backgrou
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center bg-gradient-navy text-text-primary overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-primary-navy text-text-primary overflow-hidden"
     >
       {/* Dynamic Background Pattern - Exactly as per blueprint */}
       <div className="absolute inset-0 opacity-10">
@@ -128,10 +128,8 @@ const HeroSection = ({ title, subtitle, primaryAction, secondaryAction, backgrou
               <motion.h1 
                 className="text-6xl lg:text-7xl xl:text-8xl font-heading font-bold leading-tight tracking-tight"
                 style={{
-                  background: 'linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #FFFFFF 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
+                  color: '#D4AF00',
+                  textShadow: '0px 2px 4px rgba(212, 175, 0, 0.3)',
                 }}
               >
                 <AnimatedText 

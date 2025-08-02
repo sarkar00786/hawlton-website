@@ -104,7 +104,7 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-primary-white via-primary-gold to-primary-white bg-clip-text text-transparent">
+              							<span className="text-primary-gold">
                 Insights & Innovation
               </span>
             </h1>

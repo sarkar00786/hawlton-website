@@ -167,8 +167,8 @@ export const getThemeColors = () => ({
     goldMetallic: '#FFD700',
   },
   gradients: {
-    gold: 'linear-gradient(135deg, #FFD700 0%, #FFD700 100%)',
-    navy: 'linear-gradient(135deg, #1A3A5F 0%, #2A4A6F 100%)',
-    platinum: 'linear-gradient(135deg, #F5F8FA 0%, #E6EAED 100%)',
+    gold: '#FFD700',
+    navy: '#1A3A5F',
+    platinum: '#F5F8FA',
   }
 })

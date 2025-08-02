@@ -77,16 +77,17 @@ const SuccessGuarantee = ({
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
               {guaranteeFeatures.map((feature, index) => {
                 const IconComponent = feature.icon
                 return (
-                  <div key={index} className="text-center">
-                    <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-3">
-                      <IconComponent className="w-6 h-6 text-primary-navy" />
+                  <div key={index} className="text-center space-y-3">
+                    <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-primary-navy" />
                     </div>
-                    <h4 className="text-base font-bold text-primary-white mb-1">{feature.title}</h4>
-                    <p className="text-sm text-primary-white/80">{feature.description}</p>
+                    <h4 className="text-lg font-bold text-primary-white mb-2">{feature.title}</h4>
+                    <p className="text-sm text-primary-white/90 font-medium mb-2">{feature.description}</p>
+                    <p className="text-xs text-primary-white/70 leading-relaxed px-2">{feature.detail}</p>
                   </div>
                 )
               })}
@@ -111,57 +112,51 @@ const SuccessGuarantee = ({
   }
 
   return (
-    <section className={`py-16 bg-primary-white ${className}`}>
+    <section className={`py-16 bg-primary-platinum ${className}`}>
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           
-          {/* Main Success Guarantee Section */}
-          <Card variant="navy" padding="none">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-primary-navy to-primary-navy/90 px-6 py-6 text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-white mb-3">
-                  Our Success Guarantee
-                </h2>
-                <p className="text-lg text-primary-white/90 max-w-2xl mx-auto leading-relaxed">
-                  Unlike traditional agencies that get paid regardless of results, we only succeed when you succeed. 
-                  Our profit-sharing model ensures we're fully invested in your growth.
-                </p>
-              </motion.div>
-            </div>
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
+              Our Success Guarantee
+            </h2>
+            <p className="text-lg text-primary-charcoal/90 max-w-3xl mx-auto leading-relaxed">
+              Unlike traditional agencies that get paid regardless of results, we only succeed when you succeed. 
+              Our profit-sharing model ensures we're fully invested in your growth.
+            </p>
+          </motion.div>
 
-            {/* Guarantee Features */}
-            <div className="px-6 py-8 bg-primary-navy">
-              <div className="grid md:grid-cols-3 gap-6">
-                {guaranteeFeatures.map((feature, index) => {
-                  const IconComponent = feature.icon
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.2 }}
-                      viewport={{ once: true }}
-                      className="text-center group"
-                    >
-                      <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="w-6 h-6 text-primary-navy" />
-                      </div>
-                      <h3 className="text-lg font-bold text-primary-white mb-2">{feature.title}</h3>
-                      <p className="text-primary-white/90 mb-2 font-medium text-sm">{feature.description}</p>
-                      <p className="text-primary-white/70 text-xs leading-relaxed">{feature.detail}</p>
-                    </motion.div>
-                  )
-                })}
-              </div>
-            </div>
-
-          </Card>
+          {/* Guarantee Features */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {guaranteeFeatures.map((feature, index) => {
+              const IconComponent = feature.icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="text-center hover:shadow-lg transition-all duration-300 group" padding="lg" variant="elevated">
+                    <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-8 h-8 text-primary-navy" />
+                    </div>
+                    <h3 className="text-xl font-bold text-primary-navy mb-3">{feature.title}</h3>
+                    <p className="text-primary-charcoal/90 font-medium mb-4 text-base">{feature.description}</p>
+                    <p className="text-primary-charcoal/70 text-sm leading-relaxed">{feature.detail}</p>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </div>
 
         </div>
       </div>

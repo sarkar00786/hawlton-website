@@ -14,8 +14,9 @@ const config: Config = {
         'primary-platinum': '#F5F8FA',
         'primary-charcoal': '#333333',
         'primary-silver': '#A0A0A0',
-        'primary-gold': '#FFD700',
-        'metallic-gold': '#D4AF37',
+        'primary-gold': '#D4AF00', // 75 Million Pakistani Gold - richer, more prestigious
+        'metallic-gold': '#B8860B', // Darker metallic variant
+        'accent-gold': '#FFD700', // Original gold for accents
         'primary-white': '#FFFFFF',
         'error': '#EF4444',
         'success': '#10B981',
@@ -133,16 +134,17 @@ const config: Config = {
         },
       },
       backgroundImage: {
-'gradient-gold': '#FFD700',
-        'gradient-navy': 'linear-gradient(135deg, #1A3A5F 0%, #2A4A6F 100%)',
-        'gradient-platinum': 'linear-gradient(135deg, #F5F8FA 0%, #E6EAED 100%)',
-        'shimmer': 'linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent)',
+        'gradient-gold': '#D4AF00', // Solid gold color instead of gradient
+        'gradient-navy': '#1A3A5F', // Solid navy color instead of gradient
+        'gradient-platinum': '#F5F8FA', // Solid platinum color instead of gradient
+        'shimmer': '#D4AF00', // Solid gold color instead of shimmer gradient
+        'hero-heading': '#D4AF00', // Solid gold color instead of special heading gradient
       },
       boxShadow: {
-        'gold': '0 4px 14px 0 rgba(255, 215, 0, 0.15)',
+        'gold': '0 4px 14px 0 rgba(212, 175, 0, 0.25)', // Enhanced shadow with new gold
         'navy': '0 4px 14px 0 rgba(26, 58, 95, 0.15)',
         'premium': '0 8px 32px 0 rgba(0, 0, 0, 0.12)',
-        'glow-gold': '0 0 20px rgba(255, 215, 0, 0.3)',
+        'glow-gold': '0 0 25px rgba(212, 175, 0, 0.4), 0 0 50px rgba(212, 175, 0, 0.2)', // Enhanced glow
         'soft': '0 2px 4px 0 rgba(0, 0, 0, 0.05)',
         'elevated': '0 4px 12px 0 rgba(0, 0, 0, 0.15)',
       },

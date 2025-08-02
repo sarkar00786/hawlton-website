@@ -231,9 +231,7 @@ body {
 
 /* Digital network pattern for backgrounds */
 .digital-pattern {
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(26, 58, 95, 0.1) 0%, transparent 50%);
+  background-color: rgba(255, 215, 0, 0.1);
   background-size: 100px 100px;
 }
 
@@ -256,8 +254,7 @@ body {
 
 /* Loading states */
 .loading-skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
+  background: #e0e0e0;
   animation: shimmer 1.5s infinite;
 }
 
@@ -268,7 +265,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #FFD700, #FFD700);
+  background: #FFD700;
   transform-origin: left;
   z-index: 1000;
 }
@@ -296,7 +293,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: rgba(255, 255, 255, 0.2);
   transition: left 0.5s;
 }
 
@@ -306,10 +303,42 @@ body {
 
 /* Typography enhancements */
 .text-gradient {
-background: #FFD700;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #D4AF00;
+}
+
+/* Premium heading styles for 75 Million Pakistani theme */
+.heading-75million {
+  color: #D4AF00;
+  text-shadow: 0 2px 4px rgba(212, 175, 0, 0.3);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heading-gold-shadow {
+  color: #D4AF00;
+  text-shadow: 0 2px 8px rgba(212, 175, 0, 0.4), 0 4px 16px rgba(212, 175, 0, 0.2);
+  font-weight: 700;
+}
+
+/* Enhanced heading variants */
+.heading-hero-gold {
+  color: #D4AF00;
+  text-shadow: 0 4px 12px rgba(212, 175, 0, 0.25);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.heading-hero-gold::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #D4AF00;
+  border-radius: 2px;
+  opacity: 0.6;
 }
 
 /* Mobile-first responsive utilities */
@@ -388,8 +417,7 @@ background: #FFD700;
 }
 
 .shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
+  background: #e0e0e0;
   animation: shimmer-loading 1.5s infinite;
 }
 
@@ -419,7 +447,7 @@ background: #FFD700;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #fee 0%, #fdd 100%);
+  background: #fee;
   border: 1px solid #fbb;
   border-radius: 8px;
   padding: 2rem;
@@ -459,7 +487,7 @@ background: #FFD700;
 
 /* Professional button animations */
 .btn-gradient {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  background: #FFD700;
   position: relative;
   overflow: hidden;
 }
@@ -471,7 +499,7 @@ background: #FFD700;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: rgba(255, 255, 255, 0.2);
   transition: left 0.5s;
 }
 
@@ -492,7 +520,7 @@ background: #FFD700;
 
 .scroll-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #FFD700, #FFA500);
+  background: #FFD700;
   transform-origin: 0%;
 }
 
@@ -860,7 +888,7 @@ background: #FFD700;
   
   /* Legacy Support - Maintain backward compatibility */
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-primary-gold to-primary-gold bg-clip-text text-transparent;
+    @apply text-primary-gold;
   }
   
   .success-notification {

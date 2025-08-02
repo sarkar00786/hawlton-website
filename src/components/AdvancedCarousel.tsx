@@ -190,7 +190,7 @@ const AdvancedCarousel: React.FC<AdvancedCarouselProps> = ({
                     backgroundImage: `url(${slides[currentSlide].image})`,
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-navy/80 via-primary-navy/40 to-transparent" />
+                  <div className="absolute inset-0 bg-primary-navy/80" />
                 </div>
               )}
 

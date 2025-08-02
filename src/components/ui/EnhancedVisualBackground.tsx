@@ -96,14 +96,11 @@ const EnhancedVisualBackground = ({
     >
       {/* Base Layer - Always visible with low opacity */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-navy/10 via-transparent to-accent-primary/5" />
+        <div className="absolute inset-0 bg-primary-navy/10" />
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `
-              linear-gradient(rgba(255, 215, 0, 0.02) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 215, 0, 0.02) 1px, transparent 1px)
-            `,
+            backgroundColor: 'rgba(255, 215, 0, 0.02)',
             backgroundSize: '60px 60px'
           }}
         />

@@ -8,6 +8,7 @@ interface HeroSectionProps {
   primaryAction: { text: string; href: string };
   secondaryAction?: { text: string; href: string };
   backgroundImage: string;
+  titleClassName?: string;
 }
 
 const HeroSectionWithProps = ({
@@ -16,6 +17,7 @@ const HeroSectionWithProps = ({
   primaryAction,
   secondaryAction,
   backgroundImage,
+  titleClassName,
 }: HeroSectionProps) => {
   // Function to render title with one emphasized word in gold
   const renderTitle = (title: string) => {
@@ -44,7 +46,7 @@ const HeroSectionWithProps = ({
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <div className="text-center space-y-8">
-        <h1 className="text-6xl font-bold">
+        <h1 className={`text-6xl font-bold ${titleClassName || ''}`}>
           {renderTitle(title)}
         </h1>
         <p className="text-xl text-primary-navy/80">{subtitle}</p>

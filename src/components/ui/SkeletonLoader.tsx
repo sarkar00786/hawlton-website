@@ -17,7 +17,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   height,
   lines = 1
 }) => {
-  const baseClasses = 'animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 bg-[length:200%_100%]'
+  const baseClasses = 'animate-pulse bg-gray-300'
   
   const variantClasses = {
     text: 'h-4 rounded',

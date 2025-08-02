@@ -114,7 +114,7 @@ export default function PartnerWithUsPage() {
                 
                 <h1 className="text-5xl md:text-6xl font-bold text-primary-white mb-6">
                   Partner With{' '}
-                  <span className="text-primary-gold">Hawlton</span>
+                  <span className="heading-hero-gold">Hawlton</span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-primary-silver leading-relaxed max-w-2xl">
@@ -205,7 +205,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold heading-75million mb-8">
               Partnership Models Available
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -260,7 +260,7 @@ export default function PartnerWithUsPage() {
 
             {/* Full Collaboration Partnership Model */}
             <motion.div
-              className="bg-gradient-to-br from-primary-navy to-primary-navy/90 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-white relative overflow-hidden"
+              className="bg-primary-navy rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-white relative overflow-hidden"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -343,7 +343,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold heading-75million mb-8">
               Why Partner With Hawlton?
             </h2>
             <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
@@ -382,7 +382,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold heading-gold-shadow mb-8">
               Partnership Process
             </h2>
             <p className="text-xl text-primary-silver max-w-3xl mx-auto">
@@ -421,7 +421,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold heading-75million mb-8">
               Your Dedicated Project Portal
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed">
@@ -529,7 +529,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold heading-gold-shadow mb-8">
               Comprehensive Partner Resources
             </h2>
             <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
@@ -640,7 +640,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold heading-75million mb-6">
               Choose Your Application Method
             </h2>
             <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed mb-12">
@@ -735,7 +735,7 @@ export default function PartnerWithUsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-navy py-20">
+      <section className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             className="space-y-8"
@@ -744,7 +744,7 @@ export default function PartnerWithUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold heading-gold-shadow mb-6">
               Questions About Partnership?
             </h2>
             <p className="text-xl text-primary-silver max-w-3xl mx-auto">

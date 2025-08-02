@@ -64,7 +64,7 @@ const PremiumTypography = ({
             }}
             className={`inline-block mr-1 ${
               isHighlighted
-                ? 'text-primary-gold font-semibold bg-gradient-to-r from-primary-gold to-metallic-gold bg-clip-text text-transparent'
+                ? 'text-primary-gold font-semibold'
                 : ''
             }`}
           >
@@ -78,7 +78,7 @@ const PremiumTypography = ({
           key={index}
           className={`${
             isHighlighted
-              ? 'text-primary-gold font-semibold bg-gradient-to-r from-primary-gold to-metallic-gold bg-clip-text text-transparent'
+              ? 'text-primary-gold font-semibold'
               : ''
           }`}
         >
@@ -102,7 +102,7 @@ const PremiumTypography = ({
 
   // Gradient classes
   const gradientClass = gradient
-    ? 'bg-gradient-to-r from-primary-gold via-metallic-gold to-primary-gold bg-clip-text text-transparent'
+    ? 'text-primary-gold'
     : ''
 
   // Glow effect classes

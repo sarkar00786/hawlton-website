@@ -311,7 +311,7 @@ export const FormProgress: React.FC<FormProgressProps> = ({
       
       <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
         <motion.div
-          className="h-2 bg-gradient-to-r from-primary-gold to-accent-primary rounded-full"
+          className="h-2 bg-primary-gold rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
           transition={{ duration: 0.5, ease: "easeOut" }}

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Suspense } from "react";
-import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone, FileCheck, Search } from 'lucide-react'
+import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone, FileCheck, Search, FileText } from 'lucide-react'
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -42,6 +42,7 @@ export default function HomePage() {
             href: "#market-data",
           }}
           backgroundImage="/images/backgrounds/hero-home.png"
+          titleClassName="heading-hero-gold text-shadow-lg"
         />
 
         {/* 2. PROBLEM NARRATIVE - Immediate engagement after hero */}
@@ -49,7 +50,7 @@ export default function HomePage() {
         <section className="py-20 bg-primary-navy text-primary-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-primary-white mb-8">
+              <h2 className="text-4xl font-bold heading-gold-shadow mb-8">
                 The Crisis That Changed Everything.
               </h2>
               <p className="text-xl text-primary-white/90 leading-relaxed mb-8">
@@ -88,7 +89,7 @@ export default function HomePage() {
         <section className="py-20 bg-primary-platinum">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+              <h2 className="text-4xl font-bold heading-75million mb-8">
                 How Our Business Model Works.
               </h2>
               <p className="text-xl text-primary-charcoal leading-relaxed mb-12">
@@ -131,7 +132,7 @@ export default function HomePage() {
         <section className="py-20 bg-primary-navy text-primary-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-primary-white mb-8">
+              <h2 className="text-4xl font-bold heading-gold-shadow mb-8">
                 A Partnership with Zero Digital Headaches.
               </h2>
               <p className="text-xl text-primary-white/90 leading-relaxed mb-12">
@@ -143,38 +144,38 @@ export default function HomePage() {
               </p>
               
               {/* Key Benefits Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
                     <ShoppingCart className="w-10 h-10 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">Professional Platform</h3>
-                  <p className="text-sm text-primary-white/80">Enterprise-grade e-commerce solution</p>
-                </div>
+                  <h3 className="text-lg font-bold mb-3 text-primary-white">Professional Platform</h3>
+                  <p className="text-sm text-primary-white/80 leading-relaxed">Enterprise-grade e-commerce solution</p>
+                </Card>
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
                     <Target className="w-10 h-10 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">Targeted Marketing</h3>
-                  <p className="text-sm text-primary-white/80">Data-driven customer acquisition</p>
-                </div>
+                  <h3 className="text-lg font-bold mb-3 text-primary-white">Targeted Marketing</h3>
+                  <p className="text-sm text-primary-white/80 leading-relaxed">Data-driven customer acquisition</p>
+                </Card>
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
                     <Truck className="w-10 h-10 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">Nationwide Logistics</h3>
-                  <p className="text-sm text-primary-white/80">Seamless delivery across Pakistan</p>
-                </div>
+                  <h3 className="text-lg font-bold mb-3 text-primary-white">Nationwide Logistics</h3>
+                  <p className="text-sm text-primary-white/80 leading-relaxed">Seamless delivery across Pakistan</p>
+                </Card>
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
                     <BarChart3 className="w-10 h-10 text-primary-navy" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">Zero Investment</h3>
-                  <p className="text-sm text-primary-white/80">We handle all upfront costs</p>
-                </div>
+                  <h3 className="text-lg font-bold mb-3 text-primary-white">Zero Investment</h3>
+                  <p className="text-sm text-primary-white/80 leading-relaxed">We handle all upfront costs</p>
+                </Card>
               </div>
             </div>
           </div>
@@ -184,7 +185,7 @@ export default function HomePage() {
         <section id="market-data" className="py-20 bg-primary-white">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+              <h2 className="text-4xl font-bold heading-75million mb-8">
                 Pakistan's Massive Digital Commerce Opportunity
               </h2>
               <p className="text-xl text-primary-charcoal max-w-3xl mx-auto mb-8">
@@ -317,29 +318,73 @@ export default function HomePage() {
     </div>
     
     {/* Enhanced Partnership Transparency */}
-    <div className="bg-primary-white border-2 border-primary-gold/20 rounded-xl p-10 max-w-4xl mx-auto shadow-lg">
-      <h3 className="text-2xl font-bold text-primary-navy mb-8 text-center">
-        Complete Partnership Transparency
-      </h3>
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
-          <h4 className="text-lg font-semibold text-primary-navy mb-4">Clear Terms</h4>
-          <ul className="space-y-3 text-primary-charcoal text-base">
-            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Revenue sharing model clearly defined</li>
-            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />No hidden fees or surprise costs</li>
-            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Transparent reporting and analytics</li>
+    <Card className="max-w-4xl mx-auto hover:shadow-lg transition-shadow" padding="xl" variant="elevated">
+      <div className="text-center mb-8">
+        <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <Shield className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-2xl font-bold text-primary-navy mb-4">
+          Complete Partnership Transparency
+        </h3>
+        <p className="text-primary-charcoal max-w-2xl mx-auto leading-relaxed">
+          We believe in complete transparency and mutual success. Here's exactly what you can expect from our partnership model.
+        </p>
+      </div>
+      
+      <div className="grid md:grid-cols-2 gap-8 mt-8">
+        <div className="space-y-6">
+          <div className="flex items-center space-x-3 mb-4">
+            <div className="w-8 h-8 bg-primary-gold/20 rounded-full flex items-center justify-center">
+              <FileText className="w-4 h-4 text-primary-navy" />
+            </div>
+            <h4 className="text-xl font-semibold text-primary-navy">Clear Terms</h4>
+          </div>
+          <ul className="space-y-4 text-primary-charcoal">
+            <li className="flex items-start">
+              <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+              <span className="text-base leading-relaxed">Revenue sharing model clearly defined with transparent calculations</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+              <span className="text-base leading-relaxed">No hidden fees or surprise costs throughout our partnership</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+              <span className="text-base leading-relaxed">Transparent reporting and real-time analytics dashboard</span>
+            </li>
           </ul>
         </div>
-        <div>
-          <h4 className="text-lg font-semibold text-primary-navy mb-4">Protected Investment</h4>
-          <ul className="space-y-3 text-primary-charcoal text-base">
-            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />We invest in your success upfront</li>
-            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Comprehensive legal agreements</li>
-            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Mutual success accountability</li>
+        
+        <div className="space-y-6">
+          <div className="flex items-center space-x-3 mb-4">
+            <div className="w-8 h-8 bg-primary-gold/20 rounded-full flex items-center justify-center">
+              <Shield className="w-4 h-4 text-primary-navy" />
+            </div>
+            <h4 className="text-xl font-semibold text-primary-navy">Protected Investment</h4>
+          </div>
+          <ul className="space-y-4 text-primary-charcoal">
+            <li className="flex items-start">
+              <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+              <span className="text-base leading-relaxed">We invest in your success upfront with zero cost to you</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+              <span className="text-base leading-relaxed">Comprehensive legal agreements protecting both parties</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+              <span className="text-base leading-relaxed">Mutual success accountability with clear performance metrics</span>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
+      
+      <div className="mt-8 pt-6 border-t border-primary-silver/20 text-center">
+        <p className="text-sm text-primary-charcoal/80 font-medium">
+          🔒 All partnership terms are documented, legally binding, and designed for mutual success
+        </p>
+      </div>
+    </Card>
   </div>
 </section>
 
