@@ -11,8 +11,8 @@ interface MediaMentionsProps {
 const MediaMentions = ({ className = '', variant = 'default' }: MediaMentionsProps) => {
   const certifications = [
     {
-      title: "P@SHA Member",
-      description: "Pakistan Software Houses Association",
+      title: "SECP Registration",
+      description: "Securities & Exchange Commission of Pakistan",
       icon: Award,
       type: "certification"
     },
