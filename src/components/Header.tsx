@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Search, Globe, Bell, User, ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin } from 'lucide-react'
+import { Menu, X, Search, Globe, Bell, User, ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin, Smartphone, Monitor } from 'lucide-react'
 import LiquidNav from './LiquidNav'
 import EnhancedNavigation from './EnhancedNavigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -51,10 +51,71 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [isMobileView, setIsMobileView] = useState(false)
   const pathname = usePathname()
   const mobileMenuRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  const toggleViewMode = () => {
+    const newMobileView = !isMobileView
+    setIsMobileView(newMobileView)
+    
+    // Apply the mobile/desktop view changes to the document body
+    const body = document.body
+    const html = document.documentElement
+    
+    if (newMobileView) {
+      // Switch to mobile view - create mobile frame
+      body.style.maxWidth = '414px' // iPhone 14 Pro Max width
+      body.style.margin = '20px auto'
+      body.style.border = '8px solid #1a1a1a'
+      body.style.borderRadius = '25px'
+      body.style.boxShadow = '0 0 30px rgba(0,0,0,0.5), inset 0 0 0 2px #333'
+      body.style.backgroundColor = '#000'
+      body.style.padding = '0'
+      body.style.minHeight = 'calc(100vh - 40px)'
+      
+      // Add mobile device chrome
+      html.style.backgroundColor = '#f0f0f0'
+      html.style.padding = '0'
+      
+      // Force mobile responsive behavior
+      const viewport = document.querySelector('meta[name="viewport"]')
+      if (viewport) {
+        viewport.setAttribute('content', 'width=414, initial-scale=1, maximum-scale=1, user-scalable=no')
+      }
+      
+      // Add mobile class to body for additional styling
+      body.classList.add('mobile-preview-mode')
+      
+    } else {
+      // Switch back to desktop view
+      body.style.maxWidth = ''
+      body.style.margin = ''
+      body.style.border = ''
+      body.style.borderRadius = ''
+      body.style.boxShadow = ''
+      body.style.backgroundColor = ''
+      body.style.padding = ''
+      body.style.minHeight = ''
+      
+      html.style.backgroundColor = ''
+      html.style.padding = ''
+      
+      // Restore normal viewport
+      const viewport = document.querySelector('meta[name="viewport"]')
+      if (viewport) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1, shrink-to-fit=no')
+      }
+      
+      // Remove mobile class
+      body.classList.remove('mobile-preview-mode')
+    }
+    
+    // Trigger a resize event to help components adjust
+    window.dispatchEvent(new Event('resize'))
+  }
 
   const isActive = (path: string) => pathname === path
 
@@ -129,10 +190,29 @@ const Header = () => {
         <div className="flex justify-between items-center h-14">
           {/* Logo and Navigation */}
           <div className="flex items-center space-x-8">
-            <div id="logo-wrapper" className="flex-shrink-0">
-              <Link href="/" id="logo-main" className="text-2xl font-bold text-primary-gold">
-                Hawlton
-              </Link>
+            <div className="flex items-center space-x-3">
+              <button
+                onClick={toggleViewMode}
+                className="flex items-center px-2 py-1 text-xs font-medium bg-primary-gold/10 text-primary-gold border border-primary-gold/30 rounded transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy"
+                title={isMobileView ? "Switch to Desktop View" : "Switch to Mobile View"}
+              >
+                {isMobileView ? (
+                  <>
+                    <Monitor className="w-3 h-3 mr-1" />
+                    Desktop
+                  </>
+                ) : (
+                  <>
+                    <Smartphone className="w-3 h-3 mr-1" />
+                    Mobile
+                  </>
+                )}
+              </button>
+              <div id="logo-wrapper" className="flex-shrink-0">
+                <Link href="/" id="logo-main" className="text-2xl font-bold text-primary-gold">
+                  Hawlton
+                </Link>
+              </div>
             </div>
 
             {/* Desktop Navigation - Enhanced Navigation */}
