@@ -315,15 +315,15 @@ export default function HomePage() {
     </div>
     
     {/* Enhanced Partnership Transparency */}
-    <Card className="max-w-4xl mx-auto hover:shadow-lg transition-shadow" padding="xl" variant="elevated">
+    <Card className="max-w-4xl mx-auto hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="xl" variant="elevated">
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-6">
           <Shield className="w-8 h-8 text-primary-navy" />
         </div>
-        <h3 className="text-2xl font-bold text-primary-navy mb-4">
+        <h3 className="text-2xl font-bold text-primary-white mb-4">
           Complete Partnership Transparency
         </h3>
-        <p className="text-primary-charcoal max-w-2xl mx-auto leading-relaxed">
+        <p className="text-primary-white/90 max-w-2xl mx-auto leading-relaxed">
           We believe in complete transparency and mutual success. Here's exactly what you can expect from our partnership model.
         </p>
       </div>
@@ -334,9 +334,9 @@ export default function HomePage() {
             <div className="w-8 h-8 bg-primary-gold/20 rounded-full flex items-center justify-center">
               <FileText className="w-4 h-4 text-primary-navy" />
             </div>
-            <h4 className="text-xl font-semibold text-primary-navy">Clear Terms</h4>
+            <h4 className="text-xl font-semibold text-primary-white">Clear Terms</h4>
           </div>
-          <ul className="space-y-4 text-primary-charcoal">
+          <ul className="space-y-4 text-primary-white/80">
             <li className="flex items-start">
               <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
               <span className="text-base leading-relaxed">Revenue sharing model clearly defined with transparent calculations</span>
@@ -357,9 +357,9 @@ export default function HomePage() {
             <div className="w-8 h-8 bg-primary-gold/20 rounded-full flex items-center justify-center">
               <Shield className="w-4 h-4 text-primary-navy" />
             </div>
-            <h4 className="text-xl font-semibold text-primary-navy">Protected Investment</h4>
+            <h4 className="text-xl font-semibold text-primary-white">Protected Investment</h4>
           </div>
-          <ul className="space-y-4 text-primary-charcoal">
+          <ul className="space-y-4 text-primary-white/80">
             <li className="flex items-start">
               <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
               <span className="text-base leading-relaxed">We invest in your success upfront with zero cost to you</span>
@@ -377,7 +377,7 @@ export default function HomePage() {
       </div>
       
       <div className="mt-8 pt-6 border-t border-primary-silver/20 text-center">
-        <p className="text-sm text-primary-charcoal/80 font-medium">
+        <p className="text-sm text-primary-white/70 font-medium">
           🔒 All partnership terms are documented, legally binding, and designed for mutual success
         </p>
       </div>
