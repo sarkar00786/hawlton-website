@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "Hawlton - Pakistan's Premier Digital Transformation & Partnership Platform",
     template: "%s | Hawlton - Digital Growth Partners Pakistan"
   },
-  description: "🚀 Empowering Pakistani businesses through strategic digital partnerships and innovative solutions. Transform your local business into a national digital powerhouse with proven growth strategies, measurable success, and expert guidance. Join 500+ successful Pakistani businesses scaling digitally.",
+  description: "⭐ **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. Expert guidance, measurable growth, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
   keywords: [
     "Pakistan digital transformation",
     "strategic business partnerships Pakistan", 
@@ -73,20 +73,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "16x16 32x32" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    other: [
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/apple-touch-icon.png",
-      },
-    ],
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     type: "website",
@@ -94,7 +87,7 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://hawlton.com",
     siteName: "Hawlton - Pakistan's Digital Transformation Leaders",
     title: "Hawlton - Empowering Pakistan's Digital Future 🇵🇰",
-    description: "🚀 Pakistan's #1 Digital Transformation Platform | 500+ Successful Partnerships | Proven Growth Strategies | Transform Your Business Digitally | Strategic Partnerships & Innovation Solutions",
+    description: "⭐ **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. Expert guidance, measurable growth, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
     images: [
       {
         url: "/images/backgrounds/home-hero.jpg",
@@ -117,7 +110,7 @@ export const metadata: Metadata = {
     site: "@hawlton",
     creator: "@hawlton",
     title: "Hawlton - Pakistan's Digital Transformation Leaders 🇵🇰",
-    description: "🚀 Empowering Pakistani businesses through strategic partnerships | 500+ Success Stories | Digital Growth Solutions | Transform Your Business Today",
+    description: "⭐ **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
     images: {
       url: "/images/backgrounds/home-hero.jpg",
       alt: "Hawlton - Digital Transformation Platform Pakistan",
@@ -134,7 +127,7 @@ export const metadata: Metadata = {
   classification: "Digital Transformation and Business Partnership Platform",
   other: {
     "msapplication-TileColor": "#FFD700",
-    "msapplication-TileImage": "/android-chrome-192x192.png",
+    "msapplication-TileImage": "/apple-touch-icon.png",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
     "apple-mobile-web-app-title": "Hawlton",
@@ -297,6 +290,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* Traditional favicon link for maximum compatibility */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        
         {/* Schema.org structured data */}
         <script
           type="application/ld+json"
