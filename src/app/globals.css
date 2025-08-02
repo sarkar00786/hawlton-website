@@ -342,6 +342,52 @@ body {
   opacity: 0.6;
 }
 
+/* Ultra-thick professional hero heading */
+.heading-ultra-thick {
+  font-weight: 900;
+  font-size: 3.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make subtitle thick and professional too */
+.subtitle-thick {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Responsive typography for mobile */
+@media (max-width: 768px) {
+  .heading-ultra-thick {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  
+  .subtitle-thick {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-ultra-thick {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  .subtitle-thick {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
 /* Mobile-first responsive utilities */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -22,7 +22,7 @@ const HeroSectionWithProps = ({
   // Function to render title with one emphasized word in gold
   const renderTitle = (title: string) => {
     // Define the word to emphasize (you can change this based on the specific title)
-    const wordsToEmphasize = ['Billions', 'Trapped', 'Digital', 'Revenue'];
+    const wordsToEmphasize = ['75', 'Million', 'Pakistanis'];
     const words = title.split(' ');
     
     return words.map((word, index) => {
@@ -42,16 +42,16 @@ const HeroSectionWithProps = ({
 
   return (
     <section
-      className="relative h-[60vh] flex items-center justify-center bg-cover bg-top"
+      className="relative h-[70vh] flex items-center justify-center bg-cover bg-top"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       {/* Professional overlay for better text readability */}
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative z-10 text-center space-y-8 px-6">
-        <h1 className={`text-6xl font-bold ${titleClassName || ''}`}>
+        <h1 className={`heading-ultra-thick ${titleClassName || ''}`}>
           {renderTitle(title)}
         </h1>
-        <p className="text-xl text-primary-navy/80">{subtitle}</p>
+        <p className="subtitle-thick text-primary-navy/90 max-w-4xl mx-auto">{subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={primaryAction.href}>
             <Button className="bg-primary-navy text-white">{primaryAction.text}</Button>
