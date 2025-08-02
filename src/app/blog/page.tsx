@@ -5,34 +5,28 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CalendarDays, Clock, User, ArrowRight, Search, Filter } from 'lucide-react'
-import { client, queries, urlFor } from '@/lib/sanity'
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import { blogService, BlogPost as FirebaseBlogPost } from '@/lib/services/blog'
 
 interface BlogPost {
-  _id: string
+  id: string
   title: string
-  slug: { current: string }
+  slug: string
   excerpt: string
-  featuredImage?: SanityImageSource
-  category?: {
-    title: string
-    slug: { current: string }
-    color: string
-  }
-  author?: {
+  featuredImage?: string
+  category: string
+  author: {
     name: string
-    title: string
-    image?: SanityImageSource
+    email: string
   }
-  publishedAt: string
-  tags?: string[]
-  featured?: boolean
+  publishedAt?: string
+  tags: string[]
+  status: 'draft' | 'published'
 }
 
 interface BlogCategory {
-  _id: string
+  id: string
   title: string
-  slug: { current: string }
+  slug: string
   description: string
   color: string
   postCount: number
@@ -50,9 +44,9 @@ export default function BlogPage() {
     const fetchData = async () => {
       try {
         const [blogPosts, blogCategories, featured] = await Promise.all([
-          client.fetch(queries.blogPosts),
-          client.fetch(queries.blogCategories),
-          client.fetch(queries.featuredBlogPosts)
+          blogService.getPublishedPosts(),
+          blogService.getCategories(),
+          blogService.getFeaturedPosts()
         ])
         
         setPosts(blogPosts || [])
@@ -69,10 +63,10 @@ export default function BlogPage() {
   }, [])
 
   const filteredPosts = posts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || post.category?.slug.current === selectedCategory
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
     const matchesSearch = searchQuery === '' || 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
     return matchesCategory && matchesSearch
   })
 
@@ -145,7 +139,7 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post, index) => (
                 <motion.article
-                  key={post._id}
+                  key={post.id}
                   className="bg-primary-platinum rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -156,14 +150,14 @@ export default function BlogPage() {
                   {post.featuredImage && (
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={urlFor(post.featuredImage)?.width(600)?.height(300)?.url() || ''}
+                        src={post.featuredImage}
                         alt={post.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       {post.category && (
-                        <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-${post.category.color} text-primary-white`}>
-                          {post.category.title}
+                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-primary-gold text-primary-navy">
+                          {post.category}
                         </div>
                       )}
                     </div>
@@ -173,14 +167,12 @@ export default function BlogPage() {
                     <div className="flex items-center gap-4 text-sm text-primary-charcoal mb-3">
                       <span className="flex items-center gap-1">
                         <CalendarDays className="w-4 h-4" />
-                        {formatDate(post.publishedAt)}
+                        {formatDate(post.publishedAt || '')}
                       </span>
-                      {post.author && (
-                        <span className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          {post.author.name}
-                        </span>
-                      )}
+                      <span className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        {post.author.name}
+                      </span>
                     </div>
                     
                     <h3 className="text-xl font-bold text-primary-navy mb-3 group-hover:text-primary-gold transition-colors">
@@ -192,7 +184,7 @@ export default function BlogPage() {
                     </p>
                     
                     <Link 
-                      href={`/blog/${post.slug.current}`}
+                      href={`/blog/${post.slug}`}
                       className="inline-flex items-center gap-2 text-primary-gold font-semibold hover:gap-3 transition-all"
                     >
                       Read More <ArrowRight className="w-4 h-4" />
@@ -221,10 +213,10 @@ export default function BlogPage() {
             </button>
             {categories.map((category) => (
               <button
-                key={category._id}
-                onClick={() => setSelectedCategory(category.slug.current)}
+                key={category.id}
+                onClick={() => setSelectedCategory(category.title)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  selectedCategory === category.slug.current
+                  selectedCategory === category.title
                     ? 'bg-primary-gold text-primary-navy'
                     : 'bg-primary-white text-primary-charcoal hover:bg-primary-gold hover:text-primary-navy'
                 }`}
@@ -248,7 +240,7 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
                 <motion.article
-                  key={post._id}
+                  key={post.id}
                   className="bg-primary-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -259,14 +251,14 @@ export default function BlogPage() {
                   {post.featuredImage && (
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={urlFor(post.featuredImage)?.width(600)?.height(300)?.url() || ''}
+                        src={post.featuredImage}
                         alt={post.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       {post.category && (
-                        <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-${post.category.color} text-primary-white`}>
-                          {post.category.title}
+                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-primary-gold text-primary-navy">
+                          {post.category}
                         </div>
                       )}
                     </div>
@@ -276,14 +268,12 @@ export default function BlogPage() {
                     <div className="flex items-center gap-4 text-sm text-primary-charcoal mb-3">
                       <span className="flex items-center gap-1">
                         <CalendarDays className="w-4 h-4" />
-                        {formatDate(post.publishedAt)}
+                        {formatDate(post.publishedAt || '')}
                       </span>
-                      {post.author && (
-                        <span className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          {post.author.name}
-                        </span>
-                      )}
+                      <span className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        {post.author.name}
+                      </span>
                     </div>
                     
                     <h3 className="text-xl font-bold text-primary-navy mb-3 group-hover:text-primary-gold transition-colors">
@@ -308,7 +298,7 @@ export default function BlogPage() {
                     )}
                     
                     <Link 
-                      href={`/blog/${post.slug.current}`}
+                      href={`/blog/${post.slug}`}
                       className="inline-flex items-center gap-2 text-primary-gold font-semibold hover:gap-3 transition-all"
                     >
                       Read More <ArrowRight className="w-4 h-4" />
