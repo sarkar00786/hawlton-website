@@ -198,11 +198,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14">
           {/* Logo and Navigation */}
-          <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-8">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <button
                 onClick={toggleViewMode}
-                className="flex items-center px-2 py-1 text-xs font-medium bg-primary-gold/10 text-primary-gold border border-primary-gold/30 rounded transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy"
+                className="hidden sm:flex items-center px-2 py-1 text-xs font-medium bg-primary-gold/10 text-primary-gold border border-primary-gold/30 rounded transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy"
                 title={isMobileView ? "Switch to Desktop View" : "Switch to Mobile View"}
               >
                 {isMobileView ? (
@@ -218,7 +218,7 @@ const Header = () => {
                 )}
               </button>
               <div id="logo-wrapper" className="flex-shrink-0">
-                <Link href="/" id="logo-main" className="text-2xl font-bold text-primary-gold">
+                <Link href="/" id="logo-main" className="text-xl sm:text-2xl font-bold text-primary-gold">
                   Hawlton
                 </Link>
               </div>

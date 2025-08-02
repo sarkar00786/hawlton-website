@@ -44,16 +44,16 @@ export default function HomePage() {
 
         {/* 2. PROBLEM NARRATIVE - Immediate engagement after hero */}
         {/* The Crisis That Changed Everything */}
-        <section className="py-20 bg-primary-navy text-primary-white">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-primary-white">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold heading-gold-shadow mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-gold-shadow mb-6 sm:mb-8">
                 The Crisis That Changed Everything.
               </h2>
-              <p className="text-xl text-primary-white/90 leading-relaxed mb-8">
+              <p className="text-lg sm:text-xl text-primary-white/90 leading-relaxed mb-6 sm:mb-8">
                 <strong>"We watched talented Pakistani entrepreneurs slowly suffocate in their local markets."</strong>
               </p>
-              <div className="grid md:grid-cols-2 gap-8 mb-8 text-left">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8 text-left">
                 <div className="bg-primary-white/5 border border-primary-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <div className="flex items-center mb-4">
                     <div className="w-10 h-10 bg-primary-gold rounded-full flex items-center justify-center mr-3">
@@ -93,13 +93,13 @@ export default function HomePage() {
 
         {/* 3. SOLUTION & VALUE PROPOSITION */}
         {/* How Our Business Model Works */}
-        <section className="py-20 bg-primary-platinum">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-platinum">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
                 How Our Business Model Works.
               </h2>
-              <p className="text-xl text-primary-charcoal leading-relaxed mb-12">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-charcoal leading-relaxed mb-8 sm:mb-12">
                 We're building a partnership model that eliminates upfront investment risks. Our vision is to create
                 comprehensive e-commerce solutions where we handle digital infrastructure while you focus on your
                 products. Together, we share in the growth and success of your expanded market reach.
@@ -107,7 +107,7 @@ export default function HomePage() {
             </div>
             
             {/* Three Steps Visual */}
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
               <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-primary-navy" />
@@ -136,13 +136,13 @@ export default function HomePage() {
         </section>
 
         {/* The Hawlton Advantage Section */}
-        <section className="py-20 bg-primary-navy text-primary-white">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-primary-white">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold heading-gold-shadow mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-gold-shadow mb-6 sm:mb-8">
                 A Partnership with Zero Digital Headaches.
               </h2>
-              <p className="text-xl text-primary-white/90 leading-relaxed mb-12">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-white/90 leading-relaxed mb-8 sm:mb-12">
                 We provide a complete digital ecosystem for your business, from a professional 
                 e-commerce platform and targeted marketing to nationwide logistics. The best part? 
                 There is no upfront investment required from your side. We absorb the costs and 
@@ -151,7 +151,7 @@ export default function HomePage() {
               </p>
               
               {/* Key Benefits Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
                 <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="lg">
                   <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-6">
                     <ShoppingCart className="w-10 h-10 text-primary-navy" />
@@ -189,17 +189,17 @@ export default function HomePage() {
         </section>
 
         {/* 4. MARKET OPPORTUNITY DATA SECTION */}
-        <section id="market-data" className="py-20 bg-primary-white">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+        <section id="market-data" className="py-12 sm:py-16 lg:py-20 bg-primary-white">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-6xl mx-auto text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
                 Pakistan's Massive Digital Commerce Opportunity
               </h2>
-              <p className="text-xl text-primary-navy max-w-3xl mx-auto mb-8">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-navy max-w-3xl mx-auto mb-6 sm:mb-8">
                 While global e-commerce thrives, Pakistan's digital market remains vastly underpenetrated. 
                 The data reveals an unprecedented opportunity for first-movers.
               </p>
-              <div className="text-sm text-primary-silver mb-8">
+              <div className="text-xs sm:text-sm text-primary-silver mb-6 sm:mb-8">
                 <span className="font-medium">Sources: State Bank of Pakistan, Pakistan Bureau of Statistics, McKinsey Global Institute</span>
               </div>
             </div>
@@ -215,12 +215,12 @@ export default function HomePage() {
             />
             
             {/* Market Insights Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 max-w-6xl mx-auto">
               <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
-                <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-primary-navy" />
+                <div className="w-12 sm:w-16 h-12 sm:h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-6 sm:w-8 h-6 sm:h-8 text-primary-navy" />
                 </div>
-                <h3 className="text-xl font-bold text-primary-navy mb-3">Digital Payment Surge</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-primary-navy mb-3">Digital Payment Surge</h3>
                 <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
                   Mobile banking transactions grew 67% in 2023, creating infrastructure for online commerce.
                 </p>
