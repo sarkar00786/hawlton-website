@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - Maximum Priority -->
+  <url>
+    <loc>https://hawlton.com/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hawlton.com/images/backgrounds/home-hero.jpg</image:loc>
+      <image:title>Hawlton - Pakistan's Premier Digital Transformation Platform</image:title>
+      <image:caption>Empowering Pakistani businesses through strategic digital partnerships and innovative solutions</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Page - High Priority -->
+  <url>
+    <loc>https://hawlton.com/about</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hawlton.com/images/team/Jahangir-Hussain.jpg</image:loc>
+      <image:title>Jahangir Hussain - Founder & Visionary Lead at Hawlton</image:title>
+      <image:caption>Strategic mind behind Hawlton's digital transformation mission</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Partner Page - Critical Business Page -->
+  <url>
+    <loc>https://hawlton.com/partner</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Solutions Page - Service Offerings -->
+  <url>
+    <loc>https://hawlton.com/solutions</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page - Important for Business -->
+  <url>
+    <loc>https://hawlton.com/contact</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Careers Page - Talent Acquisition -->
+  <url>
+    <loc>https://hawlton.com/careers</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Career Application Page -->
+  <url>
+    <loc>https://hawlton.com/careers/apply</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal Pages - Required but Lower Priority -->
+  <url>
+    <loc>https://hawlton.com/privacy</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://hawlton.com/terms</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Dynamic Pages for Future Content -->
+  <url>
+    <loc>https://hawlton.com/blog</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

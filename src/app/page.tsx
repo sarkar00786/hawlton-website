@@ -1,286 +1,386 @@
-'use client'
-import React from 'react'
-import { motion } from 'framer-motion'
-import { TrendingUp, Users, Shield, Target, ArrowRight, CheckCircle, Building, Handshake, Globe, Star, Zap } from 'lucide-react'
-import Link from 'next/link'
-import Button from '@/components/ui/Button'
-import ClientSuccess from '@/components/ClientSuccess'
-import MagneticButton from '@/components/MagneticButton'
+import { Metadata } from "next";
+import { Suspense } from "react";
+import { ChevronRight, Award, Users, Target, TrendingUp, Building2, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Handshake, Building, Sparkles, Rocket, Map, Lightbulb, BarChart3, ShoppingCart, Truck, Play, CheckCircle2, MapPin, Phone } from 'lucide-react'
+import Link from "next/link";
+import { Card } from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import AnimatedStats from "@/components/AnimatedStats";
+import PageLoader from "@/components/ui/PageLoader";
+import HeroSection from "@/components/HeroSection";
+import HeroSectionWithProps from "@/components/HeroSectionWithProps";
+import MediaMentions from "@/components/MediaMentions";
+import ComparisonMatrix from "@/components/ComparisonMatrix";
+import PartnershipAssessment from "@/components/PartnershipAssessment";
+import VideoTestimonials from "@/components/VideoTestimonials";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Hawlton | The Future of Business is Digital. The Future of Digital is Partnership.",
+  description: "We are Hawlton. We are building Pakistan's digital future, one partner at a time. Transform your business through strategic partnerships that eliminate risk and maximize growth potential.",
+  keywords: "Pakistan digital transformation, strategic business partnerships, zero investment business growth, e-commerce development Pakistan, nationwide business expansion, digital economy Pakistan, profit sharing partnerships",
+  openGraph: {
+    title: "Hawlton | The Future of Business is Digital. The Future of Digital is Partnership.",
+    description: "We are Hawlton. We are building Pakistan's digital future, one partner at a time.",
+    type: 'website',
+    locale: 'en_US',
+    images: ["/images/backgrounds/home-hero.jpg"],
+  },
+  alternates: {
+    canonical: 'https://hawlton.com'
+  }
+};
+
+export default function HomePage() {
   return (
-    <div id="hp1" className="min-h-screen">
-      {/* Hero Section with Enhanced Visual Appeal */}
-<section id="hero1" className="relative overflow-hidden bg-primary-navy py-32 text-white on-dark-bg" style={{ backgroundImage: "url('/images/backgrounds/hero-home.png')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
-        <div id="bg1" className="absolute inset-0 bg-gradient-to-br from-primary-navy via-primary-700 to-primary-800 opacity-10"></div>
-        <div id="bg2" className="absolute inset-0 bg-[linear-gradient(rgba(255,215,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,215,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-40"></div>
-        <div id="cont1" className="page-container relative text-center">
-          <motion.div id="anim1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
-            <h1 id="h1" className="h1"><span id="span1" className="text-primary-gold">Empowering</span> Pakistan's Digital Future</h1>
-            <p id="p1" className="lead mt-6 max-w-3xl mx-auto">We transform ambitious Pakistani businesses into national digital leaders through strategic partnerships and innovative digital solutions, delivering measurable growth and sustainable success.</p>
-            <div id="btns1" className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link id="link1" href="/partner"><Button id="btn1" size="xl" icon={ArrowRight} iconPosition="right">Partner With Us</Button></Link>
-              <Link id="link2" href="/about"><Button id="btn2" variant="outline" size="xl">Learn More</Button></Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      
-      {/* Value Proposition Section */}
-      <section id="sec1" className="bg-primary-platinum py-20">
-        <div id="cont2" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            id="anim2"
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 id="h2" className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
-              Driving Digital Growth Through Strategic Partnerships
-            </h2>
-            <div id="div1" className="max-w-4xl mx-auto text-lg text-primary-charcoal leading-relaxed">
-              <motion.p 
-                id="p2"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                Hawlton bridges the gap between traditional businesses and digital excellence, creating sustainable partnerships that benefit all stakeholders in Pakistan&apos;s growing economy.
-              </motion.p>
-            </div>
-          </motion.div>
-          
-          {/* Key Value Icons with Enhanced Design */}
-          <div id="grid1" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: 'Digital Growth', description: 'Transform local presence into national reach', icon: TrendingUp },
-              { title: 'Partnership', description: 'Collaborative approach for shared success', icon: Handshake },
-              { title: 'Security', description: 'Transparent and secure operations', icon: Shield },
-              { title: 'Impact', description: 'Creating measurable economic value', icon: Target }
-            ].map((item, index) => (
-              <motion.div 
-                key={index}
-                id={`card${index + 1}`}
-                className="text-center bg-white p-6 shadow-soft hover:shadow-elevated transition-all duration-300 rounded-xl border border-gray-100 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.15 }}
-                whileHover={{ y: -4, scale: 1.01 }}
-              >
-                <div id={`icon${index + 1}`} className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-accent-primary to-yellow-400 rounded-xl flex items-center justify-center shadow-gold group-hover:shadow-glow-gold transition-all duration-300">
-                  <item.icon className="w-7 h-7 text-primary-navy" />
+    <Suspense fallback={<PageLoader isLoading={true} />}>
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <HeroSectionWithProps
+          title="Pakistani Entrepreneurs Are Trapped in Their Local Markets. While Billions in Digital Revenue Flows Past Them."
+          subtitle="Every day, 75 million Pakistani consumers search online for products they can't find from local businesses. Meanwhile, your competitors gain zero digital advantage. We change that equation—together."
+          primaryAction={{
+            text: "See The Untapped Opportunity",
+            href: "#market-data",
+          }}
+          secondaryAction={{
+            text: "Calculate Your Revenue Potential",
+            href: "/partnership",
+          }}
+          backgroundImage="/images/backgrounds/home-hero.jpg"
+        />
+
+        {/* The Crisis That Changed Everything */}
+        <section className="py-20 bg-primary-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                The Crisis That Changed Everything.
+              </h2>
+              <p className="text-xl text-primary-charcoal leading-relaxed mb-8">
+                <strong>"We watched talented Pakistani entrepreneurs slowly suffocate in their local markets."</strong>
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 mb-8 text-left">
+                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                  <h3 className="text-lg font-bold text-red-700 mb-3">The Pain We Witnessed</h3>
+                  <ul className="space-y-2 text-primary-charcoal">
+                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Brilliant artisans with 5-10 customers per month</li>
+                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Quality manufacturers competing on price alone</li>
+                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Traditional businesses watching younger competitors fail online</li>
+                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Customers paying premium for imports while local quality goes unseen</li>
+                  </ul>
                 </div>
-                <h3 id={`h3_${index + 1}`} className="text-2xl font-bold text-primary-navy mb-3 group-hover:text-accent-primary transition-colors duration-300">{item.title}</h3>
-                <p id={`p${index + 3}`} className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Approach Section */}
-      <section id="sec2" className="bg-primary-navy py-20">
-        <div id="cont3" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            id="anim3"
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 id="h3" className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
-              Strategic Partnerships & Digital Innovation for Accelerated Growth.
-            </h2>
-            <div id="div2" className="max-w-4xl mx-auto space-y-6 text-lg text-primary-silver leading-relaxed">
-              <motion.p
-                id="p7"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                Hawlton collaborates closely with partners, leveraging existing assets and our deep digital expertise 
-                to co-create and scale online ventures.
-              </motion.p>
-            </div>
-          </motion.div>
-          
-          {/* Process Flow - Clean Grid Layout */}
-          <div id="grid2" className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: '01', title: 'Partner', description: 'Collaborate with ambitious businesses ready for digital transformation' },
-              { step: '02', title: 'Transform', description: 'Build robust digital infrastructure and scale operations nationwide' },
-              { step: '03', title: 'Grow', description: 'Achieve sustainable growth through optimized digital channels' }
-            ].map((item, index) => (
-              <motion.div 
-                key={index}
-                id={`step${index + 1}`}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <motion.div 
-                  id={`box${index + 1}`}
-                  className="bg-primary-platinum p-6 h-full rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100"
-                  whileHover={{ y: -5 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <div id={`num${index + 1}`} className="text-xl font-bold text-accent-primary mb-3">{item.step}</div>
-                  <h3 id={`h4_${index + 1}`} className="text-lg font-bold text-primary-navy mb-3 leading-tight">{item.title}</h3>
-                  <p id={`p${index + 8}`} className="text-primary-charcoal leading-relaxed text-sm">{item.description}</p>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Impact Section */}
-      <section id="sec3" className="bg-primary-platinum py-20">
-        <div id="cont4" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            id="anim4"
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 id="h4" className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
-              Driving Exponential Growth: Our Collective Journey.
-            </h2>
-          </motion.div>
-          
-          <div id="grid3" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Transforming Local Presence into National Reach',
-                desc: 'Enabling businesses to connect with customers nationwide.',
-                metric: 'National Scale',
-                icon: Globe
-              },
-              {
-                title: 'Unlocking Digital Potential',
-                desc: 'Guiding traditional enterprises into the lucrative online marketplace.',
-                metric: 'Digital Growth',
-                icon: Zap
-              },
-              {
-                title: 'Driving Exponential Growth for Partners',
-                desc: 'Achieving significant revenue increases and market share expansion.',
-                metric: 'Revenue Growth',
-                icon: TrendingUp
-              },
-              {
-                title: 'Optimizing Operations',
-                desc: 'Streamlining logistics and customer acquisition through digital innovation.',
-                metric: 'Efficiency Gains',
-                icon: Target
-              },
-              {
-                title: 'Empowering Pakistan&apos;s Digital Economy',
-                desc: 'Contributing to national economic development and job creation.',
-                metric: 'Economic Impact',
-                icon: Building
-              }
-            ].map((item, index) => (
-              <motion.div 
-                key={index}
-                id={`impact${index + 1}`}
-                className="bg-white p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover rounded-lg hover:scale-105 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-              >
-                <div id={`row${index + 1}`} className="flex items-center justify-between mb-4">
-                  <div id={`badge${index + 1}`} className="w-12 h-12 bg-gradient-gold flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-primary-navy" />
-                  </div>
-                  <span id={`metric${index + 1}`} className="text-sm font-semibold text-primary-gold uppercase tracking-wider">
-                    {item.metric}
-                  </span>
+                <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
+                  <h3 className="text-lg font-bold text-green-700 mb-3">The Solution We Built</h3>
+                  <ul className="space-y-2 text-primary-charcoal">
+                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Professional digital infrastructure with zero upfront cost</li>
+                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Nationwide customer reach for local businesses</li>
+                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Profit-sharing model that aligns our success with yours</li>
+                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Complete digital management so you focus on what you do best</li>
+                  </ul>
                 </div>
-                <h3 id={`h5_${index + 1}`} className="text-lg font-bold text-primary-navy mb-3 leading-tight">{item.title}</h3>
-                <p id={`p${index + 11}`} className="text-primary-charcoal leading-relaxed text-sm">{item.desc}</p>
-              </motion.div>
-            ))}
+              </div>
+              <p className="text-lg text-primary-charcoal leading-relaxed italic">
+                The problem wasn't the businesses or the customers—it was the missing bridge. 
+                <strong>We became that bridge.</strong>
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Client Success Stories */}
-      <ClientSuccess />
-
-      {/* CTA Section */}
-      <section id="cta1" className="bg-gradient-navy py-20">
-        <div id="cont5" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            id="anim5"
-            className="space-y-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 id="h5" className="text-2xl md:text-3xl font-bold text-primary-white mb-6">
-              Ready to Transform Your Business with Pakistan's Digital Leader?
-            </h2>
-            <p id="p16" className="text-xl text-primary-silver mb-12 max-w-3xl mx-auto">
-              Connect with our team to explore how Hawlton can empower your national expansion and digital transformation.
-            </p>
+        {/* Our Partner-First Approach Section */}
+        <section className="py-20 bg-primary-platinum">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                How Our Business Model Works.
+              </h2>
+              <p className="text-xl text-primary-charcoal leading-relaxed mb-12">
+                We're building a partnership model that eliminates upfront investment risks. Our vision is to create 
+                comprehensive e-commerce solutions where we handle digital infrastructure while you focus on your 
+                products. Together, we share in the growth and success of your expanded market reach.
+              </p>
+            </div>
             
-            {/* CTA Buttons */}
-            <div id="btns2" className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <motion.div
-                id="wrap1"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link id="link3" href="/partner">
-                  <Button
-                    id="btn3"
-                    variant="primary"
-                    size="lg"
-                    icon={ArrowRight}
-                    iconPosition="right"
-                    className="transform hover:scale-105 px-8 py-4"
-                  >
-                    Start Your Growth Journey
-                  </Button>
-                </Link>
-              </motion.div>
+            {/* Three Steps Visual */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-primary-navy">1</span>
+                </div>
+                <h3 className="text-xl font-bold text-primary-navy mb-4">Your Expertise</h3>
+                <p className="text-primary-charcoal">Your proven business model and exceptional products</p>
+              </Card>
               
-              <motion.div
-                id="wrap2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link id="link4" href="/about">
-                  <Button
-                    id="btn4"
-                    variant="outline"
-                    size="lg"
-                    icon={ArrowRight}
-                    iconPosition="right"
-                    className="border-primary-white text-primary-white hover:bg-primary-white hover:text-primary-navy px-8 py-4"
-                  >
-                    Discover Hawlton
-                  </Button>
-                </Link>
-              </motion.div>
+              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-primary-navy">+</span>
+                </div>
+                <h3 className="text-xl font-bold text-primary-navy mb-4">Our Platform</h3>
+                <p className="text-primary-charcoal">Complete digital infrastructure and nationwide reach</p>
+              </Card>
+              
+              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-primary-navy">=</span>
+                </div>
+                <h3 className="text-xl font-bold text-primary-navy mb-4">Shared Success</h3>
+                <p className="text-primary-charcoal">Exponential growth for both partners</p>
+              </Card>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
+
+        {/* The Hawlton Advantage Section */}
+        <section className="py-20 bg-primary-navy text-primary-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-primary-white mb-8">
+                A Partnership with Zero Digital Headaches.
+              </h2>
+              <p className="text-xl text-primary-white/90 leading-relaxed mb-12">
+                We provide a complete digital ecosystem for your business, from a professional 
+                e-commerce platform and targeted marketing to nationwide logistics. The best part? 
+                There is no upfront investment required from your side. We absorb the costs and 
+                handle the complexities of digital management, allowing you to focus on your core 
+                business and products.
+              </p>
+              
+              {/* Key Benefits Grid */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <ShoppingCart className="w-10 h-10 text-primary-navy" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">Professional Platform</h3>
+                  <p className="text-sm text-primary-white/80">Enterprise-grade e-commerce solution</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-10 h-10 text-primary-navy" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">Targeted Marketing</h3>
+                  <p className="text-sm text-primary-white/80">Data-driven customer acquisition</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Truck className="w-10 h-10 text-primary-navy" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">Nationwide Logistics</h3>
+                  <p className="text-sm text-primary-white/80">Seamless delivery across Pakistan</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-10 h-10 text-primary-navy" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">Zero Investment</h3>
+                  <p className="text-sm text-primary-white/80">We handle all upfront costs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{/* Market Opportunity Data Section */}
+<section id="market-data" className="py-20 bg-primary-white">
+  <div className="container mx-auto px-6">
+    <div className="max-w-6xl mx-auto text-center mb-16">
+      <h2 className="text-4xl font-bold text-primary-navy mb-8">
+        Pakistan's Massive Digital Commerce Opportunity
+      </h2>
+      <p className="text-xl text-primary-charcoal max-w-3xl mx-auto mb-8">
+        While global e-commerce thrives, Pakistan's digital market remains vastly underpenetrated. 
+        The data reveals an unprecedented opportunity for first-movers.
+      </p>
+      <div className="text-sm text-primary-silver mb-8">
+        <span className="font-medium">Sources: State Bank of Pakistan, Pakistan Bureau of Statistics, McKinsey Global Institute</span>
+      </div>
     </div>
+    
+    {/* Primary Market Statistics */}
+    <AnimatedStats 
+      stats={[
+        { value: "$10B", label: "Untapped E-commerce Market by 2027", suffix: "" },
+        { value: "95%", label: "of SMEs Lack Digital Presence", suffix: "%" },
+        { value: "40%", label: "Annual E-commerce Growth Rate", suffix: "%" },
+        { value: "75M", label: "Internet Users Ready to Shop Online", suffix: "" },
+      ]}
+    />
+    
+    {/* Market Insights Grid */}
+    <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+        <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <TrendingUp className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-xl font-bold text-primary-navy mb-3">Digital Payment Surge</h3>
+        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+          Mobile banking transactions grew 67% in 2023, creating infrastructure for online commerce.
+        </p>
+        <div className="text-2xl font-bold text-primary-gold">PKR 14T</div>
+        <div className="text-xs text-primary-silver">Digital transaction volume 2023</div>
+      </Card>
+      
+      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+        <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <Users className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-xl font-bold text-primary-navy mb-3">Youth Demographics</h3>
+        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+          64% of Pakistan's population is under 30, representing the most digitally-native consumer base in the region.
+        </p>
+        <div className="text-2xl font-bold text-primary-gold">140M</div>
+        <div className="text-xs text-primary-silver">Digital-first consumers under 30</div>
+      </Card>
+      
+      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+        <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <Globe className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-xl font-bold text-primary-navy mb-3">Regional Advantage</h3>
+        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+          Pakistan's e-commerce penetration (2.4%) lags far behind regional averages (8.1%), indicating massive catch-up potential.
+        </p>
+        <div className="text-2xl font-bold text-primary-gold">235%</div>
+        <div className="text-xs text-primary-silver">Growth potential vs regional average</div>
+      </Card>
+    </div>
+    
+    {/* Call to Action */}
+    <div className="text-center mt-12">
+      <div className="bg-primary-gold/10 rounded-xl p-6 max-w-4xl mx-auto">
+        <h3 className="text-2xl font-bold text-primary-navy mb-4">
+          The Window is Open. But Not Forever.
+        </h3>
+        <p className="text-primary-charcoal mb-6">
+          First-mover advantage in Pakistan's digital economy won't last. International players and tech giants 
+          are already eyeing this market. The businesses that act now will own their categories.
+        </p>
+        <Link href="/partnership">
+          <Button className="bg-primary-navy text-primary-white hover:bg-primary-navy/90 px-8 py-3">
+            Secure Your Market Position
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Trust & Authority Section */}
+<section className="py-20 bg-primary-platinum">
+  <div className="container mx-auto px-6">
+    <div className="max-w-6xl mx-auto text-center mb-16">
+      <h2 className="text-4xl font-bold text-primary-navy mb-8">
+        Building Pakistan's Digital Future with Integrity
+      </h2>
+      <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
+        Our approach is founded on transparency, deep market research, 
+        and an unwavering commitment to your success. We're building something new together.
+      </p>
+    </div>
+    
+    {/* Credibility Grid */}
+    <div className="grid md:grid-cols-3 gap-8 mb-12">
+      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+        <div className="w-16 h-16 bg-primary-navy/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <Shield className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-xl font-bold text-primary-navy mb-3">Registered & Compliant</h3>
+        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+          Fully registered Pakistani business entity operating under local regulations and international digital commerce standards.
+        </p>
+        <div className="text-sm text-primary-gold font-medium">SECP Registered • PKI Compliant</div>
+      </Card>
+      
+      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+        <div className="w-16 h-16 bg-primary-navy/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <TrendingUp className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-xl font-bold text-primary-navy mb-3">Market Research Driven</h3>
+        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+          Our strategies are built on comprehensive analysis of Pakistan's digital economy using data from State Bank, PBS, and international sources.
+        </p>
+        <div className="text-sm text-primary-gold font-medium">Research-Based Approach</div>
+      </Card>
+      
+      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+        <div className="w-16 h-16 bg-primary-navy/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <Users className="w-8 h-8 text-primary-navy" />
+        </div>
+        <h3 className="text-xl font-bold text-primary-navy mb-3">Founder Expertise</h3>
+        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+          Led by experienced entrepreneurs with proven track records in identifying market opportunities and building scalable digital businesses.
+        </p>
+        <div className="text-sm text-primary-gold font-medium">Jahangir Hussain • Muhammad Ismail</div>
+      </Card>
+    </div>
+    
+    {/* Partnership Transparency */}
+    <div className="bg-primary-white rounded-xl p-8 max-w-4xl mx-auto">
+      <h3 className="text-2xl font-bold text-primary-navy mb-6 text-center">
+        Complete Partnership Transparency
+      </h3>
+      <div className="grid md:grid-cols-2 gap-6">
+        <div>
+          <h4 className="text-lg font-semibold text-primary-navy mb-3">Clear Terms</h4>
+          <ul className="space-y-2 text-primary-charcoal text-sm">
+            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Revenue sharing model clearly defined</li>
+            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />No hidden fees or surprise costs</li>
+            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Transparent reporting and analytics</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold text-primary-navy mb-3">Protected Investment</h4>
+          <ul className="space-y-2 text-primary-charcoal text-sm">
+            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />We invest in your success upfront</li>
+            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Comprehensive legal agreements</li>
+            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Mutual success accountability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Media Mentions - Simplified */}
+<MediaMentions variant="compact" />
+
+{/* Partnership Assessment Section */}
+<PartnershipAssessment />
+
+{/* Video Testimonials Section - Disabled until real testimonials are available */}
+{/* <VideoTestimonials /> */}
+
+{/* Comparison Matrix Section */}
+<ComparisonMatrix />
+
+{/* Final Call to Action Section */}
+<section className="py-20 bg-primary-navy text-white">
+  <div className="container mx-auto px-6">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-4xl font-bold mb-8">
+        Ready to Partner with Hawlton?
+      </h2>
+      <p className="text-xl mb-12 max-w-3xl mx-auto">
+        If you have quality products and want to sell nationwide without upfront costs, 
+        let's talk. We personally vet every partner to ensure mutual success.
+      </p>
+      <div className="space-y-4">
+        <Link href="/partnership">
+          <Button 
+            size="lg" 
+            className="bg-primary-gold text-primary-navy hover:bg-primary-gold/90 px-12 py-4 text-lg font-bold"
+          >
+            Claim Your Market Position Now
+          </Button>
+        </Link>
+        <p className="text-sm text-primary-white/70">Limited partnerships available • Personal vetting required • Zero upfront costs</p>
+      </div>
+    </div>
+  </div>
+</section>
+      </div>
+    </Suspense>
   );
 }

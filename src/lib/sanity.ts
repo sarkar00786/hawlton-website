@@ -1,5 +1,6 @@
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 // Direct configuration (can also use environment variables)
 export const client = createClient({
@@ -9,14 +10,10 @@ export const client = createClient({
   useCdn: false, // Set to false for fresh data in development
 })
 
-const builder = client ? imageUrlBuilder(client) : null
+const builder = imageUrlBuilder(client)
 
-export function urlFor(source: unknown) {
-  if (!builder) {
-    console.warn('Sanity client not configured properly')
-    return { url: () => '' }
-  }
-  return builder.image(source as Parameters<typeof builder.image>[0])
+export function urlFor(source: SanityImageSource) {
+  return builder.image(source)
 }
 
 // Helper function to convert portable text to plain text for descriptions

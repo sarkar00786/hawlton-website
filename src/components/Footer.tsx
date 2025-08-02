@@ -32,7 +32,10 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary-gold" />
-                <span className="text-primary-silver text-sm">+92-XXX-XXXXXXX</span>
+                <div className="text-primary-silver text-sm">
+                  <div>+92 (330) 2577116</div>
+                  <div>+92 (370) 7874867</div>
+                </div>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-primary-gold" />
@@ -46,23 +49,18 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-primary-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className={`${isActive('/about') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
-                  About Us
+                <Link href="/our-vision" className={`${isActive('/our-vision') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
+                  Our Vision
                 </Link>
               </li>
               <li>
                 <Link href="/solutions" className={`${isActive('/solutions') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
-                  Our Solutions
+                  Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/partner" className={`${isActive('/partner') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
-                  Partner With Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className={`${isActive('/careers') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
-                  Careers
+                <Link href="/partnership" className={`${isActive('/partnership') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
+                  Partnership
                 </Link>
               </li>
               <li>
@@ -73,10 +71,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal & Social */}
+          {/* Careers & Legal */}
           <div>
-            <h4 className="text-lg font-semibold text-primary-white mb-4">Legal & Connect</h4>
+            <h4 className="text-lg font-semibold text-primary-white mb-4">Careers & Legal</h4>
             <ul className="space-y-2 mb-6">
+              <li>
+                <Link href="/careers" className={`${isActive('/careers') ? 'text-primary-gold font-semibold' : 'text-primary-silver'} hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0`}>
+                  Careers
+                </Link>
+              </li>
               <li>
                 <Link href="/privacy" className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0">
                   Privacy Policy

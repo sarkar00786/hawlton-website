@@ -25,6 +25,10 @@ Allow: /site.webmanifest
 
 # Sitemap location
 Sitemap: https://hawlton.com/sitemap.xml
+User-agent: *
+Crawl-delay: 1
+Request-rate: 1/1s # 1 request per second
+Clean-param: ref / # Removes the query string parameter 'ref' from URLs
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

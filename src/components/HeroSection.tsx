@@ -6,6 +6,15 @@ import { ArrowRight, TrendingUp, Users, Globe, Sparkles, Building2, Target, Shie
 import Button from './ui/Button'
 import { useScrollAnimation, useStaggerAnimation } from '@/lib/hooks'
 
+interface HeroSectionProps {
+  title?: string;
+  subtitle?: string;
+  primaryAction?: { text: string; href: string };
+  secondaryAction?: { text: string; href: string };
+  backgroundImage?: string;
+  showVideo?: boolean;
+}
+
 // Character-by-character animation component
 const AnimatedText = ({ text, className = '', delay = 0 }: { text: string, className?: string, delay?: number }) => {
   const characters = text.split('')
@@ -32,7 +41,7 @@ const AnimatedText = ({ text, className = '', delay = 0 }: { text: string, class
   )
 }
 
-const HeroSection = () => {
+const HeroSection = ({ title, subtitle, primaryAction, secondaryAction, backgroundImage, showVideo }: HeroSectionProps = {}) => {
   const { ref: heroRef, inView } = useScrollAnimation(0.2)
   const staggerAnimation = useStaggerAnimation(0.15)
 
@@ -126,7 +135,7 @@ const HeroSection = () => {
                 }}
               >
                 <AnimatedText 
-                  text="Hawlton: Empowering Pakistan's "
+                  text="Hawlton: Building Pakistan's "
                   delay={inView ? 0.5 : 0}
                 />
                 <motion.span 
@@ -141,7 +150,7 @@ const HeroSection = () => {
                   transition={{ duration: 3, repeat: Infinity }}
                 >
                   <AnimatedText 
-                    text="Digital Future"
+                    text="E-Commerce Portfolio"
                     delay={inView ? 1.5 : 0}
                     className="text-accent-primary font-black"
                   />
@@ -159,14 +168,14 @@ const HeroSection = () => {
             {/* Sub-tagline as per blueprint */}
             <motion.div variants={staggerAnimation.item}>
               <p className="text-lg text-text-muted leading-relaxed">
-                Catalyzing National Digital Transformation through Strategic Partnerships & Digital Innovation.
+                We build niche e-commerce brands by partnering with quality local businesses.
               </p>
             </motion.div>
 
             {/* Sub-text as per blueprint */}
             <motion.div variants={staggerAnimation.item}>
               <p className="text-lg lg:text-xl text-text-light leading-relaxed max-w-2xl">
-                Hawlton transforms traditional enterprises into digital powerhouses and offers unparalleled opportunities for strategic partnerships in Pakistan&apos;s vibrant growth story.
+                Our first brand, Ranée Rouge, sells curated artificial jewelry. We handle the website, marketing, and customers. You handle the products. We split the profits.
               </p>
             </motion.div>
 
@@ -177,15 +186,15 @@ const HeroSection = () => {
             >
               <div className="flex items-center gap-2 text-accent-primary">
                 <Sparkles className="w-5 h-5" />
-                <span className="text-sm font-medium text-text-light">Pioneering Excellence</span>
+                <span className="text-sm font-medium text-text-light">No Upfront Costs</span>
               </div>
               <div className="flex items-center gap-2 text-accent-primary">
                 <Building2 className="w-5 h-5" />
-                <span className="text-sm font-medium text-text-light">Enterprise Ready</span>
+                <span className="text-sm font-medium text-text-light">Personal Vetting</span>
               </div>
               <div className="flex items-center gap-2 text-accent-primary">
                 <Target className="w-5 h-5" />
-                <span className="text-sm font-medium text-text-light">Results Driven</span>
+                <span className="text-sm font-medium text-text-light">Profit Sharing</span>
               </div>
             </motion.div>
 

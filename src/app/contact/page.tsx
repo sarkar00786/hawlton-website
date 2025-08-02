@@ -72,11 +72,10 @@ export default function ContactPage() {
       <section className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-primary-white mb-6">
-            Get In Touch
+            Connect With Us.
           </h1>
           <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your business or explore partnership opportunities?
-            Our team is here to answer your questions and guide you towards digital success.
+            Whether you have a question or are ready to begin, our team is here to help.
           </p>
         </div>
       </section>
@@ -84,16 +83,16 @@ export default function ContactPage() {
       {/* Quick Links Section */}
       <section className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
-            Looking for Something Specific?
-          </h2>
-          <p className="text-xl text-primary-charcoal mb-12 max-w-3xl mx-auto">
-            Jump directly to the information you need or explore our specialized inquiry forms.
-          </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-8">
+              Connect With Us.
+            </h2>
+            <p className="text-xl text-primary-charcoal mb-12 max-w-3xl mx-auto">
+              Whether you have a question or are ready to begin, our team is here to help.
+            </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a
-              href="/partner"
+              href="/partnership"
               className="group bg-white rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold rounded-full flex items-center justify-center group-hover:bg-primary-gold transition-colors duration-300">
@@ -242,8 +241,9 @@ export default function ContactPage() {
                       <Phone className="w-5 h-5 text-primary-navy" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-primary-navy text-sm">Phone</h3>
-                      <p className="text-primary-charcoal text-sm">+92-XXX-XXXXXXX</p>
+                      <h3 className="font-medium text-primary-navy text-sm">Phone & WhatsApp</h3>
+                      <p className="text-primary-charcoal text-sm">+92 (330) 2577116</p>
+                      <p className="text-primary-charcoal text-sm">+92 (370) 7874867</p>
                       <p className="text-xs text-primary-silver">9 AM - 6 PM PKT</p>
                     </div>
                   </div>

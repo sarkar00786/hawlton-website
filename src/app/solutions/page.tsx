@@ -1,5 +1,11 @@
-import { client, queries } from '@/lib/sanity';
-import { Metadata } from 'next';
+import { Metadata } from "next";
+import { Suspense } from "react";
+import HeroSectionWithProps from "@/components/HeroSectionWithProps";
+import PageLoader from "@/components/ui/PageLoader";
+import { Card } from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import Link from "next/link";
+import ResourceLibrary from "@/components/ResourceLibrary";
 import { 
   ShoppingCart, 
   Megaphone, 
@@ -9,101 +15,143 @@ import {
   Globe, 
   Shield,
   Zap,
+  Users,
+  Target,
   RefreshCw,
   Cloud,
   BarChart3,
-  Users,
   Bolt,
   Lock
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Our Solutions - Hawlton | Digital Growth Partnerships',
-  description: 'Discover Hawlton&apos;s comprehensive digital transformation solutions for Pakistani businesses. From e-commerce to logistics optimization.',
+  title: "Our Solutions - Your Digital Transformation Starts Here | Hawlton",
+  description: "Comprehensive digital transformation solutions for Pakistani businesses. Professional e-commerce platforms, hyper-targeted marketing, optimized logistics, and strategic growth through partnership models.",
+  keywords: "digital transformation Pakistan, e-commerce platform Pakistan, digital marketing Pakistan, business growth solutions Pakistan, strategic partnerships Pakistan, logistics optimization Pakistan, nationwide digital solutions",
+  openGraph: {
+    title: "Our Solutions - Your Digital Transformation Starts Here | Hawlton",
+    description: "We provide the infrastructure, expertise, and support you need to thrive online.",
+    images: ["/images/backgrounds/solutions-hero.jpg"],
+  },
 };
 
-// Icon mapping for solutions - commented out as it's not currently used
-// const iconMap: { [key: string]: React.ComponentType } = {
-//   'ShoppingCart': ShoppingCart,
-//   'Megaphone': Megaphone,
-//   'Truck': Truck,
-//   'Brain': Brain,
-//   'TrendingUp': TrendingUp,
-//   'Globe': Globe,
-//   'Shield': Shield,
-//   'Zap': Zap,
-// };
 
-// Fetch solutions from Sanity
-async function getSolutions() {
-  try {
-    if (!client) {
-      console.warn('Sanity client not configured, using fallback data');
-      throw new Error('Sanity not configured');
-    }
-    return await client.fetch(queries.solutions);
-  } catch (error) {
-    console.error('Error fetching solutions:', error);
-    // Return fallback data if Sanity is not available
-    return [
-      {
-        _id: '1',
-        title: 'E-commerce Platform Development & Management',
-        description: [{ _type: 'block', children: [{ text: 'Crafting robust, user-friendly online stores and managing their continuous optimization for peak performance.' }] }],
-        icon: 'ShoppingCart',
-        benefits: ['Nationwide reach', 'Mobile-optimized', '24/7 operations', 'Secure payments'],
-        order: 1,
-        featured: true
-      },
-      {
-        _id: '2',
-        title: 'Digital Marketing & Customer Acquisition',
-        description: [{ _type: 'block', children: [{ text: 'Implementing data-driven strategies to reach, engage, and convert your target audience across various digital channels.' }] }],
-        icon: 'Megaphone',
-        benefits: ['Targeted campaigns', 'Social media marketing', 'SEO optimization', 'Performance tracking'],
-        order: 2,
-        featured: true
-      },
-      {
-        _id: '3',
-        title: 'Logistics & Fulfillment Optimization',
-        description: [{ _type: 'block', children: [{ text: 'Streamlining your supply chain and delivery processes for efficient, nationwide order fulfillment.' }] }],
-        icon: 'Truck',
-        benefits: ['Fast delivery', 'Inventory management', 'Order tracking', 'Cost optimization'],
-        order: 3,
-        featured: true
-      },
-      {
-        _id: '4',
-        title: 'Strategic Business Development',
-        description: [{ _type: 'block', children: [{ text: 'Identifying new market opportunities, refining business models, and ensuring long-term competitive advantage in the digital sphere.' }] }],
-        icon: 'Brain',
-        benefits: ['Market analysis', 'Growth strategies', 'Competitive positioning', 'Revenue optimization'],
-        order: 4,
-        featured: true
-      }
-    ];
-  }
-}
-
-export default async function SolutionsPage() {
-  // Commented out as solutions data is not currently used in the component
-  // const solutions = await getSolutions();
-
+export default function SolutionsPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section id="hero-section" className="bg-primary-navy py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary-white mb-6">
-            Our Expertise, Your Advantage!
-          </h1>
-          <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
-            Comprehensive digital transformation solutions designed to empower your business 
-            for the digital age and expand your reach across Pakistan.
-          </p>
-        </div>
-      </section>
+    <Suspense fallback={<PageLoader isLoading={true} />}>
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <HeroSectionWithProps
+          title="Your Digital Transformation Starts Here."
+          subtitle="We provide the infrastructure, expertise, and support you need to thrive online."
+          primaryAction={{
+            text: "Discover Our Partnership Models",
+            href: "/partnership",
+          }}
+          secondaryAction={{
+            text: "Ready to See What's Possible?",
+            href: "#core-pillars",
+          }}
+          backgroundImage="/images/backgrounds/solutions-hero.jpg"
+        />
+
+        {/* Core Pillars Section */}
+        <section className="py-20 bg-primary-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                  Our Core Pillars of Partnership
+                </h2>
+                <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
+                  Four comprehensive pillars that form the foundation of your digital transformation journey.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Pillar 1 */}
+                <Card className="p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
+                      <ShoppingCart className="w-8 h-8 text-primary-navy" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary-navy">E-commerce Platform Architecture</h3>
+                  </div>
+                  <p className="text-primary-charcoal leading-relaxed mb-4">
+                    We don't just create a website; we architect a professional, conversion-optimized platform 
+                    that is a true extension of your business.
+                  </p>
+                  <ul className="space-y-2 text-primary-charcoal">
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Professional design & user experience</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Mobile-optimized responsive platform</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Secure payment gateway integration</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Performance optimization & speed</li>
+                  </ul>
+                </Card>
+
+                {/* Pillar 2 */}
+                <Card className="p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
+                      <Target className="w-8 h-8 text-primary-navy" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary-navy">Hyper-Targeted Digital Marketing</h3>
+                  </div>
+                  <p className="text-primary-charcoal leading-relaxed mb-4">
+                    We connect your products with the right audience across Pakistan, using data-driven 
+                    strategies to maximize your reach and revenue.
+                  </p>
+                  <ul className="space-y-2 text-primary-charcoal">
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Strategic social media campaigns</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Search engine optimization (SEO)</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Paid advertising management</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Customer acquisition optimization</li>
+                  </ul>
+                </Card>
+
+                {/* Pillar 3 */}
+                <Card className="p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
+                      <Truck className="w-8 h-8 text-primary-navy" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary-navy">Optimized Logistics & Fulfillment</h3>
+                  </div>
+                  <p className="text-primary-charcoal leading-relaxed mb-4">
+                    We handle the complexities of logistics, from secure warehousing to nationwide delivery, 
+                    ensuring a seamless and trustworthy experience for your customers.
+                  </p>
+                  <ul className="space-y-2 text-primary-charcoal">
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Nationwide delivery network</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Inventory management systems</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Order tracking & notifications</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Customer service integration</li>
+                  </ul>
+                </Card>
+
+                {/* Pillar 4 */}
+                <Card className="p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
+                      <TrendingUp className="w-8 h-8 text-primary-navy" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary-navy">Strategic Growth & Continuous Optimization</h3>
+                  </div>
+                  <p className="text-primary-charcoal leading-relaxed mb-4">
+                    We work with you to analyze data, identify new opportunities, and continuously refine 
+                    our strategies to ensure sustained growth and market leadership.
+                  </p>
+                  <ul className="space-y-2 text-primary-charcoal">
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Performance analytics & insights</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Market opportunity identification</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Strategic planning & roadmapping</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Continuous improvement processes</li>
+                  </ul>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
 
       {/* Animated Moving Text Section */}
         <section className="bg-primary-gold py-12 overflow-hidden relative -z-10">
@@ -191,13 +239,13 @@ export default async function SolutionsPage() {
               <h3 className="text-2xl font-bold text-primary-gold mb-6">Revenue Share Partnership</h3>
               <div className="space-y-4">
                 <p className="text-primary-silver leading-relaxed">
-                  We provide comprehensive support for your digital transformation with flexible partnership models. Perfect for businesses ready to scale rapidly.
+                  We're developing comprehensive support for digital transformation through transparent partnership models. Designed for businesses ready to grow together with us.
                 </p>
                 <ul className="space-y-2 text-primary-silver">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Full digital infrastructure support</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Shared revenue model (60/40)</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Comprehensive growth support</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Long-term strategic partnership</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Complete digital infrastructure vision</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Transparent revenue sharing model</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Committed long-term growth support</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-gold rounded-full mr-3"></span>Strategic partnership approach</li>
                 </ul>
               </div>
             </div>
@@ -221,65 +269,71 @@ export default async function SolutionsPage() {
       </section>
 
 
-      {/* Success Stories Section */}
-      <section id="success-stories-section" className="bg-primary-navy py-20">
+      {/* Industry Insights Section */}
+      <section id="industry-insights-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
-              Real Transformation Stories
+              Pakistan's Digital Business Landscape
             </h2>
             <p className="text-xl text-primary-silver max-w-4xl mx-auto leading-relaxed">
-              See how Pakistani businesses have achieved remarkable growth through our digital transformation solutions.
+              Understanding the sectors with the highest digital transformation potential in Pakistan's economy.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[ // Example success stories
+            {[ // Real industry data and opportunities
               {
-                company: 'Digital Innovators Inc.',
-                industry: 'Tech Solutions',
-                location: 'Islamabad → Global',
-                growth: 'Rapid Growth in the Digital Market',
-                timeframe: '24 Months',
-                story: 'Innovated with cutting-edge technology to expand global market reach and accelerate growth exponentially.',
-                metric: 'Innovative Solutions'
+                sector: 'Textile & Fashion',
+                marketSize: 'PKR 2.1T Industry',
+                digitalPenetration: '3% Currently Digital',
+                opportunity: '97% Untapped Market',
+                potential: 'Export + Domestic Growth',
+                insight: 'Pakistan\'s largest export industry with minimal digital presence offers massive partnership opportunities for fashion and textile businesses.',
+                dataPoint: 'PKR 2.1T'
               },
               {
-                company: 'AgriTech Ventures',
-                industry: 'Agricultural Technology',
-                location: 'Multan → International',
-                growth: 'Advanced Agricultural Solutions',
-                timeframe: '20 Months',
-                story: 'Implemented smart farming technologies resulting in enhanced agricultural productivity and market expansion.',
-                metric: 'Smart Farming Tech'
+                sector: 'Agriculture & Food',
+                marketSize: 'PKR 8.1T Sector Value',
+                digitalPenetration: '1.5% Digital Adoption',
+                opportunity: '98.5% Growth Potential',
+                potential: 'Farm-to-Consumer Direct',
+                insight: 'With 70% of population in agriculture, direct-to-consumer models can revolutionize food distribution and farmer incomes.',
+                dataPoint: 'PKR 8.1T'
               },
               {
-                company: 'Green Energy Corp.',
-                industry: 'Renewable Energy',
-                location: 'Karachi → Nationwide',
-                growth: 'Expansion into Renewable Energy',
-                timeframe: '22 Months',
-                story: 'Exploited renewable energy solutions to support sustainable development across various sectors.',
-                metric: 'Sustainable Energy'
+                sector: 'Manufacturing & SMEs',
+                marketSize: '3.2M Small Businesses',
+                digitalPenetration: '5% Have Online Presence',
+                opportunity: '95% Ready for Digital',
+                potential: 'B2B Marketplace Dominance',
+                insight: 'Small manufacturers with quality products lack digital channels, creating partnership opportunities in B2B and export markets.',
+                dataPoint: '3.2M SMEs'
               }
-            ].map((story, index) => (
+            ].map((industry, index) => (
               <div key={index} className="bg-primary-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-primary-white/15 transition-all duration-300">
                 <div className="text-center mb-6">
-                  <div className="text-2xl font-bold text-primary-gold mb-2">{story.metric}</div>
-                  <div className="text-sm text-primary-silver uppercase tracking-wider">{story.growth}</div>
+                  <div className="text-2xl font-bold text-primary-gold mb-2">{industry.dataPoint}</div>
+                  <div className="text-sm text-primary-silver uppercase tracking-wider">{industry.sector}</div>
                 </div>
                 
                 <div className="space-y-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-primary-white mb-1">{story.company}</h3>
-                    <p className="text-primary-silver text-sm">{story.industry}</p>
+                  <div className="grid grid-cols-2 gap-4 text-xs">
+                    <div>
+                      <div className="text-primary-gold font-medium">Market Size</div>
+                      <div className="text-primary-white">{industry.marketSize}</div>
+                    </div>
+                    <div>
+                      <div className="text-primary-gold font-medium">Digital Gap</div>
+                      <div className="text-primary-white">{industry.opportunity}</div>
+                    </div>
                   </div>
                   
-                  <p className="text-primary-silver leading-relaxed text-sm">{story.story}</p>
+                  <p className="text-primary-silver leading-relaxed text-sm">{industry.insight}</p>
                   
-                  <div className="flex justify-between text-xs text-primary-gold">
-                    <span>{story.location}</span>
-                    <span>{story.timeframe}</span>
+                  <div className="bg-primary-gold/20 rounded-lg p-3 text-center">
+                    <div className="text-primary-gold font-medium text-sm">Partnership Potential</div>
+                    <div className="text-primary-white text-xs">{industry.potential}</div>
                   </div>
                 </div>
               </div>
@@ -287,11 +341,20 @@ export default async function SolutionsPage() {
           </div>
 
           <div className="text-center mt-12">
+            <div className="bg-primary-white/10 rounded-xl p-6 max-w-4xl mx-auto mb-8">
+              <h3 className="text-xl font-bold text-primary-white mb-4">
+                Ready to Lead Your Industry's Digital Revolution?
+              </h3>
+              <p className="text-primary-silver mb-6">
+                These sectors represent billions in untapped digital commerce potential. 
+                First-mover advantage goes to businesses that act now.
+              </p>
+            </div>
             <a 
-              href="/partner#testimonials" 
+              href="/partnership" 
               className="inline-flex items-center bg-primary-gold text-primary-navy px-6 py-3 font-semibold hover:bg-primary-gold/90 transition-colors"
             >
-              View More Success Stories
+              Explore Partnership Opportunities
               <TrendingUp className="ml-2 w-5 h-5" />
             </a>
           </div>
@@ -355,6 +418,9 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
+      {/* Resource Library Section */}
+      <ResourceLibrary />
+
       {/* CTA Section */}
       <section id="cta-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -367,7 +433,7 @@ export default async function SolutionsPage() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="/partner"
+              href="/partnership"
               className="group bg-primary-gold hover:bg-primary-gold text-primary-navy px-6 py-3 font-semibold text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               Start Your Partnership Journey
@@ -377,5 +443,6 @@ export default async function SolutionsPage() {
         </div>
       </section>
     </div>
+    </Suspense>
   );
 }

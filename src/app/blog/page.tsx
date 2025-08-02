@@ -6,13 +6,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CalendarDays, Clock, User, ArrowRight, Search, Filter } from 'lucide-react'
 import { client, queries, urlFor } from '@/lib/sanity'
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 interface BlogPost {
   _id: string
   title: string
   slug: { current: string }
   excerpt: string
-  featuredImage?: any
+  featuredImage?: SanityImageSource
   category?: {
     title: string
     slug: { current: string }
@@ -21,7 +22,7 @@ interface BlogPost {
   author?: {
     name: string
     title: string
-    image?: any
+    image?: SanityImageSource
   }
   publishedAt: string
   tags?: string[]

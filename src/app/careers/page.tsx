@@ -92,11 +92,11 @@ export default function CareersPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-primary-gold mb-6 animate-fade-in">
-              Join Our Mission
+              Build Your Career. Build a Nation.
             </h1>
             <p className="text-lg md:text-xl text-primary-silver mb-8 max-w-3xl mx-auto animate-slide-up">
-              Be part of Pakistan&apos;s digital transformation story. Build the future of business, 
-              create meaningful impact, and advance your career with Hawlton.
+              We are seeking passionate individuals to join us in empowering Pakistan's digital economy. 
+              Be part of a movement that transforms businesses and shapes the future of our nation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <a
@@ -121,11 +121,12 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
-              Why Choose Hawlton?
+              A Culture of Innovation, Collaboration, and Impact.
             </h2>
             <p className="text-lg text-primary-charcoal max-w-3xl mx-auto leading-relaxed">
-              We&apos;re not just building businesses—we&apos;re shaping Pakistan&apos;s digital future. 
-              Join a team of passionate professionals driving real economic impact.
+              At Hawlton, we believe in a lean, agile, and remote-first work environment. Our team is 
+              a collective of strategic thinkers and doers, united by a shared vision. We value creativity, 
+              ownership, and a relentless drive to solve complex problems.
             </p>
           </div>
 

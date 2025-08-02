@@ -28,6 +28,7 @@ import {
   Sparkles
 } from 'lucide-react'
 import PartnerInquiryForm from '@/components/forms/PartnerInquiryForm'
+import ProgressiveForm from '@/components/ProgressiveForm'
 import Button from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -83,7 +84,7 @@ export default function PartnerWithUsPage() {
   return (
     <div className="min-h-screen bg-primary-platinum">
       {/* Hero Section */}
-      <section className="relative bg-gradient-navy text-primary-white py-24 overflow-hidden">
+      <section className="relative text-primary-white py-24 overflow-hidden" style={{ backgroundImage: "url('/images/backgrounds/0.png')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 -z-10">
           <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
@@ -145,7 +146,7 @@ export default function PartnerWithUsPage() {
               </div>
             </motion.div>
 
-            {/* Right Content - Hero Image */}
+            {/* Right Content - Floating Stats */}
             <motion.div
               className="relative z-[1] flex justify-center lg:justify-end"
               initial={{ opacity: 0, x: 50 }}
@@ -154,56 +155,37 @@ export default function PartnerWithUsPage() {
               style={{ zIndex: 1 }}
             >
               <div className="relative w-full max-w-lg">
-                {/* Main Hero Image */}
-                <motion.div
-                  className="relative overflow-hidden rounded-2xl shadow-2xl"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Image
-                    src="/images/backgrounds/0.png"
-                    alt="Partnership Success - Business Growth with Hawlton"
-                    width={500}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                    priority
-                  />
-                  
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/20 to-transparent" />
-                </motion.div>
-                
                 {/* Floating Stats Cards */}
                 <motion.div
-                  className="absolute -top-4 -left-4 bg-primary-white rounded-xl p-4 shadow-lg backdrop-blur-sm"
+                  className="bg-primary-white rounded-xl p-6 shadow-lg backdrop-blur-sm mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary-gold/20 rounded-lg flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-primary-navy" />
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary-gold/20 rounded-lg flex items-center justify-center">
+                      <TrendingUp className="w-6 h-6 text-primary-navy" />
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-primary-navy">300%</div>
-                      <div className="text-xs text-primary-charcoal">Growth Rate</div>
+                      <div className="text-2xl font-bold text-primary-navy">300%</div>
+                      <div className="text-sm text-primary-charcoal">Average Growth Rate</div>
                     </div>
                   </div>
                 </motion.div>
                 
                 <motion.div
-                  className="absolute -bottom-4 -right-4 bg-primary-white rounded-xl p-4 shadow-lg backdrop-blur-sm"
+                  className="bg-primary-white rounded-xl p-6 shadow-lg backdrop-blur-sm"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 }}
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-accent-primary/20 rounded-lg flex items-center justify-center">
-                      <Users className="w-5 h-5 text-primary-navy" />
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-accent-primary/20 rounded-lg flex items-center justify-center">
+                      <Users className="w-6 h-6 text-primary-navy" />
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-primary-navy">50+</div>
-                      <div className="text-xs text-primary-charcoal">Partners</div>
+                      <div className="text-2xl font-bold text-primary-navy">50+</div>
+                      <div className="text-sm text-primary-charcoal">Successful Partners</div>
                     </div>
                   </div>
                 </motion.div>
@@ -654,7 +636,7 @@ export default function PartnerWithUsPage() {
       </section>
 
 
-      {/* Partner Form Section */}
+      {/* Partner Form Options Section */}
       <section id="partner-form" className="py-20 bg-secondary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -665,10 +647,85 @@ export default function PartnerWithUsPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
-              Ready to Transform Your Business?
+              Choose Your Application Method
+            </h2>
+            <p className="text-xl text-primary-charcoal max-w-4xl mx-auto leading-relaxed mb-12">
+              Ready to transform your business? Choose between our guided step-by-step process or comprehensive single form.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+              <motion.div 
+                className="bg-primary-gold/10 p-8 rounded-xl text-center border-2 border-primary-gold"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <h3 className="text-2xl font-bold text-primary-navy mb-4">Guided Process</h3>
+                <p className="text-primary-charcoal mb-6">Step-by-step application with progress tracking and validation</p>
+                <Button 
+                  onClick={() => {
+                    const element = document.getElementById('progressive-form')
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  variant="primary"
+                  size="lg"
+                  className="transform hover:scale-105"
+                >
+                  Use Guided Form
+                </Button>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-primary-white p-8 rounded-xl text-center border border-primary-silver"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <h3 className="text-2xl font-bold text-primary-navy mb-4">Quick Application</h3>
+                <p className="text-primary-charcoal mb-6">Complete all information in one comprehensive form</p>
+                <Button 
+                  onClick={() => {
+                    const element = document.getElementById('standard-form')
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  variant="outline"
+                  size="lg"
+                  className="transform hover:scale-105"
+                >
+                  Use Standard Form
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Progressive Form Section */}
+      <div id="progressive-form">
+        <ProgressiveForm />
+      </div>
+      
+      {/* Standard Form Section */}
+      <section id="standard-form" className="py-20 bg-primary-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
+              Standard Partnership Application
             </h2>
             <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
-              Complete the partnership inquiry form below and our team will contact you within 24-48 hours to discuss your growth opportunities.
+              Complete our comprehensive partnership inquiry form and our team will contact you within 24-48 hours.
             </p>
           </motion.div>
 
