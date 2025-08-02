@@ -31,14 +31,25 @@ interface BlogPost {
   relatedPosts?: BlogPost[]
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const [post, setPost] = useState<BlogPost | null>(null)
   const [loading, setLoading] = useState(true)
+  const [slug, setSlug] = useState<string>('')
 
   useEffect(() => {
+    const resolveParams = async () => {
+      const resolvedParams = await params
+      setSlug(resolvedParams.slug)
+    }
+    resolveParams()
+  }, [params])
+
+  useEffect(() => {
+    if (!slug) return
+    
     const fetchPost = async () => {
       try {
-        const result = await client.fetch(queries.blogPostBySlug, { slug: params.slug })
+        const result = await client.fetch(queries.blogPostBySlug, { slug })
         setPost(result)
       } catch (error) {
         console.error('Error fetching post:', error)
@@ -48,7 +59,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     }
 
     fetchPost()
-  }, [params.slug])
+  }, [slug])
 
   if (loading) {
     return (
@@ -84,7 +95,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <Image
                 src={urlFor(post.featuredImage).width(800).height(400).url()}
                 alt={post.title}
-                layout="fill"
+                fill
                 className="object-cover"
               />
             </div>
@@ -174,7 +185,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                       <Image
                         src={urlFor(relatedPost.featuredImage).width(600).height(300).url()}
                         alt={relatedPost.title}
-                        layout="fill"
+                        fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       {relatedPost.category && (
