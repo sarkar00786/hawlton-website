@@ -95,21 +95,21 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
 
             <div className="divide-y divide-primary-silver/20">
               {comparisonData.map((item, index) => (
-                <div key={index} className="p-6 hover:bg-primary-platinum/50 transition-colors">
+                <div key={index} className="py-4 px-6 hover:bg-primary-platinum/50 transition-colors">
                   <div className="grid grid-cols-3 gap-6 items-center">
                     <div>
-                      <h4 className="text-base font-bold text-primary-navy uppercase tracking-wide">{item.feature}</h4>
+                      <h4 className="text-sm font-semibold text-primary-navy uppercase tracking-wide">{item.feature}</h4>
                     </div>
-                    <div className="bg-primary-gold/10 rounded-lg p-4">
+                    <div className="bg-primary-gold/10 rounded-lg py-3 px-4">
                       <div className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
-                        <span className="text-primary-navy font-medium">{item.hawlton}</span>
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                        <span className="text-sm text-primary-navy font-medium">{item.hawlton}</span>
                       </div>
                     </div>
-                    <div className="p-4">
+                    <div className="py-3 px-4">
                       <div className="flex items-center">
-                        <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
-                        <span className="text-primary-charcoal">{item.traditional}</span>
+                        <X className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
+                        <span className="text-sm text-primary-charcoal">{item.traditional}</span>
                       </div>
                     </div>
                   </div>
@@ -117,25 +117,25 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
               ))}
             </div>
 
-            <div className="bg-primary-gold p-8">
+            <div className="bg-primary-gold py-6 px-8">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-primary-navy mb-4">
+                <h3 className="text-xl font-bold text-primary-navy mb-3">
                   Ready to Experience the Hawlton Advantage?
                 </h3>
-                <p className="text-primary-navy/80 mb-6">
+                <p className="text-sm text-primary-navy/80 mb-5">
                   Join successful Pakistani businesses who chose partnership over traditional agency services.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href="/partnership"
-                    className="inline-flex items-center bg-primary-navy text-primary-white px-8 py-3 font-semibold hover:bg-primary-navy/90 transition-colors"
+                    className="inline-flex items-center bg-primary-navy text-primary-white px-6 py-2.5 text-sm font-semibold hover:bg-primary-navy/90 transition-colors"
                   >
                     Start Your Partnership Journey
-                    <TrendingUp className="ml-2 w-5 h-5" />
+                    <TrendingUp className="ml-2 w-4 h-4" />
                   </a>
                   <a
                     href="/solutions"
-                    className="inline-flex items-center border-2 border-primary-navy text-primary-navy px-8 py-3 font-semibold hover:bg-primary-navy hover:text-primary-white transition-colors"
+                    className="inline-flex items-center border-2 border-primary-navy text-primary-navy px-6 py-2.5 text-sm font-semibold hover:bg-primary-navy hover:text-primary-white transition-colors"
                   >
                     Explore Our Solutions
                   </a>
@@ -145,36 +145,36 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
           </Card>
 
           {/* Success Guarantee Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-primary-navy rounded-2xl p-12">
-              <h3 className="text-3xl font-bold text-primary-white mb-6">
+          <div className="mt-12 text-center">
+            <div className="bg-primary-navy rounded-2xl py-8 px-6">
+              <h3 className="text-xl font-bold text-primary-white mb-4">
                 Our Success Guarantee
               </h3>
-              <p className="text-xl text-primary-white/90 max-w-3xl mx-auto mb-8">
+              <p className="text-sm text-primary-white/90 max-w-2xl mx-auto mb-6">
                 Unlike traditional agencies that get paid regardless of results, we only succeed when you succeed. 
                 Our profit-sharing model ensures we're fully invested in your growth.
               </p>
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-10 h-10 text-primary-navy" />
+                  <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-3">
+                    <CheckCircle className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h4 className="text-xl font-bold text-primary-white mb-2">No Risk</h4>
-                  <p className="text-primary-white/80">Zero upfront investment required</p>
+                  <h4 className="text-base font-bold text-primary-white mb-1">No Risk</h4>
+                  <p className="text-sm text-primary-white/80">Zero upfront investment required</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-10 h-10 text-primary-navy" />
+                  <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-3">
+                    <TrendingUp className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h4 className="text-xl font-bold text-primary-white mb-2">Shared Growth</h4>
-                  <p className="text-primary-white/80">We grow when your business grows</p>
+                  <h4 className="text-base font-bold text-primary-white mb-1">Shared Growth</h4>
+                  <p className="text-sm text-primary-white/80">We grow when your business grows</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="w-10 h-10 text-primary-navy" />
+                  <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Star className="w-6 h-6 text-primary-navy" />
                   </div>
-                  <h4 className="text-xl font-bold text-primary-white mb-2">Full Support</h4>
-                  <p className="text-primary-white/80">Complete digital ecosystem provided</p>
+                  <h4 className="text-base font-bold text-primary-white mb-1">Full Support</h4>
+                  <p className="text-sm text-primary-white/80">Complete digital ecosystem provided</p>
                 </div>
               </div>
             </div>
