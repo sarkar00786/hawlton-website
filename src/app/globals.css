@@ -224,7 +224,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 58, 95, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+  background: #FFD700;
   pointer-events: none;
   z-index: 1;
 }
@@ -306,7 +306,7 @@ body {
 
 /* Typography enhancements */
 .text-gradient {
-  background: linear-gradient(135deg, #FFD700 0%, #FFD700 100%);
+background: #FFD700;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

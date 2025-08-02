@@ -58,13 +58,6 @@ const Header = () => {
 
   const isActive = (path: string) => pathname === path
 
-  // Hide header on portal pages for focused app experience
-  const isPortalPage = pathname.startsWith('/partner-portal')
-  
-  // Don't render header at all on portal pages
-  if (isPortalPage) {
-    return null
-  }
 
   // Professional scroll behavior - hide on scroll down, show on scroll up
   useEffect(() => {
@@ -151,10 +144,10 @@ const Header = () => {
           {/* CTA Buttons Section - Desktop */}
           <div id="cta-desktop" className="hidden md:flex items-center space-x-2">
             <Link
-              href="/partnership"
+              href="/auth/signin"
               id="cta-partner-header"
               className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
-                isActive('/partnership') 
+                isActive('/auth/signin')
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
                   : ''
               }`}
@@ -175,7 +168,7 @@ const Header = () => {
                 }, 100);
               }}
             >
-              Partnership
+Login
             </Link>
               <Link
                 href="/partnership"
@@ -267,15 +260,15 @@ const Header = () => {
               {/* Mobile CTA Buttons */}
               <div className="pt-4 space-y-3 border-t border-primary-silver/20">
                 <Link
-                  href="/partnership"
+                  href="/auth/signin"
                   className={`block w-full border border-primary-gold px-4 py-2.5 font-semibold text-center transition-all duration-200 ${
-                    isActive('/partnership') 
+                    isActive('/auth/signin') 
                       ? 'bg-primary-gold text-primary-navy shadow-lg' 
                       : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
                   }`}
                   onClick={toggleMenu}
                 >
-                  Partnership
+                  Login
                 </Link>
                 <Link
                   href="/partnership"

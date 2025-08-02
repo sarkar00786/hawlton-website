@@ -11,6 +11,8 @@ interface StatItem {
   animatedValue?: number
   icon?: React.ReactNode
   color?: string
+  progressWidth?: number
+  category?: 'opportunity' | 'gap' | 'growth' | 'market'
 }
 
 interface AnimatedStatsProps {
@@ -26,40 +28,9 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
 
   useEffect(() => {
     if (isInView) {
-      // Start counter animations
-      const animationPromises = stats.map((stat, index) => {
-        const numericValue = parseFloat(stat.value.replace(/[^0-9.]/g, ''))
-        
-        if (!isNaN(numericValue)) {
-          return new Promise<void>((resolve) => {
-            let currentValue = 0
-            const increment = numericValue / 60 // 60 frames for smooth animation
-            const timer = setInterval(() => {
-              currentValue += increment
-              if (currentValue >= numericValue) {
-                currentValue = numericValue
-                clearInterval(timer)
-                resolve()
-              }
-              
-              setAnimatedStats(prev => {
-                const updated = [...prev]
-                updated[index] = {
-                  ...updated[index],
-                  animatedValue: currentValue
-                }
-                return updated
-              })
-            }, 16) // ~60fps
-          })
-        }
-        return Promise.resolve()
-      })
-
-      Promise.all(animationPromises)
       controls.start("visible")
     }
-  }, [isInView, stats, controls])
+  }, [isInView, controls])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -90,21 +61,41 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
     }
   }
 
-  const formatDisplayValue = (stat: StatItem, index: number) => {
-    const animatedValue = animatedStats[index]?.animatedValue
-    
-    if (animatedValue !== undefined) {
-      const formattedValue = Math.floor(animatedValue)
-      return `${stat.prefix || ''}${formattedValue}${stat.suffix || ''}`
+  const getProgressWidth = (stat: StatItem) => {
+    // For percentages, use the percentage directly
+    if (stat.value.includes('%')) {
+      return parseInt(stat.value.replace('%', ''))
     }
-    
-    return stat.value
+    // For $10B, show as 75% (representing significant market opportunity)
+    if (stat.value.includes('$10B')) {
+      return 75
+    }
+    // For 75M, show as 60% (representing user base)
+    if (stat.value.includes('75M')) {
+      return 60
+    }
+    // Default fallback
+    return 50
+  }
+
+  const getBarColor = (stat: StatItem) => {
+    // Color coding based on what the statistic represents
+    if (stat.label.includes('Lack') || stat.label.includes('Gap')) {
+      return 'bg-red-500' // Red for gaps/problems
+    }
+    if (stat.label.includes('Growth') || stat.label.includes('Market')) {
+      return 'bg-green-500' // Green for growth/opportunities
+    }
+    if (stat.label.includes('Users') || stat.label.includes('Ready')) {
+      return 'bg-blue-500' // Blue for user metrics
+    }
+    return 'bg-primary-gold' // Default gold
   }
 
   return (
     <motion.div
       ref={containerRef}
-      className={`grid grid-cols-2 md:grid-cols-4 gap-6 ${className}`}
+      className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${className}`}
       variants={containerVariants}
       initial="hidden"
       animate={controls}
@@ -112,113 +103,39 @@ const AnimatedStats = ({ stats, className = '' }: AnimatedStatsProps) => {
       {animatedStats.map((stat, index) => (
         <motion.div
           key={index}
-          className="relative text-center group"
+          className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
           variants={itemVariants}
-          whileHover={{ 
-            scale: 1.05,
-            transition: { type: "spring", stiffness: 400, damping: 10 }
-          }}
         >
-          {/* Background glow effect */}
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-primary-gold/10 to-transparent rounded-xl filter blur-xl opacity-0 group-hover:opacity-100"
-            animate={{
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              repeat: Infinity,
-            }}
-          />
+          {/* Stat Value and Label */}
+          <div className="flex justify-between items-center mb-4">
+            <span className="text-3xl font-bold text-primary-navy">{stat.value}</span>
+            <span className="text-sm text-primary-charcoal font-medium text-right max-w-[60%]">{stat.label}</span>
+          </div>
           
-          {/* Card content */}
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-primary-gold/10 group-hover:border-primary-gold/30 transition-colors duration-300">
-            {/* Icon */}
-            {stat.icon && (
-              <motion.div 
-                className="flex justify-center mb-4"
-                animate={{
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 20,
-                  ease: "linear",
-                  repeat: Infinity,
-                }}
-              >
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center ${stat.color || 'bg-primary-gold'} text-primary-navy`}>
-                  {stat.icon}
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Animated value */}
-            <motion.div 
-              className="text-3xl font-bold text-primary-navy mb-2"
-              animate={{
-                textShadow: isInView ? [
-                  "0 0 0px rgba(255, 215, 0, 0)",
-                  "0 0 10px rgba(255, 215, 0, 0.3)",
-                  "0 0 0px rgba(255, 215, 0, 0)"
-                ] : "0 0 0px rgba(255, 215, 0, 0)"
-              }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                repeat: Infinity,
-                delay: index * 0.5
-              }}
-            >
-              {formatDisplayValue(stat, index)}
-            </motion.div>
-            
-            {/* Label */}
-            <div className="text-sm text-primary-charcoal font-medium">
-              {stat.label}
-            </div>
-            
-            {/* Pulse effect */}
+          {/* Progress Bar Background */}
+          <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+            {/* Animated Progress Bar */}
             <motion.div
-              className="absolute inset-0 rounded-xl border-2 border-primary-gold opacity-0"
-              animate={{
-                scale: [1, 1.05, 1],
-                opacity: [0, 0.5, 0],
-              }}
+              className={`h-3 rounded-full ${getBarColor(stat)}`}
+              initial={{ width: '0%' }}
+              animate={isInView ? { width: `${getProgressWidth(stat)}%` } : { width: '0%' }}
               transition={{
-                duration: 3,
-                ease: "easeInOut",
-                repeat: Infinity,
-                delay: index * 0.7,
+                duration: 1.5,
+                ease: "easeOut",
+                delay: index * 0.2
               }}
             />
-            
-            {/* Floating particles */}
-            <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-xl">
-              {[...Array(4)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 bg-primary-gold rounded-full opacity-60"
-                  animate={{
-                    x: [0, Math.random() * 100 - 50, 0],
-                    y: [0, Math.random() * 100 - 50, 0],
-                    opacity: [0, 1, 0],
-                    scale: [0, 1, 0],
-                  }}
-                  transition={{
-                    duration: 4 + Math.random() * 2,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    delay: Math.random() * 2,
-                  }}
-                  style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${20 + Math.random() * 60}%`,
-                  }}
-                />
-              ))}
-            </div>
           </div>
+          
+          {/* Progress Percentage */}
+          <motion.div
+            className="text-right text-xs text-primary-silver font-medium"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ delay: index * 0.2 + 0.5 }}
+          >
+            {getProgressWidth(stat)}% of potential
+          </motion.div>
         </motion.div>
       ))}
     </motion.div>

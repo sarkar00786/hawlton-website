@@ -73,10 +73,10 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
             </p>
           </div>
 
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden" padding="none">
             <div className="bg-primary-navy p-6">
               <div className="grid grid-cols-3 gap-6">
-                <div className="text-center">
+                <div className="text-center flex items-center justify-center p-4">
                   <h3 className="text-xl font-bold text-primary-white">Feature</h3>
                 </div>
                 <div className="text-center bg-primary-gold/20 rounded-lg p-4">
@@ -86,8 +86,8 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
                   </div>
                   <p className="text-sm text-primary-white/80">Strategic Growth Partner</p>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-primary-white">Traditional Agencies</h3>
+                <div className="text-center flex flex-col items-center justify-center p-4">
+                  <h3 className="text-xl font-bold text-primary-white mb-2">Traditional Agencies</h3>
                   <p className="text-sm text-primary-white/60">Service Providers</p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
                 <div key={index} className="p-6 hover:bg-primary-platinum/50 transition-colors">
                   <div className="grid grid-cols-3 gap-6 items-center">
                     <div>
-                      <h4 className="font-semibold text-primary-navy">{item.feature}</h4>
+                      h4 className="text-sm font-semibold text-primary-navy"{item.feature}/h4
                     </div>
                     <div className="bg-primary-gold/10 rounded-lg p-4">
                       <div className="flex items-center">

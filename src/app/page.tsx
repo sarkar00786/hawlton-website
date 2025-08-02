@@ -10,7 +10,6 @@ import HeroSection from "@/components/HeroSection";
 import HeroSectionWithProps from "@/components/HeroSectionWithProps";
 import MediaMentions from "@/components/MediaMentions";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
-import PartnershipAssessment from "@/components/PartnershipAssessment";
 import VideoTestimonials from "@/components/VideoTestimonials";
 
 export const metadata: Metadata = {
@@ -33,10 +32,10 @@ export default function HomePage() {
   return (
     <Suspense fallback={<PageLoader isLoading={true} />}>
       <div className="min-h-screen">
-        {/* Hero Section */}
+        {/* 1. HERO SECTION - Strong opener */}
         <HeroSectionWithProps
-          title="Pakistani Entrepreneurs Are Trapped in Their Local Markets. While Billions in Digital Revenue Flows Past Them."
-          subtitle="Every day, 75 million Pakistani consumers search online for products they can't find from local businesses. Meanwhile, your competitors gain zero digital advantage. We change that equation—together."
+          title="75 Million Pakistanis Want What You're Selling. They Just Can't Find You."
+          subtitle="Every day, these consumers search online for products they can't find from local businesses. Meanwhile, your competitors gain zero digital advantage. We change that equation—together."
           primaryAction={{
             text: "See The Untapped Opportunity",
             href: "#market-data",
@@ -48,45 +47,47 @@ export default function HomePage() {
           backgroundImage="/images/backgrounds/hero-home.png"
         />
 
+        {/* 2. PROBLEM NARRATIVE - Immediate engagement after hero */}
         {/* The Crisis That Changed Everything */}
-        <section className="py-20 bg-primary-white">
+        <section className="py-20 bg-primary-navy text-primary-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+              <h2 className="text-4xl font-bold text-primary-white mb-8">
                 The Crisis That Changed Everything.
               </h2>
-              <p className="text-xl text-primary-charcoal leading-relaxed mb-8">
+              <p className="text-xl text-primary-white/90 leading-relaxed mb-8">
                 <strong>"We watched talented Pakistani entrepreneurs slowly suffocate in their local markets."</strong>
               </p>
               <div className="grid md:grid-cols-2 gap-8 mb-8 text-left">
-                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
-                  <h3 className="text-lg font-bold text-red-700 mb-3">The Pain We Witnessed</h3>
-                  <ul className="space-y-2 text-primary-charcoal">
-                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Brilliant artisans with 5-10 customers per month</li>
-                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Quality manufacturers competing on price alone</li>
-                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Traditional businesses watching younger competitors fail online</li>
-                    <li className="flex items-start"><span className="text-red-500 mr-2">•</span>Customers paying premium for imports while local quality goes unseen</li>
+                <div className="bg-red-900/30 border-l-4 border-red-400 p-6 rounded-r-lg backdrop-blur-sm">
+                  <h3 className="text-lg font-bold text-red-300 mb-3">The Pain We Witnessed</h3>
+                  <ul className="space-y-2 text-primary-white/80">
+                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Brilliant artisans with 5-10 customers per month</li>
+                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Quality manufacturers competing on price alone</li>
+                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Traditional businesses watching younger competitors fail online</li>
+                    <li className="flex items-start"><span className="text-red-400 mr-2">•</span>Customers paying premium for imports while local quality goes unseen</li>
                   </ul>
                 </div>
-                <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-                  <h3 className="text-lg font-bold text-green-700 mb-3">The Solution We Built</h3>
-                  <ul className="space-y-2 text-primary-charcoal">
-                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Professional digital infrastructure with zero upfront cost</li>
-                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Nationwide customer reach for local businesses</li>
-                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Profit-sharing model that aligns our success with yours</li>
-                    <li className="flex items-start"><span className="text-green-500 mr-2">•</span>Complete digital management so you focus on what you do best</li>
+                <div className="bg-green-900/30 border-l-4 border-green-400 p-6 rounded-r-lg backdrop-blur-sm">
+                  <h3 className="text-lg font-bold text-green-300 mb-3">The Solution We Built</h3>
+                  <ul className="space-y-2 text-primary-white/80">
+                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Professional digital infrastructure with zero upfront cost</li>
+                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Nationwide customer reach for local businesses</li>
+                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Profit-sharing model that aligns our success with yours</li>
+                    <li className="flex items-start"><span className="text-green-400 mr-2">•</span>Complete digital management so you focus on what you do best</li>
                   </ul>
                 </div>
               </div>
-              <p className="text-lg text-primary-charcoal leading-relaxed italic">
+              <p className="text-lg text-primary-white/90 leading-relaxed italic">
                 The problem wasn't the businesses or the customers—it was the missing bridge. 
-                <strong>We became that bridge.</strong>
+                <strong className="text-primary-gold">We became that bridge.</strong>
               </p>
             </div>
           </div>
         </section>
 
-        {/* Our Partner-First Approach Section */}
+        {/* 3. SOLUTION & VALUE PROPOSITION */}
+        {/* How Our Business Model Works */}
         <section className="py-20 bg-primary-platinum">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center mb-16">
@@ -94,15 +95,15 @@ export default function HomePage() {
                 How Our Business Model Works.
               </h2>
               <p className="text-xl text-primary-charcoal leading-relaxed mb-12">
-                We're building a partnership model that eliminates upfront investment risks. Our vision is to create 
-                comprehensive e-commerce solutions where we handle digital infrastructure while you focus on your 
+                We're building a partnership model that eliminates upfront investment risks. Our vision is to create
+                comprehensive e-commerce solutions where we handle digital infrastructure while you focus on your
                 products. Together, we share in the growth and success of your expanded market reach.
               </p>
             </div>
             
             {/* Three Steps Visual */}
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
                 <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-primary-navy">1</span>
                 </div>
@@ -110,7 +111,7 @@ export default function HomePage() {
                 <p className="text-primary-charcoal">Your proven business model and exceptional products</p>
               </Card>
               
-              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
                 <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-primary-navy">+</span>
                 </div>
@@ -118,7 +119,7 @@ export default function HomePage() {
                 <p className="text-primary-charcoal">Complete digital infrastructure and nationwide reach</p>
               </Card>
               
-              <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
                 <div className="w-16 h-16 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-primary-navy">=</span>
                 </div>
@@ -182,7 +183,92 @@ export default function HomePage() {
           </div>
         </section>
 
-{/* Market Opportunity Data Section */}
+        {/* 4. MARKET OPPORTUNITY DATA SECTION */}
+        <section id="market-data" className="py-20 bg-primary-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto text-center mb-16">
+              <h2 className="text-4xl font-bold text-primary-navy mb-8">
+                Pakistan's Massive Digital Commerce Opportunity
+              </h2>
+              <p className="text-xl text-primary-charcoal max-w-3xl mx-auto mb-8">
+                While global e-commerce thrives, Pakistan's digital market remains vastly underpenetrated. 
+                The data reveals an unprecedented opportunity for first-movers.
+              </p>
+              <div className="text-sm text-primary-silver mb-8">
+                <span className="font-medium">Sources: State Bank of Pakistan, Pakistan Bureau of Statistics, McKinsey Global Institute</span>
+              </div>
+            </div>
+            
+            {/* Primary Market Statistics */}
+            <AnimatedStats 
+              stats={[
+                { value: "$10B", label: "Untapped E-commerce Market by 2027", suffix: "" },
+                { value: "95%", label: "of SMEs Lack Digital Presence", suffix: "%" },
+                { value: "40%", label: "Annual E-commerce Growth Rate", suffix: "%" },
+                { value: "75M", label: "Internet Users Ready to Shop Online", suffix: "" },
+              ]}
+            />
+            
+            {/* Market Insights Grid */}
+            <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-primary-navy" />
+                </div>
+                <h3 className="text-xl font-bold text-primary-navy mb-3">Digital Payment Surge</h3>
+                <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+                  Mobile banking transactions grew 67% in 2023, creating infrastructure for online commerce.
+                </p>
+                <div className="text-2xl font-bold text-primary-gold">PKR 14T</div>
+                <div className="text-xs text-primary-silver">Digital transaction volume 2023</div>
+              </Card>
+              
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-primary-navy" />
+                </div>
+                <h3 className="text-xl font-bold text-primary-navy mb-3">Youth Demographics</h3>
+                <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+                  64% of Pakistan's population is under 30, representing the most digitally-native consumer base in the region.
+                </p>
+                <div className="text-2xl font-bold text-primary-gold">140M</div>
+                <div className="text-xs text-primary-silver">Digital-first consumers under 30</div>
+              </Card>
+              
+              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-primary-navy" />
+                </div>
+                <h3 className="text-xl font-bold text-primary-navy mb-3">Regional Advantage</h3>
+                <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+                  Pakistan's e-commerce penetration (2.4%) lags far behind regional averages (8.1%), indicating massive catch-up potential.
+                </p>
+                <div className="text-2xl font-bold text-primary-gold">235%</div>
+                <div className="text-xs text-primary-silver">Growth potential vs regional average</div>
+              </Card>
+            </div>
+            
+            {/* Call to Action */}
+            <div className="text-center mt-12">
+              <div className="bg-primary-gold/10 rounded-xl p-6 max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-primary-navy mb-4">
+                  The Window is Open. But Not Forever.
+                </h3>
+                <p className="text-primary-charcoal mb-6">
+                  First-mover advantage in Pakistan's digital economy won't last. International players and tech giants 
+                  are already eyeing this market. The businesses that act now will own their categories.
+                </p>
+                <Link href="/partnership">
+                  <Button className="bg-primary-navy text-primary-white hover:bg-primary-navy/90 px-8 py-3">
+                    Secure Your Market Position
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust & Authority Section */}
 <section id="market-data" className="py-20 bg-primary-white">
   <div className="container mx-auto px-6">
     <div className="max-w-6xl mx-auto text-center mb-16">
@@ -210,7 +296,7 @@ export default function HomePage() {
     
     {/* Market Insights Grid */}
     <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
         <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
           <TrendingUp className="w-8 h-8 text-primary-navy" />
         </div>
@@ -222,7 +308,7 @@ export default function HomePage() {
         <div className="text-xs text-primary-silver">Digital transaction volume 2023</div>
       </Card>
       
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
         <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
           <Users className="w-8 h-8 text-primary-navy" />
         </div>
@@ -234,7 +320,7 @@ export default function HomePage() {
         <div className="text-xs text-primary-silver">Digital-first consumers under 30</div>
       </Card>
       
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
         <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
           <Globe className="w-8 h-8 text-primary-navy" />
         </div>
@@ -280,62 +366,62 @@ export default function HomePage() {
       </p>
     </div>
     
-    {/* Credibility Grid */}
-    <div className="grid md:grid-cols-3 gap-8 mb-12">
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-        <div className="w-16 h-16 bg-primary-navy/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-          <Shield className="w-8 h-8 text-primary-navy" />
+    {/* Enhanced Credibility Grid */}
+    <div className="grid md:grid-cols-3 gap-10 mb-16">
+      <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 border-primary-gold/20 hover:border-primary-gold rounded-xl" padding="lg">
+        <div className="w-20 h-20 bg-primary-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Shield className="w-10 h-10 text-primary-navy" />
         </div>
-        <h3 className="text-xl font-bold text-primary-navy mb-3">Registered & Compliant</h3>
-        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+        <h3 className="text-xl font-bold text-primary-navy mb-4">Registered & Compliant</h3>
+        <p className="text-primary-charcoal text-base leading-relaxed mb-4">
           Fully registered Pakistani business entity operating under local regulations and international digital commerce standards.
         </p>
         <div className="text-sm text-primary-gold font-medium">SECP Registered • PKI Compliant</div>
       </Card>
       
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-        <div className="w-16 h-16 bg-primary-navy/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-          <TrendingUp className="w-8 h-8 text-primary-navy" />
+      <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 border-primary-gold/20 hover:border-primary-gold rounded-xl" padding="lg">
+        <div className="w-20 h-20 bg-primary-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <TrendingUp className="w-10 h-10 text-primary-navy" />
         </div>
-        <h3 className="text-xl font-bold text-primary-navy mb-3">Market Research Driven</h3>
-        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+        <h3 className="text-xl font-bold text-primary-navy mb-4">Market Research Driven</h3>
+        <p className="text-primary-charcoal text-base leading-relaxed mb-4">
           Our strategies are built on comprehensive analysis of Pakistan's digital economy using data from State Bank, PBS, and international sources.
         </p>
         <div className="text-sm text-primary-gold font-medium">Research-Based Approach</div>
       </Card>
       
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-        <div className="w-16 h-16 bg-primary-navy/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-          <Users className="w-8 h-8 text-primary-navy" />
+      <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 border-primary-gold/20 hover:border-primary-gold rounded-xl" padding="lg">
+        <div className="w-20 h-20 bg-primary-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Users className="w-10 h-10 text-primary-navy" />
         </div>
-        <h3 className="text-xl font-bold text-primary-navy mb-3">Founder Expertise</h3>
-        <p className="text-primary-charcoal text-sm leading-relaxed mb-3">
+        <h3 className="text-xl font-bold text-primary-navy mb-4">Founder Expertise</h3>
+        <p className="text-primary-charcoal text-base leading-relaxed mb-4">
           Led by experienced entrepreneurs with proven track records in identifying market opportunities and building scalable digital businesses.
         </p>
         <div className="text-sm text-primary-gold font-medium">Jahangir Hussain • Muhammad Ismail</div>
       </Card>
     </div>
     
-    {/* Partnership Transparency */}
-    <div className="bg-primary-white rounded-xl p-8 max-w-4xl mx-auto">
-      <h3 className="text-2xl font-bold text-primary-navy mb-6 text-center">
+    {/* Enhanced Partnership Transparency */}
+    <div className="bg-primary-white border-2 border-primary-gold/20 rounded-xl p-10 max-w-4xl mx-auto shadow-lg">
+      <h3 className="text-2xl font-bold text-primary-navy mb-8 text-center">
         Complete Partnership Transparency
       </h3>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-8">
         <div>
-          <h4 className="text-lg font-semibold text-primary-navy mb-3">Clear Terms</h4>
-          <ul className="space-y-2 text-primary-charcoal text-sm">
-            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Revenue sharing model clearly defined</li>
-            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />No hidden fees or surprise costs</li>
-            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Transparent reporting and analytics</li>
+          <h4 className="text-lg font-semibold text-primary-navy mb-4">Clear Terms</h4>
+          <ul className="space-y-3 text-primary-charcoal text-base">
+            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Revenue sharing model clearly defined</li>
+            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />No hidden fees or surprise costs</li>
+            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Transparent reporting and analytics</li>
           </ul>
         </div>
         <div>
-          <h4 className="text-lg font-semibold text-primary-navy mb-3">Protected Investment</h4>
-          <ul className="space-y-2 text-primary-charcoal text-sm">
-            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />We invest in your success upfront</li>
-            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Comprehensive legal agreements</li>
-            <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0" />Mutual success accountability</li>
+          <h4 className="text-lg font-semibold text-primary-navy mb-4">Protected Investment</h4>
+          <ul className="space-y-3 text-primary-charcoal text-base">
+            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />We invest in your success upfront</li>
+            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Comprehensive legal agreements</li>
+            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />Mutual success accountability</li>
           </ul>
         </div>
       </div>
@@ -346,8 +432,6 @@ export default function HomePage() {
 {/* Media Mentions - Simplified */}
 <MediaMentions variant="compact" />
 
-{/* Partnership Assessment Section */}
-<PartnershipAssessment />
 
 {/* Video Testimonials Section - Disabled until real testimonials are available */}
 {/* <VideoTestimonials /> */}

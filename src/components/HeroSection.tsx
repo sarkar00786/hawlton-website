@@ -53,7 +53,7 @@ const HeroSection = ({ title, subtitle, primaryAction, secondaryAction, backgrou
       {/* Dynamic Background Pattern - Exactly as per blueprint */}
       <div className="absolute inset-0 opacity-10">
         <motion.div 
-          className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full mix-blend-multiply filter blur-xl"
+          className="absolute top-20 left-20 w-96 h-96 bg-primary-gold rounded-full mix-blend-multiply filter blur-xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],
@@ -78,7 +78,7 @@ const HeroSection = ({ title, subtitle, primaryAction, secondaryAction, backgrou
           }}
         />
         <motion.div 
-          className="absolute -bottom-8 left-40 w-72 h-72 bg-gradient-gold rounded-full mix-blend-multiply filter blur-xl"
+          className="absolute -bottom-8 left-40 w-72 h-72 bg-primary-gold rounded-full mix-blend-multiply filter blur-xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.15, 0.35, 0.15],
@@ -246,7 +246,7 @@ const HeroSection = ({ title, subtitle, primaryAction, secondaryAction, backgrou
             <div className="relative w-full h-[500px] lg:h-[600px] flex items-center justify-center">
               {/* Central Pakistan Hub with Pakistan map suggestion */}
               <motion.div 
-                className="absolute w-24 h-24 bg-gradient-gold rounded-full flex items-center justify-center z-20 shadow-glow-gold"
+                className="absolute w-24 h-24 bg-primary-gold rounded-full flex items-center justify-center z-20 shadow-glow-gold"
                 animate={{ 
                   scale: [1, 1.1, 1],
                   boxShadow: [

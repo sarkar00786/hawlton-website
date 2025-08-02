@@ -196,7 +196,7 @@ export default function DynamicHomepage() {
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   whileHover={{ y: -3 }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-gold flex items-center justify-center">
+                  <div className="w-16 h-16 bg-primary-gold rounded-xl flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary-navy mb-2">{item.title}</h3>
@@ -287,7 +287,7 @@ export default function DynamicHomepage() {
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-gold flex items-center justify-center">
+                  <div className="w-16 h-16 bg-primary-gold rounded-xl flex items-center justify-center mb-6">
                     <Building className="w-6 h-6 text-primary-navy" />
                   </div>
                   <span className="text-sm font-semibold text-primary-gold uppercase tracking-wider">

@@ -5,6 +5,7 @@ import PageLoader from "@/components/ui/PageLoader";
 import { Card } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import { Handshake, Lightbulb, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Vision - The Vision Beyond a Single Venture | Hawlton",
@@ -93,7 +94,7 @@ export default function OurVisionPage() {
               {/* Team Member Cards */}
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Jahangir Hussain */}
-                <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+                <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
                   <div className="w-32 h-32 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-4xl font-bold text-primary-navy">JH</span>
                   </div>
@@ -109,7 +110,7 @@ export default function OurVisionPage() {
                 </Card>
 
                 {/* Muhammad Ismail */}
-                <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+                <Card className="text-center hover:shadow-lg transition-shadow" padding="lg">
                   <div className="w-32 h-32 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-4xl font-bold text-primary-navy">MI</span>
                   </div>
@@ -144,11 +145,9 @@ export default function OurVisionPage() {
 
               {/* Values Grid */}
               <div className="grid md:grid-cols-3 gap-8">
-                <Card className="bg-primary-white/10 backdrop-blur-sm p-6 text-center border border-primary-gold/20">
+                <Card className="bg-primary-white/10 backdrop-blur-sm text-center border border-primary-gold/20" padding="md">
                   <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-primary-navy" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <Handshake className="w-8 h-8 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-bold text-primary-white mb-3">Partnership First</h3>
                   <p className="text-primary-white/80">
@@ -156,11 +155,9 @@ export default function OurVisionPage() {
                   </p>
                 </Card>
 
-                <Card className="bg-primary-white/10 backdrop-blur-sm p-6 text-center border border-primary-gold/20">
+                <Card className="bg-primary-white/10 backdrop-blur-sm text-center border border-primary-gold/20" padding="md">
                   <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-primary-navy" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-                    </svg>
+                    <Lightbulb className="w-8 h-8 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-bold text-primary-white mb-3">Innovation Focus</h3>
                   <p className="text-primary-white/80">
@@ -168,11 +165,9 @@ export default function OurVisionPage() {
                   </p>
                 </Card>
 
-                <Card className="bg-primary-white/10 backdrop-blur-sm p-6 text-center border border-primary-gold/20">
+                <Card className="bg-primary-white/10 backdrop-blur-sm text-center border border-primary-gold/20" padding="md">
                   <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-primary-navy" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                    </svg>
+                    <Globe className="w-8 h-8 text-primary-navy" />
                   </div>
                   <h3 className="text-xl font-bold text-primary-white mb-3">National Impact</h3>
                   <p className="text-primary-white/80">

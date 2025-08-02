@@ -150,7 +150,7 @@ const VideoTestimonials = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <Card className="p-6 bg-primary-white/10 backdrop-blur-sm border-primary-white/20 hover:bg-primary-white/15 transition-all duration-300">
+                <Card padding="md" className="bg-primary-white/10 backdrop-blur-sm border-primary-white/20 hover:bg-primary-white/15 transition-all duration-300">
                   {/* Video Thumbnail */}
                   <div className="relative mb-6 group cursor-pointer" onClick={() => handleVideoPlay(testimonial.id)}>
                     <div className="aspect-video bg-primary-charcoal rounded-lg overflow-hidden">

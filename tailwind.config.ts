@@ -133,7 +133,7 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        'gradient-gold': 'linear-gradient(135deg, #FFD700 0%, #FFD700 100%)',
+'gradient-gold': '#FFD700',
         'gradient-navy': 'linear-gradient(135deg, #1A3A5F 0%, #2A4A6F 100%)',
         'gradient-platinum': 'linear-gradient(135deg, #F5F8FA 0%, #E6EAED 100%)',
         'shimmer': 'linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent)',

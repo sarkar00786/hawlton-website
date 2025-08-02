@@ -40,7 +40,8 @@ const ResourceLibrary = () => {
           {resources.map((resource, index) => (
             <Card 
               key={index} 
-              className="p-6 hover:bg-primary-platinum transition-colors"
+              padding="lg"
+              className="hover:bg-primary-platinum transition-colors"
             >
               <div className="flex items-center mb-4">
                 <BookOpen className="w-8 h-8 text-primary-gold mr-2" />

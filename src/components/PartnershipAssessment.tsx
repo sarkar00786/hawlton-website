@@ -158,7 +158,7 @@ const PartnershipAssessment = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="p-8 text-center">
+              <Card padding="lg" className="text-center">
                 <div className="mb-8">
                   <motion.div
                     className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6"
@@ -249,7 +249,7 @@ const PartnershipAssessment = () => {
             </p>
           </div>
 
-          <Card className="p-8">
+          <Card padding="lg">
             {/* Progress Bar */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-2">

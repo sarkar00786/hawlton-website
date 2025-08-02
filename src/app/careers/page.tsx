@@ -163,16 +163,16 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
-              Future Opportunities
+              Career Opportunities
             </h2>
             <p className="text-lg text-primary-charcoal max-w-3xl mx-auto leading-relaxed">
-              As we grow our partnership network and expand our digital transformation initiatives, 
-              we'll be seeking talented professionals to join our mission of empowering Pakistan's digital economy.
+              We're always interested in connecting with exceptional talent who share our vision of transforming Pakistan's digital landscape. 
+              While we don't have active job postings at the moment, we maintain a talent pipeline for future opportunities.
             </p>
             <div className="mt-6 text-center">
               <div className="inline-flex items-center bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full text-sm font-semibold">
                 <Users className="w-4 h-4 mr-2" />
-                Currently Building Our Team
+                No Current Openings - Building Talent Pipeline
               </div>
             </div>
           </div>
@@ -245,26 +245,28 @@ export default function CareersPage() {
       <section className="bg-primary-platinum py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-6">
-            Ready to Shape Pakistan&apos;s Digital Future?
+            Interested in Joining Our Mission?
           </h2>
           <p className="text-xl text-primary-charcoal mb-12 max-w-3xl mx-auto">
-            Don&apos;t see the right position? We&apos;re always looking for exceptional talent. 
-            Send us your resume and let&apos;s start a conversation.
+            While we don't have active openings, we're always interested in connecting with talented professionals 
+            who are passionate about digital transformation. Share your CV and expected salary range with us at 
+            <a href="mailto:careers@hawlton.com" className="text-primary-gold hover:underline font-semibold"> careers@hawlton.com</a>, 
+            and we'll consider your profile for future opportunities that align with your expertise.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              href="/careers/apply"
+            <a
+              href="mailto:careers@hawlton.com"
               className="group bg-primary-gold hover:bg-primary-gold text-primary-navy px-6 py-3 font-semibold text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
-              Apply Now
+              Send Your CV
               <Briefcase className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="group border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-primary-white px-6 py-3 font-semibold text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
-              Contact HR
+              Contact Us
               <Users className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
           </div>

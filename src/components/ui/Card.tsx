@@ -22,13 +22,13 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     children,
     ...props
   }, ref) => {
-    // Enhanced padding system following 8-point grid with generous white space
+    // Responsive padding system following mobile-first approach
     const paddingClasses = {
       none: 'p-0',
-      sm: 'p-4', // 16px
-      md: 'p-6', // 24px - refined for better breathing room
-      lg: 'p-8', // 32px
-      xl: 'p-12', // 48px
+      sm: 'p-3 sm:p-4', // 12px -> 16px
+      md: 'p-4 sm:p-6', // 16px -> 24px (default, more reasonable)
+      lg: 'p-6 sm:p-8', // 24px -> 32px
+      xl: 'p-8 sm:p-12', // 32px -> 48px
     };
 
     // Refined variants with enhanced shadows and premium effects
@@ -41,7 +41,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     };
 
     const baseClasses = cn(
-      'rounded-lg transition-all duration-300 ease-in-out',
+      'rounded-lg transition-all duration-300 ease-in-out max-w-full overflow-hidden',
       paddingClasses[padding],
       variantClasses[variant],
       hover && 'hover:shadow-xl hover:-translate-y-1',

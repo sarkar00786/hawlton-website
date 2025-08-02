@@ -259,7 +259,7 @@ const ProgressiveForm = () => {
             </p>
           </div>
 
-          <Card className="p-8">
+          <Card padding="lg">
             {/* Progress Indicator */}
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">

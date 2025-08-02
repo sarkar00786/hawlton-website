@@ -70,7 +70,7 @@ export default function SolutionsPage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Pillar 1 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
                       <ShoppingCart className="w-8 h-8 text-primary-navy" />
@@ -90,7 +90,7 @@ export default function SolutionsPage() {
                 </Card>
 
                 {/* Pillar 2 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
                       <Target className="w-8 h-8 text-primary-navy" />
@@ -110,7 +110,7 @@ export default function SolutionsPage() {
                 </Card>
 
                 {/* Pillar 3 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
                       <Truck className="w-8 h-8 text-primary-navy" />
@@ -130,7 +130,7 @@ export default function SolutionsPage() {
                 </Card>
 
                 {/* Pillar 4 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-primary-gold rounded-lg flex items-center justify-center mr-6">
                       <TrendingUp className="w-8 h-8 text-primary-navy" />

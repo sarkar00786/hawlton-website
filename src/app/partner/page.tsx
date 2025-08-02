@@ -87,7 +87,7 @@ export default function PartnerWithUsPage() {
       <section className="relative text-primary-white py-24 overflow-hidden" style={{ backgroundImage: "url('/images/backgrounds/0.png')", backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 -z-10">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
+          <div className="absolute top-20 left-20 w-96 h-96 bg-primary-gold rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
           <div className="absolute bottom-20 right-20 w-80 h-80 bg-accent-secondary rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
         </div>
 
@@ -114,7 +114,7 @@ export default function PartnerWithUsPage() {
                 
                 <h1 className="text-5xl md:text-6xl font-bold text-primary-white mb-6">
                   Partner With{' '}
-                  <span className="text-gradient-gold">Hawlton</span>
+                  <span className="text-primary-gold">Hawlton</span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-primary-silver leading-relaxed max-w-2xl">
@@ -361,7 +361,7 @@ export default function PartnerWithUsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-gold rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-primary-gold rounded-xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-primary-navy" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary-navy mb-6">{benefit.title}</h3>
@@ -508,16 +508,10 @@ export default function PartnerWithUsPage() {
                 </div>
                 
                 <div className="mt-8">
-                  <Link href="/partner-portal">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-primary-navy transform hover:scale-105 transition-all duration-300"
-                    >
-                      <Sparkles className="w-4 h-4 mr-2" />
-                      Experience Live Portal
-                    </Button>
-                  </Link>
+                  <div className="bg-primary-gold/20 rounded-lg p-4 backdrop-blur-sm">
+                    <div className="text-primary-gold font-semibold mb-2">Portal Coming Soon</div>
+                    <div className="text-sm text-primary-silver">Full portal access will be available upon partnership activation</div>
+                  </div>
                 </div>
               </div>
             </motion.div>

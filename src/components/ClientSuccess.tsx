@@ -14,7 +14,7 @@ const ClientSuccess = () => {
         </div>
         <div id="grid4" className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
           {[1,2,3].map(i => (
-            <Card key={i} id={`review${i}`} variant="navy" hover>
+            <Card key={i} id={`review${i}`} variant="navy" hover padding="lg">
               <CardContent id={`content${i}`}>
                 <p id={`quote${i}`} className="text-primary-silver mb-4">Working with Hawlton has been a game-changer for our business. Their expertise in digital strategy and execution is unmatched.</p>
                 <p id={`name${i}`} className="text-primary-white font-semibold">Ayesha Khan</p>

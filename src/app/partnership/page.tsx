@@ -45,7 +45,7 @@ export default function PartnershipPage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Reason 1 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mr-4">
                       <span className="text-xl font-bold text-primary-navy">1</span>
@@ -59,7 +59,7 @@ export default function PartnershipPage() {
                 </Card>
 
                 {/* Reason 2 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mr-4">
                       <span className="text-xl font-bold text-primary-navy">2</span>
@@ -73,7 +73,7 @@ export default function PartnershipPage() {
                 </Card>
 
                 {/* Reason 3 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mr-4">
                       <span className="text-xl font-bold text-primary-navy">3</span>
@@ -87,7 +87,7 @@ export default function PartnershipPage() {
                 </Card>
 
                 {/* Reason 4 */}
-                <Card className="p-8 hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mr-4">
                       <span className="text-xl font-bold text-primary-navy">4</span>
@@ -116,7 +116,7 @@ export default function PartnershipPage() {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Step 1 */}
-                <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="text-center hover:shadow-lg transition-shadow">
                   <div className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-2xl font-bold text-primary-navy">1</span>
                   </div>
@@ -128,7 +128,7 @@ export default function PartnershipPage() {
                 </Card>
 
                 {/* Step 2 */}
-                <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="text-center hover:shadow-lg transition-shadow">
                   <div className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-2xl font-bold text-primary-navy">2</span>
                   </div>
@@ -140,7 +140,7 @@ export default function PartnershipPage() {
                 </Card>
 
                 {/* Step 3 */}
-                <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+                <Card padding="lg" className="text-center hover:shadow-lg transition-shadow">
                   <div className="w-20 h-20 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-2xl font-bold text-primary-navy">3</span>
                   </div>
