@@ -196,10 +196,10 @@ const Header = () => {
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14">
+        <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo and Navigation */}
-          <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-8">
-            <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex items-center space-x-1 sm:space-x-4 lg:space-x-8">
+            <div className="flex items-center space-x-1 sm:space-x-3">
               <button
                 onClick={toggleViewMode}
                 className="hidden sm:flex items-center px-2 py-1 text-xs font-medium bg-primary-gold/10 text-primary-gold border border-primary-gold/30 rounded transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy"
@@ -208,17 +208,17 @@ const Header = () => {
                 {isMobileView ? (
                   <>
                     <Monitor className="w-3 h-3 mr-1" />
-                    Desktop
+                    <span className="hidden md:inline">Desktop</span>
                   </>
                 ) : (
                   <>
                     <Smartphone className="w-3 h-3 mr-1" />
-                    Mobile
+                    <span className="hidden md:inline">Mobile</span>
                   </>
                 )}
               </button>
               <div id="logo-wrapper" className="flex-shrink-0">
-                <Link href="/" id="logo-main" className="text-xl sm:text-2xl font-bold text-primary-gold">
+                <Link href="/" id="logo-main" className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-gold">
                   Hawlton
                 </Link>
               </div>
@@ -247,12 +247,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary-navy">
+          <div className="md:hidden" ref={mobileMenuRef}>
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-primary-navy border-t border-primary-gold/20">
               <Link
                 href="/"
-                className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                className={`block px-4 py-3 rounded-lg text-base font-medium hover:text-primary-white hover:bg-primary-gold/10 transition-all duration-200 focus:outline-none focus:ring-0 min-h-[44px] flex items-center ${
+                  isActive('/') ? 'text-primary-gold font-semibold bg-primary-gold/10' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
@@ -260,8 +260,8 @@ const Header = () => {
               </Link>
               <Link
                 href="/our-vision"
-                className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/our-vision') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                className={`block px-4 py-3 rounded-lg text-base font-medium hover:text-primary-white hover:bg-primary-gold/10 transition-all duration-200 focus:outline-none focus:ring-0 min-h-[44px] flex items-center ${
+                  isActive('/our-vision') ? 'text-primary-gold font-semibold bg-primary-gold/10' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
@@ -269,8 +269,8 @@ const Header = () => {
               </Link>
               <Link
                 href="/solutions"
-                className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/solutions') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                className={`block px-4 py-3 rounded-lg text-base font-medium hover:text-primary-white hover:bg-primary-gold/10 transition-all duration-200 focus:outline-none focus:ring-0 min-h-[44px] flex items-center ${
+                  isActive('/solutions') ? 'text-primary-gold font-semibold bg-primary-gold/10' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
@@ -278,8 +278,8 @@ const Header = () => {
               </Link>
               <Link
                 href="/blog"
-                className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/blog') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                className={`block px-4 py-3 rounded-lg text-base font-medium hover:text-primary-white hover:bg-primary-gold/10 transition-all duration-200 focus:outline-none focus:ring-0 min-h-[44px] flex items-center ${
+                  isActive('/blog') ? 'text-primary-gold font-semibold bg-primary-gold/10' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
@@ -287,8 +287,8 @@ const Header = () => {
               </Link>
               <Link
                 href="/contact"
-                className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/contact') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                className={`block px-4 py-3 rounded-lg text-base font-medium hover:text-primary-white hover:bg-primary-gold/10 transition-all duration-200 focus:outline-none focus:ring-0 min-h-[44px] flex items-center ${
+                  isActive('/contact') ? 'text-primary-gold font-semibold bg-primary-gold/10' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
@@ -296,7 +296,9 @@ const Header = () => {
               </Link>
               
               {/* Mobile Auth Buttons */}
-              <MobileAuthButtons onMenuClick={toggleMenu} />
+              <div className="pt-4 border-t border-primary-gold/20">
+                <MobileAuthButtons onMenuClick={toggleMenu} />
+              </div>
             </div>
           </div>
         )}

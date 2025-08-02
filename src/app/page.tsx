@@ -276,20 +276,20 @@ export default function HomePage() {
         {/* Trust & Authority Section */}
 
 {/* Trust & Authority Section */}
-<section className="py-20 bg-primary-navy text-primary-white">
-  <div className="container mx-auto px-6">
-    <div className="max-w-6xl mx-auto text-center mb-16">
-      <h2 className="text-4xl font-bold text-primary-white heading-gold-shadow mb-8">
+<section className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-primary-white">
+  <div className="container mx-auto px-4 sm:px-6">
+    <div className="max-w-6xl mx-auto text-center mb-12 sm:mb-16">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-white heading-gold-shadow mb-6 sm:mb-8">
         Building Pakistan's Digital Future with Integrity
       </h2>
-      <p className="text-xl text-primary-white/90 max-w-3xl mx-auto">
+      <p className="text-base sm:text-lg lg:text-xl text-primary-white/90 max-w-3xl mx-auto">
         Our approach is founded on transparency, deep market research, 
         and an unwavering commitment to your success. We're building something new together.
       </p>
     </div>
     
     {/* Enhanced Credibility Grid */}
-    <div className="grid md:grid-cols-3 gap-6 mb-12">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
       <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
         <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
           <FileCheck className="w-6 h-6 text-primary-navy" />
@@ -408,26 +408,28 @@ export default function HomePage() {
 <SuccessGuarantee className="my-20" />
 
 {/* Final Call to Action Section */}
-<section className="py-20 bg-primary-navy text-white">
-  <div className="container mx-auto px-6">
+<section className="py-12 sm:py-16 lg:py-20 bg-primary-navy text-white">
+  <div className="container mx-auto px-4 sm:px-6">
     <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-4xl font-bold mb-8">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">
         Ready to Partner with Hawlton?
       </h2>
-      <p className="text-xl mb-12 max-w-3xl mx-auto">
+      <p className="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
         If you have quality products and want to sell nationwide without upfront costs, 
         let's talk. We personally vet every partner to ensure mutual success.
       </p>
-      <div className="space-y-4">
-        <Link href="/partnership">
+      <div className="space-y-4 sm:space-y-6">
+        <Link href="/partnership" className="inline-block w-full sm:w-auto">
           <Button 
             size="lg" 
-            className="bg-primary-gold text-primary-navy hover:bg-primary-gold/90 px-12 py-4 text-lg font-bold"
+            className="bg-primary-gold text-primary-navy hover:bg-primary-gold/90 w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4 text-base sm:text-lg font-bold min-h-[52px] rounded-lg transition-all duration-200"
           >
             Claim Your Market Position Now
           </Button>
         </Link>
-        <p className="text-sm text-primary-white/70">Limited partnerships available • Personal vetting required • Zero upfront costs</p>
+        <p className="text-xs sm:text-sm text-primary-white/70 max-w-2xl mx-auto leading-relaxed">
+          Limited partnerships available • Personal vetting required • Zero upfront costs
+        </p>
       </div>
     </div>
   </div>

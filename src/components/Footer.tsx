@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary-navy text-primary-platinum">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Company Info */}
           <div className="col-span-1 sm:col-span-2 md:col-span-2">
             <h3 className="text-xl sm:text-2xl font-bold text-primary-white mb-3 sm:mb-4">Hawlton</h3>
@@ -93,24 +93,24 @@ const Footer = () => {
             {/* Social Media Links */}
             <div>
               <h5 className="text-sm font-medium text-primary-white mb-3">Follow Us</h5>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3">
                 <a
                   href="#"
-                  className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0 p-1 rounded"
+                  className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0 p-2 rounded-lg hover:bg-primary-gold/10 min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
-                  className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0 p-1 rounded"
+                  className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0 p-2 rounded-lg hover:bg-primary-gold/10 min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
-                  className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0 p-1 rounded"
+                  className="text-primary-silver hover:text-primary-gold transition-colors duration-200 focus:outline-none focus:ring-0 p-2 rounded-lg hover:bg-primary-gold/10 min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-5 h-5" />

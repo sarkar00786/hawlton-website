@@ -42,23 +42,23 @@ const HeroSectionWithProps = ({
 
   return (
     <section
-      className="relative h-[70vh] sm:h-[80vh] flex items-center justify-center bg-cover bg-center sm:bg-top pt-14"
+      className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] flex items-center justify-center bg-cover bg-center sm:bg-top pt-14 sm:pt-16"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       {/* Professional overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30 sm:bg-black/20"></div>
-      <div className="relative z-10 text-center space-y-4 sm:space-y-8 px-4 sm:px-6">
+      <div className="absolute inset-0 bg-black/40 sm:bg-black/30 lg:bg-black/20"></div>
+      <div className="relative z-10 text-center space-y-6 sm:space-y-6 lg:space-y-8 px-4 sm:px-6 max-w-6xl mx-auto">
         <h1 className={`heading-ultra-thick ${titleClassName || ''}`}>
           {renderTitle(title)}
         </h1>
-        <p className="subtitle-thick text-primary-white/90 max-w-4xl mx-auto">{subtitle}</p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-          <Link href={primaryAction.href} className="w-full sm:w-auto">
-            <Button className="bg-primary-navy text-white w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">{primaryAction.text}</Button>
+        <p className="subtitle-thick text-primary-white/95 max-w-4xl mx-auto">{subtitle}</p>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-center pt-2">
+          <Link href={primaryAction.href} className="w-full sm:w-auto max-w-xs sm:max-w-none">
+            <Button className="bg-primary-navy text-white w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4 text-base sm:text-lg font-semibold min-h-[48px] sm:min-h-[52px] rounded-lg hover:bg-primary-navy/90 transition-all duration-200">{primaryAction.text}</Button>
           </Link>
           {secondaryAction && (
-            <Link href={secondaryAction.href} className="w-full sm:w-auto">
-              <Button className="bg-white text-primary-navy w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">{secondaryAction.text}</Button>
+            <Link href={secondaryAction.href} className="w-full sm:w-auto max-w-xs sm:max-w-none">
+              <Button className="bg-white text-primary-navy w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4 text-base sm:text-lg font-semibold min-h-[48px] sm:min-h-[52px] rounded-lg hover:bg-white/90 transition-all duration-200">{secondaryAction.text}</Button>
             </Link>
           )}
         </div>
