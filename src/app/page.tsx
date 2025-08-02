@@ -6,9 +6,7 @@ import { Card } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import AnimatedStats from "@/components/AnimatedStats";
 import PageLoader from "@/components/ui/PageLoader";
-import HeroSection from "@/components/HeroSection";
 import HeroSectionWithProps from "@/components/HeroSectionWithProps";
-import MediaMentions from "@/components/MediaMentions";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import SuccessGuarantee from "@/components/SuccessGuarantee";
@@ -89,7 +87,7 @@ export default function HomePage() {
         <section className="py-20 bg-primary-platinum">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold heading-75million mb-8">
+              <h2 className="text-4xl font-bold text-primary-navy mb-8">
                 How Our Business Model Works.
               </h2>
               <p className="text-xl text-primary-charcoal leading-relaxed mb-12">
@@ -185,10 +183,10 @@ export default function HomePage() {
         <section id="market-data" className="py-20 bg-primary-white">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto text-center mb-16">
-              <h2 className="text-4xl font-bold heading-75million mb-8">
+              <h2 className="text-4xl font-bold text-primary-navy mb-8">
                 Pakistan's Massive Digital Commerce Opportunity
               </h2>
-              <p className="text-xl text-primary-charcoal max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-primary-navy max-w-3xl mx-auto mb-8">
                 While global e-commerce thrives, Pakistan's digital market remains vastly underpenetrated. 
                 The data reveals an unprecedented opportunity for first-movers.
               </p>
@@ -388,8 +386,7 @@ export default function HomePage() {
   </div>
 </section>
 
-{/* Media Mentions - Simplified */}
-<MediaMentions variant="compact" />
+{/* Media Mentions - Removed for cleanup */}
 
 
 {/* Video Testimonials Section - Disabled until real testimonials are available */}

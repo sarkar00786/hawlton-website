@@ -42,10 +42,12 @@ const HeroSectionWithProps = ({
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+      className="relative h-[60vh] flex items-center justify-center bg-cover bg-top"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
-      <div className="text-center space-y-8">
+      {/* Professional overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="relative z-10 text-center space-y-8 px-6">
         <h1 className={`text-6xl font-bold ${titleClassName || ''}`}>
           {renderTitle(title)}
         </h1>

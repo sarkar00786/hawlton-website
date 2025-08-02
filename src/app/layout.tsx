@@ -12,6 +12,7 @@ import { ToastProvider } from "@/components/ui/Toast";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { LoadingProvider } from "@/components/ui/LoadingStates";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import SessionProvider from "@/components/SessionProvider";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -583,21 +584,23 @@ export default function RootLayout({
           }}
         />
         
-        <LanguageProvider>
-          <LoadingProvider>
-            <ToastProvider>
-              <ErrorBoundary>
-                <ScrollProgress showReadingTime={true} />
-                <AccessibilityEnhancer />
-                <Header />
-                <main id="main-content">{children}</main>
-                <Footer />
-                <BackToTop />
-                <GDPRCookieConsent />
-              </ErrorBoundary>
-            </ToastProvider>
-          </LoadingProvider>
-        </LanguageProvider>
+        <SessionProvider>
+          <LanguageProvider>
+            <LoadingProvider>
+              <ToastProvider>
+                <ErrorBoundary>
+                  <ScrollProgress showReadingTime={true} />
+                  <AccessibilityEnhancer />
+                  <Header />
+                  <main id="main-content">{children}</main>
+                  <Footer />
+                  <BackToTop />
+                  <GDPRCookieConsent />
+                </ErrorBoundary>
+              </ToastProvider>
+            </LoadingProvider>
+          </LanguageProvider>
+        </SessionProvider>
       </body>
     </html>
   );

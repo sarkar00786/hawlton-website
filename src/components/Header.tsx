@@ -9,9 +9,7 @@ import EnhancedNavigation from './EnhancedNavigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './ui/ErrorBoundary'
 import { HeaderIds } from '@/config/elementIds'
-
-// For now, just show auth links without checking session state
-// This makes the header work without requiring SessionProvider
+import AuthButtons, { MobileAuthButtons } from './AuthButtons'
 
 // Simple fallback navigation component
 const SimpleNavigation = () => {
@@ -233,59 +231,8 @@ const Header = () => {
             </ErrorBoundary>
           </div>
 
-          {/* CTA Buttons Section - Desktop */}
-          <div id="cta-desktop" className="hidden md:flex items-center space-x-2">
-            <Link
-              href="/auth/signin"
-              id="cta-partner-header"
-              className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
-                isActive('/auth/signin')
-                  ? 'bg-primary-gold text-primary-navy shadow-md' 
-                  : ''
-              }`}
-              onBlur={(e) => {
-                setTimeout(() => {
-                  if (e.target instanceof HTMLElement) {
-                    e.target.blur();
-                    e.target.style.outline = 'none';
-                    e.target.style.boxShadow = 'none';
-                  }
-                }, 100);
-              }}
-              onMouseDown={(e) => {
-                setTimeout(() => {
-                  if (e.target instanceof HTMLElement) {
-                    e.target.blur();
-                  }
-                }, 100);
-              }}
-            >
-Login
-            </Link>
-              <Link
-                href="/partnership"
-                id="cta-get-started-header"
-                className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
-                onBlur={(e) => {
-                  setTimeout(() => {
-                    if (e.target instanceof HTMLElement) {
-                      e.target.blur();
-                      e.target.style.outline = 'none';
-                      e.target.style.boxShadow = 'none';
-                    }
-                  }, 100);
-                }}
-                onMouseDown={(e) => {
-                  setTimeout(() => {
-                    if (e.target instanceof HTMLElement) {
-                      e.target.blur();
-                    }
-                  }, 100);
-                }}
-              >
-                Start Your Digital Journey
-              </Link>
-          </div>
+          {/* Auth Buttons Section - Desktop */}
+          <AuthButtons />
 
           {/* Mobile menu button */}
           <div id="mobile-menu-btn-wrapper" className="md:hidden">
@@ -349,27 +296,8 @@ Login
                 Contact
               </Link>
               
-              {/* Mobile CTA Buttons */}
-              <div className="pt-4 space-y-3 border-t border-primary-silver/20">
-                <Link
-                  href="/auth/signin"
-                  className={`block w-full border border-primary-gold px-4 py-2.5 font-semibold text-center transition-all duration-200 ${
-                    isActive('/auth/signin') 
-                      ? 'bg-primary-gold text-primary-navy shadow-lg' 
-                      : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
-                  }`}
-                  onClick={toggleMenu}
-                >
-                  Login
-                </Link>
-                <Link
-                  href="/partnership"
-                  className="block w-full bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-4 py-3 font-semibold text-center transition-all duration-200 transform hover:scale-105 shadow-lg"
-                  onClick={toggleMenu}
-                >
-                  Start Your Digital Journey
-                </Link>
-              </div>
+              {/* Mobile Auth Buttons */}
+              <MobileAuthButtons onMenuClick={toggleMenu} />
             </div>
           </div>
         )}

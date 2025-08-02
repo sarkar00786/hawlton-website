@@ -84,7 +84,7 @@ function DashboardContent() {
                 </Link>
                 
                 <Link 
-                  href="/partner"
+                  href="/partnership"
                   className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200"
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Partnership Opportunities</h3>

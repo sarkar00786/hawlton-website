@@ -144,14 +144,15 @@ const SuccessGuarantee = ({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
+                  className="h-full"
                 >
-                  <Card className="text-center hover:shadow-lg transition-all duration-300 group" padding="lg" variant="elevated">
+                  <Card className="text-center hover:shadow-lg transition-all duration-300 group h-full flex flex-col" padding="lg" variant="elevated">
                     <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-8 h-8 text-primary-navy" />
                     </div>
                     <h3 className="text-xl font-bold text-primary-navy mb-3">{feature.title}</h3>
                     <p className="text-primary-charcoal/90 font-medium mb-4 text-base">{feature.description}</p>
-                    <p className="text-primary-charcoal/70 text-sm leading-relaxed">{feature.detail}</p>
+                    <p className="text-primary-charcoal/70 text-sm leading-relaxed flex-grow">{feature.detail}</p>
                   </Card>
                 </motion.div>
               )

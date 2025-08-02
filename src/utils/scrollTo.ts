@@ -51,16 +51,6 @@ export const PAGE_SECTIONS = {
     'process': 'cta-section' // CTA Section
   },
   
-  // Partner page sections - matching actual content
-  '/partner': {
-    'benefits': 'benefits-section', // Benefits Section
-    'types': 'partnership-types-section', // Partnership Types Section
-    'portal': 'project-portal-section', // Project Portal Section
-    'resources': 'partner-resources-section', // Partner Resources Section
-    'process': 'process-section', // Process Section
-    'testimonials': 'testimonials-section', // Testimonials Section
-    'application': 'partner-form' // Partner Form Section
-  },
   
   // Contact page sections - matching actual content
   '/contact': {
@@ -94,14 +84,6 @@ export const NAVIGATION_MAPPING = {
   '/solutions#results': 'results',
   '/solutions#process': 'process',
   
-  // Partner dropdown mappings - matching new structure
-  '/partner#benefits': 'benefits',
-  '/partner#types': 'types',
-  '/partner#portal': 'portal',
-  '/partner#resources': 'resources',
-  '/partner#process': 'process',
-  '/partner#testimonials': 'testimonials',
-  '/partner#application': 'application',
   
   // Contact dropdown mappings - matching new structure
   '/contact#form': 'form',

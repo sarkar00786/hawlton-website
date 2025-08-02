@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckCircle, X, Star, TrendingUp, Crown, Shield, Zap, Award, Globe, Sparkles, Target, HandHeart, Rocket } from 'lucide-react'
+import { CheckCircle, X, Star, TrendingUp, Crown, Shield, Zap, Award, Globe, Sparkles, Target, HandHeart, Rocket, Building2 } from 'lucide-react'
 import { Card } from './ui/Card'
 import { motion } from 'framer-motion'
 
@@ -112,18 +112,25 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
     <Card className="overflow-hidden" padding="none">
         <div className="bg-primary-navy py-4 px-6">
           <div className="grid grid-cols-3 gap-6">
-            <div className="text-center flex items-center justify-center py-2">
-              <h3 className="text-xl font-bold text-primary-white tracking-wide">FEATURE</h3>
-            </div>
-            <div className="text-center bg-primary-gold/20 rounded-lg py-3 px-4 border-2 border-primary-gold/30">
+            <div className="text-center flex flex-col items-center justify-center py-2">
               <div className="flex items-center justify-center mb-1">
-                <Star className="w-6 h-6 text-primary-gold mr-2" />
-                <h3 className="text-xl font-bold text-primary-gold tracking-wide">HAWLTON PARTNERSHIP</h3>
+                <CheckCircle className="w-6 h-6 text-primary-gold mr-2" />
+                <h3 className="text-xl font-bold text-primary-white tracking-wide">KEY POINTS</h3>
               </div>
-              <p className="text-sm font-medium text-primary-white/90">Strategic Growth Partner</p>
+              <p className="text-sm font-medium text-primary-white/70">For Businesses</p>
             </div>
             <div className="text-center flex flex-col items-center justify-center py-2">
-              <h3 className="text-xl font-bold text-primary-white mb-1 tracking-wide">TRADITIONAL AGENCIES</h3>
+              <div className="flex items-center justify-center mb-1">
+                <Star className="w-6 h-6 text-primary-gold mr-2" />
+                <h3 className="text-xl font-bold text-primary-white tracking-wide">HAWLTON PARTNERSHIP</h3>
+              </div>
+              <p className="text-sm font-medium text-primary-white/70">Strategic Growth Partner</p>
+            </div>
+            <div className="text-center flex flex-col items-center justify-center py-2">
+              <div className="flex items-center justify-center mb-1">
+                <Building2 className="w-6 h-6 text-primary-gold mr-2" />
+                <h3 className="text-xl font-bold text-primary-white tracking-wide">TRADITIONAL AGENCIES</h3>
+              </div>
               <p className="text-sm font-medium text-primary-white/70">Service Providers</p>
             </div>
           </div>
@@ -136,7 +143,7 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
                     <div>
                       <h4 className="text-sm font-semibold text-primary-navy uppercase tracking-wide">{item.feature}</h4>
                     </div>
-                    <div className="bg-primary-gold/10 rounded-lg py-3 px-4">
+                    <div className="py-3 px-4">
                       <div className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
                         <span className="text-sm text-primary-navy font-medium">{item.hawlton}</span>
