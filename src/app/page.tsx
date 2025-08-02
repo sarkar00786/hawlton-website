@@ -93,7 +93,7 @@ export default function HomePage() {
 
         {/* 3. SOLUTION & VALUE PROPOSITION */}
         {/* How Our Business Model Works */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-primary-platinum">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
@@ -108,7 +108,7 @@ export default function HomePage() {
             
             {/* Three Steps Visual */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-primary-navy" />
                 </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
                 <p className="text-sm text-primary-charcoal">Your proven business model and exceptional products</p>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building2 className="w-6 h-6 text-primary-navy" />
                 </div>
@@ -124,7 +124,7 @@ export default function HomePage() {
                 <p className="text-sm text-primary-charcoal">Complete digital infrastructure and nationwide reach</p>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                 <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
                   <Handshake className="w-6 h-6 text-primary-navy" />
                 </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
         </section>
 
         {/* The Hawlton Advantage Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-primary-platinum">
+        <section className="py-12 sm:py-16 lg:py-20 bg-primary-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-navy mb-6 sm:mb-8">
@@ -152,7 +152,7 @@ export default function HomePage() {
               
               {/* Key Benefits Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-6xl mx-auto">
-                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                   <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
                     <ShoppingCart className="w-7 h-7 text-primary-navy" />
                   </div>
@@ -160,7 +160,7 @@ export default function HomePage() {
                   <p className="text-sm text-primary-charcoal leading-relaxed">Enterprise-grade e-commerce solution</p>
                 </Card>
                 
-                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                   <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Target className="w-7 h-7 text-primary-navy" />
                   </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
                   <p className="text-sm text-primary-charcoal leading-relaxed">Data-driven customer acquisition</p>
                 </Card>
                 
-                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                   <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Truck className="w-7 h-7 text-primary-navy" />
                   </div>
@@ -176,7 +176,7 @@ export default function HomePage() {
                   <p className="text-sm text-primary-charcoal leading-relaxed">Seamless delivery across Pakistan</p>
                 </Card>
                 
-                <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+                <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                   <div className="w-14 h-14 bg-primary-gold rounded-lg flex items-center justify-center mx-auto mb-4">
                     <BarChart3 className="w-7 h-7 text-primary-navy" />
                   </div>
@@ -216,7 +216,7 @@ export default function HomePage() {
             
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 max-w-6xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                 <div className="w-12 sm:w-16 h-12 sm:h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-6 sm:w-8 h-6 sm:h-8 text-primary-navy" />
                 </div>
@@ -228,7 +228,7 @@ export default function HomePage() {
                 <div className="text-xs text-primary-silver">Digital transaction volume 2023</div>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-primary-navy" />
                 </div>
@@ -240,7 +240,7 @@ export default function HomePage() {
                 <div className="text-xs text-primary-silver">Digital-first consumers under 30</div>
               </Card>
               
-              <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-primary-platinum" padding="md">
                 <div className="w-16 h-16 bg-primary-gold/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-primary-navy" />
                 </div>
