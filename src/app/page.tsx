@@ -266,13 +266,13 @@ export default function HomePage() {
         {/* Trust & Authority Section */}
 
 {/* Trust & Authority Section */}
-<section className="py-20 bg-primary-platinum">
+<section className="py-20 bg-primary-navy text-primary-white">
   <div className="container mx-auto px-6">
     <div className="max-w-6xl mx-auto text-center mb-16">
-      <h2 className="text-4xl font-bold text-primary-navy mb-8">
+      <h2 className="text-4xl font-bold text-primary-white heading-gold-shadow mb-8">
         Building Pakistan's Digital Future with Integrity
       </h2>
-      <p className="text-xl text-primary-charcoal max-w-3xl mx-auto">
+      <p className="text-xl text-primary-white/90 max-w-3xl mx-auto">
         Our approach is founded on transparency, deep market research, 
         and an unwavering commitment to your success. We're building something new together.
       </p>
@@ -280,34 +280,34 @@ export default function HomePage() {
     
     {/* Enhanced Credibility Grid */}
     <div className="grid md:grid-cols-3 gap-6 mb-12">
-      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+      <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
         <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
           <FileCheck className="w-6 h-6 text-primary-navy" />
         </div>
-        <h3 className="text-lg font-bold text-primary-navy mb-3">Registered & Compliant</h3>
-        <p className="text-sm text-primary-charcoal leading-relaxed mb-3">
+        <h3 className="text-lg font-bold text-primary-white mb-3">Registered & Compliant</h3>
+        <p className="text-sm text-primary-white/80 leading-relaxed mb-3">
           Fully registered Pakistani business entity operating under local regulations and international digital commerce standards.
         </p>
         <div className="text-xs text-primary-gold font-medium">SECP Registered • PKI Compliant</div>
       </Card>
       
-      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+      <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
         <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
           <Search className="w-6 h-6 text-primary-navy" />
         </div>
-        <h3 className="text-lg font-bold text-primary-navy mb-3">Market Research Driven</h3>
-        <p className="text-sm text-primary-charcoal leading-relaxed mb-3">
+        <h3 className="text-lg font-bold text-primary-white mb-3">Market Research Driven</h3>
+        <p className="text-sm text-primary-white/80 leading-relaxed mb-3">
           Our strategies are built on comprehensive analysis of Pakistan's digital economy using data from State Bank, PBS, and international sources.
         </p>
         <div className="text-xs text-primary-gold font-medium">Research-Based Approach</div>
       </Card>
       
-      <Card className="text-center hover:shadow-lg transition-shadow" padding="md">
+      <Card className="text-center hover:shadow-lg transition-shadow bg-primary-white/5 border-primary-gold/20" padding="md">
         <div className="w-12 h-12 bg-primary-gold rounded-full flex items-center justify-center mx-auto mb-4">
           <Award className="w-6 h-6 text-primary-navy" />
         </div>
-        <h3 className="text-lg font-bold text-primary-navy mb-3">Founder Expertise</h3>
-        <p className="text-sm text-primary-charcoal leading-relaxed mb-3">
+        <h3 className="text-lg font-bold text-primary-white mb-3">Founder Expertise</h3>
+        <p className="text-sm text-primary-white/80 leading-relaxed mb-3">
           Led by experienced entrepreneurs with proven track records in identifying market opportunities and building scalable digital businesses.
         </p>
         <div className="text-xs text-primary-gold font-medium">Jahangir Hussain • Muhammad Ismail</div>
