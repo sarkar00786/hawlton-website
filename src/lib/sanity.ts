@@ -191,5 +191,128 @@ export const queries = {
     rating,
     category,
     order
+  }`,
+  
+  // Blog posts queries
+  blogPosts: `*[_type == "blogPost" && !draft] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    excerpt,
+    featuredImage,
+    category->{
+      title,
+      slug,
+      color
+    },
+    author->{
+      name,
+      title,
+      image
+    },
+    publishedAt,
+    tags,
+    featured,
+    seo
+  }`,
+  
+  // Featured blog posts
+  featuredBlogPosts: `*[_type == "blogPost" && featured == true && !draft] | order(publishedAt desc)[0...3] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    featuredImage,
+    category->{
+      title,
+      slug,
+      color
+    },
+    author->{
+      name,
+      title,
+      image
+    },
+    publishedAt,
+    tags
+  }`,
+  
+  // Blog post by slug
+  blogPostBySlug: `*[_type == "blogPost" && slug.current == $slug && !draft][0] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    featuredImage,
+    category->{
+      title,
+      slug,
+      color,
+      description
+    },
+    author->{
+      name,
+      title,
+      bio,
+      image
+    },
+    publishedAt,
+    content,
+    tags,
+    seo,
+    "relatedPosts": *[_type == "blogPost" && slug.current != $slug && !draft && category._ref == ^.category._ref] | order(publishedAt desc)[0...3] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      featuredImage,
+      publishedAt
+    }
+  }`,
+  
+  // Blog posts by category
+  blogPostsByCategory: `*[_type == "blogPost" && category->slug.current == $categorySlug && !draft] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    excerpt,
+    featuredImage,
+    category->{
+      title,
+      slug,
+      color
+    },
+    author->{
+      name,
+      title,
+      image
+    },
+    publishedAt,
+    tags
+  }`,
+  
+  // Blog categories
+  blogCategories: `*[_type == "blogCategory"] | order(title asc) {
+    _id,
+    title,
+    slug,
+    description,
+    color,
+    "postCount": count(*[_type == "blogPost" && references(^._id) && !draft])
+  }`,
+  
+  // Recent blog posts for homepage
+  recentBlogPosts: `*[_type == "blogPost" && !draft] | order(publishedAt desc)[0...6] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    featuredImage,
+    category->{
+      title,
+      slug,
+      color
+    },
+    publishedAt
   }`
 }

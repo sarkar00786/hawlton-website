@@ -20,9 +20,10 @@ const SimpleNavigation = () => {
   
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
+    { label: 'Our Vision', href: '/our-vision' },
     { label: 'Solutions', href: '/solutions' },
-    { label: 'Partner', href: '/partner' },
+    { label: 'Insights', href: '/blog' },
+    { label: 'Partnership', href: '/partnership' },
     { label: 'Contact', href: '/contact' }
   ]
 
@@ -150,10 +151,10 @@ const Header = () => {
           {/* CTA Buttons Section - Desktop */}
           <div id="cta-desktop" className="hidden md:flex items-center space-x-2">
             <Link
-              href="/partner"
+              href="/partnership"
               id="cta-partner-header"
               className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy ${
-                isActive('/partner') 
+                isActive('/partnership') 
                   ? 'bg-primary-gold text-primary-navy shadow-md' 
                   : ''
               }`}
@@ -174,31 +175,31 @@ const Header = () => {
                 }, 100);
               }}
             >
-              Partner
+              Partnership
             </Link>
-            <Link
-              href="/auth/signup"
-              id="cta-get-started-header"
-              className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
-              onBlur={(e) => {
-                setTimeout(() => {
-                  if (e.target instanceof HTMLElement) {
-                    e.target.blur();
-                    e.target.style.outline = 'none';
-                    e.target.style.boxShadow = 'none';
-                  }
-                }, 100);
-              }}
-              onMouseDown={(e) => {
-                setTimeout(() => {
-                  if (e.target instanceof HTMLElement) {
-                    e.target.blur();
-                  }
-                }, 100);
-              }}
-            >
-              Get Started
-            </Link>
+              <Link
+                href="/partnership"
+                id="cta-get-started-header"
+                className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy transition-all duration-200 hover:bg-primary-gold/90 shadow-sm"
+                onBlur={(e) => {
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                      e.target.style.outline = 'none';
+                      e.target.style.boxShadow = 'none';
+                    }
+                  }, 100);
+                }}
+                onMouseDown={(e) => {
+                  setTimeout(() => {
+                    if (e.target instanceof HTMLElement) {
+                      e.target.blur();
+                    }
+                  }, 100);
+                }}
+              >
+                Start Your Digital Journey
+              </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -227,13 +228,13 @@ const Header = () => {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/our-vision"
                 className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/about') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                  isActive('/our-vision') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
-                About Us
+                Our Vision
               </Link>
               <Link
                 href="/solutions"
@@ -242,16 +243,16 @@ const Header = () => {
                 }`}
                 onClick={toggleMenu}
               >
-                Our Solutions
+                Solutions
               </Link>
               <Link
-                href="/careers"
+                href="/blog"
                 className={`block px-3 py-2 hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-0 ${
-                  isActive('/careers') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
+                  isActive('/blog') ? 'text-primary-gold font-semibold' : 'text-primary-silver'
                 }`}
                 onClick={toggleMenu}
               >
-                Careers
+                Insights
               </Link>
               <Link
                 href="/contact"
@@ -266,22 +267,22 @@ const Header = () => {
               {/* Mobile CTA Buttons */}
               <div className="pt-4 space-y-3 border-t border-primary-silver/20">
                 <Link
-                  href="/partner"
+                  href="/partnership"
                   className={`block w-full border border-primary-gold px-4 py-2.5 font-semibold text-center transition-all duration-200 ${
-                    isActive('/partner') 
+                    isActive('/partnership') 
                       ? 'bg-primary-gold text-primary-navy shadow-lg' 
                       : 'bg-transparent text-primary-gold hover:bg-primary-gold hover:text-primary-navy'
                   }`}
                   onClick={toggleMenu}
                 >
-                  Partner With Us
+                  Partnership
                 </Link>
                 <Link
-                  href="/auth/signup"
+                  href="/partnership"
                   className="block w-full bg-primary-gold hover:bg-primary-gold/90 text-primary-navy px-4 py-3 font-semibold text-center transition-all duration-200 transform hover:scale-105 shadow-lg"
                   onClick={toggleMenu}
                 >
-                  Get Started
+                  Start Your Digital Journey
                 </Link>
               </div>
             </div>

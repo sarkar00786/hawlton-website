@@ -16,7 +16,7 @@ const EnhancedNavigation = () => {
   const router = useRouter()
   const { language, setLanguage, t } = useLanguage()
 
-  // Navigation items with internationalization
+  // Consolidated navigation - 6 core pages including blog
   const navigationItems = [
     {
       label: 'Home',
@@ -24,44 +24,43 @@ const EnhancedNavigation = () => {
       submenu: null
     },
     {
-      label: t('nav.about'),
-      href: '/about',
+      label: 'Our Vision',
+      href: '/our-vision',
       submenu: [
-        { label: 'Our Story', href: '/about#overview', icon: Building2, description: 'Learn about Hawlton\'s vision and mission to transform Pakistan\'s digital economy', id: 'nav-about-story' },
-        { label: 'Leadership Team', href: '/about#team', icon: Users, description: 'Meet the architects of digital growth and transformation', id: 'nav-about-team' },
-        { label: 'Vision & Mission', href: '/about#vision', icon: Target, description: 'Our guiding principles for Pakistan\'s digital transformation', id: 'nav-about-vision' },
-        { label: 'Our Values', href: '/about#values', icon: Award, description: 'Partnership, innovation, and commitment to mutual success', id: 'nav-about-values' }
+        { label: 'The Story', href: '/our-vision#story', icon: Building2, description: 'From idea to digital transformation leader', id: 'nav-vision-story' },
+        { label: 'Leadership', href: '/our-vision#team', icon: Users, description: 'Meet our visionary team', id: 'nav-vision-team' },
+        { label: 'Mission & Values', href: '/our-vision#mission', icon: Target, description: 'Our commitment to Pakistan\'s digital future', id: 'nav-vision-mission' }
       ]
     },
     {
-      label: t('nav.solutions'),
+      label: 'Solutions',
       href: '/solutions',
       submenu: [
-        { label: 'Our Services', href: '/solutions#services', icon: TrendingUp, description: 'Comprehensive digital transformation solutions for your business', id: 'nav-solutions-services' },
-        { label: 'Digital Transformation', href: '/solutions#digital-transformation', icon: Target, description: 'Complete digital transformation strategies and implementation', id: 'nav-solutions-digital' },
-        { label: 'Strategic Partnerships', href: '/solutions#partnerships', icon: Users, description: 'Partnership models and collaborative growth approaches', id: 'nav-solutions-partnerships' },
-        { label: 'Success Stories', href: '/solutions#success-stories', icon: Award, description: 'Real case studies and transformation results', id: 'nav-solutions-success' }
+        { label: 'Digital Transformation', href: '/solutions#digital-transformation', icon: TrendingUp, description: 'Complete business digitalization', id: 'nav-solutions-digital' },
+        { label: 'Partnership Models', href: '/solutions#partnerships', icon: Users, description: 'Flexible collaboration approaches', id: 'nav-solutions-partnerships' },
+        { label: 'Success Stories', href: '/solutions#success-stories', icon: Award, description: 'Real transformation results', id: 'nav-solutions-success' }
       ]
     },
     {
-      label: t('nav.partner'),
-      href: '/partner',
+      label: 'Insights',
+      href: '/blog',
+      submenu: null
+    },
+    {
+      label: 'Partnership',
+      href: '/partnership',
       submenu: [
-        { label: 'Partnership Benefits', href: '/partner#benefits', icon: TrendingUp, description: 'Why partner with Hawlton for exponential business growth', id: 'nav-partner-benefits' },
-        { label: 'Partnership Types', href: '/partner#types', icon: Building2, description: 'Different partnership models and collaboration approaches', id: 'nav-partner-types' },
-        { label: 'Project Portal', href: '/partner-portal', icon: Target, description: 'Access your dedicated project management and tracking portal', id: 'nav-partner-portal' },
-        { label: 'Partner Resources', href: '/partner#resources', icon: FileText, description: 'Tools, materials, and support resources for partners', id: 'nav-partner-resources' },
-        { label: 'Success Stories', href: '/partner#testimonials', icon: Users, description: 'Hear from partners who transformed their businesses', id: 'nav-partner-testimonials' },
-        { label: 'Apply Now', href: '/partner#application', icon: Award, description: 'Start your partnership journey with Hawlton today', id: 'nav-partner-apply' }
+        { label: 'Partnership Benefits', href: '/partnership#benefits', icon: TrendingUp, description: 'Why partner with Hawlton', id: 'nav-partner-benefits' },
+        { label: 'Application Process', href: '/partnership#partner-form', icon: Building2, description: 'Start your partnership journey', id: 'nav-partner-process' },
+        { label: 'Partner Resources', href: '/partnership#partner-resources-section', icon: FileText, description: 'Tools and support for partners', id: 'nav-partner-resources' }
       ]
     },
     {
-      label: t('nav.contact'),
+      label: 'Contact',
       href: '/contact',
       submenu: [
-        { label: 'Get In Touch', href: '/contact#form', icon: Phone, description: 'Contact us for partnerships, collaboration, or general inquiries', id: 'nav-contact-form' },
-        { label: 'Contact Info', href: '/contact#info', icon: MapPin, description: 'Our contact details and office information', id: 'nav-contact-info' },
-        { label: 'Careers', href: '/careers#openings', icon: Users, description: 'Join our mission to transform Pakistan\'s digital future', id: 'nav-contact-careers' }
+        { label: 'Get In Touch', href: '/contact#form', icon: Phone, description: 'Contact us for partnerships or inquiries', id: 'nav-contact-form' },
+        { label: 'Careers', href: '/careers', icon: Users, description: 'Join our mission', id: 'nav-contact-careers' }
       ]
     }
   ]
