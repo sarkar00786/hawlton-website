@@ -42,7 +42,7 @@ const HeroSectionWithProps = ({
 
   return (
     <section
-      className="relative h-[80vh] flex items-center justify-center bg-cover bg-top"
+      className="relative h-[80vh] flex items-center justify-center bg-cover bg-top pt-14"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       {/* Professional overlay for better text readability */}
