@@ -40,7 +40,6 @@ export default function HomePage() {
             href: "#market-data",
           }}
           backgroundImage="/images/backgrounds/hero-home.png"
-          titleClassName="heading-hero-gold text-shadow-lg"
         />
 
         {/* 2. PROBLEM NARRATIVE - Immediate engagement after hero */}
