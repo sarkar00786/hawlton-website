@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "Hawlton - Pakistan's Premier Digital Transformation & Partnership Platform",
     template: "%s | Hawlton - Digital Growth Partners Pakistan"
   },
-  description: "⭐ **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. Expert guidance, measurable growth, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+  description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
   keywords: [
     "Pakistan digital transformation",
     "strategic business partnerships Pakistan", 
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://hawlton.com",
     siteName: "Hawlton - Pakistan's Digital Transformation Leaders",
     title: "Hawlton - Empowering Pakistan's Digital Future 🇵🇰",
-    description: "⭐ **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. Expert guidance, measurable growth, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+    description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
     images: [
       {
         url: "/images/backgrounds/home-hero.jpg",
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     site: "@hawlton",
     creator: "@hawlton",
     title: "Hawlton - Pakistan's Digital Transformation Leaders 🇵🇰",
-    description: "⭐ **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+    description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
     images: {
       url: "/images/backgrounds/home-hero.jpg",
       alt: "Hawlton - Digital Transformation Platform Pakistan",
