@@ -11,6 +11,7 @@ import HeroSectionWithProps from "@/components/HeroSectionWithProps";
 import MediaMentions from "@/components/MediaMentions";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
 import VideoTestimonials from "@/components/VideoTestimonials";
+import SuccessGuarantee from "@/components/SuccessGuarantee";
 
 export const metadata: Metadata = {
   title: "Hawlton | The Future of Business is Digital. The Future of Digital is Partnership.",
