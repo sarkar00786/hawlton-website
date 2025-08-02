@@ -54,11 +54,11 @@ const HeroSectionWithProps = ({
         <p className="subtitle-thick text-primary-white/95 max-w-4xl mx-auto">{subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-center pt-2">
           <Link href={primaryAction.href} className="w-full sm:w-auto max-w-xs sm:max-w-none">
-            <Button className="bg-primary-navy text-white w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4 text-base sm:text-lg font-semibold min-h-[48px] sm:min-h-[52px] rounded-lg hover:bg-primary-navy/90 transition-all duration-200">{primaryAction.text}</Button>
+            <Button className="bg-primary-navy text-white w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4 text-base sm:text-lg font-semibold min-h-[48px] sm:min-h-[52px] rounded-none hover:bg-primary-navy/90 transition-all duration-200">{primaryAction.text}</Button>
           </Link>
           {secondaryAction && (
             <Link href={secondaryAction.href} className="w-full sm:w-auto max-w-xs sm:max-w-none">
-              <Button className="bg-white text-primary-navy w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4 text-base sm:text-lg font-semibold min-h-[48px] sm:min-h-[52px] rounded-lg hover:bg-white/90 transition-all duration-200">{secondaryAction.text}</Button>
+              <Button className="bg-white text-primary-navy w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4 text-base sm:text-lg font-semibold min-h-[48px] sm:min-h-[52px] rounded-none hover:bg-white/90 transition-all duration-200">{secondaryAction.text}</Button>
             </Link>
           )}
         </div>

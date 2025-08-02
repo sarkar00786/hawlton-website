@@ -100,7 +100,7 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
     <div className="hidden md:flex items-center space-x-2">
       <Link
         href="/auth/signin"
-        className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold rounded ${
+        className={`px-3 py-1.5 text-sm font-medium border border-primary-gold text-primary-gold rounded-none ${
           isActive('/auth/signin')
             ? 'bg-primary-gold text-primary-navy' 
             : ''
@@ -110,7 +110,7 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
       </Link>
       <Link
         href="/partnership"
-        className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy rounded"
+        className="px-3 py-1.5 text-sm font-medium bg-primary-gold text-primary-navy rounded-none"
       >
         Start Your Digital Journey
       </Link>
@@ -172,7 +172,7 @@ export function MobileAuthButtons({ onMenuClick }: AuthButtonsProps) {
     <div className="pt-4 space-y-3 border-t border-primary-silver/20">
       <Link
         href="/auth/signin"
-        className={`block w-full border border-primary-gold px-4 py-2.5 font-semibold text-center rounded ${
+        className={`block w-full border border-primary-gold px-4 py-2.5 font-semibold text-center rounded-none ${
           isActive('/auth/signin') 
             ? 'bg-primary-gold text-primary-navy' 
             : 'bg-transparent text-primary-gold'
@@ -183,7 +183,7 @@ export function MobileAuthButtons({ onMenuClick }: AuthButtonsProps) {
       </Link>
       <Link
         href="/partnership"
-        className="block w-full bg-primary-gold text-primary-navy px-4 py-3 font-semibold text-center rounded"
+        className="block w-full bg-primary-gold text-primary-navy px-4 py-3 font-semibold text-center rounded-none"
         onClick={onMenuClick}
       >
         Start Your Digital Journey
