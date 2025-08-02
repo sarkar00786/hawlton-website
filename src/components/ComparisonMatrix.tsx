@@ -74,21 +74,21 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
           </div>
 
           <Card className="overflow-hidden" padding="none">
-            <div className="bg-primary-navy p-6">
+            <div className="bg-primary-navy p-8">
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center flex items-center justify-center p-4">
-                  <h3 className="text-xl font-bold text-primary-white">Feature</h3>
+                  <h3 className="text-2xl font-extrabold text-primary-white tracking-wide">FEATURE</h3>
                 </div>
-                <div className="text-center bg-primary-gold/20 rounded-lg p-4">
-                  <div className="flex items-center justify-center mb-2">
-                    <Star className="w-6 h-6 text-primary-gold mr-2" />
-                    <h3 className="text-xl font-bold text-primary-gold">Hawlton Partnership</h3>
+                <div className="text-center bg-primary-gold/20 rounded-lg p-6 border-2 border-primary-gold/30">
+                  <div className="flex items-center justify-center mb-3">
+                    <Star className="w-8 h-8 text-primary-gold mr-3" />
+                    <h3 className="text-2xl font-extrabold text-primary-gold tracking-wide">HAWLTON PARTNERSHIP</h3>
                   </div>
-                  <p className="text-sm text-primary-white/80">Strategic Growth Partner</p>
+                  <p className="text-base font-semibold text-primary-white/90">Strategic Growth Partner</p>
                 </div>
                 <div className="text-center flex flex-col items-center justify-center p-4">
-                  <h3 className="text-xl font-bold text-primary-white mb-2">Traditional Agencies</h3>
-                  <p className="text-sm text-primary-white/60">Service Providers</p>
+                  <h3 className="text-2xl font-extrabold text-primary-white mb-3 tracking-wide">TRADITIONAL AGENCIES</h3>
+                  <p className="text-base font-medium text-primary-white/70">Service Providers</p>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ const ComparisonMatrix = ({ className = '' }: ComparisonMatrixProps) => {
                 <div key={index} className="p-6 hover:bg-primary-platinum/50 transition-colors">
                   <div className="grid grid-cols-3 gap-6 items-center">
                     <div>
-                      h4 className="text-sm font-semibold text-primary-navy"{item.feature}/h4
+                      <h4 className="text-base font-bold text-primary-navy uppercase tracking-wide">{item.feature}</h4>
                     </div>
                     <div className="bg-primary-gold/10 rounded-lg p-4">
                       <div className="flex items-center">
