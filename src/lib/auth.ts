@@ -1,20 +1,18 @@
 import type { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
+import GoogleProvider from 'next-auth/providers/google'
 import type { UserRole } from '@/types/next-auth'
-
-// Mock user database for development (replace with real database in production)
-const users = [
-  {
-    id: '1',
-    name: 'Demo User',
-    email: 'demo@hawlton.com',
-    password: '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj5w5wJksmBq', // 'password123'
-  },
-]
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '@/lib/firebase'
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    // Simple Email/Password Provider
+    // Google OAuth Provider
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID || '',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
+    }),
+    // Firebase Email/Password Provider
     CredentialsProvider({
       name: 'credentials',
       credentials: {
@@ -26,23 +24,33 @@ export const authOptions: NextAuthOptions = {
           throw new Error('Email and password are required')
         }
 
-        // Find user in mock database
-        const user = users.find((u) => u.email === credentials.email)
-        
-        if (!user) {
-          throw new Error('No user found with this email')
-        }
-
-        // For demo purposes, just check if password is 'password123'
-        if (credentials.password !== 'password123') {
-          throw new Error('Invalid password')
-        }
-
-        return {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          role: 'USER' as UserRole,
+        try {
+          // Use Firebase to authenticate the user
+          const userCredential = await signInWithEmailAndPassword(
+            auth, 
+            credentials.email, 
+            credentials.password
+          )
+          
+          const user = userCredential.user
+          
+          return {
+            id: user.uid,
+            name: user.displayName || user.email?.split('@')[0] || 'User',
+            email: user.email,
+            role: 'USER' as UserRole,
+          }
+        } catch (error: any) {
+          console.error('Firebase auth error:', error)
+          if (error.code === 'auth/user-not-found') {
+            throw new Error('No account found with this email address')
+          } else if (error.code === 'auth/wrong-password') {
+            throw new Error('Invalid password')
+          } else if (error.code === 'auth/invalid-email') {
+            throw new Error('Invalid email address')
+          } else {
+            throw new Error('Authentication failed. Please try again.')
+          }
         }
       },
     }),

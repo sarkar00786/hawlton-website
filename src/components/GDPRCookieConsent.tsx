@@ -37,6 +37,10 @@ const GDPRCookieConsent: React.FC = () => {
         applyConsent(savedSettings)
       } catch (error) {
         console.error('Error loading cookie preferences:', error)
+        // Clear corrupted data and show banner again
+        localStorage.removeItem('hawlton-cookie-consent')
+        const timer = setTimeout(() => setShowBanner(true), 2000)
+        return () => clearTimeout(timer)
       }
     }
   }, [])
