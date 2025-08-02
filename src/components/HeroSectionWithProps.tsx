@@ -32,7 +32,7 @@ const HeroSectionWithProps = ({
       return (
         <span
           key={index}
-          className={isEmphasized ? 'text-primary-gold' : 'text-primary-navy'}
+          className={isEmphasized ? 'text-primary-gold' : 'text-primary-white'}
         >
           {word}{index < words.length - 1 ? ' ' : ''}
         </span>
@@ -51,7 +51,7 @@ const HeroSectionWithProps = ({
         <h1 className={`heading-ultra-thick ${titleClassName || ''}`}>
           {renderTitle(title)}
         </h1>
-        <p className="subtitle-thick text-primary-navy/90 max-w-4xl mx-auto">{subtitle}</p>
+        <p className="subtitle-thick text-primary-white/90 max-w-4xl mx-auto">{subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={primaryAction.href}>
             <Button className="bg-primary-navy text-white">{primaryAction.text}</Button>
