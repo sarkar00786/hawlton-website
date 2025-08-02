@@ -12,15 +12,15 @@ import VideoTestimonials from "@/components/VideoTestimonials";
 import SuccessGuarantee from "@/components/SuccessGuarantee";
 
 export const metadata: Metadata = {
-  title: "Hawlton | The Future of Business is Digital. The Future of Digital is Partnership.",
-  description: "We are Hawlton. We are building Pakistan's digital future, one partner at a time. Transform your business through strategic partnerships that eliminate risk and maximize growth potential.",
-  keywords: "Pakistan digital transformation, strategic business partnerships, zero investment business growth, e-commerce development Pakistan, nationwide business expansion, digital economy Pakistan, profit sharing partnerships",
+  title: "Hawlton - Pakistan's Premier Digital Transformation & Partnership Platform",
+  description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+  keywords: "Pakistan digital transformation, strategic business partnerships Pakistan, digital growth opportunities, e-commerce development Pakistan, online business solutions Pakistan, Pakistan startup ecosystem, digital marketing Pakistan, business scaling solutions, digital economy partnerships, technology consulting Pakistan",
   openGraph: {
-    title: "Hawlton | The Future of Business is Digital. The Future of Digital is Partnership.",
-    description: "We are Hawlton. We are building Pakistan's digital future, one partner at a time.",
+    title: "Hawlton - Empowering Pakistan's Digital Future 🇵🇰",
+    description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
     type: 'website',
     locale: 'en_US',
-    images: ["/images/backgrounds/hero-home.png"],
+    images: ["/images/backgrounds/home-hero.jpg"],
   },
   alternates: {
     canonical: 'https://hawlton.com'
