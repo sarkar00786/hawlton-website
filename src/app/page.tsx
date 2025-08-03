@@ -12,12 +12,12 @@ import VideoTestimonials from "@/components/VideoTestimonials";
 import SuccessGuarantee from "@/components/SuccessGuarantee";
 
 export const metadata: Metadata = {
-  title: "Hawlton - Pakistan's Premier Digital Transformation & Partnership Platform",
-  description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+  title: "🇵🇰 Pakistan's #1 Digital Partner | Trusted Growth Partners | Transform your ambitious local venture into Pakistan's next industry leader. Expert guidance, measurable growth, guaranteed results. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+  description: "🇵🇰 Pakistan's #1 Digital Partner | Trusted Growth Partners | Transform your ambitious local venture into Pakistan's next industry leader. Expert guidance, measurable growth, guaranteed results. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
   keywords: "Pakistan digital transformation, strategic business partnerships Pakistan, digital growth opportunities, e-commerce development Pakistan, online business solutions Pakistan, Pakistan startup ecosystem, digital marketing Pakistan, business scaling solutions, digital economy partnerships, technology consulting Pakistan",
   openGraph: {
-    title: "Hawlton - Empowering Pakistan's Digital Future 🇵🇰",
-    description: "🇵🇰 **Pakistan's #1 Digital Partner** | **Trusted Growth Partners** | Transform your ambitious local venture into **Pakistan's next industry leader**. **Expert guidance**, **measurable growth**, **guaranteed results**. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+    title: "🇵🇰 Pakistan's #1 Digital Partner | Trusted Growth Partners | Transform your ambitious local venture into Pakistan's next industry leader. Expert guidance, measurable growth, guaranteed results. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
+    description: "🇵🇰 Pakistan's #1 Digital Partner | Trusted Growth Partners | Transform your ambitious local venture into Pakistan's next industry leader. Expert guidance, measurable growth, guaranteed results. — ✓ Strategic Partnerships ✓ Digital Excellence ✓ National Expansion",
     type: 'website',
     locale: 'en_US',
     images: ["/images/backgrounds/home-hero.jpg"],
