@@ -7,15 +7,15 @@ import { useAuth } from '@/hooks/useAuth'
 import SessionProvider from '@/components/SessionProvider'
 
 function DashboardContent() {
-  const { data: session, status, signOut } = useAuth()
+  const { user, loading, signOut } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
-    if (status === 'loading') return // Still loading
-    if (!session) router.push('/auth/signin') // Redirect if not authenticated
-  }, [session, status, router])
+    if (loading) return // Still loading
+    if (!user) router.push('/auth/signin') // Redirect if not authenticated
+  }, [user, loading, router])
 
-  if (status === 'loading') {
+  if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
@@ -26,7 +26,7 @@ function DashboardContent() {
     )
   }
 
-  if (!session) {
+  if (!user) {
     return null // Will redirect
   }
 
@@ -41,9 +41,9 @@ function DashboardContent() {
               </Link>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-gray-700">Welcome, {session.user.name || session.user.email}</span>
+              <span className="text-gray-700">Welcome, {user.displayName || user.email}</span>
               <button
-                onClick={() => signOut({ callbackUrl: '/' })}
+                onClick={() => signOut()}
                 className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition-colors"
               >
                 Sign Out
@@ -67,10 +67,10 @@ function DashboardContent() {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
                 <h2 className="text-xl font-semibold text-blue-800 mb-4">Session Information</h2>
                 <div className="text-left space-y-2">
-                  <p><strong>Name:</strong> {session.user.name || 'Not provided'}</p>
-                  <p><strong>Email:</strong> {session.user.email}</p>
-                  <p><strong>User ID:</strong> {session.user.id || 'Not available'}</p>
-                  <p><strong>Provider:</strong> {session.user.provider || 'credentials'}</p>
+                  <p><strong>Name:</strong> {user.displayName || 'Not provided'}</p>
+                  <p><strong>Email:</strong> {user.email}</p>
+                  <p><strong>User ID:</strong> {user.uid}</p>
+                  <p><strong>Provider:</strong> {user.providerData[0]?.providerId || 'firebase'}</p>
                 </div>
               </div>
 

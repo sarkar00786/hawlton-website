@@ -26,10 +26,10 @@ This guide will help you set up Firebase Authentication and Google OAuth for you
    - Go to "APIs & Services" → "Credentials"
    - Click "Create Credentials" → "OAuth 2.0 Client ID"
    - Choose "Web application"
-   - Add authorized redirect URIs:
-     - `http://localhost:3000/api/auth/callback/google` (for development)
-     - `https://your-domain.com/api/auth/callback/google` (for production)
-   - Save and copy the Client ID and Client Secret
+   - Add authorized origins:
+     - `http://localhost:3000` (for development)
+     - `https://your-domain.com` (for production)
+   - Note: Firebase handles the OAuth redirect flow automatically
 
 ### 3. Environment Variables
 
@@ -37,14 +37,6 @@ This guide will help you set up Firebase Authentication and Google OAuth for you
 2. Fill in all the required values:
 
 ```env
-# NextAuth.js Configuration
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=generate-a-random-secret-key
-
-# Google OAuth Configuration (from step 2)
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-
 # Firebase Configuration (from Firebase project settings)
 NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
@@ -65,13 +57,6 @@ NEXT_PUBLIC_ADMIN_EMAILS=your-admin-email@example.com
 3. Click on your web app or create one
 4. Copy the configuration values to your `.env.local`
 
-### 5. Generate NextAuth Secret
-
-Run this command to generate a secure secret:
-```bash
-openssl rand -base64 32
-```
-Add the result to `NEXTAUTH_SECRET` in your `.env.local`
 
 ## 🚀 Testing
 

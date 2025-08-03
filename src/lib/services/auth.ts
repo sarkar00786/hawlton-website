@@ -10,14 +10,6 @@ import {
 } from 'firebase/auth'
 import { auth } from '@/lib/firebase'
 
-export interface AuthUser {
-  uid: string
-  email: string | null
-  displayName: string | null
-  photoURL: string | null
-  isAdmin: boolean
-}
-
 class AuthService {
   private googleProvider: GoogleAuthProvider
 
@@ -28,36 +20,11 @@ class AuthService {
     this.googleProvider.addScope('email')
   }
 
-  // Check if user is admin
-  private isAdminUser(email: string | null): boolean {
-    if (!email) return false
-    const adminEmails = process.env.NEXT_PUBLIC_ADMIN_EMAILS?.split(',') || []
-    return adminEmails.includes(email.trim())
-  }
-
-  // Convert Firebase User to AuthUser
-  private mapFirebaseUser(user: User): AuthUser {
-    return {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      isAdmin: this.isAdminUser(user.email)
-    }
-  }
-
   // Email/Password Sign In
-  async signInWithEmail(email: string, password: string): Promise<AuthUser> {
+  async signInWithEmail(email: string, password: string): Promise<User> {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password)
-      const authUser = this.mapFirebaseUser(result.user)
-      
-      if (!authUser.isAdmin) {
-        await this.signOut()
-        throw new Error('Access denied. You are not authorized to access the admin panel.')
-      }
-      
-      return authUser
+      return result.user
     } catch (error: any) {
       console.error('Email sign-in error:', error)
       throw new Error(error.message || 'Failed to sign in with email')
@@ -65,17 +32,10 @@ class AuthService {
   }
 
   // Google OAuth Sign In
-  async signInWithGoogle(): Promise<AuthUser> {
+  async signInWithGoogle(): Promise<User> {
     try {
       const result = await signInWithPopup(auth, this.googleProvider)
-      const authUser = this.mapFirebaseUser(result.user)
-      
-      if (!authUser.isAdmin) {
-        await this.signOut()
-        throw new Error('Access denied. You are not authorized to access the admin panel.')
-      }
-      
-      return authUser
+      return result.user
     } catch (error: any) {
       console.error('Google sign-in error:', error)
       if (error.code === 'auth/popup-closed-by-user') {
@@ -86,14 +46,10 @@ class AuthService {
   }
 
   // Create new user (email/password)
-  async createUser(email: string, password: string): Promise<AuthUser> {
+  async createUser(email: string, password: string): Promise<User> {
     try {
-      if (!this.isAdminUser(email)) {
-        throw new Error('Access denied. You are not authorized to create an admin account.')
-      }
-      
       const result = await createUserWithEmailAndPassword(auth, email, password)
-      return this.mapFirebaseUser(result.user)
+      return result.user
     } catch (error: any) {
       console.error('User creation error:', error)
       throw new Error(error.message || 'Failed to create user')
@@ -121,27 +77,19 @@ class AuthService {
   }
 
   // Get current user
-  getCurrentUser(): Promise<AuthUser | null> {
+  getCurrentUser(): Promise<User | null> {
     return new Promise((resolve) => {
       const unsubscribe = onAuthStateChanged(auth, (user) => {
         unsubscribe()
-        if (user && this.isAdminUser(user.email)) {
-          resolve(this.mapFirebaseUser(user))
-        } else {
-          resolve(null)
-        }
+        resolve(user)
       })
     })
   }
 
   // Listen to auth state changes
-  onAuthStateChange(callback: (user: AuthUser | null) => void): () => void {
+  onAuthStateChange(callback: (user: User | null) => void): () => void {
     return onAuthStateChanged(auth, (user) => {
-      if (user && this.isAdminUser(user.email)) {
-        callback(this.mapFirebaseUser(user))
-      } else {
-        callback(null)
-      }
+      callback(user)
     })
   }
 }

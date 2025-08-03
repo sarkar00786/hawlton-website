@@ -12,7 +12,8 @@ interface AuthButtonsProps {
 
 export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
-  const { data: session, status, signOut } = useAuth()
+  const { user: session, loading, signOut } = useAuth()
+  const status = loading ? 'loading' : session ? 'authenticated' : 'unauthenticated'
   const userMenuRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
 
@@ -33,7 +34,7 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
 
   const handleSignOut = async () => {
     setIsUserMenuOpen(false)
-    await signOut({ callbackUrl: '/' })
+    await signOut()
   }
 
   // Loading state
@@ -56,7 +57,7 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
           >
             <User className="w-4 h-4" />
             <span className="max-w-24 truncate">
-              {session.user.name || session.user.email}
+              {session.displayName || session.email}
             </span>
             <ChevronDown className={`w-4 h-4 ${isUserMenuOpen ? 'rotate-180' : ''}`} />
           </button>
@@ -65,8 +66,8 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
           {isUserMenuOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md border border-gray-200 py-2 z-50">
               <div className="px-4 py-2 text-sm text-gray-500 border-b border-gray-100">
-                <div className="font-medium text-gray-900">{session.user.name || 'User'}</div>
-                <div className="truncate">{session.user.email}</div>
+                <div className="font-medium text-gray-900">{session.displayName || 'User'}</div>
+                <div className="truncate">{session.email}</div>
               </div>
               
               <Link
@@ -120,13 +121,14 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
 
 // Mobile version of AuthButtons
 export function MobileAuthButtons({ onMenuClick }: AuthButtonsProps) {
-  const { data: session, status, signOut } = useAuth()
+  const { user: session, loading, signOut } = useAuth()
+  const status = loading ? 'loading' : session ? 'authenticated' : 'unauthenticated'
   const pathname = usePathname()
   const isActive = (path: string) => pathname === path
 
   const handleSignOut = async () => {
     onMenuClick?.()
-    await signOut({ callbackUrl: '/' })
+    await signOut()
   }
 
   // Loading state
@@ -143,8 +145,8 @@ export function MobileAuthButtons({ onMenuClick }: AuthButtonsProps) {
     return (
       <div className="pt-4 space-y-3 border-t border-primary-silver/20">
         <div className="px-4 py-2 text-primary-silver text-sm border-b border-primary-silver/20">
-          <div className="font-medium text-primary-white">{session.user.name || 'User'}</div>
-          <div className="truncate text-xs">{session.user.email}</div>
+          <div className="font-medium text-primary-white">{session.displayName || 'User'}</div>
+          <div className="truncate text-xs">{session.email}</div>
         </div>
         
         <Link

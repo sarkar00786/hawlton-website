@@ -1,13 +1,14 @@
 'use client'
 
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { authService, AuthUser } from '@/lib/services/auth'
+import { User } from 'firebase/auth'
+import { authService } from '@/lib/services/auth'
 
 interface AuthContextType {
-  user: AuthUser | null
+  user: User | null
   loading: boolean
-  signInWithEmail: (email: string, password: string) => Promise<AuthUser>
-  signInWithGoogle: () => Promise<AuthUser>
+  signInWithEmail: (email: string, password: string) => Promise<User>
+  signInWithGoogle: () => Promise<User>
   signOut: () => Promise<void>
   sendPasswordReset: (email: string) => Promise<void>
 }
@@ -15,7 +16,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<AuthUser | null>(null)
+  const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => unsubscribe()
   }, [])
 
-  const signInWithEmail = async (email: string, password: string): Promise<AuthUser> => {
+  const signInWithEmail = async (email: string, password: string): Promise<User> => {
     setLoading(true)
     try {
       const user = await authService.signInWithEmail(email, password)
@@ -37,7 +38,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const signInWithGoogle = async (): Promise<AuthUser> => {
+  const signInWithGoogle = async (): Promise<User> => {
     setLoading(true)
     try {
       const user = await authService.signInWithGoogle()
