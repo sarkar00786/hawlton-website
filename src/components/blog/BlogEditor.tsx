@@ -121,10 +121,13 @@ export default function BlogEditor({
   const [newTag, setNewTag] = useState('')
   const [showColorPicker, setShowColorPicker] = useState(false)
   const [selectedColor, setSelectedColor] = useState('#000000')
+  const [autoSaveStatus, setAutoSaveStatus] = useState<'saved' | 'saving' | 'error'>('saved')
+  const [lastSaved, setLastSaved] = useState<Date | null>(null)
 
   const editorRef = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const featuredImageInputRef = useRef<HTMLInputElement>(null)
+  const autoSaveTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Auto-generate slug from title
   useEffect(() => {
@@ -147,6 +150,74 @@ export default function BlogEditor({
       setPost(prev => ({ ...prev, excerpt }))
     }
   }, [post.content, initialPost?.excerpt])
+
+  // Auto-save functionality
+  const autoSave = useCallback(async () => {
+    if (!post.title.trim()) return
+    
+    try {
+      setAutoSaveStatus('saving')
+      
+      // Save to localStorage as backup
+      const draftKey = `blog-draft-${post.slug || 'new'}`
+      localStorage.setItem(draftKey, JSON.stringify({
+        ...post,
+        lastSaved: new Date().toISOString()
+      }))
+      
+      setAutoSaveStatus('saved')
+      setLastSaved(new Date())
+    } catch (error) {
+      console.error('Auto-save failed:', error)
+      setAutoSaveStatus('error')
+    }
+  }, [post])
+
+  // Auto-save on content changes
+  useEffect(() => {
+    if (autoSaveTimeoutRef.current) {
+      clearTimeout(autoSaveTimeoutRef.current)
+    }
+    
+    autoSaveTimeoutRef.current = setTimeout(() => {
+      autoSave()
+    }, 3000) // Auto-save after 3 seconds of inactivity
+    
+    return () => {
+      if (autoSaveTimeoutRef.current) {
+        clearTimeout(autoSaveTimeoutRef.current)
+      }
+    }
+  }, [post, autoSave])
+
+  // Load draft from localStorage on mount
+  useEffect(() => {
+    if (!initialPost?.id) {
+      const draftKey = `blog-draft-${post.slug || 'new'}`
+      const savedDraft = localStorage.getItem(draftKey)
+      
+      if (savedDraft) {
+        try {
+          const draft = JSON.parse(savedDraft)
+          const confirmRestore = window.confirm(
+            `Found a saved draft from ${new Date(draft.lastSaved).toLocaleString()}. Would you like to restore it?`
+          )
+          
+          if (confirmRestore) {
+            setPost({
+              ...draft,
+              author: {
+                name: authorName,
+                email: authorEmail
+              }
+            })
+          }
+        } catch (error) {
+          console.error('Failed to restore draft:', error)
+        }
+      }
+    }
+  }, [initialPost?.id, post.slug, authorName, authorEmail])
 
   const executeCommand = useCallback((command: string, value?: string) => {
     document.execCommand(command, false, value)
@@ -253,9 +324,27 @@ export default function BlogEditor({
       <div className="max-w-6xl mx-auto p-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-bold text-primary-navy">
-            {initialPost?.id ? 'Edit Post' : 'Create New Post'}
-          </h1>
+          <div>
+            <h1 className="text-3xl font-bold text-primary-navy">
+              {initialPost?.id ? 'Edit Post' : 'Create New Post'}
+            </h1>
+            
+            {/* Auto-save status */}
+            <div className="flex items-center gap-2 mt-2">
+              <div className={`w-2 h-2 rounded-full ${
+                autoSaveStatus === 'saving' ? 'bg-yellow-500 animate-pulse' :
+                autoSaveStatus === 'saved' ? 'bg-green-500' :
+                'bg-red-500'
+              }`} />
+              <span className="text-sm text-primary-charcoal">
+                {
+                  autoSaveStatus === 'saving' ? 'Saving...' :
+                  autoSaveStatus === 'saved' ? `Auto-saved ${lastSaved ? new Date(lastSaved).toLocaleTimeString() : ''}` :
+                  'Auto-save failed'
+                }
+              </span>
+            </div>
+          </div>
           
           <div className="flex items-center gap-3">
             <Button

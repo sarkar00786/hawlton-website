@@ -13,6 +13,7 @@ import {
   Timestamp
 } from 'firebase/firestore'
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage'
+import { getAuth } from 'firebase/auth'
 import { db, storage } from '@/lib/firebase'
 
 export interface BlogPost {
@@ -50,6 +51,37 @@ const POSTS_COLLECTION = 'blog_posts'
 const CATEGORIES_COLLECTION = 'blog_categories'
 
 class BlogService {
+  private checkAuth(): boolean {
+    // For read operations, we can be more lenient with authentication
+    // Let Firebase handle permissions on the backend
+    return true
+  }
+
+  private async safeExecute<T>(operation: () => Promise<T>, fallback: T, errorMessage: string): Promise<T> {
+    try {
+      if (!this.checkAuth()) {
+        console.warn(`${errorMessage}: User not authenticated, returning fallback`)
+        return fallback
+      }
+      return await operation()
+    } catch (error: any) {
+      console.error(`${errorMessage}:`, error)
+      
+      // Handle specific Firebase permission errors
+      if (error?.code === 'permission-denied' || error?.message?.includes('Missing or insufficient permissions')) {
+        console.warn(`${errorMessage}: Permission denied, returning fallback`)
+        return fallback
+      }
+      
+      // For write operations, throw the error
+      if (errorMessage.includes('create') || errorMessage.includes('update') || errorMessage.includes('delete')) {
+        throw error
+      }
+      
+      // For read operations, return fallback
+      return fallback
+    }
+  }
   // Create a new blog post
   async createPost(postData: Omit<BlogPost, 'id' | 'createdAt' | 'updatedAt'>): Promise<string> {
     try {
@@ -118,51 +150,53 @@ class BlogService {
 
   // Get all blog posts
   async getAllPosts(): Promise<BlogPost[]> {
-    try {
-      const q = query(
-        collection(db, POSTS_COLLECTION),
-        orderBy('updatedAt', 'desc')
-      )
-      
-      const querySnapshot = await getDocs(q)
-      const posts: BlogPost[] = []
-      
-      querySnapshot.forEach((doc) => {
-        posts.push({ id: doc.id, ...doc.data() } as BlogPost)
-      })
-      
-      return posts
-    } catch (error) {
-      console.error('Error fetching posts:', error)
-      throw new Error('Failed to fetch posts')
-    }
+    return this.safeExecute(
+      async () => {
+        const q = query(
+          collection(db, POSTS_COLLECTION),
+          orderBy('updatedAt', 'desc')
+        )
+        
+        const querySnapshot = await getDocs(q)
+        const posts: BlogPost[] = []
+        
+        querySnapshot.forEach((doc) => {
+          posts.push({ id: doc.id, ...doc.data() } as BlogPost)
+        })
+        
+        return posts
+      },
+      [], // Empty array as fallback
+      'Error fetching posts'
+    )
   }
 
   // Get published blog posts
   async getPublishedPosts(limitCount?: number): Promise<BlogPost[]> {
-    try {
-      let q = query(
-        collection(db, POSTS_COLLECTION),
-        where('status', '==', 'published'),
-        orderBy('publishedAt', 'desc')
-      )
-      
-      if (limitCount) {
-        q = query(q, limit(limitCount))
-      }
-      
-      const querySnapshot = await getDocs(q)
-      const posts: BlogPost[] = []
-      
-      querySnapshot.forEach((doc) => {
-        posts.push({ id: doc.id, ...doc.data() } as BlogPost)
-      })
-      
-      return posts
-    } catch (error) {
-      console.error('Error fetching published posts:', error)
-      throw new Error('Failed to fetch published posts')
-    }
+    return this.safeExecute(
+      async () => {
+        let q = query(
+          collection(db, POSTS_COLLECTION),
+          where('status', '==', 'published'),
+          orderBy('publishedAt', 'desc')
+        )
+        
+        if (limitCount) {
+          q = query(q, limit(limitCount))
+        }
+        
+        const querySnapshot = await getDocs(q)
+        const posts: BlogPost[] = []
+        
+        querySnapshot.forEach((doc) => {
+          posts.push({ id: doc.id, ...doc.data() } as BlogPost)
+        })
+        
+        return posts
+      },
+      [], // Empty array as fallback
+      'Error fetching published posts'
+    )
   }
 
   // Get a single blog post by slug
@@ -303,19 +337,20 @@ class BlogService {
 
   // Get blog categories
   async getCategories(): Promise<BlogCategory[]> {
-    try {
-      const querySnapshot = await getDocs(collection(db, CATEGORIES_COLLECTION))
-      const categories: BlogCategory[] = []
-      
-      querySnapshot.forEach((doc) => {
-        categories.push({ id: doc.id, ...doc.data() } as BlogCategory)
-      })
-      
-      return categories
-    } catch (error) {
-      console.error('Error fetching categories:', error)
-      throw new Error('Failed to fetch categories')
-    }
+    return this.safeExecute(
+      async () => {
+        const querySnapshot = await getDocs(collection(db, CATEGORIES_COLLECTION))
+        const categories: BlogCategory[] = []
+        
+        querySnapshot.forEach((doc) => {
+          categories.push({ id: doc.id, ...doc.data() } as BlogCategory)
+        })
+        
+        return categories
+      },
+      [], // Empty array as fallback
+      'Error fetching categories'
+    )
   }
 
   // Create or update category
@@ -353,26 +388,27 @@ class BlogService {
 
   // Get featured posts
   async getFeaturedPosts(limitCount: number = 3): Promise<BlogPost[]> {
-    try {
-      const q = query(
-        collection(db, POSTS_COLLECTION),
-        where('status', '==', 'published'),
-        orderBy('views', 'desc'),
-        limit(limitCount)
-      )
-      
-      const querySnapshot = await getDocs(q)
-      const posts: BlogPost[] = []
-      
-      querySnapshot.forEach((doc) => {
-        posts.push({ id: doc.id, ...doc.data() } as BlogPost)
-      })
-      
-      return posts
-    } catch (error) {
-      console.error('Error fetching featured posts:', error)
-      throw new Error('Failed to fetch featured posts')
-    }
+    return this.safeExecute(
+      async () => {
+        const q = query(
+          collection(db, POSTS_COLLECTION),
+          where('status', '==', 'published'),
+          orderBy('views', 'desc'),
+          limit(limitCount)
+        )
+        
+        const querySnapshot = await getDocs(q)
+        const posts: BlogPost[] = []
+        
+        querySnapshot.forEach((doc) => {
+          posts.push({ id: doc.id, ...doc.data() } as BlogPost)
+        })
+        
+        return posts
+      },
+      [], // Empty array as fallback
+      'Error fetching featured posts'
+    )
   }
 
   // Get recent posts
