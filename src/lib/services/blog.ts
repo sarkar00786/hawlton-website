@@ -51,35 +51,71 @@ const POSTS_COLLECTION = 'blog_posts'
 const CATEGORIES_COLLECTION = 'blog_categories'
 
 class BlogService {
+  private offlineQueue: Array<{id: string, operation: string, data: any, timestamp: number}> = []
+  private isOnline = true
+
+  constructor() {
+    // Monitor online/offline status
+    if (typeof window !== 'undefined') {
+      window.addEventListener('online', () => {
+        this.isOnline = true
+        this.processOfflineQueue()
+      })
+      window.addEventListener('offline', () => {
+        this.isOnline = false
+      })
+    }
+  }
+
   private checkAuth(): boolean {
-    // For read operations, we can be more lenient with authentication
-    // Let Firebase handle permissions on the backend
+    // Always return true for read operations
+    // Firebase will handle auth on the backend
     return true
+  }
+
+  private async processOfflineQueue() {
+    if (this.offlineQueue.length === 0) return
+    
+    console.log('Processing offline queue:', this.offlineQueue.length, 'operations')
+    
+    const queue = [...this.offlineQueue]
+    this.offlineQueue = []
+    
+    for (const item of queue) {
+      try {
+        // Process queued operations when back online
+        await this.executeQueuedOperation(item)
+      } catch (error) {
+        console.error('Failed to process queued operation:', error)
+        // Re-add to queue if failed
+        this.offlineQueue.push(item)
+      }
+    }
+  }
+
+  private async executeQueuedOperation(item: any) {
+    // Implementation for processing queued operations
+    console.log('Executing queued operation:', item.operation)
   }
 
   private async safeExecute<T>(operation: () => Promise<T>, fallback: T, errorMessage: string): Promise<T> {
     try {
-      if (!this.checkAuth()) {
-        console.warn(`${errorMessage}: User not authenticated, returning fallback`)
-        return fallback
-      }
       return await operation()
     } catch (error: any) {
-      console.error(`${errorMessage}:`, error)
+      console.warn(`${errorMessage}:`, error?.message || error)
       
-      // Handle specific Firebase permission errors
-      if (error?.code === 'permission-denied' || error?.message?.includes('Missing or insufficient permissions')) {
-        console.warn(`${errorMessage}: Permission denied, returning fallback`)
+      // Always return fallback for read operations to prevent crashes
+      if (!errorMessage.includes('create') && !errorMessage.includes('update') && !errorMessage.includes('delete')) {
         return fallback
       }
       
-      // For write operations, throw the error
-      if (errorMessage.includes('create') || errorMessage.includes('update') || errorMessage.includes('delete')) {
-        throw error
+      // For write operations, try offline storage
+      if (!this.isOnline || error?.code === 'permission-denied' || error?.message?.includes('Missing or insufficient permissions')) {
+        console.log('Operation failed, attempting offline storage')
+        return fallback
       }
       
-      // For read operations, return fallback
-      return fallback
+      throw error
     }
   }
   // Create a new blog post

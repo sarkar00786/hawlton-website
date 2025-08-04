@@ -2,40 +2,31 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { client, queries, urlFor } from '@/lib/sanity'
 import Image from 'next/image'
-import { CalendarDays, User, Tag, ArrowRight } from 'lucide-react'
-import { PortableText } from '@portabletext/react'
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import Link from 'next/link'
+import { CalendarDays, User, Tag, ArrowRight, Heart, Eye } from 'lucide-react'
+import { blogService, BlogPost } from '@/lib/services/blog'
 
-interface BlogPost {
-  _id: string
+interface RelatedPost {
+  id: string
   title: string
-  slug: { current: string }
+  slug: string
   excerpt: string
-  featuredImage?: SanityImageSource
-  category?: {
-    title: string
-    slug: { current: string }
-    description?: string
-    color: string
-  }
-  author?: {
+  featuredImage?: string
+  category: string
+  author: {
     name: string
-    title: string
-    bio?: string
-    image?: SanityImageSource
+    email: string
   }
-  publishedAt: string
-  content: any
-  tags?: string[]
-  relatedPosts?: BlogPost[]
+  publishedAt?: string
 }
 
 export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const [post, setPost] = useState<BlogPost | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<RelatedPost[]>([])
   const [loading, setLoading] = useState(true)
   const [slug, setSlug] = useState<string>('')
+  const [liked, setLiked] = useState(false)
 
   useEffect(() => {
     const resolveParams = async () => {
@@ -50,8 +41,33 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
     
     const fetchPost = async () => {
       try {
-        const result = await client.fetch(queries.blogPostBySlug, { slug })
-        setPost(result)
+        // Fetch the blog post
+        const result = await blogService.getPostBySlug(slug)
+        if (result) {
+          setPost(result)
+          
+          // Increment views
+          await blogService.incrementViews(result.id)
+          
+          // Fetch related posts from the same category
+          if (result.category) {
+            const categoryPosts = await blogService.getPostsByCategory(result.category)
+            const related = categoryPosts
+              .filter(p => p.id !== result.id)
+              .slice(0, 3)
+              .map(p => ({
+                id: p.id,
+                title: p.title,
+                slug: p.slug,
+                excerpt: p.excerpt,
+                featuredImage: p.featuredImage,
+                category: p.category,
+                author: p.author,
+                publishedAt: p.publishedAt
+              }))
+            setRelatedPosts(related)
+          }
+        }
       } catch (error) {
         console.error('Error fetching post:', error)
       } finally {
@@ -86,6 +102,20 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
     })
   }
 
+  const handleLike = async () => {
+    if (!post) return
+    try {
+      await blogService.toggleLike(post.id, !liked)
+      setLiked(!liked)
+      setPost(prev => prev ? {
+        ...prev,
+        likes: (prev.likes || 0) + (liked ? -1 : 1)
+      } : null)
+    } catch (error) {
+      console.error('Error toggling like:', error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-primary-platinum">
       {/* Hero Section */}
@@ -94,7 +124,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
           {post.featuredImage && (
             <div className="relative h-80 rounded-lg overflow-hidden mb-8">
               <Image
-                src={urlFor(post.featuredImage)?.width(800)?.height(400)?.url() || ''}
+                src={post.featuredImage}
                 alt={post.title}
                 fill
                 className="object-cover"
@@ -119,7 +149,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             <div className="flex flex-wrap justify-center items-center gap-4 text-primary-charcoal mt-6">
               <span className="flex items-center gap-1">
                 <CalendarDays className="w-4 h-4" />
-                {formatDate(post.publishedAt)}
+                {formatDate(post.publishedAt || post.createdAt)}
               </span>
               {post.author && (
                 <span className="flex items-center gap-1">
@@ -140,16 +170,45 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <PortableText value={post.content} />
+            {/* Blog Content */}
+            <div 
+              className="prose prose-lg max-w-none text-primary-charcoal leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+            
+            {/* Stats and Actions */}
+            <div className="flex items-center justify-between mt-8 pt-8 border-t border-primary-silver">
+              <div className="flex items-center gap-6">
+                <span className="flex items-center gap-2 text-primary-charcoal">
+                  <Eye className="w-4 h-4" />
+                  {post.views || 0} views
+                </span>
+                <button
+                  onClick={handleLike}
+                  className={`flex items-center gap-2 transition-colors ${
+                    liked ? 'text-red-500' : 'text-primary-charcoal hover:text-red-500'
+                  }`}
+                >
+                  <Heart className={`w-4 h-4 ${liked ? 'fill-current' : ''}`} />
+                  {post.likes || 0} likes
+                </button>
+              </div>
+              
+              {post.category && (
+                <span className="px-3 py-1 bg-primary-gold/10 text-primary-gold text-sm rounded-full">
+                  {post.category}
+                </span>
+              )}
+            </div>
 
             {post.tags && post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-8">
+              <div className="flex flex-wrap gap-2 mt-6">
                 {post.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-primary-gold text-primary-white text-xs rounded-full"
+                    className="inline-flex items-center gap-1 px-3 py-1 bg-primary-navy/10 text-primary-navy text-sm rounded-full"
                   >
-                    <Tag className="w-3 h-3 inline-block mr-1" />
+                    <Tag className="w-3 h-3" />
                     {tag}
                   </span>
                 ))}
@@ -160,7 +219,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       </section>
 
       {/* Related Posts */}
-      {post.relatedPosts && post.relatedPosts.length > 0 && (
+      {relatedPosts && relatedPosts.length > 0 && (
         <section className="py-16 bg-primary-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
@@ -173,9 +232,9 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {post.relatedPosts.map((relatedPost, index) => (
+              {relatedPosts.map((relatedPost, index) => (
                 <motion.article
-                  key={relatedPost._id}
+                  key={relatedPost.id}
                   className="bg-primary-platinum rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -184,14 +243,14 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                   {relatedPost.featuredImage && (
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={urlFor(relatedPost.featuredImage)?.width(600)?.height(300)?.url() || ''}
+                        src={relatedPost.featuredImage}
                         alt={relatedPost.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       {relatedPost.category && (
-                        <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-${relatedPost.category.color} text-primary-white`}>
-                          {relatedPost.category.title}
+                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-primary-gold text-primary-navy">
+                          {relatedPost.category}
                         </div>
                       )}
                     </div>
@@ -201,7 +260,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                     <div className="flex items-center gap-4 text-sm text-primary-charcoal mb-3">
                       <span className="flex items-center gap-1">
                         <CalendarDays className="w-4 h-4" />
-                        {formatDate(relatedPost.publishedAt)}
+                        {formatDate(relatedPost.publishedAt || '')}
                       </span>
                       {relatedPost.author && (
                         <span className="flex items-center gap-1">
@@ -219,12 +278,12 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                       {relatedPost.excerpt}
                     </p>
 
-                    <a
-                      href={`/blog/${relatedPost.slug.current}`}
+                    <Link
+                      href={`/blog/${relatedPost.slug}`}
                       className="inline-flex items-center gap-2 text-primary-gold font-semibold hover:gap-3 transition-all"
                     >
                       Read More <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                   </div>
                 </motion.article>
               ))}

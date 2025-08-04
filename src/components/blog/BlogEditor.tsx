@@ -173,22 +173,25 @@ export default function BlogEditor({
     }
   }, [post])
 
-  // Auto-save on content changes
+  // Debounced auto-save on content changes
   useEffect(() => {
     if (autoSaveTimeoutRef.current) {
       clearTimeout(autoSaveTimeoutRef.current)
     }
     
-    autoSaveTimeoutRef.current = setTimeout(() => {
-      autoSave()
-    }, 3000) // Auto-save after 3 seconds of inactivity
+    // Only auto-save if there's meaningful content and it's been changed
+    if (post.title.trim() || post.content.trim()) {
+      autoSaveTimeoutRef.current = setTimeout(() => {
+        autoSave()
+      }, 2000) // Reduced to 2 seconds for better UX
+    }
     
     return () => {
       if (autoSaveTimeoutRef.current) {
         clearTimeout(autoSaveTimeoutRef.current)
       }
     }
-  }, [post, autoSave])
+  }, [post.title, post.content, post.excerpt, autoSave])
 
   // Load draft from localStorage on mount
   useEffect(() => {
@@ -218,6 +221,80 @@ export default function BlogEditor({
       }
     }
   }, [initialPost?.id, post.slug, authorName, authorEmail])
+
+  // Define handleSave before it's used in keyboard shortcuts
+  const handleSave = useCallback(async (status: 'draft' | 'published') => {
+    if (!post.title.trim() || !post.content.trim()) {
+      alert('Please fill in both title and content.')
+      return
+    }
+
+    setIsLoading(true)
+    try {
+      const postToSave = {
+        ...post,
+        status,
+        publishedAt: status === 'published' ? new Date().toISOString() : undefined,
+        content: editorRef.current?.innerHTML || post.content
+      }
+
+      // Remove saved draft from localStorage after a successful save
+      if (status === 'published') {
+        const draftKey = `blog-draft-${post.slug || 'new'}`
+        localStorage.removeItem(draftKey)
+      }
+
+      await onSave(postToSave)
+    } catch (error) {
+      console.error('Error saving post:', error)
+      alert('Failed to save post. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
+  }, [post, onSave])
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        switch (e.key) {
+          case 's':
+            e.preventDefault()
+            handleSave('draft')
+            break
+          case 'Enter':
+            e.preventDefault()
+            if (e.shiftKey) {
+              handleSave('published')
+            } else {
+              handleSave('draft')
+            }
+            break
+          case 'p':
+            e.preventDefault()
+            setIsPreview(!isPreview)
+            break
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isPreview, handleSave])
+
+  // Prevent data loss on page unload
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (post.title.trim() || post.content.trim()) {
+        e.preventDefault()
+        e.returnValue = 'You have unsaved changes. Are you sure you want to leave?'
+        return e.returnValue
+      }
+    }
+
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
+  }, [post.title, post.content])
 
   const executeCommand = useCallback((command: string, value?: string) => {
     document.execCommand(command, false, value)
@@ -289,29 +366,6 @@ export default function BlogEditor({
       ...prev, 
       tags: prev.tags.filter(tag => tag !== tagToRemove) 
     }))
-  }
-
-  const handleSave = async (status: 'draft' | 'published') => {
-    if (!post.title.trim() || !post.content.trim()) {
-      alert('Please fill in both title and content.')
-      return
-    }
-    
-    setIsLoading(true)
-    try {
-      const postToSave = {
-        ...post,
-        status,
-        publishedAt: status === 'published' ? new Date().toISOString() : undefined,
-        content: editorRef.current?.innerHTML || post.content
-      }
-      await onSave(postToSave)
-    } catch (error) {
-      console.error('Error saving post:', error)
-      alert('Failed to save post. Please try again.')
-    } finally {
-      setIsLoading(false)
-    }
   }
 
   const applyTextColor = (color: string) => {
@@ -663,6 +717,33 @@ export default function BlogEditor({
               <p className="text-xs text-primary-charcoal mt-2">
                 {post.excerpt.length}/200 characters
               </p>
+            </Card>
+
+            {/* Keyboard Shortcuts Help */}
+            <Card padding="md">
+              <h3 className="text-lg font-semibold text-primary-navy mb-4">Keyboard Shortcuts</h3>
+              <div className="space-y-2 text-sm text-primary-charcoal">
+                <div className="flex justify-between">
+                  <span>Save Draft:</span>
+                  <kbd className="px-2 py-1 bg-primary-silver text-white rounded text-xs">Ctrl+S</kbd>
+                </div>
+                <div className="flex justify-between">
+                  <span>Publish:</span>
+                  <kbd className="px-2 py-1 bg-primary-silver text-white rounded text-xs">Ctrl+Shift+Enter</kbd>
+                </div>
+                <div className="flex justify-between">
+                  <span>Preview:</span>
+                  <kbd className="px-2 py-1 bg-primary-silver text-white rounded text-xs">Ctrl+P</kbd>
+                </div>
+                <div className="flex justify-between">
+                  <span>Bold:</span>
+                  <kbd className="px-2 py-1 bg-primary-silver text-white rounded text-xs">Ctrl+B</kbd>
+                </div>
+                <div className="flex justify-between">
+                  <span>Italic:</span>
+                  <kbd className="px-2 py-1 bg-primary-silver text-white rounded text-xs">Ctrl+I</kbd>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
