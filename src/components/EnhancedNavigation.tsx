@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { ChevronDown, Award, Users, Target, TrendingUp, Building2, FileText, Phone, MapPin, Globe } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useLanguage } from '@/contexts/LanguageContext'
 import { handleNavigation } from '@/utils/scrollTo'
 import { NavDropdownIds, HeaderIds } from '@/config/elementIds'
 
@@ -14,7 +13,6 @@ const EnhancedNavigation = () => {
   const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const pathname = usePathname()
   const router = useRouter()
-  const { language, setLanguage, t } = useLanguage()
 
   // Consolidated navigation - 6 core pages including blog
   const navigationItems = [
@@ -168,34 +166,7 @@ const EnhancedNavigation = () => {
 
   return (
     <nav className="hidden lg:flex items-center space-x-1">
-      {/* Language Switcher */}
-      <div className="relative mr-4">
-        <button
-          onClick={() => setLanguage(language === 'EN' ? 'UR' : 'EN')}
-          className="flex items-center space-x-1 text-primary-silver hover:text-primary-gold transition-colors px-1.5 py-1"
-          onBlur={(e) => {
-            setTimeout(() => {
-              if (e.target instanceof HTMLElement) {
-                e.target.blur();
-                e.target.style.outline = 'none';
-                e.target.style.boxShadow = 'none';
-              }
-            }, 100);
-          }}
-          onMouseDown={(e) => {
-            setTimeout(() => {
-              if (e.target instanceof HTMLElement) {
-                e.target.blur();
-              }
-            }, 100);
-          }}
-        >
-          <Globe className="w-3 h-3" />
-          <span className="text-xs font-medium">{language}</span>
-        </button>
-      </div>
-
-      {/* Main Navigation Items */}
+      
       {navigationItems.map((item) => (
         <div
           key={item.label}
