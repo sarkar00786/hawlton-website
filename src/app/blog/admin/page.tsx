@@ -10,7 +10,7 @@ import {
 import Image from 'next/image'
 import { Card } from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
-import BlogEditor from '@/components/blog/BlogEditor'
+import SimpleBlogEditor from '@/components/blog/SimpleBlogEditor'
 import LoginForm from '@/components/auth/LoginForm'
 import { blogService, BlogPost } from '@/lib/services/blog'
 import { AuthProvider, useAuth } from '@/contexts/AuthContext'
@@ -148,7 +148,7 @@ function BlogAdminContent() {
 
   if (showEditor) {
     return (
-      <BlogEditor
+      <SimpleBlogEditor
         initialPost={editingPost || undefined}
         onSave={handleSavePost}
         onCancel={() => {
