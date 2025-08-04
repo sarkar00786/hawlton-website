@@ -19,7 +19,6 @@ const SimpleNavigation = () => {
     { label: 'Home', href: '/' },
     { label: 'Our Vision', href: '/our-vision' },
     { label: 'Solutions', href: '/solutions' },
-    { label: 'Insights', href: '/blog' },
     { label: 'Partnership', href: '/partnership' },
     { label: 'Contact', href: '/contact' }
   ]
@@ -48,83 +47,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-  const [isMobileView, setIsMobileView] = useState(false)
   const pathname = usePathname()
   const mobileMenuRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
-  const toggleViewMode = () => {
-    const newMobileView = !isMobileView
-    setIsMobileView(newMobileView)
-    
-    // Apply the mobile/desktop view changes to the document body
-    const body = document.body
-    const html = document.documentElement
-    
-    if (newMobileView) {
-      // Switch to mobile view - create mobile frame
-      body.style.maxWidth = '375px' // iPhone standard width
-      body.style.margin = '20px auto'
-      body.style.border = '8px solid #1a1a1a'
-      body.style.borderRadius = '25px'
-      body.style.boxShadow = '0 0 30px rgba(0,0,0,0.5), inset 0 0 0 2px #333'
-      body.style.backgroundColor = '#000'
-      body.style.padding = '0'
-      body.style.minHeight = 'calc(100vh - 40px)'
-      body.style.overflow = 'hidden' // Prevent body scroll
-      
-      // Add mobile device chrome
-      html.style.backgroundColor = '#f0f0f0'
-      html.style.padding = '0'
-      html.style.overflow = 'hidden'
-      
-      // Force mobile responsive behavior
-      const viewport = document.querySelector('meta[name="viewport"]')
-      if (viewport) {
-        viewport.setAttribute('content', 'width=375, initial-scale=1, maximum-scale=1, user-scalable=no')
-      }
-      
-      // Add mobile class to body for additional styling
-      body.classList.add('mobile-preview-mode')
-      
-      // Create mobile scrollable container
-      const mainContent = document.getElementById('main-content')
-      if (mainContent) {
-        mainContent.style.height = 'calc(100vh - 100px)'
-        mainContent.style.overflowY = 'auto'
-        mainContent.style.overflowX = 'hidden'
-        mainContent.style.position = 'relative'
-        mainContent.style.zIndex = '1'
-      }
-      
-    } else {
-      // Switch back to desktop view
-      body.style.maxWidth = ''
-      body.style.margin = ''
-      body.style.border = ''
-      body.style.borderRadius = ''
-      body.style.boxShadow = ''
-      body.style.backgroundColor = ''
-      body.style.padding = ''
-      body.style.minHeight = ''
-      
-      html.style.backgroundColor = ''
-      html.style.padding = ''
-      
-      // Restore normal viewport
-      const viewport = document.querySelector('meta[name="viewport"]')
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1, shrink-to-fit=no')
-      }
-      
-      // Remove mobile class
-      body.classList.remove('mobile-preview-mode')
-    }
-    
-    // Trigger a resize event to help components adjust
-    window.dispatchEvent(new Event('resize'))
-  }
 
   const isActive = (path: string) => pathname === path
 
@@ -200,23 +127,7 @@ const Header = () => {
           {/* Logo and Navigation */}
           <div className="flex items-center space-x-1 sm:space-x-4 lg:space-x-8">
             <div className="flex items-center space-x-1 sm:space-x-3">
-              <button
-                onClick={toggleViewMode}
-                className="hidden sm:flex items-center px-2 py-1 text-xs font-medium bg-primary-gold/10 text-primary-gold border border-primary-gold/30 rounded transition-all duration-200 hover:bg-primary-gold hover:text-primary-navy"
-                title={isMobileView ? "Switch to Desktop View" : "Switch to Mobile View"}
-              >
-                {isMobileView ? (
-                  <>
-                    <Monitor className="w-3 h-3 mr-1" />
-                    <span className="hidden md:inline">Desktop</span>
-                  </>
-                ) : (
-                  <>
-                    <Smartphone className="w-3 h-3 mr-1" />
-                    <span className="hidden md:inline">Mobile</span>
-                  </>
-                )}
-              </button>
+              
               <div id="logo-wrapper" className="flex-shrink-0">
                 <Link href="/" id="logo-main" className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-gold">
                   Hawlton
@@ -275,15 +186,6 @@ const Header = () => {
                 onClick={toggleMenu}
               >
                 Solutions
-              </Link>
-              <Link
-                href="/blog"
-                className={`block px-4 py-3 rounded-lg text-base font-medium hover:text-primary-white hover:bg-primary-gold/10 transition-all duration-200 focus:outline-none focus:ring-0 min-h-[44px] flex items-center ${
-                  isActive('/blog') ? 'text-primary-gold font-semibold bg-primary-gold/10' : 'text-primary-silver'
-                }`}
-                onClick={toggleMenu}
-              >
-                Insights
               </Link>
               <Link
                 href="/contact"

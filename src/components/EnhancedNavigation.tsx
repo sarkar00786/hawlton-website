@@ -29,7 +29,7 @@ const EnhancedNavigation = () => {
       submenu: [
         { label: 'The Story', href: '/our-vision#story', icon: Building2, description: 'From idea to digital transformation leader', id: 'nav-vision-story' },
         { label: 'Leadership', href: '/our-vision#team', icon: Users, description: 'Meet our visionary team', id: 'nav-vision-team' },
-        { label: 'Mission & Values', href: '/our-vision#mission', icon: Target, description: 'Our commitment to Pakistan\'s digital future', id: 'nav-vision-mission' }
+        { label: 'Mission & Values', href: '/our-vision#mission', icon: Target, description: 'Our commitment to Pakistan's digital future', id: 'nav-vision-mission' }
       ]
     },
     {
@@ -40,11 +40,6 @@ const EnhancedNavigation = () => {
         { label: 'Partnership Models', href: '/solutions#partnerships', icon: Users, description: 'Flexible collaboration approaches', id: 'nav-solutions-partnerships' },
         { label: 'Success Stories', href: '/solutions#success-stories', icon: Award, description: 'Real transformation results', id: 'nav-solutions-success' }
       ]
-    },
-    {
-      label: 'Insights',
-      href: '/blog',
-      submenu: null
     },
     {
       label: 'Partnership',
