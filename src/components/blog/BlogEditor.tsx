@@ -115,6 +115,8 @@ export default function BlogEditor({
     }
   })
 
+  const [isInitialized, setIsInitialized] = useState(false)
+
   const [isPreview, setIsPreview] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [uploadingImage, setUploadingImage] = useState(false)
@@ -221,6 +223,14 @@ export default function BlogEditor({
       }
     }
   }, [initialPost?.id, post.slug, authorName, authorEmail])
+
+  // Initialize editor content once
+  useEffect(() => {
+    if (editorRef.current && !isInitialized && post.content) {
+      editorRef.current.innerHTML = post.content
+      setIsInitialized(true)
+    }
+  }, [post.content, isInitialized])
 
   // Define handleSave before it's used in keyboard shortcuts
   const handleSave = useCallback(async (status: 'draft' | 'published') => {
@@ -560,7 +570,6 @@ export default function BlogEditor({
                       lineHeight: '1.6',
                       fontFamily: 'inherit'
                     }}
-                    dangerouslySetInnerHTML={{ __html: post.content }}
                   />
 
                   {/* Hidden file inputs */}
