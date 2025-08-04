@@ -45,17 +45,23 @@ export default function BlogPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log('🔍 Fetching blog data...')
         const [blogPosts, blogCategories, featured] = await Promise.all([
           blogService.getPublishedPosts(),
           blogService.getCategories(),
           blogService.getFeaturedPosts()
         ])
         
+        console.log('📊 Blog data fetched:')
+        console.log('- Published posts:', blogPosts?.length || 0, blogPosts)
+        console.log('- Categories:', blogCategories?.length || 0, blogCategories)
+        console.log('- Featured posts:', featured?.length || 0, featured)
+        
         setPosts(blogPosts || [])
         setCategories(blogCategories || [])
         setFeaturedPosts(featured || [])
       } catch (error) {
-        console.error('Error fetching blog data:', error)
+        console.error('❌ Error fetching blog data:', error)
       } finally {
         setLoading(false)
       }

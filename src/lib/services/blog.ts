@@ -230,6 +230,7 @@ class BlogService {
         let q = query(
           collection(db, POSTS_COLLECTION),
           where('status', '==', 'published'),
+          where('publishedAt', '!=', null),
           orderBy('publishedAt', 'desc')
         )
         
@@ -281,6 +282,7 @@ class BlogService {
         collection(db, POSTS_COLLECTION),
         where('category', '==', category),
         where('status', '==', 'published'),
+        where('publishedAt', '!=', null),
         orderBy('publishedAt', 'desc')
       )
       
@@ -467,7 +469,8 @@ class BlogService {
         const q = query(
           collection(db, POSTS_COLLECTION),
           where('status', '==', 'published'),
-          orderBy('views', 'desc'),
+          where('publishedAt', '!=', null),
+          orderBy('publishedAt', 'desc'),
           limit(limitCount)
         )
         
@@ -491,6 +494,7 @@ class BlogService {
       const q = query(
         collection(db, POSTS_COLLECTION),
         where('status', '==', 'published'),
+        where('publishedAt', '!=', null),
         orderBy('publishedAt', 'desc'),
         limit(limitCount)
       )
