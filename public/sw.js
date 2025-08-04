@@ -211,6 +211,15 @@ async function networkFirstStrategy(request) {
 
 // Stale while revalidate - return cached version immediately, update in background
 async function staleWhileRevalidateStrategy(request) {
+  // NEVER cache POST, PUT, PATCH, DELETE requests
+  if (request.method !== 'GET') {
+    try {
+      return await fetch(request)
+    } catch (error) {
+      throw new Error(`Network request failed for ${request.method} ${request.url}`)
+    }
+  }
+
   const cachedPromise = caches.match(request)
   const networkPromise = fetch(request).then(async (networkResponse) => {
     if (networkResponse.ok) {
