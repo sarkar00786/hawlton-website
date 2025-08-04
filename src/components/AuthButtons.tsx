@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { User, ChevronDown, Settings, LogOut, LayoutDashboard } from 'lucide-react'
+import { User, ChevronDown, Settings, LogOut, LayoutDashboard, Edit3 } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 
 interface AuthButtonsProps {
@@ -82,6 +82,18 @@ export default function AuthButtons({ onMenuClick }: AuthButtonsProps) {
                 Dashboard
               </Link>
               
+              <Link
+                href="/blog/admin"
+                className="flex items-center px-4 py-2 text-sm text-gray-700"
+                onClick={() => {
+                  setIsUserMenuOpen(false)
+                  onMenuClick?.()
+                }}
+              >
+                <Edit3 className="w-4 h-4 mr-3" />
+                Blog Admin
+              </Link>
+              
               <button
                 onClick={handleSignOut}
                 className="flex items-center w-full px-4 py-2 text-sm text-red-600"
@@ -156,6 +168,15 @@ export function MobileAuthButtons({ onMenuClick }: AuthButtonsProps) {
         >
           <LayoutDashboard className="w-4 h-4 mr-3" />
           Dashboard
+        </Link>
+        
+        <Link
+          href="/blog/admin"
+          className="flex items-center w-full px-4 py-2.5 text-primary-gold"
+          onClick={onMenuClick}
+        >
+          <Edit3 className="w-4 h-4 mr-3" />
+          Blog Admin
         </Link>
         
         <button

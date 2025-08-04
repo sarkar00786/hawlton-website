@@ -349,25 +349,28 @@ export default function RootLayout({
           />
         )}
 
-        {/* Service Worker Registration - DISABLED FOR GOOGLE AUTH FIX */}
-        <Script
-          id="service-worker"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              console.log('[SW] Service Worker temporarily disabled for Google Auth fix');
-              // Unregister existing service worker if present
-              if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                  for(let registration of registrations) {
-                    registration.unregister();
-                    console.log('[SW] Unregistered existing service worker');
-                  }
-                });
-              }
-            `,
-          }}
-        />
+        {/* Service Worker Registration - Re-enabled with Google API exclusions */}
+        {process.env.NODE_ENV === 'production' && (
+          <Script
+            id="service-worker"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js')
+                      .then(function(registration) {
+                        console.log('[SW] Service Worker registered successfully:', registration.scope);
+                      })
+                      .catch(function(registrationError) {
+                        console.warn('[SW] Service Worker registration failed:', registrationError);
+                      });
+                  });
+                }
+              `,
+            }}
+          />
+        )}
         
         {/* BULLETPROOF FOCUS MANAGEMENT SYSTEM */}
         <Script
