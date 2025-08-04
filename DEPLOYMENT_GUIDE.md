@@ -4,7 +4,8 @@
 Your Hawlton website has been successfully deployed to Vercel!
 
 ### 🌐 Live URLs
-- **Production**: https://hawlton-b3s0u5xkb-jhangir-hussains-projects.vercel.app
+- **Production (Custom Domain)**: https://hawlton.com
+- **Production (Vercel)**: https://hawlton-b3s0u5xkb-jhangir-hussains-projects.vercel.app
 - **Dashboard**: https://vercel.com/jhangir-hussains-projects/hawlton
 
 ## 🔧 Post-Deployment Setup
