@@ -126,6 +126,7 @@ class BlogService {
         ...postData,
         createdAt: now,
         updatedAt: now,
+        publishedAt: postData.status === 'published' ? now : undefined,
         views: 0,
         likes: 0
       }
@@ -142,9 +143,24 @@ class BlogService {
   async updatePost(postId: string, postData: Partial<BlogPost>): Promise<void> {
     try {
       const postRef = doc(db, POSTS_COLLECTION, postId)
-      const updateData = {
+      const now = new Date().toISOString()
+      
+      // Get the current post to check status change
+      const currentPost = await getDoc(postRef)
+      const currentData = currentPost.data() as BlogPost
+      
+      const updateData: any = {
         ...postData,
-        updatedAt: new Date().toISOString()
+        updatedAt: now
+      }
+      
+      // Set publishedAt when status changes from draft to published
+      if (postData.status === 'published' && currentData?.status === 'draft') {
+        updateData.publishedAt = now
+      }
+      // Clear publishedAt when status changes from published to draft
+      else if (postData.status === 'draft' && currentData?.status === 'published') {
+        updateData.publishedAt = null
       }
 
       await updateDoc(postRef, updateData)
