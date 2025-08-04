@@ -9,6 +9,7 @@ interface AuthContextType {
   loading: boolean
   signInWithEmail: (email: string, password: string) => Promise<User>
   signInWithGoogle: () => Promise<User>
+  createUser: (email: string, password: string) => Promise<User>
   signOut: () => Promise<void>
   sendPasswordReset: (email: string) => Promise<void>
 }
@@ -20,45 +21,67 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    console.log('AuthProvider: Setting up auth state listener')
     const unsubscribe = authService.onAuthStateChange((user) => {
+      console.log('AuthProvider: Auth state changed', user ? user.email : 'No user')
       setUser(user)
       setLoading(false)
     })
 
-    return () => unsubscribe()
+    return () => {
+      console.log('AuthProvider: Cleaning up auth state listener')
+      unsubscribe()
+    }
   }, [])
 
   const signInWithEmail = async (email: string, password: string): Promise<User> => {
-    setLoading(true)
     try {
       const user = await authService.signInWithEmail(email, password)
       return user
-    } finally {
-      setLoading(false)
+    } catch (error) {
+      console.error('AuthProvider: Email sign-in failed', error)
+      throw error
     }
   }
 
   const signInWithGoogle = async (): Promise<User> => {
-    setLoading(true)
     try {
+      console.log('AuthProvider: Starting Google sign-in')
       const user = await authService.signInWithGoogle()
+      console.log('AuthProvider: Google sign-in successful')
       return user
-    } finally {
-      setLoading(false)
+    } catch (error) {
+      console.error('AuthProvider: Google sign-in failed', error)
+      throw error
+    }
+  }
+
+  const createUser = async (email: string, password: string): Promise<User> => {
+    try {
+      const user = await authService.createUser(email, password)
+      return user
+    } catch (error) {
+      console.error('AuthProvider: User creation failed', error)
+      throw error
     }
   }
 
   const signOut = async (): Promise<void> => {
-    setLoading(true)
     try {
       await authService.signOut()
-    } finally {
-      setLoading(false)
+    } catch (error) {
+      console.error('AuthProvider: Sign-out failed', error)
+      throw error
     }
   }
 
   const sendPasswordReset = async (email: string): Promise<void> => {
-    await authService.sendPasswordReset(email)
+    try {
+      await authService.sendPasswordReset(email)
+    } catch (error) {
+      console.error('AuthProvider: Password reset failed', error)
+      throw error
+    }
   }
 
   const value: AuthContextType = {
@@ -66,6 +89,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     loading,
     signInWithEmail,
     signInWithGoogle,
+    createUser,
     signOut,
     sendPasswordReset
   }

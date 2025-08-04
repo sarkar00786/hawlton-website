@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
+import { updateProfile } from 'firebase/auth'
 
 export default function SignUpPage() {
   const [formData, setFormData] = useState({
@@ -14,7 +15,8 @@ export default function SignUpPage() {
   })
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
-  const { signIn } = useAuth()
+  const [success, setSuccess] = useState('')
+  const { createUser, signInWithGoogle } = useAuth()
   const router = useRouter()
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,6 +30,7 @@ export default function SignUpPage() {
     e.preventDefault()
     setIsLoading(true)
     setError('')
+    setSuccess('')
 
     // Basic validation
     if (formData.password !== formData.confirmPassword) {
@@ -43,36 +46,22 @@ export default function SignUpPage() {
     }
 
     try {
-      // Create Firebase user
-      const { createUserWithEmailAndPassword, updateProfile } = await import('firebase/auth')
-      const { auth } = await import('@/lib/firebase')
-      
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        formData.email,
-        formData.password
-      )
+      const user = await createUser(formData.email, formData.password)
       
       // Update user profile with name
-      await updateProfile(userCredential.user, {
-        displayName: formData.name
-      })
+      if (formData.name) {
+        await updateProfile(user, {
+          displayName: formData.name
+        })
+      }
       
-      setError('Account created successfully! You can now sign in with your credentials.')
+      setSuccess('Account created successfully! Redirecting to dashboard...')
       setTimeout(() => {
-        router.push('/auth/signin')
+        router.push('/dashboard')
       }, 2000)
     } catch (error: any) {
       console.error('Signup error:', error)
-      if (error.code === 'auth/email-already-in-use') {
-        setError('An account with this email already exists. Please sign in instead.')
-      } else if (error.code === 'auth/weak-password') {
-        setError('Password is too weak. Please choose a stronger password.')
-      } else if (error.code === 'auth/invalid-email') {
-        setError('Please enter a valid email address.')
-      } else {
-        setError('Failed to create account. Please try again.')
-      }
+      setError(error.message || 'Failed to create account. Please try again.')
     } finally {
       setIsLoading(false)
     }
@@ -81,28 +70,16 @@ export default function SignUpPage() {
   const handleGoogleSignUp = async () => {
     setIsLoading(true)
     setError('')
+    setSuccess('')
     
     try {
-      const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
-      const { auth } = await import('@/lib/firebase')
-      
-      const provider = new GoogleAuthProvider()
-      const result = await signInWithPopup(auth, provider)
-      
-      // User signed up successfully with Google
-      console.log('Google signup successful:', result.user)
-      
-      // Redirect to dashboard
+      console.log('Starting Google sign-up...')
+      await signInWithGoogle()
+      console.log('Google sign-up successful, redirecting to dashboard')
       router.push('/dashboard')
     } catch (error: any) {
-      console.error('Google signup error:', error)
-      if (error.code === 'auth/account-exists-with-different-credential') {
-        setError('An account already exists with this email. Please sign in instead.')
-      } else if (error.code === 'auth/popup-closed-by-user') {
-        setError('Sign-up was cancelled. Please try again.')
-      } else {
-        setError('Google sign-up failed. Please try again.')
-      }
+      console.error('Google sign-up error:', error)
+      setError(error.message || 'Google sign-up failed. Please try again.')
     } finally {
       setIsLoading(false)
     }
@@ -124,10 +101,14 @@ export default function SignUpPage() {
           {/* Email Sign Up Form */}
           <form className="mt-8 space-y-6" onSubmit={handleSignUp}>
             {error && (
-              <div className={`rounded-md p-4 ${error.includes('successful') ? 'bg-green-50' : 'bg-red-50'}`}>
-                <div className={`text-sm ${error.includes('successful') ? 'text-green-700' : 'text-red-700'}`}>
-                  {error}
-                </div>
+              <div className="rounded-md bg-red-50 p-4">
+                <div className="text-sm text-red-700">{error}</div>
+              </div>
+            )}
+            
+            {success && (
+              <div className="rounded-md bg-green-50 p-4">
+                <div className="text-sm text-green-700">{success}</div>
               </div>
             )}
             
@@ -226,7 +207,7 @@ export default function SignUpPage() {
             <button
               onClick={handleGoogleSignUp}
               disabled={isLoading}
-              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />

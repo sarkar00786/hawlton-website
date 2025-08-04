@@ -3,15 +3,14 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { useAuth } from '@/hooks/useAuth'
-import SessionProvider from '@/components/SessionProvider'
+import { useAuth } from '@/contexts/AuthContext'
 
-function SignInForm() {
+export default function SignInPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
-  const { signIn } = useAuth()
+  const { signInWithEmail, signInWithGoogle } = useAuth()
   const router = useRouter()
 
   const handleEmailSignIn = async (e: React.FormEvent) => {
@@ -20,20 +19,12 @@ function SignInForm() {
     setError('')
 
     try {
-      const result = await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
-      })
-
-      if (result?.error) {
-        setError(result.error)
-      } else {
-        // Redirect to dashboard on success
-        router.push('/dashboard')
-      }
-    } catch (error) {
-      setError('An unexpected error occurred')
+      await signInWithEmail(email, password)
+      console.log('Email sign-in successful, redirecting to dashboard')
+      router.push('/dashboard')
+    } catch (error: any) {
+      console.error('Sign-in error:', error)
+      setError(error.message || 'Sign-in failed. Please try again.')
     } finally {
       setIsLoading(false)
     }
@@ -44,26 +35,13 @@ function SignInForm() {
     setError('')
     
     try {
-      const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
-      const { auth } = await import('@/lib/firebase')
-      
-      const provider = new GoogleAuthProvider()
-      const result = await signInWithPopup(auth, provider)
-      
-      // User signed in successfully with Google
-      console.log('Google signin successful:', result.user)
-      
-      // Redirect to dashboard
+      console.log('Starting Google sign-in...')
+      await signInWithGoogle()
+      console.log('Google sign-in successful, redirecting to dashboard')
       router.push('/dashboard')
     } catch (error: any) {
-      console.error('Google signin error:', error)
-      if (error.code === 'auth/account-exists-with-different-credential') {
-        setError('An account already exists with this email. Please try a different sign-in method.')
-      } else if (error.code === 'auth/popup-closed-by-user') {
-        setError('Sign-in was cancelled. Please try again.')
-      } else {
-        setError('Google sign-in failed. Please try again.')
-      }
+      console.error('Google sign-in error:', error)
+      setError(error.message || 'Google sign-in failed. Please try again.')
     } finally {
       setIsLoading(false)
     }
@@ -153,7 +131,7 @@ function SignInForm() {
             <button
               onClick={handleGoogleSignIn}
               disabled={isLoading}
-              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -176,13 +154,5 @@ function SignInForm() {
         </div>
       </div>
     </div>
-  )
-}
-
-export default function SignInPage() {
-  return (
-    <SessionProvider>
-      <SignInForm />
-    </SessionProvider>
   )
 }

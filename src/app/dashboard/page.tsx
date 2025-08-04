@@ -3,17 +3,28 @@
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import Link from 'next/link'
-import { useAuth } from '@/hooks/useAuth'
-import SessionProvider from '@/components/SessionProvider'
+import { useAuth } from '@/contexts/AuthContext'
 
-function DashboardContent() {
+export default function DashboardPage() {
   const { user, loading, signOut } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
     if (loading) return // Still loading
-    if (!user) router.push('/auth/signin') // Redirect if not authenticated
+    if (!user) {
+      console.log('No user found, redirecting to signin')
+      router.push('/auth/signin')
+    }
   }, [user, loading, router])
+
+  const handleSignOut = async () => {
+    try {
+      await signOut()
+      router.push('/')
+    } catch (error) {
+      console.error('Sign out error:', error)
+    }
+  }
 
   if (loading) {
     return (
@@ -43,7 +54,7 @@ function DashboardContent() {
             <div className="flex items-center space-x-4">
               <span className="text-gray-700">Welcome, {user.displayName || user.email}</span>
               <button
-                onClick={() => signOut()}
+                onClick={handleSignOut}
                 className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition-colors"
               >
                 Sign Out
@@ -71,6 +82,8 @@ function DashboardContent() {
                   <p><strong>Email:</strong> {user.email}</p>
                   <p><strong>User ID:</strong> {user.uid}</p>
                   <p><strong>Provider:</strong> {user.providerData[0]?.providerId || 'firebase'}</p>
+                  <p><strong>Email Verified:</strong> {user.emailVerified ? 'Yes' : 'No'}</p>
+                  <p><strong>Created:</strong> {user.metadata.creationTime}</p>
                 </div>
               </div>
 
@@ -106,13 +119,5 @@ function DashboardContent() {
         </div>
       </div>
     </div>
-  )
-}
-
-export default function DashboardPage() {
-  return (
-    <SessionProvider>
-      <DashboardContent />
-    </SessionProvider>
   )
 }
