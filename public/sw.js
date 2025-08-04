@@ -1,7 +1,7 @@
 // Hawlton Website Service Worker
 // Advanced caching strategy for improved performance
 
-const CACHE_NAME = 'hawlton-v1.2'
+const CACHE_NAME = 'hawlton-v1.3-no-google-apis'
 const urlsToCache = [
   '/',
   '/about',
@@ -88,6 +88,26 @@ self.addEventListener('fetch', (event) => {
 
   // Skip if it's a Chrome extension request
   if (url.protocol === 'chrome-extension:') {
+    return
+  }
+
+  // Skip Google APIs and Firebase URLs - these should never be cached
+  if (
+    url.hostname.includes('googleapis.com') ||
+    url.hostname.includes('google.com') ||
+    url.hostname.includes('gstatic.com') ||
+    url.hostname.includes('firebaseapp.com') ||
+    url.hostname.includes('firebase.com') ||
+    url.hostname === 'apis.google.com' ||
+    url.hostname === 'accounts.google.com' ||
+    url.hostname === 'oauth2.googleapis.com' ||
+    url.hostname === 'securetoken.googleapis.com' ||
+    url.hostname === 'identitytoolkit.googleapis.com' ||
+    request.url.includes('__/auth/') || // Firebase auth endpoints
+    request.url.includes('identitytoolkit') ||
+    request.url.includes('securetoken')
+  ) {
+    // Let these requests go directly to the network without SW intervention
     return
   }
 
