@@ -349,21 +349,20 @@ export default function RootLayout({
           />
         )}
 
-        {/* Service Worker Registration */}
+        {/* Service Worker Registration - DISABLED FOR GOOGLE AUTH FIX */}
         <Script
           id="service-worker"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
+              console.log('[SW] Service Worker temporarily disabled for Google Auth fix');
+              // Unregister existing service worker if present
               if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                      console.log('[SW] Registration successful:', registration.scope);
-                    })
-                    .catch(function(error) {
-                      console.log('[SW] Registration failed:', error);
-                    });
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                  for(let registration of registrations) {
+                    registration.unregister();
+                    console.log('[SW] Unregistered existing service worker');
+                  }
                 });
               }
             `,

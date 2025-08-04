@@ -44,20 +44,19 @@ const nextConfig: NextConfig = {
       {
         key: 'Content-Security-Policy',
         value: `
-          default-src 'self';
-          script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://*.tawk.to https://vercel.live https://www.google.com https://www.gstatic.com https://apis.google.com https://*.googleapis.com;
-          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
-          img-src 'self' data: blob: https://*.sanity.io https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https: https://*.gstatic.com;
-          font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:;
-          connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://*.googleadservices.com https://*.sanity.io https://fonts.googleapis.com https://fonts.gstatic.com https://vercel.live wss://ws-us3.pusher.com https://api.hawlton.com https://firestore.googleapis.com https://*.firebaseapp.com https://*.googleapis.com https://www.google.com https://accounts.google.com https://oauth2.googleapis.com https://securetoken.googleapis.com https://identitytoolkit.googleapis.com https://apis.google.com data: blob:;
-          frame-src 'self' https://*.tawk.to https://vercel.live https://www.google.com;
-          worker-src 'self' blob:;
-          child-src 'self' blob:;
+          default-src 'self' https:;
+          script-src 'self' 'unsafe-eval' 'unsafe-inline' https: data:;
+          style-src 'self' 'unsafe-inline' https: data:;
+          img-src 'self' data: blob: https: http:;
+          font-src 'self' https: data:;
+          connect-src 'self' https: wss: data: blob:;
+          frame-src 'self' https:;
+          worker-src 'self' blob: https:;
+          child-src 'self' blob: https:;
           object-src 'none';
           base-uri 'self';
-          form-action 'self';
+          form-action 'self' https:;
           frame-ancestors 'self';
-          upgrade-insecure-requests;
         `.replace(/\s{2,}/g, ' ').trim()
       },
       {
