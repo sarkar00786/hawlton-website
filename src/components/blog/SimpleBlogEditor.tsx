@@ -134,7 +134,22 @@ export default function SimpleBlogEditor({
   const handleImageUpload = async (file: File, isFeatured = false) => {
     setUploadingImage(true)
     try {
-      const imageUrl = await blogService.uploadImage(file, 'blog-images')
+      let imageUrl: string
+      
+      try {
+        // Try Firebase Storage first
+        imageUrl = await blogService.uploadImage(file, 'blog-images')
+      } catch (firebaseError) {
+        console.warn('Firebase Storage failed, using base64 fallback:', firebaseError)
+        
+        // Fallback to base64 encoding
+        const reader = new FileReader()
+        imageUrl = await new Promise((resolve, reject) => {
+          reader.onload = () => resolve(reader.result as string)
+          reader.onerror = reject
+          reader.readAsDataURL(file)
+        })
+      }
 
       if (isFeatured) {
         setPost(prev => ({ ...prev, featuredImage: imageUrl }))
@@ -197,7 +212,7 @@ export default function SimpleBlogEditor({
   }
 
   return (
-    <div className="min-h-screen bg-primary-platinum">
+    <div className="min-h-screen bg-primary-platinum pt-24">
       <div className="max-w-6xl mx-auto p-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">

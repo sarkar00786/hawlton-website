@@ -306,17 +306,39 @@ class BlogService {
   // Upload image to Firebase Storage
   async uploadImage(file: File, path: string = 'blog-images'): Promise<string> {
     try {
+      // Clean the filename to avoid URL encoding issues
       const timestamp = Date.now()
-      const fileName = `${timestamp}-${file.name}`
+      const cleanFileName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_')
+      const fileName = `${timestamp}-${cleanFileName}`
       const imageRef = ref(storage, `${path}/${fileName}`)
       
-      const snapshot = await uploadBytes(imageRef, file)
+      // Set metadata to help with CORS
+      const metadata = {
+        contentType: file.type,
+        customMetadata: {
+          'uploadedBy': 'blog-editor',
+          'timestamp': timestamp.toString()
+        }
+      }
+      
+      // Upload with metadata
+      const snapshot = await uploadBytes(imageRef, file, metadata)
       const downloadURL = await getDownloadURL(snapshot.ref)
       
       return downloadURL
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error uploading image:', error)
-      throw new Error('Failed to upload image')
+      
+      // Provide more specific error messages
+      if (error?.code === 'storage/unauthorized') {
+        throw new Error('Unauthorized: Please check Firebase Storage rules')
+      } else if (error?.code === 'storage/unknown') {
+        throw new Error('Network error: Please check your internet connection')
+      } else if (error?.message?.includes('CORS')) {
+        throw new Error('CORS error: Please check Firebase Storage CORS configuration')
+      }
+      
+      throw new Error(`Failed to upload image: ${error?.message || 'Unknown error'}`)
     }
   }
 
