@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { CalendarDays, Clock, User, ArrowRight, Search, Filter } from 'lucide-react'
+import { CalendarDays, Clock, User, ArrowRight, Search, Filter, Plus, Edit3 } from 'lucide-react'
 import { blogService, BlogPost as FirebaseBlogPost } from '@/lib/services/blog'
+import { useAuth } from '@/contexts/AuthContext'
 
 interface BlogPost {
   id: string
@@ -33,6 +34,7 @@ interface BlogCategory {
 }
 
 export default function BlogPage() {
+  const { user } = useAuth()
   const [posts, setPosts] = useState<BlogPost[]>([])
   const [categories, setCategories] = useState<BlogCategory[]>([])
   const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([])
@@ -105,6 +107,26 @@ export default function BlogPage() {
             <p className="text-xl md:text-2xl text-primary-silver mb-8 leading-relaxed">
               Discover the latest trends in digital transformation, e-commerce growth, and partnership success stories from Pakistan's evolving business landscape.
             </p>
+            
+            {/* Admin Actions for Authenticated Users */}
+            {user && (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  href="/blog/admin"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary-gold text-primary-navy font-semibold rounded-lg hover:bg-primary-gold/90 transition-colors"
+                >
+                  <Plus className="w-5 h-5" />
+                  Create New Post
+                </Link>
+                <Link
+                  href="/blog/admin"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-primary-gold text-primary-gold font-semibold rounded-lg hover:bg-primary-gold hover:text-primary-navy transition-colors"
+                >
+                  <Edit3 className="w-5 h-5" />
+                  Manage Posts
+                </Link>
+              </div>
+            )}
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
@@ -233,8 +255,23 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-16">
-              <h3 className="text-2xl font-bold text-primary-navy mb-4">No articles found</h3>
-              <p className="text-primary-charcoal">Try adjusting your search or category filter.</p>
+              <h3 className="text-2xl font-bold text-primary-navy mb-4">
+                {posts.length === 0 ? 'No articles published yet' : 'No articles found'}
+              </h3>
+              <p className="text-primary-charcoal mb-6">
+                {posts.length === 0 
+                  ? 'Be the first to share insights and start creating valuable content for your audience.' 
+                  : 'Try adjusting your search or category filter.'}
+              </p>
+              {user && posts.length === 0 && (
+                <Link
+                  href="/blog/admin"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary-gold text-primary-navy font-semibold rounded-lg hover:bg-primary-gold/90 transition-colors"
+                >
+                  <Plus className="w-5 h-5" />
+                  Create Your First Post
+                </Link>
+              )}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
