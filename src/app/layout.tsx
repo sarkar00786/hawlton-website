@@ -419,6 +419,13 @@ export default function RootLayout({
                   const target = event.target;
                   if (!target) return;
                   
+                  // EXCLUDE input fields and textareas from focus management
+                  if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || 
+                      target.contentEditable === 'true' || target.contentEditable === true ||
+                      target.getAttribute('contenteditable') === 'true') {
+                    return; // Don't interfere with typing
+                  }
+                  
                   // Check if target matches any interactive element
                   const isInteractive = INTERACTIVE_SELECTORS.some(selector => {
                     try {
@@ -498,15 +505,19 @@ export default function RootLayout({
                   style.id = styleId;
                   style.textContent = \`
                     /* BULLETPROOF FOCUS REMOVAL - MAXIMUM COVERAGE */
+                    /* EXCLUDE input, textarea, and contentEditable elements */
                     button:focus:not(:focus-visible),
                     a:focus:not(:focus-visible),
-                    input:focus:not(:focus-visible),
-                    textarea:focus:not(:focus-visible),
+                    input[type="submit"]:focus:not(:focus-visible),
+                    input[type="button"]:focus:not(:focus-visible),
+                    input[type="reset"]:focus:not(:focus-visible),
+                    input[type="checkbox"]:focus:not(:focus-visible),
+                    input[type="radio"]:focus:not(:focus-visible),
                     select:focus:not(:focus-visible),
-                    [role="button"]:focus:not(:focus-visible),
-                    [tabindex]:focus:not(:focus-visible),
-                    [tabindex="0"]:focus:not(:focus-visible),
-                    [tabindex="-1"]:focus:not(:focus-visible),
+                    [role="button"]:focus:not(:focus-visible):not(input):not(textarea),
+                    [tabindex]:focus:not(:focus-visible):not(input):not(textarea):not([contenteditable]),
+                    [tabindex="0"]:focus:not(:focus-visible):not(input):not(textarea):not([contenteditable]),
+                    [tabindex="-1"]:focus:not(:focus-visible):not(input):not(textarea):not([contenteditable]),
                     summary:focus:not(:focus-visible),
                     details:focus:not(:focus-visible),
                     label:focus:not(:focus-visible),
@@ -520,13 +531,28 @@ export default function RootLayout({
                     .faq-button:focus:not(:focus-visible),
                     .accordion-trigger:focus:not(:focus-visible),
                     .accordion-button:focus:not(:focus-visible),
-                    [data-framer-name]:focus:not(:focus-visible),
-                    .motion-div:focus:not(:focus-visible),
-                    .motion-button:focus:not(:focus-visible),
-                    .interactive-element:focus:not(:focus-visible) {
+                    [data-framer-name]:focus:not(:focus-visible):not(input):not(textarea),
+                    .motion-div:focus:not(:focus-visible):not(input):not(textarea),
+                    .motion-button:focus:not(:focus-visible):not(input):not(textarea),
+                    .interactive-element:focus:not(:focus-visible):not(input):not(textarea) {
                       outline: none !important;
                       box-shadow: none !important;
                       border-color: inherit !important;
+                    }
+                    
+                    /* PRESERVE focus styles for form elements */
+                    input[type="text"]:focus,
+                    input[type="email"]:focus,
+                    input[type="password"]:focus,
+                    input[type="search"]:focus,
+                    input[type="url"]:focus,
+                    input[type="tel"]:focus,
+                    input[type="number"]:focus,
+                    textarea:focus,
+                    [contenteditable="true"]:focus {
+                      outline: 2px solid #FFD700 !important;
+                      outline-offset: 2px !important;
+                      box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2) !important;
                     }
                     
                     /* Ensure accessibility is preserved */

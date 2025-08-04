@@ -18,6 +18,11 @@ const removeFocus = (element: HTMLElement) => {
 const handleMouseDown = (event: MouseEvent) => {
   const target = event.target as HTMLElement;
   if (target) {
+    // EXCLUDE input fields and textareas from focus management
+    if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || 
+        target.contentEditable === 'true' || target.getAttribute('contenteditable') === 'true') {
+      return; // Don't interfere with typing
+    }
     setTimeout(() => {
       removeFocus(target);
     }, 100);
@@ -28,6 +33,11 @@ const handleMouseDown = (event: MouseEvent) => {
 const handleBlur = (event: FocusEvent) => {
   const target = event.target as HTMLElement;
   if (target) {
+    // EXCLUDE input fields and textareas from focus management
+    if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || 
+        target.contentEditable === 'true' || target.getAttribute('contenteditable') === 'true') {
+      return; // Don't interfere with typing
+    }
     setTimeout(() => {
       removeFocus(target);
     }, 100);
@@ -38,6 +48,11 @@ const handleBlur = (event: FocusEvent) => {
 const handleClick = (event: MouseEvent) => {
   const target = event.target as HTMLElement;
   if (target) {
+    // EXCLUDE input fields and textareas from focus management
+    if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || 
+        target.contentEditable === 'true' || target.getAttribute('contenteditable') === 'true') {
+      return; // Don't interfere with typing
+    }
     setTimeout(() => {
       removeFocus(target);
     }, 150);
