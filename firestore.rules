@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Blog posts - read all, write only for authenticated admin
+    match /blog_posts/{document} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.email == "azkabloch786@gmail.com";
+    }
+    
+    // Blog categories - read all, write only for authenticated admin
+    match /blog_categories/{document} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.email == "azkabloch786@gmail.com";
+    }
+    
+    // Allow reading user profiles (for admin verification)
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
