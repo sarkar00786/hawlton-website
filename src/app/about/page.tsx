@@ -175,42 +175,22 @@ export default function AboutPage() {
 
           {/* Our Commitment */}
           <div className="bg-white p-8 shadow-lg rounded-xl mb-12">
-            <h3 className="text-3xl font-bold text-primary-navy mb-8 text-center">Our Commitment to Excellence</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {
-                [
-                  {
-                    type: "Legal Compliance",
-                    authority: "Pakistani Business Standards",
-                    status: "Fully Registered & Compliant",
-                    year: "2024",
-                    icon: Shield
-                  },
-                  {
-                    type: "Digital Innovation",
-                    authority: "Modern Technology Standards",
-                    status: "Cutting-Edge Solutions",
-                    year: "2024",
-                    icon: Lightbulb
-                  },
-                  {
-                    type: "Financial Transparency",
-                    authority: "International Best Practices",
-                    status: "Transparent Operations",
-                    year: "2024",
-                    icon: TrendingUp
-                  }
-                ].map((credential, index) => (
-                  <div key={index} className="text-center p-6 border border-primary-gold/20 rounded-xl hover:shadow-md transition-shadow">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold flex items-center justify-center rounded-full">
-                      <credential.icon className="w-8 h-8 text-primary-navy" />
-                    </div>
-                    <h4 className="font-semibold text-primary-navy mb-2">{credential.type}</h4>
-                    <p className="text-sm text-primary-charcoal mb-1">{credential.authority}</p>
-                    <p className="text-xs text-primary-gold font-medium">{credential.status} ({credential.year})</p>
-                  </div>
-                ))
-              }
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-3xl font-bold text-primary-navy mb-8 text-center md:text-left">Our Commitment to Excellence</h3>
+                <p className="text-primary-charcoal leading-relaxed mb-4">
+                  We are committed to delivering the highest standards of service and partnership. Our operations are fully compliant with Pakistani business standards, and we leverage modern technology to deliver cutting-edge solutions. We believe in financial transparency and adhere to international best practices.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <Image
+                  src="/images/stock/professional.jpg"
+                  alt="A professional business setting"
+                  width={500}
+                  height={400}
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
 
@@ -235,43 +215,24 @@ export default function AboutPage() {
       {/* Our Philosophy Section */}
       <section id="philosophy-section" className="bg-primary-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
-              Our Commitment: Partnership, Innovation & Impact.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Users,
-                title: 'Long-Term Partnerships',
-                description: 'Building enduring relationships based on trust, mutual respect, and shared growth.'
-              },
-              {
-                icon: Lightbulb,
-                title: 'Innovation',
-                description: 'Continuously exploring cutting-edge digital strategies, technologies, and partnership models.'
-              },
-              {
-                icon: TrendingUp,
-                title: 'Mutual Success',
-                description: 'Our growth is intrinsically linked to our partners\' and collaborators\' success.'
-              },
-              {
-                icon: Globe,
-                title: 'Commitment to Pakistan',
-                description: 'Dedicated to fostering digital economic growth, creating opportunities nationwide, and attracting impactful partnerships.'
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-primary-platinum p-6 text-center hover:transform hover:scale-105 transition-all duration-300 rounded-xl">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary-gold flex items-center justify-center">
-                  <item.icon className="w-8 h-8 text-primary-navy" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary-navy mb-3">{item.title}</h3>
-                <p className="text-primary-charcoal text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-white mb-8">
+                Our Commitment: Partnership, Innovation & Impact.
+              </h2>
+              <p className="text-primary-white/90 leading-relaxed mb-4">
+                We are dedicated to building long-term partnerships based on trust and mutual success. Our focus on innovation ensures we are always at the forefront of digital strategies, and our commitment to Pakistan drives us to foster economic growth and create opportunities.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Image
+                src="/images/stock/group.jpg"
+                alt="A team working together on a project"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
